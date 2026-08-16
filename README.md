@@ -1,4 +1,4 @@
-# Market Signal Atlas
+# Market Mover - Tracking Words That Move Markets
 
 Market Signal Atlas is an evidence-first dashboard that follows reviewed public signals across markets, media, and public attention. It combines actual asset prices, raw news-publication counts, scoped social evidence, and an inspectable AI research workflow without claiming causality or predicting the next move.
 
