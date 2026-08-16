@@ -134,6 +134,10 @@ function loadAltman() {
   }));
 }
 
+function loadKoreanSummaries() {
+  return JSON.parse(fs.readFileSync(path.join(root, "data", "event-summaries.ko.json"), "utf8"));
+}
+
 async function fetchChart(symbol) {
   const start = Math.floor(new Date("2022-01-01T00:00:00Z").getTime() / 1000);
   const end = Math.floor(Date.now() / 1000) + 86400;
@@ -174,7 +178,7 @@ const pct = (value) => Math.round(value * 100) / 100;
 function buildReaction(event, assetSeries, benchmarkSeries) {
   const target = easternDate(event.publishedAt);
   const assetIndex = assetSeries.findIndex((row) => row.date >= target);
-  if (assetIndex < 21 || assetIndex + 2 >= assetSeries.length) throw new Error(`Insufficient market window for ${event.id}`);
+  if (assetIndex < 21 || assetIndex + 5 >= assetSeries.length) throw new Error(`Insufficient market window for ${event.id}`);
   const sessionDate = assetSeries[assetIndex].date;
   const benchmarkIndex = benchmarkSeries.findIndex((row) => row.date === sessionDate);
   if (benchmarkIndex < 1 || benchmarkIndex + 2 >= benchmarkSeries.length) throw new Error(`Benchmark mismatch for ${event.id}`);
@@ -208,6 +212,11 @@ function buildReaction(event, assetSeries, benchmarkSeries) {
       { day: 1, ...at(1) },
       { day: 3, ...at(2) },
     ].map(({ day, asset, benchmark }) => ({ day, asset, benchmark })),
+    priceWindow: assetSeries.slice(assetIndex - 5, assetIndex + 6).map((row, index) => ({
+      session: index - 5,
+      date: row.date,
+      close: pct(row.close),
+    })),
     sessionDate,
   };
 }
@@ -286,6 +295,7 @@ async function buildLiveFallback(priceSeries) {
 
 async function main() {
   const raw = [...loadTrump(), ...loadMusk(), ...loadAltman()];
+  const koreanSummaries = loadKoreanSummaries();
   if (raw.length < 20) throw new Error(`Expected at least 20 source events, got ${raw.length}`);
 
   const symbols = ["SPY", "QQQ", "TSLA", "NVDA", "MSFT"];
@@ -303,12 +313,17 @@ async function main() {
       text: event.text,
       sourceUrl: event.sourceUrl,
       topic: classification.topic,
+      signalType: event.person === "trump" ? "Policy signal" : event.person === "musk" ? "Executive signal" : "Industry signal",
+      tags: [classification.topic, classification.asset, event.personName],
+      summaryKo: koreanSummaries[event.id] ?? event.text,
       asset: classification.asset,
       benchmark: classification.benchmark,
       coverage: event.person === "trump" ? "Policy" : event.person === "altman" ? "Proxy" : "Direct",
       engagement: { likes: event.likes, reposts: event.reposts, views: event.views },
       metrics: reaction.metrics,
       window: reaction.window,
+      priceWindow: reaction.priceWindow,
+      eventSession: reaction.sessionDate,
       rationale: rationale(event.person, classification),
     };
   });

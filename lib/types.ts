@@ -1,4 +1,5 @@
 export type PersonId = "trump" | "musk" | "altman";
+export type SignalType = "Policy signal" | "Executive signal" | "Industry signal";
 export type PersistenceState = "Persisted" | "Faded" | "Reversed";
 export type SourceState = "Fresh" | "Stale" | "Error";
 
@@ -6,6 +7,12 @@ export interface WindowPoint {
   day: number;
   asset: number;
   benchmark: number;
+}
+
+export interface PricePoint {
+  session: number;
+  date: string;
+  close: number;
 }
 
 export interface ReactionMetrics {
@@ -25,6 +32,9 @@ export interface MarketEvent {
   text: string;
   sourceUrl: string;
   topic: string;
+  signalType: SignalType;
+  tags: string[];
+  summaryKo: string;
   asset: string;
   benchmark: string;
   coverage: "Direct" | "Policy" | "Proxy";
@@ -35,6 +45,8 @@ export interface MarketEvent {
   };
   metrics: ReactionMetrics;
   window: WindowPoint[];
+  priceWindow: PricePoint[];
+  eventSession: string;
   rationale: string;
 }
 

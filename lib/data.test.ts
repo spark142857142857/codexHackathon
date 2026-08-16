@@ -13,6 +13,8 @@ describe("reviewed event dataset", () => {
     for (const event of marketEvents) {
       expect(event.sourceUrl).toMatch(/^https:\/\//);
       expect(event.window).toHaveLength(4);
+      expect(event.priceWindow).toHaveLength(11);
+      expect(event.priceWindow.find((point) => point.session === 0)?.date).toBe(event.eventSession);
       expect(event.metrics.volumeMultiple).toBeGreaterThan(0);
     }
   });
@@ -23,4 +25,3 @@ describe("reviewed event dataset", () => {
     expect(altmanEvents.every((event) => event.benchmark === "QQQ")).toBe(true);
   });
 });
-

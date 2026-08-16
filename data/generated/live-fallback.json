@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-16T03:32:00.360Z",
+  "fetchedAt": "2026-08-16T04:04:26.500Z",
   "mode": "fallback",
   "signals": [
     {
@@ -73,7 +73,7 @@
       "cadence": "Daily demo refresh",
       "access": "Free",
       "state": "Fresh",
-      "lastSuccessAt": "2026-08-16T03:32:00.360Z",
+      "lastSuccessAt": "2026-08-16T04:04:26.500Z",
       "note": "Independent public archive; production uses licensed Truth API."
     },
     {
@@ -83,7 +83,7 @@
       "cadence": "Daily",
       "access": "Free",
       "state": "Fresh",
-      "lastSuccessAt": "2026-08-16T03:32:00.360Z",
+      "lastSuccessAt": "2026-08-16T04:04:26.500Z",
       "note": "Five-symbol demo scope. Display licensing required for commercial use."
     },
     {
@@ -93,7 +93,7 @@
       "cadence": "Near real time in Pro",
       "access": "Paid connector",
       "state": "Stale",
-      "lastSuccessAt": "2026-08-16T03:32:00.360Z",
+      "lastSuccessAt": "2026-08-16T04:04:26.500Z",
       "note": "Historical cases are available; live X ingestion is intentionally disabled in Free."
     }
   ]
