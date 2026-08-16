@@ -29,6 +29,7 @@ import {
   LineChart,
   ReferenceLine,
   ResponsiveContainer,
+  Scatter,
   Tooltip,
   XAxis,
   YAxis,
@@ -47,7 +48,11 @@ import { SignalUniverse } from "@/components/signal-universe";
 type Locale = "en" | "ko";
 type SourceFilter = SourceType | "all";
 type ReactionLens = "all" | "market" | "news" | "attention";
+type MarketChartMode = "actual" | "compare";
+type SignalSort = "reaction" | "recent" | "volume" | "persistence";
 type ResearchSection = "explorer" | "comparison" | "sources" | "methodology";
+
+const comparisonColors = ["#174e37", "#536dfe", "#8a6f45", "#9a5f77", "#5d7185", "#9b6f35", "#667d69"];
 
 const copy = {
   en: {
@@ -432,8 +437,11 @@ export function SignalAtlasDashboard({
   const [lens, setLens] = useState<ReactionLens>("all");
   const [asset, setAsset] = useState<string>(c.allAssets);
   const [entity, setEntity] = useState<string>(c.allEntities);
+  const [topic, setTopic] = useState("all");
+  const [coverage, setCoverage] = useState<"all" | MarketEvent["coverage"]>("all");
+  const [precision, setPrecision] = useState<"all" | "exact">("all");
   const [query, setQuery] = useState("");
-  const [sort, setSort] = useState<"reaction" | "recent">("reaction");
+  const [sort, setSort] = useState<SignalSort>("reaction");
   const [selectedId, setSelectedId] = useState(
     events.find((event) =>
       event.attentionWindow.some((point) => point.newsCount !== null),
@@ -447,6 +455,9 @@ export function SignalAtlasDashboard({
   const [interpretStep, setInterpretStep] = useState(0);
   const [news, setNews] = useState<NewsEvidencePayload | null>(null);
   const [displayAsset, setDisplayAsset] = useState(events[0]?.asset ?? "SPY");
+  const [marketChartMode, setMarketChartMode] = useState<MarketChartMode>("actual");
+  const [timelineAsset, setTimelineAsset] = useState("SPY");
+  const [timelineSessions, setTimelineSessions] = useState(120);
   const navClickLock = useRef<ResearchSection | null>(null);
 
   useEffect(() => {
@@ -499,6 +510,10 @@ export function SignalAtlasDashboard({
     () => Array.from(new Set(events.map((event) => event.personName))).sort(),
     [events],
   );
+  const topics = useMemo(
+    () => Array.from(new Set(events.map((event) => event.topic))).sort(),
+    [events],
+  );
   const activeSourceTypes = sourceOrder.filter((type) =>
     events.some((event) => event.sourceType === type),
   );
@@ -511,32 +526,79 @@ export function SignalAtlasDashboard({
         const assetMatch = asset === c.allAssets || (event.relatedAssets ?? [event.asset]).includes(asset);
           const entityMatch =
             entity === c.allEntities || event.personName === entity;
+          const topicMatch = topic === "all" || event.topic === topic;
+          const coverageMatch = coverage === "all" || event.coverage === coverage;
+          const precisionMatch = precision === "all" || event.timePrecision === "exact";
           const haystack =
             `${event.text} ${event.summaryKo} ${event.topic} ${event.asset} ${event.sourceType} ${event.tags.join(" ")} ${event.hashtags.join(" ")}`.toLowerCase();
           return (
             typeMatch &&
             assetMatch &&
             entityMatch &&
+            topicMatch &&
+            coverageMatch &&
+            precisionMatch &&
             haystack.includes(query.toLowerCase())
           );
         })
-        .sort((a, b) =>
-          sort === "recent"
-            ? +new Date(b.publishedAt) - +new Date(a.publishedAt)
-            : Math.abs(b.metrics.abnormalReturn1D) -
-              Math.abs(a.metrics.abnormalReturn1D),
-        ),
+        .sort((a, b) => {
+          if (sort === "recent") return +new Date(b.publishedAt) - +new Date(a.publishedAt);
+          if (sort === "volume") return b.metrics.volumeMultiple - a.metrics.volumeMultiple;
+          if (sort === "persistence") return Math.abs(b.metrics.cumulativeAbnormal3D) - Math.abs(a.metrics.cumulativeAbnormal3D);
+          return Math.abs(b.metrics.abnormalReturn1D) - Math.abs(a.metrics.abnormalReturn1D);
+        }),
     [
       asset,
       c.allAssets,
       c.allEntities,
+      coverage,
       entity,
       events,
+      precision,
       query,
       sourceType,
       sort,
+      topic,
     ],
   );
+
+  const marketTimeline = useMemo(() => {
+    const prices = new Map<string, number>();
+    const signals = new Map<string, MarketEvent[]>();
+    for (const event of events) {
+      for (const point of event.priceWindows?.[timelineAsset] ?? []) {
+        if (point.close !== null) prices.set(point.date, point.close);
+      }
+      const bucket = signals.get(event.eventSession) ?? [];
+      bucket.push(event);
+      signals.set(event.eventSession, bucket);
+    }
+    const rows = [...prices.entries()]
+      .sort(([left], [right]) => left.localeCompare(right))
+      .slice(-timelineSessions)
+      .map(([date, close]) => {
+        const daySignals = (signals.get(date) ?? []).sort(
+          (a, b) => Math.abs(b.metrics.abnormalReturn1D) - Math.abs(a.metrics.abnormalReturn1D),
+        );
+        return {
+          date,
+          label: date.slice(5),
+          close,
+          signalCount: daySignals.length,
+          Direct: daySignals.find((event) => event.coverage === "Direct") ?? null,
+          Policy: daySignals.find((event) => event.coverage === "Policy") ?? null,
+          Proxy: daySignals.find((event) => event.coverage === "Proxy") ?? null,
+        };
+      });
+    return {
+      rows,
+      markers: {
+        Direct: rows.filter((row) => row.Direct).map((row) => ({ ...row, event: row.Direct })),
+        Policy: rows.filter((row) => row.Policy).map((row) => ({ ...row, event: row.Policy })),
+        Proxy: rows.filter((row) => row.Proxy).map((row) => ({ ...row, event: row.Proxy })),
+      },
+    };
+  }, [events, timelineAsset, timelineSessions]);
 
   const selected =
     filtered.find((event) => event.id === selectedId) ??
@@ -574,6 +636,23 @@ export function SignalAtlasDashboard({
         ? c.event
         : `D${point.session > 0 ? "+" : ""}${point.session}`,
   }));
+  const comparisonData = activePriceWindow.map((point) => {
+    const row: Record<string, string | number | null> = {
+      date: point.date,
+      label:
+        point.session === 0
+          ? c.event
+          : `D${point.session > 0 ? "+" : ""}${point.session}`,
+    };
+    for (const symbol of chartAssets) {
+      const window = selected.priceWindows?.[symbol] ?? [];
+      const baseline = window.find((item) => item.session === -1)?.close ?? window.find((item) => item.close !== null)?.close;
+      const close = window.find((item) => item.date === point.date)?.close ?? null;
+      row[`${symbol}Close`] = close;
+      row[symbol] = baseline && close !== null ? ((close / baseline) - 1) * 100 : null;
+    }
+    return row;
+  });
   const formatDate = (value: string) =>
     new Intl.DateTimeFormat(dateLocale, {
       timeZone: "Asia/Seoul",
@@ -629,6 +708,14 @@ export function SignalAtlasDashboard({
     setResearch(next?.orchestration ?? null);
     if (next) setDisplayAsset(next.asset);
     setInterpretStep(0);
+  };
+
+  const openTimelineSignal = (point: unknown) => {
+    const marker = point as { event?: MarketEvent; payload?: { event?: MarketEvent } };
+    const event = marker.event ?? marker.payload?.event;
+    if (!event) return;
+    selectSignal(event.id);
+    document.getElementById("explorer")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   useEffect(() => {
@@ -830,8 +917,8 @@ export function SignalAtlasDashboard({
             </h1>
             <p>{c.hero}</p>
             <div className="hero-actions">
-              <a className="button primary" href="#universe">
-                {locale === "ko" ? "전체 데이터 보기" : "Explore all data"}
+              <a className="button primary" href="#market-timeline">
+                {locale === "ko" ? "시장 타임라인 보기" : "Open market timeline"}
                 <ArrowRight size={16} />
               </a>
               <a className="button ghost" href="#methodology">
@@ -959,7 +1046,56 @@ export function SignalAtlasDashboard({
           </section>
         )}
 
-        <SignalUniverse locale={locale} />
+        <section className="section-shell market-timeline-section" id="market-timeline">
+          <div className="section-heading timeline-heading">
+            <div>
+              <span className="section-kicker">{locale === "ko" ? "시장 움직임에서 시그널 찾기" : "START FROM MARKET MOVEMENT"}</span>
+              <h2>{locale === "ko" ? "가격 흐름에서 공개 시그널을 역으로 탐색" : "Trace market movement back to public signals"}</h2>
+              <p>{locale === "ko" ? "마커를 선택하면 해당 거래 세션에서 관찰된 대표 시그널과 근거로 이동합니다." : "Select a marker to open the leading observed signal and its evidence for that trading session."}</p>
+            </div>
+            <div className="timeline-controls">
+              <select value={timelineAsset} onChange={(event) => setTimelineAsset(event.target.value)} aria-label={locale === "ko" ? "타임라인 자산" : "Timeline asset"}>
+                <option value="SPY">SPY</option>
+                <option value="QQQ">QQQ</option>
+                <option value="BTC-USD">BTC-USD</option>
+              </select>
+              <select value={timelineSessions} onChange={(event) => setTimelineSessions(Number(event.target.value))} aria-label={locale === "ko" ? "타임라인 기간" : "Timeline range"}>
+                <option value={60}>{locale === "ko" ? "최근 60 거래 세션" : "Last 60 sessions"}</option>
+                <option value={120}>{locale === "ko" ? "최근 120 거래 세션" : "Last 120 sessions"}</option>
+                <option value={250}>{locale === "ko" ? "최근 250 거래 세션" : "Last 250 sessions"}</option>
+              </select>
+            </div>
+          </div>
+          <div className="timeline-legend">
+            <span><i className="direct" />Direct</span>
+            <span><i className="policy" />Policy</span>
+            <span><i className="proxy" />Proxy</span>
+            <small>{locale === "ko" ? `${marketTimeline.rows.length}개 관찰 세션 · 실제 종가` : `${marketTimeline.rows.length} observed sessions · actual closes`}</small>
+          </div>
+          <div className="market-timeline-chart">
+            <ResponsiveContainer width="100%" height="100%">
+              <ComposedChart data={marketTimeline.rows} margin={{ top: 18, right: 18, left: 2, bottom: 4 }}>
+                <CartesianGrid stroke="#e4e7e2" strokeDasharray="3 3" vertical={false} />
+                <XAxis dataKey="label" minTickGap={32} tick={{ fill: "#68736d", fontSize: 10 }} axisLine={false} tickLine={false} />
+                <YAxis domain={["auto", "auto"]} tickFormatter={(value) => `$${Number(value).toFixed(0)}`} tick={{ fill: "#68736d", fontSize: 10 }} axisLine={false} tickLine={false} width={48} />
+                <Tooltip labelFormatter={(label) => `${timelineAsset} · ${label}`} formatter={(value, name) => name === "close" ? [`$${Number(value).toFixed(2)}`, locale === "ko" ? "종가" : "Close"] : [value, name]} />
+                <Line isAnimationActive={false} type="monotone" dataKey="close" name="close" stroke="#244f3d" strokeWidth={2.2} dot={false} />
+                <Scatter data={marketTimeline.markers.Direct} dataKey="close" name="Direct" fill="#1f6f4a" shape="circle" cursor="pointer" onClick={(point) => openTimelineSignal(point)} />
+                <Scatter data={marketTimeline.markers.Policy} dataKey="close" name="Policy" fill="#9a642f" shape="triangle" cursor="pointer" onClick={(point) => openTimelineSignal(point)} />
+                <Scatter data={marketTimeline.markers.Proxy} dataKey="close" name="Proxy" fill="#75658c" shape="diamond" cursor="pointer" onClick={(point) => openTimelineSignal(point)} />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
+          <p className="timeline-footnote">
+            {timelineAsset === "BTC-USD"
+              ? locale === "ko"
+                ? "BTC-USD는 현재 주식 거래 세션 날짜에 표본화된 비교 맥락입니다. 24/7 분봉 반응을 의미하지 않습니다."
+                : "BTC-USD is sampled on equity-session dates for context; this is not a 24/7 intraday reaction series."
+              : locale === "ko"
+                ? "시그널별 D-5~D+5 가격창을 합친 분석 커버리지입니다. 마커는 인과관계가 아니라 같은 세션의 공개 정보입니다."
+                : "This merges analyzed D-5 to D+5 windows. Markers denote same-session public information, not causality."}
+          </p>
+        </section>
 
         <section className="section-shell explorer-section" id="explorer">
           <div className="section-heading">
@@ -1039,20 +1175,26 @@ export function SignalAtlasDashboard({
                 <option key={item}>{item}</option>
               ))}
             </select>
-            <div className="segmented">
-              <button
-                className={sort === "reaction" ? "active" : ""}
-                onClick={() => setSort("reaction")}
-              >
-                {c.reaction}
-              </button>
-              <button
-                className={sort === "recent" ? "active" : ""}
-                onClick={() => setSort("recent")}
-              >
-                {c.recent}
-              </button>
-            </div>
+            <select value={topic} onChange={(event) => setTopic(event.target.value)} aria-label={locale === "ko" ? "주제" : "Topic"}>
+              <option value="all">{locale === "ko" ? "모든 주제" : "All topics"}</option>
+              {topics.map((item) => <option key={item} value={item}>{topicLabel(item, locale)}</option>)}
+            </select>
+            <select value={coverage} onChange={(event) => setCoverage(event.target.value as "all" | MarketEvent["coverage"])} aria-label={locale === "ko" ? "연결 유형" : "Mapping type"}>
+              <option value="all">{locale === "ko" ? "모든 연결 유형" : "All mappings"}</option>
+              <option value="Direct">Direct</option>
+              <option value="Policy">Policy</option>
+              <option value="Proxy">Proxy</option>
+            </select>
+            <select value={precision} onChange={(event) => setPrecision(event.target.value as "all" | "exact")} aria-label={locale === "ko" ? "시각 정밀도" : "Time precision"}>
+              <option value="all">{locale === "ko" ? "모든 시각 정밀도" : "All time precision"}</option>
+              <option value="exact">{locale === "ko" ? "정확한 시각만" : "Exact time only"}</option>
+            </select>
+            <select value={sort} onChange={(event) => setSort(event.target.value as SignalSort)} aria-label={locale === "ko" ? "정렬" : "Sort"}>
+              <option value="reaction">{locale === "ko" ? "1일 초과반응순" : "1D excess reaction"}</option>
+              <option value="volume">{locale === "ko" ? "거래량 배수순" : "Volume multiple"}</option>
+              <option value="persistence">{locale === "ko" ? "3일 지속성순" : "3D persistence"}</option>
+              <option value="recent">{c.recent}</option>
+            </select>
           </div>
 
           <div className="explorer-grid atlas-grid">
@@ -1181,7 +1323,10 @@ export function SignalAtlasDashboard({
                     <button
                       key={item}
                       className={lens === item ? "active" : ""}
-                      onClick={() => setLens(item)}
+                      onClick={() => {
+                        setLens(item);
+                        setMarketChartMode("actual");
+                      }}
                     >
                       {item === "all"
                         ? locale === "ko"
@@ -1203,6 +1348,15 @@ export function SignalAtlasDashboard({
                 )}
               </div>
               <div className="chart-asset-switch">
+                <div className="market-view-toggle">
+                  <span>{locale === "ko" ? "가격 보기" : "Price view"}</span>
+                  <button className={marketChartMode === "actual" ? "active" : ""} onClick={() => setMarketChartMode("actual")}>
+                    {locale === "ko" ? "실제 종가" : "Actual close"}
+                  </button>
+                  <button className={marketChartMode === "compare" ? "active" : ""} onClick={() => { setMarketChartMode("compare"); setLens("market"); }}>
+                    {locale === "ko" ? "동시 반응 비교" : "Compare reactions"}
+                  </button>
+                </div>
                 <div>
                   <span>{locale === "ko" ? "연결 자산" : "Linked assets"}</span>
                   {chartAssets.map((symbol) => (
@@ -1217,14 +1371,22 @@ export function SignalAtlasDashboard({
               <div className="chart-head">
                 <div>
                   <span>
-                    {lens === "market"
+                    {marketChartMode === "compare"
+                      ? locale === "ko"
+                        ? "동시 자산 반응"
+                        : "MULTI-ASSET REACTION"
+                      : lens === "market"
                       ? c.actualWindow
                       : locale === "ko"
                         ? "반응 타임라인"
                         : "REACTION TIMELINE"}
                   </span>
                   <strong>
-                    {lens === "market"
+                    {marketChartMode === "compare"
+                      ? locale === "ko"
+                        ? "발언 직전 종가를 0%로 맞춘 누적 변화율"
+                        : "Cumulative change indexed to the prior close"
+                      : lens === "market"
                       ? c.actualTitle
                       : lens === "news"
                         ? locale === "ko"
@@ -1239,14 +1401,38 @@ export function SignalAtlasDashboard({
                             : "Actual close and information diffusion on one timeline"}
                   </strong>
                 </div>
-                <div className="asset-pair">
-                  <b>{activeChartAsset}</b>
-                  <span>{c.eventClose}</span>${eventPrice.toFixed(2)}
-                </div>
+                {marketChartMode === "actual" ? (
+                  <div className="asset-pair">
+                    <b>{activeChartAsset}</b>
+                    <span>{c.eventClose}</span>${eventPrice.toFixed(2)}
+                  </div>
+                ) : (
+                  <div className="comparison-legend">
+                    {chartAssets.map((symbol, index) => <span key={symbol}><i style={{ background: comparisonColors[index % comparisonColors.length] }} />{symbol}</span>)}
+                  </div>
+                )}
               </div>
               <div className="reaction-chart actual-price-chart">
                 <ResponsiveContainer width="100%" height="100%">
-                  {lens === "market" ? (
+                  {marketChartMode === "compare" ? (
+                    <LineChart data={comparisonData} margin={{ top: 18, right: 14, left: -5, bottom: 0 }}>
+                      <CartesianGrid stroke="#e7e9f2" strokeDasharray="3 3" vertical={false} />
+                      <XAxis dataKey="label" tick={{ fill: "#717991", fontSize: 9 }} axisLine={false} tickLine={false} interval={1} />
+                      <YAxis tickFormatter={(value) => `${Number(value).toFixed(1)}%`} tick={{ fill: "#717991", fontSize: 10 }} axisLine={false} tickLine={false} />
+                      <Tooltip
+                        formatter={(value, name, item) => {
+                          const close = item.payload?.[`${String(name)}Close`];
+                          const suffix = typeof close === "number" ? ` · $${close.toFixed(2)}` : "";
+                          return [`${Number(value).toFixed(2)}%${suffix}`, name];
+                        }}
+                      />
+                      <ReferenceLine y={0} stroke="#aeb7b0" />
+                      <ReferenceLine x={c.event} stroke="#a45f3f" strokeDasharray="4 4" label={{ value: timing.split(" · ")[0], position: "insideTopRight", fill: "#a45f3f", fontSize: 8 }} />
+                      {chartAssets.map((symbol, index) => (
+                        <Line key={symbol} isAnimationActive={false} type="monotone" dataKey={symbol} name={symbol} stroke={comparisonColors[index % comparisonColors.length]} strokeWidth={symbol === selected.asset ? 2.8 : 1.8} dot={{ r: symbol === selected.asset ? 2.5 : 1.5 }} connectNulls />
+                      ))}
+                    </LineChart>
+                  ) : lens === "market" ? (
                     <LineChart
                       data={chartData}
                       margin={{ top: 18, right: 14, left: -5, bottom: 0 }}
@@ -1689,6 +1875,8 @@ export function SignalAtlasDashboard({
             </aside>
           </div>
         </section>
+
+        <SignalUniverse locale={locale} />
 
         <section className="comparison-section" id="comparison">
           <div className="section-shell">

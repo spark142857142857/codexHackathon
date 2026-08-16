@@ -2453,9 +2453,36 @@ footer a {
 .chart-asset-switch p { display: flex; align-items: center; gap: 5px; margin: 8px 0 0; color: #757e78; font-size: 8px; line-height: 1.4; }
 .metric-basis-note { margin: -4px 0 12px; color: #66706a; font-size: 8px; line-height: 1.45; }
 
+.market-timeline-section { margin-top: 18px; }
+.timeline-heading { align-items: flex-end; }
+.timeline-controls { display: flex; gap: 8px; flex-wrap: wrap; }
+.timeline-controls select { min-height: 38px; padding: 0 34px 0 12px; border: 1px solid #d7ddd8; border-radius: 8px; color: #405249; background: #fff; font-size: 11px; }
+.timeline-legend { display: flex; align-items: center; gap: 14px; margin: 4px 0 10px; color: #59675f; font-size: 10px; }
+.timeline-legend span { display: inline-flex; align-items: center; gap: 5px; }
+.timeline-legend i, .comparison-legend i { width: 8px; height: 8px; border-radius: 50%; }
+.timeline-legend i.direct { background: #1f6f4a; }
+.timeline-legend i.policy { background: #9a642f; clip-path: polygon(50% 0, 100% 100%, 0 100%); border-radius: 0; }
+.timeline-legend i.proxy { background: #75658c; border-radius: 1px; transform: rotate(45deg); }
+.timeline-legend small { margin-left: auto; color: #7a847e; }
+.market-timeline-chart { width: 100%; height: 300px; padding: 10px 6px 0; border: 1px solid #dfe3df; border-radius: 10px; background: #fff; }
+.timeline-footnote { margin: 9px 0 0; color: #69736d; font-size: 10px; line-height: 1.5; }
+.explorer-toolbar { flex-wrap: wrap; }
+.explorer-toolbar .search-box { min-width: 280px; }
+.explorer-toolbar select { flex: 1 1 135px; max-width: 190px; }
+.market-view-toggle { padding-bottom: 8px; margin-bottom: 8px; border-bottom: 1px solid #e4e7e4; }
+.comparison-legend { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 6px 10px; max-width: 310px; }
+.comparison-legend span { display: inline-flex; align-items: center; gap: 4px; color: #5e6a63; font-size: 8px; }
+
 @media (max-width: 760px) {
   .app-main .hero { padding-top: 88px; }
   .chart-asset-switch button { flex: 1 0 auto; }
+  .timeline-heading { align-items: flex-start; }
+  .timeline-controls { width: 100%; }
+  .timeline-controls select { flex: 1; }
+  .market-timeline-chart { height: 260px; }
+  .timeline-legend { flex-wrap: wrap; }
+  .timeline-legend small { width: 100%; margin-left: 0; }
+  .explorer-toolbar .search-box, .explorer-toolbar select { min-width: 100%; max-width: none; }
 }
 
 @media (max-width: 430px) {
