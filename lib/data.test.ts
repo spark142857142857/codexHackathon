@@ -1,11 +1,17 @@
 import { describe, expect, it } from "vitest";
-import { marketEvents } from "@/lib/data";
+import { marketEvents, reviewedEvents } from "@/lib/data";
 
-describe("reviewed event dataset", () => {
-  it("keeps the reviewed showcase separate from the full candidate catalog", () => {
-    expect(marketEvents).toHaveLength(28);
+describe("atlas event datasets", () => {
+  it("uses the 200 evidence-ready signals in the main atlas", () => {
+    expect(marketEvents).toHaveLength(200);
+    expect(new Set(marketEvents.map((event) => event.person))).toEqual(new Set(["trump", "musk"]));
+    expect(marketEvents.every((event) => event.orchestration.mode === "deterministic")).toBe(true);
+  });
+
+  it("retains the 28 reviewed records as a separate reference dataset", () => {
+    expect(reviewedEvents).toHaveLength(28);
     for (const person of ["trump", "musk", "altman"]) {
-      expect(marketEvents.filter((event) => event.person === person)).toHaveLength(8);
+      expect(reviewedEvents.filter((event) => event.person === person)).toHaveLength(8);
     }
   });
 
@@ -24,15 +30,15 @@ describe("reviewed event dataset", () => {
   });
 
   it("represents social, news, filing, and hearing sources without estimating missing news volume", () => {
-    expect(new Set(marketEvents.map((event) => event.sourceType))).toEqual(new Set(["Social", "News", "Filing", "Hearing"]));
-    const newsBacked = marketEvents.filter((event) => event.attentionWindow.some((point) => point.newsCount !== null));
+    expect(new Set(reviewedEvents.map((event) => event.sourceType))).toEqual(new Set(["Social", "News", "Filing", "Hearing"]));
+    const newsBacked = reviewedEvents.filter((event) => event.attentionWindow.some((point) => point.newsCount !== null));
     expect(newsBacked.length).toBeGreaterThanOrEqual(2);
-    const unavailable = marketEvents.find((event) => event.id === "news-openai-gpt45-2025-02-27");
+    const unavailable = reviewedEvents.find((event) => event.id === "news-openai-gpt45-2025-02-27");
     expect(unavailable?.attentionWindow.every((point) => point.newsCount === null)).toBe(true);
   });
 
   it("labels Sam Altman market links as proxies", () => {
-    const altmanEvents = marketEvents.filter((event) => event.person === "altman");
+    const altmanEvents = reviewedEvents.filter((event) => event.person === "altman");
     expect(altmanEvents.every((event) => event.coverage === "Proxy")).toBe(true);
     expect(altmanEvents.every((event) => event.benchmark === "QQQ")).toBe(true);
   });

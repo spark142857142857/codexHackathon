@@ -4,6 +4,7 @@ import path from "node:path";
 const root = process.cwd();
 const catalogFile = path.join(root, "data", "generated", "signal-catalog.json");
 const outputFile = path.join(root, "data", "generated", "evidence-universe.json");
+const atlasFile = path.join(root, "data", "generated", "atlas-events.json");
 const ASSETS = ["SPY", "QQQ", "TSLA", "NVDA", "MSFT", "BTC-USD", "SOXX"];
 const MARKET_TOPICS = new Set(["Trade & tariffs", "Economy & rates", "Technology policy", "Tesla & EV", "AI & robotics", "Energy & climate", "Crypto"]);
 const MEDIA_PATTERN = /\b(reuters|bloomberg|cnbc|wsj|nytimes|bbc|cnn|foxnews|theguardian|apnews|forbes|politico|axios|washingtonpost)\b/i;
@@ -76,6 +77,10 @@ function buildReaction(row, series, mapping) {
   const abnormal = (offset) => ((assetRows[index + offset].close / assetBase - 1) - (benchmarkRows[benchmarkIndex + offset].close / benchmarkBase - 1)) * 100;
   const dayOne = abnormal(0);
   const dayThree = abnormal(2);
+  const cumulative = (offset) => ({
+    asset: round((assetRows[index + offset].close / assetBase - 1) * 100),
+    benchmark: round((benchmarkRows[benchmarkIndex + offset].close / benchmarkBase - 1) * 100),
+  });
   const trailingVolume = assetRows.slice(index - 20, index).map((item) => item.volume);
   const meanVolume = trailingVolume.reduce((sum, value) => sum + value, 0) / trailingVolume.length;
   const returns = (rows) => rows.slice(1).map((item, i) => item.close / rows[i].close - 1);
@@ -88,11 +93,13 @@ function buildReaction(row, series, mapping) {
     eventSession,
     abnormalReturn1D: round(dayOne), volumeMultiple: round(assetRows[index].volume / meanVolume),
     cumulativeAbnormal3D: round(dayThree), volatilityMultiple: round(baseVol ? eventVol / baseVol : 0), persistence,
+    window: [-1, 0, 1, 2].map((offset, index) => ({ day: [-1, 0, 1, 3][index], ...(offset === -1 ? { asset: 0, benchmark: 0 } : cumulative(offset)) })),
     priceWindow: assetRows.slice(index - 5, index + 6).map((item, i) => ({ session: i - 5, date: item.date, close: round(item.close) })),
   };
 }
 
-function attentionFor(row, records, eventSession) {
+function attentionFor(row, records, priceWindow) {
+  const eventSession = priceWindow.find((point) => point.session === 0).date;
   const start = new Date(`${eventSession}T00:00:00Z`); start.setUTCDate(start.getUTCDate() - 5);
   const end = new Date(`${eventSession}T23:59:59Z`); end.setUTCDate(end.getUTCDate() + 5);
   const terms = [...new Set([row.topic.split(/[ &]/)[0].toLowerCase(), ...row.hashtags.map((tag) => tag.toLowerCase()), ...row.assets.map((asset) => asset.toLowerCase())])].filter((term) => term.length > 2);
@@ -101,9 +108,20 @@ function attentionFor(row, records, eventSession) {
     return date >= start && date <= end && (candidate.id === row.id || candidate.clusterId === row.clusterId
       || terms.some((term) => `${candidate.text} ${candidate.hashtags.join(" ")}`.toLowerCase().includes(term)));
   });
+  const attentionWindow = priceWindow.map((point) => {
+    const daily = matches.filter((item) => item.publishedAt.slice(0, 10) === point.date);
+    return {
+      session: point.session,
+      date: point.date,
+      newsCount: null,
+      trackedMentions: daily.length,
+      hashtagCount: new Set(daily.flatMap((item) => item.hashtags.map((tag) => tag.toLowerCase()))).size,
+    };
+  });
   return {
     trackedMentions: matches.length,
     linkedMediaReferences: matches.reduce((sum, item) => sum + (item.externalUrls ?? []).filter((url) => MEDIA_PATTERN.test(url)).length, 0),
+    attentionWindow,
   };
 }
 
@@ -143,7 +161,7 @@ async function main() {
     const mapping = primaryMapping(row);
     const reaction = buildReaction(row, series, mapping);
     if (!reaction) continue;
-    const attention = attentionFor(row, catalog.records, reaction.eventSession);
+    const attention = attentionFor(row, catalog.records, reaction.priceWindow);
     evidence.push({ id: row.id, score: round(relevanceScore(row)), ...mapping, ...reaction, ...attention,
       attentionCoverage: "Mentions and linked-media references cover only the tracked Trump and Musk source corpora; they are not global news or social counts.",
       orchestration: orchestration(row, mapping, reaction, attention),
@@ -151,6 +169,46 @@ async function main() {
   }
   const payload = { meta: { generatedAt: new Date().toISOString(), representativeCount: representatives.length, enrichedCount: evidence.length, assetCoverage: ASSETS, methodology: ["One highest-evidence representative per rule-seeded cluster.", "Top market-relevant representatives receive deterministic price, volume, volatility and tracked-corpus attention evidence.", "No paid runtime API or generative model is required."] }, representativeIds: representatives.map((row) => row.id), evidence };
   fs.writeFileSync(outputFile, `${JSON.stringify(payload)}\n`);
+  const recordsById = new Map(catalog.records.map((row) => [row.id, row]));
+  const atlasEvents = evidence.map((item) => {
+    const row = recordsById.get(item.id);
+    const signalType = row.entityId === "trump" ? "Policy signal" : "Executive signal";
+    return {
+      id: row.id,
+      person: row.entityId,
+      personName: row.entity,
+      role: row.entityId === "trump" ? "Policy power" : "Founder power",
+      platform: row.platform,
+      sourceType: "Social",
+      timePrecision: "exact",
+      publishedAt: row.publishedAt,
+      text: row.text,
+      sourceUrl: row.sourceUrl,
+      topic: row.topic,
+      signalType,
+      tags: [...new Set([row.topic, ...row.assets])],
+      hashtags: row.hashtags,
+      summaryKo: item.orchestration.summaryKo,
+      asset: item.asset,
+      benchmark: item.benchmark,
+      coverage: item.coverage,
+      engagement: row.engagement,
+      metrics: {
+        abnormalReturn1D: item.abnormalReturn1D,
+        volumeMultiple: item.volumeMultiple,
+        cumulativeAbnormal3D: item.cumulativeAbnormal3D,
+        persistence: item.persistence,
+      },
+      window: item.window,
+      priceWindow: item.priceWindow,
+      attentionWindow: item.attentionWindow,
+      attentionCoverage: `${item.attentionCoverage} Verified media-domain links in the same tracked window: ${item.linkedMediaReferences}.`,
+      eventSession: item.eventSession,
+      rationale: `${item.asset} is a ${item.coverage.toLowerCase()} mapping for the ${row.topic} signal; ${item.benchmark} is comparison context only.`,
+      orchestration: item.orchestration,
+    };
+  });
+  fs.writeFileSync(atlasFile, `${JSON.stringify(atlasEvents)}\n`);
   console.log(`Generated ${representatives.length.toLocaleString()} representatives and ${evidence.length} evidence-ready signals.`);
 }
 

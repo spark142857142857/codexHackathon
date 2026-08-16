@@ -153,6 +153,8 @@ export interface CandidateEvidence {
   linkedMediaReferences: number;
   attentionCoverage: string;
   priceWindow: PricePoint[];
+  window: WindowPoint[];
+  attentionWindow: AttentionPoint[];
   orchestration: OrchestrationReport;
 }
 
