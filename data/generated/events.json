@@ -4540,6 +4540,260 @@
     }
   },
   {
+    "id": "news-openai-stargate-2025-01-21",
+    "person": "openai",
+    "personName": "OpenAI",
+    "role": "Infrastructure announcement",
+    "platform": "OpenAI News",
+    "sourceType": "News",
+    "timePrecision": "date",
+    "publishedAt": "2025-01-21T12:00:00Z",
+    "text": "OpenAI and SoftBank announced the Stargate Project, a new company intending to invest $500 billion over four years in AI infrastructure in the United States.",
+    "sourceUrl": "https://openai.com/index/announcing-the-stargate-project/",
+    "topic": "AI infrastructure",
+    "signalType": "Industry signal",
+    "tags": [
+      "OpenAI",
+      "Stargate",
+      "AI infrastructure",
+      "NVIDIA",
+      "Microsoft"
+    ],
+    "hashtags": [],
+    "summaryKo": "OpenAI와 SoftBank가 미국 AI 인프라에 4년간 5,000억 달러를 투자할 계획인 Stargate Project를 발표했다.",
+    "asset": "NVDA",
+    "benchmark": "QQQ",
+    "coverage": "Proxy",
+    "engagement": {
+      "likes": null,
+      "reposts": null,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": 1.68,
+      "volumeMultiple": 0.95,
+      "cumulativeAbnormal3D": 4.82,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 2.27,
+        "benchmark": 0.59
+      },
+      {
+        "day": 1,
+        "asset": 6.8,
+        "benchmark": 1.87
+      },
+      {
+        "day": 3,
+        "asset": 6.91,
+        "benchmark": 2.09
+      }
+    ],
+    "priceWindow": [
+      {
+        "session": -5,
+        "date": "2025-01-13",
+        "close": 133.23
+      },
+      {
+        "session": -4,
+        "date": "2025-01-14",
+        "close": 131.76
+      },
+      {
+        "session": -3,
+        "date": "2025-01-15",
+        "close": 136.24
+      },
+      {
+        "session": -2,
+        "date": "2025-01-16",
+        "close": 133.57
+      },
+      {
+        "session": -1,
+        "date": "2025-01-17",
+        "close": 137.71
+      },
+      {
+        "session": 0,
+        "date": "2025-01-21",
+        "close": 140.83
+      },
+      {
+        "session": 1,
+        "date": "2025-01-22",
+        "close": 147.07
+      },
+      {
+        "session": 2,
+        "date": "2025-01-23",
+        "close": 147.22
+      },
+      {
+        "session": 3,
+        "date": "2025-01-24",
+        "close": 142.62
+      },
+      {
+        "session": 4,
+        "date": "2025-01-27",
+        "close": 118.42
+      },
+      {
+        "session": 5,
+        "date": "2025-01-28",
+        "close": 128.99
+      }
+    ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2025-01-13",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2025-01-14",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2025-01-15",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2025-01-16",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2025-01-17",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2025-01-21",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2025-01-22",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2025-01-23",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2025-01-24",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2025-01-27",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2025-01-28",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
+    "eventSession": "2025-01-21",
+    "rationale": "NVDA is a listed compute-infrastructure proxy named as a technology partner, not equity in the private Stargate entity.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Reaction detected",
+      "summaryEn": "OpenAI's AI infrastructure signal shows 1.68% absolute one-day excess movement in NVDA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "OpenAI의 AI infrastructure 시그널 이후 NVDA에서 1일 기준 1.68%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as AI infrastructure.",
+          "summaryKo": "AI infrastructure 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "NVDA is a proxy rather than direct equity.",
+          "summaryKo": "NVDA은(는) 직접 지분이 아닌 프록시 자산입니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Low",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Proxy mapping and source-time limits lower attribution confidence.",
+          "summaryKo": "프록시 매핑과 출처 시각의 한계 때문에 귀속 신뢰도를 낮췄습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose.",
+        "The selected listed asset is a proxy, not direct ownership."
+      ]
+    }
+  },
+  {
     "id": "trump-113683654440040843",
     "person": "trump",
     "personName": "Donald Trump",
@@ -5293,6 +5547,259 @@
     }
   },
   {
+    "id": "news-openai-chatgpt-search-2024-10-31",
+    "person": "openai",
+    "personName": "OpenAI",
+    "role": "Product announcement",
+    "platform": "OpenAI News",
+    "sourceType": "News",
+    "timePrecision": "date",
+    "publishedAt": "2024-10-31T12:00:00Z",
+    "text": "OpenAI introduced ChatGPT search with timely answers and links to relevant web sources.",
+    "sourceUrl": "https://openai.com/index/introducing-chatgpt-search/",
+    "topic": "AI product launch",
+    "signalType": "Industry signal",
+    "tags": [
+      "OpenAI",
+      "ChatGPT search",
+      "search",
+      "AI"
+    ],
+    "hashtags": [],
+    "summaryKo": "OpenAI가 최신 정보와 웹 출처 링크를 제공하는 ChatGPT 검색 기능을 공개했다.",
+    "asset": "MSFT",
+    "benchmark": "QQQ",
+    "coverage": "Proxy",
+    "engagement": {
+      "likes": null,
+      "reposts": null,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": -3.53,
+      "volumeMultiple": 3.07,
+      "cumulativeAbnormal3D": -3.48,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -6.05,
+        "benchmark": -2.52
+      },
+      {
+        "day": 1,
+        "asset": -5.12,
+        "benchmark": -1.8
+      },
+      {
+        "day": 3,
+        "asset": -5.56,
+        "benchmark": -2.09
+      }
+    ],
+    "priceWindow": [
+      {
+        "session": -5,
+        "date": "2024-10-24",
+        "close": 424.73
+      },
+      {
+        "session": -4,
+        "date": "2024-10-25",
+        "close": 428.15
+      },
+      {
+        "session": -3,
+        "date": "2024-10-28",
+        "close": 426.59
+      },
+      {
+        "session": -2,
+        "date": "2024-10-29",
+        "close": 431.95
+      },
+      {
+        "session": -1,
+        "date": "2024-10-30",
+        "close": 432.53
+      },
+      {
+        "session": 0,
+        "date": "2024-10-31",
+        "close": 406.35
+      },
+      {
+        "session": 1,
+        "date": "2024-11-01",
+        "close": 410.37
+      },
+      {
+        "session": 2,
+        "date": "2024-11-04",
+        "close": 408.46
+      },
+      {
+        "session": 3,
+        "date": "2024-11-05",
+        "close": 411.46
+      },
+      {
+        "session": 4,
+        "date": "2024-11-06",
+        "close": 420.18
+      },
+      {
+        "session": 5,
+        "date": "2024-11-07",
+        "close": 425.43
+      }
+    ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2024-10-24",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2024-10-25",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2024-10-28",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2024-10-29",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2024-10-30",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2024-10-31",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2024-11-01",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2024-11-04",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2024-11-05",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2024-11-06",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2024-11-07",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
+    "eventSession": "2024-10-31",
+    "rationale": "OpenAI is private. MSFT is labeled as a partnership proxy rather than direct OpenAI equity.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Mixed evidence",
+      "summaryEn": "OpenAI's AI product launch signal shows 3.53% absolute one-day excess movement in MSFT. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "OpenAI의 AI product launch 시그널 이후 MSFT에서 1일 기준 3.53%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as AI product launch.",
+          "summaryKo": "AI product launch 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "MSFT is a proxy rather than direct equity.",
+          "summaryKo": "MSFT은(는) 직접 지분이 아닌 프록시 자산입니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Monitoring",
+          "confidence": "Low",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Proxy mapping and source-time limits lower attribution confidence.",
+          "summaryKo": "프록시 매핑과 출처 시각의 한계 때문에 귀속 신뢰도를 낮췄습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose.",
+        "The selected listed asset is a proxy, not direct ownership."
+      ]
+    }
+  },
+  {
     "id": "trump-112909351574797350",
     "person": "trump",
     "personName": "Donald Trump",
@@ -5795,6 +6302,511 @@
     }
   },
   {
+    "id": "news-nvidia-ai-factories-2024-06-02",
+    "person": "nvidia",
+    "personName": "NVIDIA Newsroom",
+    "role": "Company newsroom",
+    "platform": "NVIDIA Newsroom",
+    "sourceType": "News",
+    "timePrecision": "date",
+    "publishedAt": "2024-06-02T12:00:00Z",
+    "text": "NVIDIA and computer manufacturers announced Blackwell-powered systems for enterprises to build AI factories and data centers.",
+    "sourceUrl": "https://nvidianews.nvidia.com/news/computer-industry-ai-factories-data-centers",
+    "topic": "AI infrastructure",
+    "signalType": "Industry signal",
+    "tags": [
+      "NVIDIA",
+      "Blackwell",
+      "AI factories",
+      "data centers"
+    ],
+    "hashtags": [],
+    "summaryKo": "NVIDIA와 주요 컴퓨터 제조사들이 기업용 AI 팩토리와 데이터센터를 위한 Blackwell 기반 시스템을 발표했다.",
+    "asset": "NVDA",
+    "benchmark": "QQQ",
+    "coverage": "Direct",
+    "engagement": {
+      "likes": null,
+      "reposts": null,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": 4.36,
+      "volumeMultiple": 1.01,
+      "cumulativeAbnormal3D": 8.84,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 4.9,
+        "benchmark": 0.54
+      },
+      {
+        "day": 1,
+        "asset": 6.21,
+        "benchmark": 0.81
+      },
+      {
+        "day": 3,
+        "asset": 11.68,
+        "benchmark": 2.84
+      }
+    ],
+    "priceWindow": [
+      {
+        "session": -5,
+        "date": "2024-05-24",
+        "close": 106.47
+      },
+      {
+        "session": -4,
+        "date": "2024-05-28",
+        "close": 113.9
+      },
+      {
+        "session": -3,
+        "date": "2024-05-29",
+        "close": 114.82
+      },
+      {
+        "session": -2,
+        "date": "2024-05-30",
+        "close": 110.5
+      },
+      {
+        "session": -1,
+        "date": "2024-05-31",
+        "close": 109.63
+      },
+      {
+        "session": 0,
+        "date": "2024-06-03",
+        "close": 115
+      },
+      {
+        "session": 1,
+        "date": "2024-06-04",
+        "close": 116.44
+      },
+      {
+        "session": 2,
+        "date": "2024-06-05",
+        "close": 122.44
+      },
+      {
+        "session": 3,
+        "date": "2024-06-06",
+        "close": 121
+      },
+      {
+        "session": 4,
+        "date": "2024-06-07",
+        "close": 120.89
+      },
+      {
+        "session": 5,
+        "date": "2024-06-10",
+        "close": 121.79
+      }
+    ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2024-05-24",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2024-05-28",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2024-05-29",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2024-05-30",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2024-05-31",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2024-06-03",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2024-06-04",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2024-06-05",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2024-06-06",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2024-06-07",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2024-06-10",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
+    "eventSession": "2024-06-03",
+    "rationale": "NVDA is the direct listed issuer behind the Blackwell systems announcement.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Reaction detected",
+      "summaryEn": "NVIDIA Newsroom's AI infrastructure signal shows 4.36% absolute one-day excess movement in NVDA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "NVIDIA Newsroom의 AI infrastructure 시그널 이후 NVDA에서 1일 기준 4.36%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as AI infrastructure.",
+          "summaryKo": "AI infrastructure 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "NVDA is mapped as a direct or policy-linked asset.",
+          "summaryKo": "NVDA을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Low",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
+  },
+  {
+    "id": "news-openai-gpt4o-2024-05-13",
+    "person": "openai",
+    "personName": "OpenAI",
+    "role": "Product announcement",
+    "platform": "OpenAI News",
+    "sourceType": "News",
+    "timePrecision": "date",
+    "publishedAt": "2024-05-13T12:00:00Z",
+    "text": "OpenAI introduced GPT-4o as its newest flagship model and expanded advanced ChatGPT capabilities to free users.",
+    "sourceUrl": "https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/",
+    "topic": "AI product launch",
+    "signalType": "Industry signal",
+    "tags": [
+      "OpenAI",
+      "GPT-4o",
+      "ChatGPT",
+      "AI"
+    ],
+    "hashtags": [],
+    "summaryKo": "OpenAI가 새로운 플래그십 모델 GPT-4o를 공개하고 ChatGPT 무료 사용자에게 고급 기능을 확대했다.",
+    "asset": "MSFT",
+    "benchmark": "QQQ",
+    "coverage": "Proxy",
+    "engagement": {
+      "likes": null,
+      "reposts": null,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": -0.48,
+      "volumeMultiple": 0.75,
+      "cumulativeAbnormal3D": -0.44,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -0.25,
+        "benchmark": 0.23
+      },
+      {
+        "day": 1,
+        "asset": 0.44,
+        "benchmark": 0.88
+      },
+      {
+        "day": 3,
+        "asset": 2.01,
+        "benchmark": 2.45
+      }
+    ],
+    "priceWindow": [
+      {
+        "session": -5,
+        "date": "2024-05-06",
+        "close": 413.54
+      },
+      {
+        "session": -4,
+        "date": "2024-05-07",
+        "close": 409.34
+      },
+      {
+        "session": -3,
+        "date": "2024-05-08",
+        "close": 410.54
+      },
+      {
+        "session": -2,
+        "date": "2024-05-09",
+        "close": 412.32
+      },
+      {
+        "session": -1,
+        "date": "2024-05-10",
+        "close": 414.74
+      },
+      {
+        "session": 0,
+        "date": "2024-05-13",
+        "close": 413.72
+      },
+      {
+        "session": 1,
+        "date": "2024-05-14",
+        "close": 416.56
+      },
+      {
+        "session": 2,
+        "date": "2024-05-15",
+        "close": 423.08
+      },
+      {
+        "session": 3,
+        "date": "2024-05-16",
+        "close": 420.99
+      },
+      {
+        "session": 4,
+        "date": "2024-05-17",
+        "close": 420.21
+      },
+      {
+        "session": 5,
+        "date": "2024-05-20",
+        "close": 425.34
+      }
+    ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2024-05-06",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2024-05-07",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2024-05-08",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2024-05-09",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2024-05-10",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2024-05-13",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2024-05-14",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2024-05-15",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2024-05-16",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2024-05-17",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2024-05-20",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
+    "eventSession": "2024-05-13",
+    "rationale": "OpenAI is private. MSFT is labeled as a partnership proxy rather than direct OpenAI equity.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Mixed evidence",
+      "summaryEn": "OpenAI's AI product launch signal shows 0.48% absolute one-day excess movement in MSFT. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "OpenAI의 AI product launch 시그널 이후 MSFT에서 1일 기준 0.48%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as AI product launch.",
+          "summaryKo": "AI product launch 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "MSFT is a proxy rather than direct equity.",
+          "summaryKo": "MSFT은(는) 직접 지분이 아닌 프록시 자산입니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Low",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Proxy mapping and source-time limits lower attribution confidence.",
+          "summaryKo": "프록시 매핑과 출처 시각의 한계 때문에 귀속 신뢰도를 낮췄습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose.",
+        "The selected listed asset is a proxy, not direct ownership."
+      ]
+    }
+  },
+  {
     "id": "musk-1785406795814510785",
     "person": "musk",
     "personName": "Elon Musk",
@@ -6286,6 +7298,258 @@
           "id": "report",
           "state": "Complete",
           "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
+  },
+  {
+    "id": "news-nvidia-blackwell-2024-03-18",
+    "person": "nvidia",
+    "personName": "NVIDIA Newsroom",
+    "role": "Company newsroom",
+    "platform": "NVIDIA Newsroom",
+    "sourceType": "News",
+    "timePrecision": "date",
+    "publishedAt": "2024-03-18T12:00:00Z",
+    "text": "NVIDIA announced the Blackwell platform for real-time generative AI on trillion-parameter models.",
+    "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing",
+    "topic": "AI infrastructure",
+    "signalType": "Industry signal",
+    "tags": [
+      "NVIDIA",
+      "Blackwell",
+      "GPU",
+      "generative AI"
+    ],
+    "hashtags": [],
+    "summaryKo": "NVIDIA가 초거대 생성형 AI 실행을 위한 Blackwell 플랫폼을 발표했다.",
+    "asset": "NVDA",
+    "benchmark": "QQQ",
+    "coverage": "Direct",
+    "engagement": {
+      "likes": null,
+      "reposts": null,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": -0.12,
+      "volumeMultiple": 1.07,
+      "cumulativeAbnormal3D": 0.62,
+      "persistence": "Reversed"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 0.7,
+        "benchmark": 0.82
+      },
+      {
+        "day": 1,
+        "asset": 1.78,
+        "benchmark": 1.07
+      },
+      {
+        "day": 3,
+        "asset": 2.89,
+        "benchmark": 2.27
+      }
+    ],
+    "priceWindow": [
+      {
+        "session": -5,
+        "date": "2024-03-11",
+        "close": 85.77
+      },
+      {
+        "session": -4,
+        "date": "2024-03-12",
+        "close": 91.91
+      },
+      {
+        "session": -3,
+        "date": "2024-03-13",
+        "close": 90.89
+      },
+      {
+        "session": -2,
+        "date": "2024-03-14",
+        "close": 87.94
+      },
+      {
+        "session": -1,
+        "date": "2024-03-15",
+        "close": 87.84
+      },
+      {
+        "session": 0,
+        "date": "2024-03-18",
+        "close": 88.46
+      },
+      {
+        "session": 1,
+        "date": "2024-03-19",
+        "close": 89.4
+      },
+      {
+        "session": 2,
+        "date": "2024-03-20",
+        "close": 90.37
+      },
+      {
+        "session": 3,
+        "date": "2024-03-21",
+        "close": 91.43
+      },
+      {
+        "session": 4,
+        "date": "2024-03-22",
+        "close": 94.29
+      },
+      {
+        "session": 5,
+        "date": "2024-03-25",
+        "close": 95
+      }
+    ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2024-03-11",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2024-03-12",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2024-03-13",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2024-03-14",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2024-03-15",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2024-03-18",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2024-03-19",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2024-03-20",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2024-03-21",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2024-03-22",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2024-03-25",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
+    "eventSession": "2024-03-18",
+    "rationale": "NVDA is the direct listed issuer behind the Blackwell platform announcement.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Insufficient evidence",
+      "summaryEn": "NVIDIA Newsroom's AI infrastructure signal shows 0.12% absolute one-day excess movement in NVDA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "NVIDIA Newsroom의 AI infrastructure 시그널 이후 NVDA에서 1일 기준 0.12%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as AI infrastructure.",
+          "summaryKo": "AI infrastructure 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "NVDA is mapped as a direct or policy-linked asset.",
+          "summaryKo": "NVDA을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Monitoring",
+          "confidence": "Low",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
           "summaryEn": "Evidence report generated with non-causality caveats.",
           "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
         }

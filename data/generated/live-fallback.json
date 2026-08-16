@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-16T04:42:37.833Z",
+  "fetchedAt": "2026-08-16T06:14:32.849Z",
   "mode": "fallback",
   "signals": [
     {
@@ -73,7 +73,7 @@
       "cadence": "Daily demo refresh",
       "access": "Free",
       "state": "Fresh",
-      "lastSuccessAt": "2026-08-16T04:42:37.833Z",
+      "lastSuccessAt": "2026-08-16T06:14:32.849Z",
       "note": "Independent public archive; production uses licensed Truth API."
     },
     {
@@ -83,7 +83,7 @@
       "cadence": "Daily",
       "access": "Free",
       "state": "Fresh",
-      "lastSuccessAt": "2026-08-16T04:42:37.833Z",
+      "lastSuccessAt": "2026-08-16T06:14:32.849Z",
       "note": "Five-symbol demo scope. Display licensing required for commercial use."
     },
     {
@@ -93,7 +93,7 @@
       "cadence": "Near real time in Pro",
       "access": "Paid connector",
       "state": "Stale",
-      "lastSuccessAt": "2026-08-16T04:42:37.833Z",
+      "lastSuccessAt": "2026-08-16T06:14:32.849Z",
       "note": "Historical cases are available; live X ingestion is intentionally disabled in Free."
     },
     {
@@ -113,7 +113,7 @@
       "cadence": "Reviewed filing events",
       "access": "Free",
       "state": "Fresh",
-      "lastSuccessAt": "2026-08-16T04:42:37.833Z",
+      "lastSuccessAt": "2026-08-16T06:14:32.849Z",
       "note": "Original filing pages and SEC acceptance timestamps are preserved."
     }
   ]
