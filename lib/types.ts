@@ -1,5 +1,7 @@
-export type PersonId = "trump" | "musk" | "altman" | "nvidia" | "tesla" | "openai" | "us-senate";
-export type SignalType = "Policy signal" | "Executive signal" | "Industry signal";
+export type PersonId =
+  "trump" | "musk" | "altman" | "nvidia" | "tesla" | "openai" | "us-senate";
+export type SignalType =
+  "Policy signal" | "Executive signal" | "Industry signal";
 export type SourceType = "Social" | "News" | "Filing" | "Hearing";
 export type EvidenceConfidence = "Low" | "Medium" | "High";
 export type AgentStageState = "Complete" | "Monitoring" | "Pending";
@@ -113,8 +115,10 @@ export interface LivePayload {
   sources: SourceStatus[];
 }
 
-export type CandidateClassificationMethod = "human_reviewed" | "ai" | "rules" | "pending";
-export type CandidateRelevance = "signal" | "candidate" | "uncertain" | "not_signal";
+export type CandidateClassificationMethod =
+  "human_reviewed" | "ai" | "rules" | "pending";
+export type CandidateRelevance =
+  "signal" | "candidate" | "uncertain" | "not_signal";
 
 export interface SignalCandidate {
   id: string;
@@ -127,7 +131,11 @@ export interface SignalCandidate {
   sourceUrl: string;
   externalUrls: string[];
   hashtags: string[];
-  engagement: { likes: number | null; reposts: number | null; views: number | null };
+  engagement: {
+    likes: number | null;
+    reposts: number | null;
+    views: number | null;
+  };
   topic: string;
   assets: string[];
   classificationMethod: CandidateClassificationMethod;
@@ -138,6 +146,23 @@ export interface SignalCandidate {
   reviewed: boolean;
   aiReason: string | null;
   evidence?: CandidateEvidence;
+}
+
+export interface NewsArticle {
+  title: string;
+  url: string;
+  domain: string;
+  publishedAt: string | null;
+}
+
+export interface NewsEvidencePayload {
+  eventId: string;
+  status: "live" | "snapshot" | "unavailable";
+  fetchedAt: string;
+  query: string;
+  counts: Record<string, number>;
+  articles: NewsArticle[];
+  message: string;
 }
 
 export interface CandidateEvidence {

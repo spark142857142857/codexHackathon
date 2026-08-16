@@ -9,11 +9,18 @@ export async function GET(request: NextRequest) {
   const authorization = request.headers.get("authorization");
 
   if (!secret || authorization !== `Bearer ${secret}`) {
-    return NextResponse.json({ ok: false, error: "Unauthorized" }, { status: 401 });
+    return NextResponse.json(
+      { ok: false, error: "Unauthorized" },
+      { status: 401 },
+    );
   }
 
   revalidateTag("market-live", "max");
+  revalidateTag("gdelt-news", "max");
   const payload = await getLivePayload({ force: true });
-  return NextResponse.json({ ok: true, refreshedAt: payload.fetchedAt, mode: payload.mode });
+  return NextResponse.json({
+    ok: true,
+    refreshedAt: payload.fetchedAt,
+    mode: payload.mode,
+  });
 }
-
