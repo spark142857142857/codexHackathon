@@ -2,7 +2,8 @@ import { describe, expect, it } from "vitest";
 import { marketEvents } from "@/lib/data";
 
 describe("reviewed event dataset", () => {
-  it("contains eight cases for every supported person", () => {
+  it("keeps the reviewed showcase separate from the full candidate catalog", () => {
+    expect(marketEvents).toHaveLength(28);
     for (const person of ["trump", "musk", "altman"]) {
       expect(marketEvents.filter((event) => event.person === person)).toHaveLength(8);
     }
