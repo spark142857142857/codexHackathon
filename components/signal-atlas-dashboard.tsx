@@ -769,6 +769,7 @@ export function SignalAtlasDashboard({
     return (
       <g
         className={`timeline-marker timeline-marker-${mapping.toLowerCase()}`}
+        data-event-id={event.id}
         role="button"
         tabIndex={0}
         aria-label={locale === "ko" ? `${label} 상세 사건 열기` : `Open ${label}`}
@@ -1164,7 +1165,15 @@ export function SignalAtlasDashboard({
             <span><i className="proxy" />Proxy</span>
             <small>{locale === "ko" ? `${marketTimeline.rows.length}개 관찰 세션 · 실제 종가` : `${marketTimeline.rows.length} observed sessions · actual closes`}</small>
           </div>
-          <div className="market-timeline-chart">
+          <div
+            className="market-timeline-chart"
+            onClick={(chartEvent) => {
+              const target = chartEvent.target as Element;
+              const marker = target.closest<SVGGElement>("[data-event-id]");
+              const eventId = marker?.dataset.eventId;
+              if (eventId) openTimelineSignal(events.find((event) => event.id === eventId));
+            }}
+          >
             <ResponsiveContainer width="100%" height="100%">
               <ComposedChart data={marketTimeline.rows} margin={{ top: 18, right: 18, left: 2, bottom: 4 }}>
                 <CartesianGrid stroke="#e4e7e2" strokeDasharray="3 3" vertical={false} />

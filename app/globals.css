@@ -3101,10 +3101,11 @@ footer a {
 }
 .app-main .explorer-grid { align-items: stretch; }
 .app-main .event-list {
-  height: 100%;
+  height: auto;
   min-height: 0;
   max-height: none;
   overflow-y: auto;
+  contain: size;
 }
 .timeline-footnote {
   display: flex;
