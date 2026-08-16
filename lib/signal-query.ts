@@ -1,4 +1,4 @@
-import type { CandidateClassificationMethod, SignalCatalog, SignalCatalogResponse } from "@/lib/types";
+import type { CandidateClassificationMethod, EvidenceUniverse, SignalCatalog, SignalCatalogResponse, SignalScope } from "@/lib/types";
 
 export interface SignalQuery {
   page?: number;
@@ -7,17 +7,23 @@ export interface SignalQuery {
   entity?: string;
   method?: CandidateClassificationMethod | "all";
   topic?: string;
+  scope?: SignalScope;
 }
 
-export function querySignals(catalog: SignalCatalog, query: SignalQuery): SignalCatalogResponse {
+export function querySignals(catalog: SignalCatalog, universe: EvidenceUniverse, query: SignalQuery): SignalCatalogResponse {
   const page = Math.max(1, Math.floor(query.page ?? 1));
   const limit = Math.min(100, Math.max(1, Math.floor(query.limit ?? 20)));
   const needle = (query.q ?? "").trim().toLowerCase();
   const entity = query.entity ?? "all";
   const method = query.method ?? "all";
   const topic = query.topic ?? "all";
+  const scope = query.scope ?? "all";
+  const representativeIds = new Set(universe.representativeIds);
+  const evidenceById = new Map(universe.evidence.map((item) => [item.id, item]));
 
   const filtered = catalog.records.filter((record) => {
+    if (scope === "representatives" && !representativeIds.has(record.id)) return false;
+    if (scope === "evidence" && !evidenceById.has(record.id)) return false;
     if (entity !== "all" && record.entityId !== entity) return false;
     if (method !== "all" && record.classificationMethod !== method) return false;
     if (topic !== "all" && record.topic !== topic) return false;
@@ -33,7 +39,12 @@ export function querySignals(catalog: SignalCatalog, query: SignalQuery): Signal
 
   return {
     meta: catalog.meta,
-    items: filtered.slice(start, start + limit),
+    universe: universe.meta,
+    scope,
+    items: filtered.slice(start, start + limit).map((record) => {
+      const evidence = evidenceById.get(record.id);
+      return evidence ? { ...record, evidence } : record;
+    }),
     pagination: { page: safePage, limit, total: filtered.length, pages },
     facets: {
       topics: [...topicCounts.entries()]
