@@ -52,5 +52,6 @@ Codex was used to inspect the source datasets, define the product boundary, impl
 - Added deterministic eligibility, preliminary topic mapping, exact-duplicate detection, and time/topic seed clustering for all 32,393 candidates.
 - Added a server-paginated `GET /api/signals` catalog so the full generated dataset stays on the server rather than entering the client bundle.
 - Added an OpenAI Batch JSONL preparation/import workflow. No AI-complete label appears until an actual result has been imported.
+- Added key-gated Batch upload, creation, status, and result-download scripts; they are implemented but intentionally not executed without billing credentials.
 - Routed deeper amplification, market, audit, and report work conditionally at the cluster level; missing news or platform-wide social coverage remains explicitly unavailable.
 - Added a bilingual Signal Universe UI with corpus counts, orchestration stages, search, filters, pagination, and the Sam Altman corpus limitation.

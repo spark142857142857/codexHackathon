@@ -60,6 +60,8 @@ The public deployment does **not** claim that the full corpus has already been A
 npm run data:build  # Rebuild the reviewed JSON artifacts from local source CSVs
 npm run catalog:build  # Rebuild all 32,393 candidate rows and rule-seeded clusters
 npm run ai:batch:prepare  # Create one /v1/responses JSONL request per candidate
+npm run ai:batch:submit  # Upload the JSONL and create a paid 24-hour Batch job
+npm run ai:batch:sync  # Check status and download completed output
 npm run ai:batch:import -- data/batch/completed-output.jsonl
 npm run lint
 npm run test
@@ -89,8 +91,9 @@ Running six agents independently for every source row would create hundreds of t
 1. Deterministic eligibility rules ingest every original and preserve its source URL.
 2. Cheap rules create preliminary topics, assets, and time-bucket clusters without pretending to be AI.
 3. `ai:batch:prepare` writes 32,393 unique `/v1/responses` requests to a generated JSONL transport file.
-4. A completed Batch output is imported into `data/ai-classifications.source.json`, then `catalog:build` merges the AI decisions.
-5. Only relevant clusters advance to news/social amplification, market calculation, confidence audit, and reporting.
+4. With `OPENAI_API_KEY` set, `ai:batch:submit` uploads the file and creates the 24-hour job; `ai:batch:sync` checks and downloads the result.
+5. The completed output is imported into `data/ai-classifications.source.json`, then `catalog:build` merges the AI decisions.
+6. Only relevant clusters advance to news/social amplification, market calculation, confidence audit, and reporting.
 
 OpenAI documents Batch as an asynchronous fit for large-dataset classification, with separate rate limits, lower cost, and a 24-hour completion window: [Batch API guide](https://developers.openai.com/api/docs/guides/batch). Batch input/output JSONL files are reproducible transport artifacts and remain outside Git; the compact merged catalog and classification source are committed.
 
