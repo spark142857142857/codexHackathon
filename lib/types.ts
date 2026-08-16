@@ -112,3 +112,54 @@ export interface LivePayload {
   prices: Record<string, { price: number; asOf: string }>;
   sources: SourceStatus[];
 }
+
+export type CandidateClassificationMethod = "human_reviewed" | "ai" | "rules" | "pending";
+export type CandidateRelevance = "signal" | "candidate" | "uncertain" | "not_signal";
+
+export interface SignalCandidate {
+  id: string;
+  entity: string;
+  entityId: "trump" | "musk";
+  sourceType: "Social";
+  platform: string;
+  publishedAt: string;
+  text: string;
+  sourceUrl: string;
+  hashtags: string[];
+  engagement: { likes: number | null; reposts: number | null; views: number | null };
+  topic: string;
+  assets: string[];
+  classificationMethod: CandidateClassificationMethod;
+  relevance: CandidateRelevance;
+  confidence: EvidenceConfidence;
+  clusterId: string;
+  duplicateCount: number;
+  reviewed: boolean;
+  aiReason: string | null;
+}
+
+export interface SignalCatalogMeta {
+  generatedAt: string;
+  rawCorpusTotal: number;
+  eligibleCandidates: number;
+  reviewedShowcases: number;
+  reviewedInCatalog: number;
+  aiClassified: number;
+  aiPending: number;
+  clusterCount: number;
+  entityCounts: Record<string, number>;
+  methodCounts: Record<string, number>;
+  note: string;
+}
+
+export interface SignalCatalog {
+  meta: SignalCatalogMeta;
+  records: SignalCandidate[];
+}
+
+export interface SignalCatalogResponse {
+  meta: SignalCatalogMeta;
+  items: SignalCandidate[];
+  pagination: { page: number; limit: number; total: number; pages: number };
+  facets: { topics: Array<{ value: string; count: number }> };
+}

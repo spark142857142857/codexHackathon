@@ -9,7 +9,10 @@
     "lint": "eslint app components lib scripts next.config.ts vitest.config.ts",
     "test": "vitest run",
     "test:watch": "vitest",
-    "data:build": "node scripts/build-events.mjs"
+    "data:build": "node scripts/build-events.mjs && node scripts/build-signal-catalog.mjs",
+    "catalog:build": "node scripts/build-signal-catalog.mjs",
+    "ai:batch:prepare": "node scripts/prepare-ai-batch.mjs",
+    "ai:batch:import": "node scripts/import-ai-batch.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^5.2.5",
