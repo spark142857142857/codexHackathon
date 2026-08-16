@@ -1172,9 +1172,9 @@ export function SignalAtlasDashboard({
                 <YAxis domain={["auto", "auto"]} tickFormatter={(value) => `$${Number(value).toFixed(0)}`} tick={{ fill: "#68736d", fontSize: 10 }} axisLine={false} tickLine={false} width={48} />
                 <Tooltip labelFormatter={(label) => `${timelineAsset} · ${label}`} formatter={(value, name) => name === "close" ? [`$${Number(value).toFixed(2)}`, locale === "ko" ? "종가" : "Close"] : [`$${Number(value).toFixed(2)}`, String(name).replace("Value", "")]} />
                 <Line isAnimationActive={false} type="monotone" dataKey="close" name="close" stroke="#205b43" strokeWidth={2.6} dot={false} activeDot={{ r: 4 }} />
-                <Scatter dataKey="DirectValue" name="Direct" fill="#1f6f4a" shape={(props: unknown) => renderTimelineMarker(props, "Direct", "circle")} />
-                <Scatter dataKey="PolicyValue" name="Policy" fill="#a66a2d" shape={(props: unknown) => renderTimelineMarker(props, "Policy", "triangle")} />
-                <Scatter dataKey="ProxyValue" name="Proxy" fill="#75658c" shape={(props: unknown) => renderTimelineMarker(props, "Proxy", "diamond")} />
+                <Scatter dataKey="DirectValue" name="Direct" fill="#1f6f4a" tooltipType="none" shape={(props: unknown) => renderTimelineMarker(props, "Direct", "circle")} />
+                <Scatter dataKey="PolicyValue" name="Policy" fill="#a66a2d" tooltipType="none" shape={(props: unknown) => renderTimelineMarker(props, "Policy", "triangle")} />
+                <Scatter dataKey="ProxyValue" name="Proxy" fill="#75658c" tooltipType="none" shape={(props: unknown) => renderTimelineMarker(props, "Proxy", "diamond")} />
               </ComposedChart>
             </ResponsiveContainer>
           </div>
