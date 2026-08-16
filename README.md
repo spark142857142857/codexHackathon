@@ -12,7 +12,7 @@ The core path is deliberately inspectable:
 
 The product now separates the full source universe from the reviewed demo layer:
 
-`145,442 raw rows → 32,393 eligible originals → 1,162 cluster representatives → 200 evidence-ready Atlas signals`
+`145,442 raw rows → 32,393 eligible originals → 1,162 cluster representatives → 735 evidence-ready social signals + 7 verified newsroom signals`
 
 ## Demo scope
 
@@ -20,9 +20,9 @@ The product now separates the full source universe from the reviewed demo layer:
 - Core people: Donald Trump, Elon Musk, and Sam Altman
 - Assets: SPY, QQQ, TSLA, NVDA, MSFT, BTC-USD, and SOXX
 - Candidate universe: all 32,393 non-reply/non-repost Musk and Trump originals since 2023, searchable through a paginated server API
-- Evidence universe: one representative per 1,162 cluster, with deterministic market and attention enrichment for 200 priority signals
-- Main Signal Atlas: all 200 evidence-ready Trump/Musk signals with price, attention, and six-stage reports
-- Reviewed reference library: 28 retained source records, no longer used as the main Atlas list
+- Evidence universe: one representative per 1,162 cluster, with deterministic enrichment for every market-relevant cluster that has a valid price window
+- Main Signal Atlas: currently 735 evidence-ready Trump/Musk signals plus seven verified newsroom announcements, without a fixed product cap
+- Reviewed reference library: 33 retained source records, including seven official OpenAI/NVIDIA newsroom announcements
 - Current signal: Trump public statements from an independent public RSS archive
 - Market refresh: five daily prices through Twelve Data when configured
 - Metrics: Abnormal Return 1D, Volume Multiple, and 3D Persistence
@@ -56,7 +56,7 @@ No AI key is required. `/api/research` runs the six roles deterministically from
 ```bash
 npm run data:build  # Rebuild the reviewed JSON artifacts from local source CSVs
 npm run catalog:build  # Rebuild all 32,393 candidate rows and rule-seeded clusters
-npm run evidence:build  # Select cluster representatives and enrich 200 priority signals
+npm run evidence:build  # Enrich every market-relevant cluster with a valid price window
 npm run ai:batch:prepare  # Create one /v1/responses JSONL request per candidate
 npm run ai:batch:submit  # Upload the JSONL and create a paid 24-hour Batch job
 npm run ai:batch:sync  # Check status and download completed output
@@ -68,19 +68,20 @@ npm run build
 
 ## Data pipeline
 
-Large source CSVs are intentionally excluded from Git and production. `scripts/build-events.mjs` builds the reviewed market-reaction cases. `scripts/build-signal-catalog.mjs` ingests every eligible original from the complete local Musk and Trump corpora. `scripts/build-evidence-universe.mjs` selects one representative per cluster and adds build-time Yahoo price, volume, volatility, and tracked-corpus attention evidence to 200 priority signals. The browser receives only the requested page, never the full catalog.
+Large source CSVs are intentionally excluded from Git and production. `scripts/build-events.mjs` builds reviewed cross-source cases. `scripts/build-signal-catalog.mjs` ingests every eligible original from the complete local Musk and Trump corpora. `scripts/build-evidence-universe.mjs` selects one representative per cluster and adds build-time Yahoo price, volume, volatility, and tracked-corpus attention evidence to every market-relevant representative with a valid price window. The browser receives only requested catalog pages rather than the full source catalog.
 
 - Musk history: local `all_musk_posts.csv`
 - Trump history: local `Kaggle_Trump_2009_2025.csv`
 - Sam Altman cases: reviewed records derived from the [SuperX 2026 Top 50](https://superx.so/tweets/sam-altman)
 - Cross-source cases: original OpenAI/NVIDIA announcements, a Tesla SEC filing, and a U.S. Senate AI hearing
+- Main Atlas source mix: 193 social signals and seven official newsroom announcements
 - News-volume snapshots: GDELT DOC 2.0 `TimelineVolRaw`; each stored case preserves its query and raw daily article counts
 - Public-attention scope: mentions and hashtags cover only the tracked Musk/Trump source corpora and are never labeled as platform-wide counts
 - Current Trump statements: independent [Trump's Truth public RSS archive](https://www.trumpstruth.org/about)
 - Current prices: [Twelve Data Basic](https://twelvedata.com/pricing)
 - Paid roadmap: official [X Search API](https://docs.x.com/x-api/posts/search/introduction)
 
-The current corpus boundary is explicit: the 200-signal Atlas uses complete local Musk and Trump history. Sam Altman remains only in the retained reviewed reference data because no complete local source corpus is available.
+The current corpus boundary is explicit: the uncapped Atlas uses complete local Musk and Trump history plus verified OpenAI/NVIDIA newsroom records. Sam Altman remains only in retained reviewed reference data because no complete local source corpus is available.
 
 ## Full-corpus evidence orchestration
 
@@ -88,7 +89,7 @@ Running deep analysis independently for every source row would repeat near-ident
 
 1. Deterministic eligibility rules ingest every original and preserve its source URL.
 2. Rules create topics, assets, and time-bucket clusters, then select the highest-evidence representative of each cluster.
-3. The top 200 market-relevant representatives receive actual price, volume, volatility, tracked mentions, and linked-media-reference evidence at build time.
+3. Every market-relevant representative with a valid price window receives actual price, volume, volatility, tracked mentions, and linked-media-reference evidence at build time.
 4. Six deterministic roles classify, map, inspect amplification, calculate market reaction, audit confidence, and render a bilingual report.
 5. Missing global news or social coverage stays explicitly unavailable; recent RSS signals stay `Pending` until a market session is observable.
 6. Optional Batch scripts remain a future AI-assisted classification path, not a dependency or a completed capability of the public demo.

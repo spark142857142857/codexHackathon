@@ -10,9 +10,9 @@ type MethodFilter = CandidateClassificationMethod | "all";
 const labels = {
   en: {
     kicker: "SIGNAL UNIVERSE",
-    title: "The 28 cases are the reviewed layer—not the whole dataset",
-    desc: "Every eligible original remains searchable. One representative per cluster removes repetition, then 200 market-relevant signals receive actual price, volume, volatility, and scoped attention evidence.",
-    raw: "Raw source rows", eligible: "Eligible originals", clusters: "Cluster reps", reviewed: "Human-reviewed", enriched: "Evidence-ready", showing: "Current layer",
+    title: "From 32,393 originals to an evidence-ready signal atlas",
+    desc: "Every eligible original remains searchable. One representative per cluster removes repetition, then every market-relevant cluster with a valid price window receives price, volume, volatility, and scoped attention evidence.",
+    raw: "Raw source rows", eligible: "Eligible originals", clusters: "Cluster reps", reviewed: "Reviewed references", enriched: "Evidence-ready", showing: "Current layer",
     search: "Search all candidate texts, topics, assets…", allPeople: "All people", allMethods: "All stages", allTopics: "All topics",
     result: "matching candidates", source: "Original", noResults: "No candidates match these filters.",
     methods: { human_reviewed: "Reviewed", ai: "Optional AI label", rules: "Rules classified", pending: "Unclassified" },
@@ -24,9 +24,9 @@ const labels = {
   },
   ko: {
     kicker: "전체 시그널 유니버스",
-    title: "28개는 전체가 아니라 사람이 검토한 쇼케이스입니다",
-    desc: "조건을 통과한 모든 원문은 검색 가능하게 유지합니다. 군집마다 대표 1개로 반복을 줄이고, 시장 관련성이 높은 200개에는 실제 가격·거래량·변동성·범위가 명시된 관심도 근거를 붙였습니다.",
-    raw: "원본 데이터 행", eligible: "후보 원문", clusters: "군집 대표", reviewed: "사람 검토", enriched: "근거 준비 완료", showing: "현재 레이어",
+    title: "32,393개 원문을 근거 중심 시그널 아틀라스로 정리했습니다",
+    desc: "조건을 통과한 모든 원문은 검색 가능하게 유지합니다. 군집마다 대표 1개로 반복을 줄이고, 유효한 가격 구간이 있는 모든 시장 관련 군집에 실제 가격·거래량·변동성·범위가 명시된 관심도 근거를 붙였습니다.",
+    raw: "원본 데이터 행", eligible: "후보 원문", clusters: "군집 대표", reviewed: "검토 참고자료", enriched: "근거 준비 완료", showing: "현재 레이어",
     search: "전체 후보의 원문·주제·자산 검색…", allPeople: "모든 인물", allMethods: "모든 단계", allTopics: "모든 주제",
     result: "개 후보 검색됨", source: "원문", noResults: "조건에 맞는 후보가 없습니다.",
     methods: { human_reviewed: "검토 완료", ai: "선택형 AI 라벨", rules: "규칙 분류", pending: "미분류" },

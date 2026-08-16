@@ -59,9 +59,9 @@ Codex was used to inspect the source datasets, define the product boundary, impl
 ## API-free evidence orchestration
 
 - Replaced the public live-model path with six deterministic roles that run from observed source, mapping, attention, and market fields.
-- Added one representative per cluster and a 200-signal priority layer, preserving all 32,393 originals for search while preventing repeated deep analysis.
+- Added one representative per cluster and an evidence-ready layer, preserving all 32,393 originals for search while preventing repeated deep analysis.
 - Added committed build-time evidence for BTC-USD and SOXX alongside SPY, QQQ, TSLA, NVDA, and MSFT.
 - Added actual D-5 through D+5 closes, abnormal return, volume multiple, volatility multiple, persistence, tracked-corpus mentions, and linked-media references to the priority layer.
 - Renamed the visible workflow to Evidence Research and positioned it as AI-ready conditional orchestration rather than completed AI analysis.
 - Added an explicit latest-signal `Pending` state so an RSS arrival is never shown as a confirmed market reaction.
-- Replaced the main Signal Atlas 28-case list with the 200 evidence-ready signals; the 28 reviewed records remain a separate reference artifact only.
+- Removed the temporary 200-signal cap. The current build produces 735 eligible social signals plus seven verified OpenAI/NVIDIA newsroom announcements; future builds grow automatically with valid data.
