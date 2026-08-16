@@ -1,8 +1,10 @@
 import eventsJson from "@/data/generated/events.json";
+import atlasEventsJson from "@/data/generated/atlas-events.json";
 import liveFallbackJson from "@/data/generated/live-fallback.json";
 import type { LivePayload, MarketEvent } from "@/lib/types";
 
-export const marketEvents = eventsJson as MarketEvent[];
+export const reviewedEvents = eventsJson as MarketEvent[];
+export const marketEvents = atlasEventsJson as MarketEvent[];
 export const liveFallback = liveFallbackJson as LivePayload;
 
 export const people = [
@@ -28,4 +30,3 @@ export const people = [
     description: "AI-industry statements measured through explicitly labeled proxy assets.",
   },
 ];
-

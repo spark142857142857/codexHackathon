@@ -35,7 +35,7 @@ export interface AgentStage {
 }
 
 export interface OrchestrationReport {
-  mode: "reviewed_snapshot" | "openai";
+  mode: "reviewed_snapshot" | "deterministic" | "openai";
   confidence: EvidenceConfidence;
   verdict: "Reaction detected" | "Mixed evidence" | "Insufficient evidence";
   summaryEn: string;
@@ -111,4 +111,99 @@ export interface LivePayload {
   signals: LiveSignal[];
   prices: Record<string, { price: number; asOf: string }>;
   sources: SourceStatus[];
+}
+
+export type CandidateClassificationMethod = "human_reviewed" | "ai" | "rules" | "pending";
+export type CandidateRelevance = "signal" | "candidate" | "uncertain" | "not_signal";
+
+export interface SignalCandidate {
+  id: string;
+  entity: string;
+  entityId: "trump" | "musk";
+  sourceType: "Social";
+  platform: string;
+  publishedAt: string;
+  text: string;
+  sourceUrl: string;
+  externalUrls: string[];
+  hashtags: string[];
+  engagement: { likes: number | null; reposts: number | null; views: number | null };
+  topic: string;
+  assets: string[];
+  classificationMethod: CandidateClassificationMethod;
+  relevance: CandidateRelevance;
+  confidence: EvidenceConfidence;
+  clusterId: string;
+  duplicateCount: number;
+  reviewed: boolean;
+  aiReason: string | null;
+  evidence?: CandidateEvidence;
+}
+
+export interface CandidateEvidence {
+  asset: string;
+  benchmark: string;
+  eventSession: string;
+  abnormalReturn1D: number;
+  volumeMultiple: number;
+  cumulativeAbnormal3D: number;
+  volatilityMultiple: number;
+  persistence: PersistenceState;
+  trackedMentions: number;
+  linkedMediaReferences: number;
+  attentionCoverage: string;
+  priceWindow: PricePoint[];
+  window: WindowPoint[];
+  attentionWindow: AttentionPoint[];
+  orchestration: OrchestrationReport;
+}
+
+export type SignalScope = "all" | "representatives" | "evidence";
+
+export interface EvidenceUniverseMeta {
+  generatedAt: string;
+  representativeCount: number;
+  enrichedCount: number;
+  assetCoverage: string[];
+  methodology: string[];
+}
+
+export interface EvidenceRecord extends CandidateEvidence {
+  id: string;
+  score: number;
+  coverage: "Direct" | "Policy" | "Proxy";
+}
+
+export interface EvidenceUniverse {
+  meta: EvidenceUniverseMeta;
+  representativeIds: string[];
+  evidence: EvidenceRecord[];
+}
+
+export interface SignalCatalogMeta {
+  generatedAt: string;
+  rawCorpusTotal: number;
+  eligibleCandidates: number;
+  reviewedShowcases: number;
+  reviewedInCatalog: number;
+  aiClassified: number;
+  aiPending: number;
+  clusterCount: number;
+  entityCounts: Record<string, number>;
+  methodCounts: Record<string, number>;
+  note: string;
+}
+
+export interface SignalCatalog {
+  meta: SignalCatalogMeta;
+  records: SignalCandidate[];
+}
+
+export interface SignalCatalogResponse {
+  meta: SignalCatalogMeta;
+  universe: EvidenceUniverseMeta;
+  scope: SignalScope;
+  items: SignalCandidate[];
+  pagination: { page: number; limit: number; total: number; pages: number };
+  facets: { topics: Array<{ value: string; count: number }> };
 }

@@ -9,7 +9,13 @@
     "lint": "eslint app components lib scripts next.config.ts vitest.config.ts",
     "test": "vitest run",
     "test:watch": "vitest",
-    "data:build": "node scripts/build-events.mjs"
+    "data:build": "node scripts/build-events.mjs && node scripts/build-signal-catalog.mjs && node scripts/build-evidence-universe.mjs",
+    "catalog:build": "node scripts/build-signal-catalog.mjs",
+    "evidence:build": "node scripts/build-evidence-universe.mjs",
+    "ai:batch:prepare": "node scripts/prepare-ai-batch.mjs",
+    "ai:batch:submit": "node scripts/submit-ai-batch.mjs",
+    "ai:batch:sync": "node scripts/sync-ai-batch.mjs",
+    "ai:batch:import": "node scripts/import-ai-batch.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^5.2.5",

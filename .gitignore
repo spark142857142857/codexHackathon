@@ -11,6 +11,7 @@ coverage/
 
 # generated caches
 data/generated/*.tmp
+data/batch/
 
 # operating system
 .DS_Store
