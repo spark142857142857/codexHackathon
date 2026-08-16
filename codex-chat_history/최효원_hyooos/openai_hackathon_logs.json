@@ -1,0 +1,151 @@
+{
+  "schema": "openai_hackathon_logs/v1",
+  "created_at": "2026-08-16",
+  "timezone": "Asia/Seoul",
+  "workspace": "/Users/hyowon/Desktop/uni/대외활동/3학년/openai 해커톤",
+  "collection_note": "Codex 작업 목록에서 workspace가 openai 해커톤 폴더와 일치하는 작업들을 수집했다. thread_preview는 Codex 목록의 사용자 발화/요청 프리뷰이며, 일부 긴 항목은 Codex UI 제공값 기준으로 truncated일 수 있다. messages는 read_thread로 확인 가능한 최근 사용자 메시지 원문이다.",
+  "thread_count": 8,
+  "threads": [
+    {
+      "thread_id": "01a00991-2753-7683-8db7-a4d1397e3171",
+      "host_id": "local",
+      "status": "active",
+      "title": "해커톤 로그 JSON으로 변환",
+      "description": "OpenAI 해커톤 관련 전체 로그 기록을 JSON 파일로 정리",
+      "created_at_epoch": 1786866902,
+      "updated_at_epoch": 1786867004,
+      "thread_preview": "내가 지금 openai 해커톤에서 말했던 모든 로그 기록들을 json 파일로 만들어줘",
+      "messages": [
+        {
+          "turn_id": "01a00991-7c49-7210-bd37-c8d637615d9a",
+          "role": "user",
+          "text": "내가 지금 openai 해커톤에서 말했던 모든 로그 기록들을 json 파일로 만들어줘"
+        }
+      ]
+    },
+    {
+      "thread_id": "01a00851-e934-7e31-8383-02e48365fa86",
+      "host_id": "local",
+      "status": "active",
+      "title": "Track1 데이터 EDA 정리",
+      "description": "트럼프와 일론머스크 SNS 데이터 기간 설정 및 결측치·engagement EDA 정리",
+      "created_at_epoch": 1786845980,
+      "updated_at_epoch": 1786866995,
+      "thread_preview": "<aside>\n\n### [확정 사항]\n\n- 기간\n  - Track1: 23.01.01~25.04.13 으로 확정\n    - 일론머스크랑 트럼프 둘 다 데이터로 커버 가능한 공통 구간임\n    - 트럼프의 후보/시민 시기 + 25.01.20 이후 대통령으로 복귀 초기까지 포함되어 있어서 뭔가 재밌는 결과가 나올 것 같기도 함\n- 왜 하필 23년부터 시작이냐라고 한다면,\n  - 트럼프가 21년 1월 트위터 정지후에 21~22년에는 플랫폼이 변환된 시기라서\n    \n    → 23년 이후랑 한 덩어리로 비교하게 되면 시장 반응이 “발언 때문인지” “플랫폼 변화 때문인지” “정치적 상황 때문인지” 등이 흐려질 수 있음\n    \n  - 그리고 일론머스크도 22년 10월에 트위터를 인수하면서 SNS 사용방식이나 시장해석, 노출 구조 등이 달라졌을 가능성이 존재함\n  - 20-22년은 코로나, 금리 급등, 테슬라 변동성 급등 등 큰 사건들이 많아서 SNS 게시물의 영향보다는 거시적인 환경 요소가 더 커서 처리하기 어려울 듯 함\n</aside>\n\n## 트럼프\n\n#### 데이터(Track1)\n\nKaggle Trump_2009_2025.csv\n\n- X + Truth Social 통합 데이터 찾음\n  - CC0라서 사용하기에도 괜찮을 듯함\n\n#### EDA(Track1)\n\ntrump_raw_eda.ipynb\n\n- 사실 원래는 engagement를 좋아요 + 리트윗 + 답글로 확인을 하려고 했는데, kaggle 데이터를 확인했을 때, 좋아요와 리트윗만 존재했음\n  \n  ⇒ engagement = likes + reweets 로 사용하는 게 좋을 것 같다.\n  \n\n라고 생각했는데, 해보니까;;\n\nX 복귀 이후에 `repost_count=0` 임 → ‘결측’\n\n- 그래서 engagement를 확인하려면(`H4`) ‘좋아요’수로만 처리를 해야할 듯\n  - 그래서 보조분석으로 truth social 좋아요 + 리포스트, X는 좋아요만 해서 해보고 넣어봐도 괜찮을 것 같기도 한데, 시간 없으면 생략해도 될 듯\n\n## 일론머스크\n\n#### 데이터(Track1)\n\nall_musk_posts.csv\n\n- 일론머스크의 모든 게시물(원본, 리트윗, 답글, 인용 포함)\n  - 55,099행\n\nmusk_quote_tweets.csv\n\n- 그 중 인용 트윗만 뽑아서 원본 게시물 정보를 붙인 버전\n  - 7,273행\n    \n    ⇒ 일론머스크가 뭘 인용하면서 뭐라고 했는지 ‘원본-인용’쌍\n    \n\n#### EDA(Track1)\n\nmusk_raw_eda.ipynb\n\n1. 결측치 관련\n- 결측치가 지금 `viewCount`가 2022년 까지는 100% 결측, 23년부터 0.4%로 급감함\n  - 트위터가 조회수 기능을 23년부터 공개적으로 도입을 해서 그 이전엔 수치가 존재하지 않았다는 것\n  - 근데 어차피 우리는 23년부터 쓸거라 딱히 상관은 없을 듯함\n- `retweet`(98%), `quote` (86.8%), `quoteId`(86.3%) 결측의 경우에도 정상 → fillna(’ ‘)로 처리하면 될 듯\n  - `retweet` : 리트윗인 게시물만 칼럼 채워짐\n  - `quote` : 인용인 게시물만 채워짐\n  - 이때, `quote`와 `quoteid`는 뭐가 다른지?\n    - `quoteid` : 인용된 원본 게시물의 ID 하나만\n    - `quote` : 인용된 원본 게시물의 전체 정보가 들어이있음\n      - 딕셔너리 형태로 id, 본문, 작성자, 좋아요 수 등등 모두 들어있음\n        \n        ⇒ 그런데 둘의 수치가 다른데 - 268개 정도 차이남\n        \n        <aside>\n        \n        둘 다 결측: 47,558개\n        둘 다 값 있음: 7,273개\n        **quote만 결측(quoteId는 있음): 268개** \n        quoteId만 결측(quote는 있음): 0개\n        \n        </aside>\n        \n        - 원본 게시물이 삭제되었거나, 비공개, 차단된 계정의 글 등의 이유가 있을 수 있음\n          \n          → 즉, 이게 뭘 인용한건지 기록에는 남아 있긴한데, 그 원본 내용 자체는 수집 시점에서 가져올 수 없었던 것\n          \n      \n      ⇒ `must_quote_tweets.csv` (상세 파일)과 매칭할 때에도 quoteId랑 orig_tweet_id로 조인하는게 깔끔할 듯\n      \n- possiblySenstive도 민감 게시물이 아니라는 뜻이니까 ㄱㅊ\n  - False로 채워서 해도 괜찮을 것 같음\n  - 그리고 애초에 X에서 ‘민감 콘텐츠 판정’을 미디어(이미지 or 영상) 첨부된 게시물에만 적용하는 기능이라서 텍스트만 있는 대다수의 게시물에는 애초에 해당사항이 없음\n  - 혹시 몰라서 민감 게시물 `True` 표시된 거 확인해봤는데, 3개가 나왔고 셋다 15-17년도 게시물이라서 우리랑은 상관없을 듯\n    - 그리고 그냥 리트윗이라서 굳이?\n    - 어차피 기간 외라 신경쓸 필요 없을 듯\n    - .\n      \n      !image.png\n      \n- `isReply` 가 이 게시물이 답글인지 아닌지를 표시하는 T/F 값\n  - 답글이 아닌 게시물은 애초에 누구한테 답글을 달았는지 기록할 게 없고,\n  - 답글인 게시물은 누구에게 답했는지 id가 있어야 정상ㅇ\n  - 실제 데이터를 대조해본 결과\n    - isReply=False (답글 아님, 15,175건) → inReplyToId 100%(15,175/15,175건) 결측\n    - isReply=True  (답글임, 39,096건)    → inReplyToId 99.9%(39,072/39,096건) 채워짐\n      \n      ⇒ 이므로 정상 결측임\n이걸 좀 서비스화 해보고 싶은데\n그 트럼프가 막 대시보드에서 화내고 이런거나 그리고 주가예측까지 해보는 그런 거 해보고 싶은데 어떻게 생각해??\n좀 진짜 사용해볼 수 있는 그런 서비스\n제품 완성도가 있게끔",
+      "messages": [
+        {
+          "turn_id": "01a0098f-e7ab-7480-b0a3-3e56c46e9352",
+          "role": "user",
+          "text": "걍 다시 ppt로 만들어줘"
+        }
+      ]
+    },
+    {
+      "thread_id": "01a0098e-3e88-71a1-bb18-dd5e039fb51a",
+      "host_id": "local",
+      "status": "active",
+      "title": "수익화 반영 PPT JPG 제작",
+      "description": "Free Pro Campaign Intelligence 요금제와 실시간 데이터 전략을 반영한 PPT JPG 제작",
+      "created_at_epoch": 1786866712,
+      "updated_at_epoch": 1786867002,
+      "thread_preview": "그리고 우리가 수익화를 어떻게 할 건지에 대한 것도 같이 해서 ppt jpg로 만들어 줄 수 있어?\n- free: 기본 인물 2명, 기본 종목 5개 일별 업데이트 최근 7일 이벤트만 보고\n- pro: 관심인물, 종목 추가, 실시간 및 준실시간 업데이트, 뉴스/해시테크/언급량 추적, 알림추적/ 이벤트 리포트 저장\n  - 원하는 유명인사 추가시에 돈 더내기\n  - 유명인사가 본인 추가를 희망할 경우 돈 받기\n  - pro 의 경우에는 **실시간성**을 넣어서\n  - **실시간성의 경우.**\n    - Crypto: CoinGecko로 어느 정도 가능\n    - 뉴스: GDELT/SerpApi/Naver로 주기적 업데이트 가능\n    - 미국 주식: 무료 실시간은 사실상 비추천. Free MVP에서는 “일봉/지연/데모”로 표시하는 게 안전\n\n| 플랜 | 기능 |\n| --- | --- |\n| Free | Musk/Trump/Sam 기본 3명, 최근 이벤트, 일봉/24h 반응, 기본 뉴스/언급량 |\n| Pro | 커스텀 인물 등록, 관심 종목 등록, 실시간/준실시간 업데이트, 알림 |\n| Campaign | 후보자/캠프용 지역·이슈 온톨로지, 공유 리포트 URL, 경쟁 후보 비교 |\n| Intelligence/API | API export, CSV export, 팀 공유, 고급 뉴스/시장 데이터 연동 |\n\n이것도 반영해줘",
+      "messages": [
+        {
+          "turn_id": "01a0098f-3981-7b11-bcd6-8f8fbe36079e",
+          "role": "user",
+          "attachments": [
+            "/var/folders/2x/zvl6qzw16gs1qb4g955mtqrc0000gn/T/codex-clipboard-133f394d-6487-41d5-ac30-9804e0300df3.png"
+          ],
+          "text": "그리고 우리가 수익화를 어떻게 할 건지에 대한 것도 같이 해서 ppt jpg로 만들어 줄 수 있어?\n- free: 기본 인물 2명, 기본 종목 5개 일별 업데이트 최근 7일 이벤트만 보고\n- pro: 관심인물, 종목 추가, 실시간 및 준실시간 업데이트, 뉴스/해시테크/언급량 추적, 알림추적/ 이벤트 리포트 저장\n  - 원하는 유명인사 추가시에 돈 더내기\n  - 유명인사가 본인 추가를 희망할 경우 돈 받기\n  - pro 의 경우에는 **실시간성**을 넣어서\n  - **실시간성의 경우.**\n    - Crypto: CoinGecko로 어느 정도 가능\n    - 뉴스: GDELT/SerpApi/Naver로 주기적 업데이트 가능\n    - 미국 주식: 무료 실시간은 사실상 비추천. Free MVP에서는 “일봉/지연/데모”로 표시하는 게 안전\n\n| 플랜 | 기능 |\n| --- | --- |\n| Free | Musk/Trump/Sam 기본 3명, 최근 이벤트, 일봉/24h 반응, 기본 뉴스/언급량 |\n| Pro | 커스텀 인물 등록, 관심 종목 등록, 실시간/준실시간 업데이트, 알림 |\n| Campaign | 후보자/캠프용 지역·이슈 온톨로지, 공유 리포트 URL, 경쟁 후보 비교 |\n| Intelligence/API | API export, CSV export, 팀 공유, 고급 뉴스/시장 데이터 연동 |\n\n이것도 반영해줘"
+        }
+      ]
+    },
+    {
+      "thread_id": "01a0098d-aa0a-7ee3-b7e9-b02be12f4a37",
+      "host_id": "local",
+      "status": "idle",
+      "title": "타겟 고객 PPT 페이지 제작",
+      "description": "액티브 투자자와 리서처 중심의 타겟 고객 및 확장 시장 소개 슬라이드 제작",
+      "created_at_epoch": 1786866674,
+      "updated_at_epoch": 1786866999,
+      "thread_preview": "**1차 타겟: 개인 투자자 / 액티브 투자자**\n가장 직관적인 사용자예요.\n이들이 겪는 문제:\n갑자기 TSLA, QQQ, BTC가 움직였는데 이유를 찾아야 함\nX, 뉴스, 차트, 커뮤니티를 따로 봐야 함\n유명 인물 발언이 진짜 중요한 신호인지 단순 소음인지 판단하기 어려움\n우리 서비스 가치:\n“이 가격 움직임 주변에 어떤 Signal이 있었는지” 빠르게 확인\nSignal Impact, Amplification, Confidence로 우선순위 판단\n투자 조언이 아니라 정보 탐색 도구로 사용\n**2차 타겟: 금융/정책/산업 리서처**\n심사위원에게 더 설득력 있는 타겟이에요.\n이들이 겪는 문제:\n특정 인물/정책/이슈가 시장에 어떤 반응을 만들었는지 분석해야 함\n뉴스량, 언급량, 자산 반응을 따로 수집해야 함\n이벤트 스터디나 리포트 작성에 시간이 오래 걸림\n우리 서비스 가치:\nSignal을 자동으로 수집·분류\n인물-이슈-자산 온톨로지 제공\n사후 리포트/근거 정리 자동화\nConfidence로 해석 리스크 표시\n**3차 타겟: 선거 캠프 / 공적 인물 / PR팀**\n이건 네가 말한 “나를 등록해줘” 기능과 잘 맞아요.\n이들이 겪는 문제:\n내 발언이 어디서 확산되는지 알고 싶음\n어떤 이슈에서 내가 영향력을 갖는지 보여주고 싶음\n후원자, 언론, 내부 팀에 영향력 리포트를 공유하고 싶음\n경쟁 후보/인물과 비교하고 싶음\n우리 서비스 가치:\n본인/후보자 등록\n지역·이슈·플랫폼별 확산 추적\n공유 가능한 영향력 리포트 URL\n“내 발언이 뉴스화되고 어떤 시장/여론 반응과 함께 나타났는지” 증명\n**4차 타겟: 금융 서비스 / 데이터 API 고객**\n행사 이후 확장 가능성을 보여주는 타겟이에요.\n이들이 원하는 것:\nmarket-moving signal feed\nAPI export\n리스크 알림\n뉴스/SNS/자산 반응 결합 데이터\n커스텀 watchlist\n우리 서비스 가치:\nSignal Intelligence API\n실시간 또는 준실시간 알림\n커스텀 인물/자산 온톨로지\n내가 보기엔 발표에서는 이렇게 잡는 게 제일 좋아요.\n핵심 타겟\n**1차 타겟은 공개 정보와 시장 반응을 함께 추적해야 하는 액티브 개인 투자자와 금융/산업 리서처이다.**\n이들은 주가, 뉴스, SNS, 커뮤니티를 따로 확인해야 하는 불편을 겪고 있으며, 특정 Signal이 실제로 시장 반응과 함께 나타났는지 빠르게 판단하고 싶어 한다.\n\n확장 타겟\n이후에는 선거 캠프, 공적 인물, PR팀이 자신의 발언과 이슈 확산을 추적하고 공유 리포트로 활용할 수 있으며, 금융 서비스 기업에는 Signal Intelligence API로 확장할 수 있다.\n\n짧게 말하면:\nPrimary: 액티브 개인 투자자 + 금융/산업 리서처\nExpansion: 선거 캠프/PR팀 + 금융 데이터/API 고객\n제품 완성도 관점에서는 **개인 투자자만 잡는 것보다 “리서처/분석가”를 같이 넣는 게 훨씬 신뢰도 높아 보여요.**\n\n\n이거 관련한 ppt 페이지를 만들어줘 이전과 ui를 비슷하게 해서",
+      "messages": [
+        {
+          "turn_id": "01a0098e-06cb-7040-92e1-3c7f8bf393f6",
+          "role": "user",
+          "text": "**1차 타겟: 개인 투자자 / 액티브 투자자**\n가장 직관적인 사용자예요.\n이들이 겪는 문제:\n갑자기 TSLA, QQQ, BTC가 움직였는데 이유를 찾아야 함\nX, 뉴스, 차트, 커뮤니티를 따로 봐야 함\n유명 인물 발언이 진짜 중요한 신호인지 단순 소음인지 판단하기 어려움\n우리 서비스 가치:\n“이 가격 움직임 주변에 어떤 Signal이 있었는지” 빠르게 확인\nSignal Impact, Amplification, Confidence로 우선순위 판단\n투자 조언이 아니라 정보 탐색 도구로 사용\n**2차 타겟: 금융/정책/산업 리서처**\n심사위원에게 더 설득력 있는 타겟이에요.\n이들이 겪는 문제:\n특정 인물/정책/이슈가 시장에 어떤 반응을 만들었는지 분석해야 함\n뉴스량, 언급량, 자산 반응을 따로 수집해야 함\n이벤트 스터디나 리포트 작성에 시간이 오래 걸림\n우리 서비스 가치:\nSignal을 자동으로 수집·분류\n인물-이슈-자산 온톨로지 제공\n사후 리포트/근거 정리 자동화\nConfidence로 해석 리스크 표시\n**3차 타겟: 선거 캠프 / 공적 인물 / PR팀**\n이건 네가 말한 “나를 등록해줘” 기능과 잘 맞아요.\n이들이 겪는 문제:\n내 발언이 어디서 확산되는지 알고 싶음\n어떤 이슈에서 내가 영향력을 갖는지 보여주고 싶음\n후원자, 언론, 내부 팀에 영향력 리포트를 공유하고 싶음\n경쟁 후보/인물과 비교하고 싶음\n우리 서비스 가치:\n본인/후보자 등록\n지역·이슈·플랫폼별 확산 추적\n공유 가능한 영향력 리포트 URL\n“내 발언이 뉴스화되고 어떤 시장/여론 반응과 함께 나타났는지” 증명\n**4차 타겟: 금융 서비스 / 데이터 API 고객**\n행사 이후 확장 가능성을 보여주는 타겟이에요.\n이들이 원하는 것:\nmarket-moving signal feed\nAPI export\n리스크 알림\n뉴스/SNS/자산 반응 결합 데이터\n커스텀 watchlist\n우리 서비스 가치:\nSignal Intelligence API\n실시간 또는 준실시간 알림\n커스텀 인물/자산 온톨로지\n내가 보기엔 발표에서는 이렇게 잡는 게 제일 좋아요.\n핵심 타겟\n**1차 타겟은 공개 정보와 시장 반응을 함께 추적해야 하는 액티브 개인 투자자와 금융/산업 리서처이다.**\n이들은 주가, 뉴스, SNS, 커뮤니티를 따로 확인해야 하는 불편을 겪고 있으며, 특정 Signal이 실제로 시장 반응과 함께 나타났는지 빠르게 판단하고 싶어 한다.\n\n확장 타겟\n이후에는 선거 캠프, 공적 인물, PR팀이 자신의 발언과 이슈 확산을 추적하고 공유 리포트로 활용할 수 있으며, 금융 서비스 기업에는 Signal Intelligence API로 확장할 수 있다.\n\n짧게 말하면:\nPrimary: 액티브 개인 투자자 + 금융/산업 리서처\nExpansion: 선거 캠프/PR팀 + 금융 데이터/API 고객\n제품 완성도 관점에서는 **개인 투자자만 잡는 것보다 “리서처/분석가”를 같이 넣는 게 훨씬 신뢰도 높아 보여요.**\n\n\n이거 관련한 ppt 페이지를 만들어줘 이전과 ui를 비슷하게 해서"
+        }
+      ]
+    },
+    {
+      "thread_id": "01a008f4-daaf-72b1-9644-f755aa46d60c",
+      "host_id": "local",
+      "status": "idle",
+      "title": "금융 이벤트 인텔리전스 디자인",
+      "description": "Signal 기반 금융 이벤트 인텔리전스 서비스의 PPT용 JPG 디자인 제작",
+      "created_at_epoch": 1786856659,
+      "updated_at_epoch": 1786865480,
+      "thread_preview": "최근 금융 시장에서는 기업의 실적이나 경제지표뿐 아니라 SNS 게시물, 뉴스, 공시, 정책 발언 등 다양한 공개 정보가 시장의 새로운 신호로 소비되고 있다. 특히 영향력 있는 인물의 발언이나 정책 관련 정보는 빠르게 확산되며 주가, 거래량, 변동성 등 금융 시장에 함께 나타나는 경우가 있다.\n\n하지만, 현재 투자자는 정보와 시장 데이터를 서로 다른 플랫폼에서 확인해야한다. 주가가 급등락한 시점을 발견하더라도 당시 어떤 정보가 등장했는지, 해당 정보가 어떤 기업, 산업, 자산과 연결되는지, 정보가 얼마나 확산되었는지, 그리고 실제 시장에서는 어떤 반응이 나타났는지를 한 번에 파악하기 어렵다.\n\n예를 들어, 특정 시점에 기술주가 급락했다면, 단순히 가격 차트만으로\n\n- 당시 어떤 SNS, 뉴스, 정책, 발언이 있었는지\n- 해당 정보가 어떤 기업과 산업에 관련되어 있는지\n- QQQ, 반도체, 개별 정복, 비트코인이 각각 어떻게 반응했는지\n- 정보확산과 시장반응이 함께 나타났는지\n\n를 종합적으로 확인하기 어렵다.\n\n따라서 공개 정보를 하나의 “Signal”로 표준화하고, Signal과 관련 자산, 산업, 이슈를 연결한 정보 확산과 시장 반응을 동일한 시간축에서 탐색할 수 있는 서비스가 필요하다.\n\n> 우리의 서비스는 SNS, 뉴스, 공시, 정책 발언 등 다양한 공개 정보(Signal)를 관련 자산, 산업과 연결하고, 정보 확산과 시장 반응을 하나의 시간축에서 탐색할 수 있도록 하는 금융 이벤트 인텔리전스 서비스이다.\n>\n\n이거 ppt로 보여주게 하고 싶은데 디자인 좀 예쁘게 jpg로 만들어봐 한번",
+      "messages": [
+        {
+          "turn_id": "01a00970-e0be-7a12-a2a5-f41a08ae3eb6",
+          "role": "user",
+          "text": "데이터 소개도!!\n- 일론머스크\n  \n  https://www.kaggle.com/datasets/dadalyndell/elon-musk-tweets-2010-to-2025-march\n  \n  musk_quote_tweets.csv\n  \n  all_musk_posts.csv\n  \n- 트럼프\n  \n  https://www.kaggle.com/datasets/datadrivendecision/trump-tweets-2009-2025/data\n  \n  Kaggle Trump_2009_2025.csv\n\nhttps://www.trumpstruth.org/feed\n\napi 구글 뉴스, 블루스카이"
+        },
+        {
+          "turn_id": "01a00974-083c-7673-8816-28cb48f5e11b",
+          "role": "user",
+          "attachments": [
+            "/var/folders/2x/zvl6qzw16gs1qb4g955mtqrc0000gn/T/codex-clipboard-0a00cf34-a5c6-4010-acca-c053a3ef9edf.png"
+          ],
+          "text": "여기서 퍼블릭 인포랑 마켓 반응 부분에 저 네모 박스가 뒤에 잇는 네모 박스를 튀어나가지 않도록 해주고\n그리고 동일 시간축 분석에서 빨간 줄이 저 글씨가 있는 부분 전까지 그어지게끔 수정해주면 좋을 것 같아"
+        }
+      ]
+    },
+    {
+      "thread_id": "01a00919-3953-74b2-bd18-957dfe60bf3e",
+      "host_id": "local",
+      "status": "idle",
+      "title": "요소별 정보 추출",
+      "description": "각 요소별 세부 정보 추출 요청",
+      "created_at_epoch": 1786859043,
+      "updated_at_epoch": 1786859164,
+      "thread_preview": "각각의 요소들을 뽑아내 줄 수 있어?",
+      "messages": [
+        {
+          "turn_id": "01a0091a-6389-7730-8586-171bc49060d4",
+          "role": "user",
+          "text": "아니 사진으로 달라고"
+        }
+      ]
+    },
+    {
+      "thread_id": "01a00865-d878-7bf3-91d1-3f04f198158d",
+      "host_id": "local",
+      "status": "notLoaded",
+      "title": "일론 머스크와 트럼프 데이터 찾기",
+      "description": "일론 머스크 트럼프 관련 데이터 및 자료 검색",
+      "created_at_epoch": 1786847287,
+      "updated_at_epoch": 1786848106,
+      "thread_preview": "일론머스크랑 트럼프 관련 데이터를 찾고 싶은데 찾아줘",
+      "messages": [
+        {
+          "turn_id": "01a00872-20e9-7b91-ac91-b088e6ed6c42",
+          "role": "user",
+          "text": "[claromes/waybacktweets](https://github.com/claromes/waybacktweets)\n\n이건 어떻게 사용할거야??"
+        }
+      ]
+    },
+    {
+      "thread_id": "01a0084e-4f3d-76f1-b0ca-37fc74a80139",
+      "host_id": "local",
+      "status": "notLoaded",
+      "title": "MD 파일 사용처 안내 프로젝트",
+      "description": "MD 파일 활용 위치와 사용법을 안내하는 프로젝트",
+      "created_at_epoch": 1786845744,
+      "updated_at_epoch": 1786846606,
+      "thread_preview": "md파일을 어디에 사용해야하는지 알려주는 프로젝트",
+      "messages": []
+    }
+  ]
+}

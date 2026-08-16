@@ -15,6 +15,7 @@ import {
   Landmark,
   LineChart as LineChartIcon,
   MessageSquareText,
+  MousePointerClick,
   Newspaper,
   Radar,
   RefreshCw,
@@ -582,24 +583,21 @@ export function SignalAtlasDashboard({
         const daySignals = (signals.get(date) ?? []).sort(
           (a, b) => Math.abs(b.metrics.abnormalReturn1D) - Math.abs(a.metrics.abnormalReturn1D),
         );
+        const representative = daySignals[0] ?? null;
         return {
           date,
           label: date.slice(5),
           close,
           signalCount: daySignals.length,
-          Direct: daySignals.find((event) => event.coverage === "Direct") ?? null,
-          Policy: daySignals.find((event) => event.coverage === "Policy") ?? null,
-          Proxy: daySignals.find((event) => event.coverage === "Proxy") ?? null,
+          Direct: representative?.coverage === "Direct" ? representative : null,
+          Policy: representative?.coverage === "Policy" ? representative : null,
+          Proxy: representative?.coverage === "Proxy" ? representative : null,
+          DirectValue: representative?.coverage === "Direct" ? close : null,
+          PolicyValue: representative?.coverage === "Policy" ? close : null,
+          ProxyValue: representative?.coverage === "Proxy" ? close : null,
         };
       });
-    return {
-      rows,
-      markers: {
-        Direct: rows.filter((row) => row.Direct).map((row) => ({ ...row, event: row.Direct })),
-        Policy: rows.filter((row) => row.Policy).map((row) => ({ ...row, event: row.Policy })),
-        Proxy: rows.filter((row) => row.Proxy).map((row) => ({ ...row, event: row.Proxy })),
-      },
-    };
+    return { rows };
   }, [events, timelineAsset, timelineSessions]);
 
   const selected =
@@ -731,12 +729,22 @@ export function SignalAtlasDashboard({
     return () => window.clearTimeout(timer);
   }, [filtered, selectedId]);
 
-  const openTimelineSignal = (point: unknown) => {
-    const marker = point as { event?: MarketEvent; payload?: { event?: MarketEvent } };
-    const event = marker.event ?? marker.payload?.event;
+  const openTimelineSignal = (point: unknown, mapping: MarketEvent["coverage"]) => {
+    const marker = point as { payload?: Partial<Record<MarketEvent["coverage"], MarketEvent>> };
+    const event = marker.payload?.[mapping];
     if (!event) return;
+    setSourceType("all");
+    setAsset(c.allAssets);
+    setEntity(c.allEntities);
+    setTopic("all");
+    setCoverage("all");
+    setPrecision("all");
+    setQuery("");
     selectSignal(event.id);
-    document.getElementById("explorer")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.setTimeout(() => {
+      window.history.replaceState(null, "", "#explorer");
+      document.getElementById("explorer")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 0);
   };
 
   useEffect(() => {
@@ -1083,19 +1091,26 @@ export function SignalAtlasDashboard({
               <p>{locale === "ko" ? "마커를 선택하면 해당 거래 세션에서 관찰된 대표 시그널과 근거로 이동합니다." : "Select a marker to open the leading observed signal and its evidence for that trading session."}</p>
             </div>
             <div className="timeline-controls">
-              <select value={timelineAsset} onChange={(event) => setTimelineAsset(event.target.value)} aria-label={locale === "ko" ? "타임라인 자산" : "Timeline asset"}>
-                <option value="SPY">SPY</option>
-                <option value="QQQ">QQQ</option>
-                <option value="BTC-USD">BTC-USD</option>
-              </select>
-              <select value={timelineSessions} onChange={(event) => setTimelineSessions(Number(event.target.value))} aria-label={locale === "ko" ? "타임라인 기간" : "Timeline range"}>
-                <option value={60}>{locale === "ko" ? "최근 60 거래 세션" : "Last 60 sessions"}</option>
-                <option value={120}>{locale === "ko" ? "최근 120 거래 세션" : "Last 120 sessions"}</option>
-                <option value={250}>{locale === "ko" ? "최근 250 거래 세션" : "Last 250 sessions"}</option>
-              </select>
+              <label>
+                <span>{locale === "ko" ? "기준 자산" : "Asset"}</span>
+                <select value={timelineAsset} onChange={(event) => setTimelineAsset(event.target.value)} aria-label={locale === "ko" ? "타임라인 자산" : "Timeline asset"}>
+                  <option value="SPY">SPY</option>
+                  <option value="QQQ">QQQ</option>
+                  <option value="BTC-USD">BTC-USD</option>
+                </select>
+              </label>
+              <label>
+                <span>{locale === "ko" ? "분석 구간" : "Window"}</span>
+                <select value={timelineSessions} onChange={(event) => setTimelineSessions(Number(event.target.value))} aria-label={locale === "ko" ? "타임라인 기간" : "Timeline range"}>
+                  <option value={60}>{locale === "ko" ? "최근 60 거래 세션" : "Last 60 sessions"}</option>
+                  <option value={120}>{locale === "ko" ? "최근 120 거래 세션" : "Last 120 sessions"}</option>
+                  <option value={250}>{locale === "ko" ? "최근 250 거래 세션" : "Last 250 sessions"}</option>
+                </select>
+              </label>
             </div>
           </div>
           <div className="timeline-legend">
+            <span className="timeline-help"><MousePointerClick size={14} />{locale === "ko" ? "마커를 클릭해 상세 사건 열기" : "Select a marker to open its evidence"}</span>
             <span><i className="direct" />Direct</span>
             <span><i className="policy" />Policy</span>
             <span><i className="proxy" />Proxy</span>
@@ -1107,11 +1122,11 @@ export function SignalAtlasDashboard({
                 <CartesianGrid stroke="#e4e7e2" strokeDasharray="3 3" vertical={false} />
                 <XAxis dataKey="label" minTickGap={32} tick={{ fill: "#68736d", fontSize: 10 }} axisLine={false} tickLine={false} />
                 <YAxis domain={["auto", "auto"]} tickFormatter={(value) => `$${Number(value).toFixed(0)}`} tick={{ fill: "#68736d", fontSize: 10 }} axisLine={false} tickLine={false} width={48} />
-                <Tooltip labelFormatter={(label) => `${timelineAsset} · ${label}`} formatter={(value, name) => name === "close" ? [`$${Number(value).toFixed(2)}`, locale === "ko" ? "종가" : "Close"] : [value, name]} />
-                <Line isAnimationActive={false} type="monotone" dataKey="close" name="close" stroke="#244f3d" strokeWidth={2.2} dot={false} />
-                <Scatter data={marketTimeline.markers.Direct} dataKey="close" name="Direct" fill="#1f6f4a" shape="circle" cursor="pointer" onClick={(point) => openTimelineSignal(point)} />
-                <Scatter data={marketTimeline.markers.Policy} dataKey="close" name="Policy" fill="#9a642f" shape="triangle" cursor="pointer" onClick={(point) => openTimelineSignal(point)} />
-                <Scatter data={marketTimeline.markers.Proxy} dataKey="close" name="Proxy" fill="#75658c" shape="diamond" cursor="pointer" onClick={(point) => openTimelineSignal(point)} />
+                <Tooltip labelFormatter={(label) => `${timelineAsset} · ${label}`} formatter={(value, name) => name === "close" ? [`$${Number(value).toFixed(2)}`, locale === "ko" ? "종가" : "Close"] : [`$${Number(value).toFixed(2)}`, String(name).replace("Value", "")]} />
+                <Line isAnimationActive={false} type="monotone" dataKey="close" name="close" stroke="#205b43" strokeWidth={2.6} dot={false} activeDot={{ r: 4 }} />
+                <Scatter dataKey="DirectValue" name="Direct" fill="#1f6f4a" fillOpacity={0.92} shape="circle" cursor="pointer" onClick={(point) => openTimelineSignal(point, "Direct")} />
+                <Scatter dataKey="PolicyValue" name="Policy" fill="#a66a2d" fillOpacity={0.92} shape="triangle" cursor="pointer" onClick={(point) => openTimelineSignal(point, "Policy")} />
+                <Scatter dataKey="ProxyValue" name="Proxy" fill="#75658c" fillOpacity={0.92} shape="diamond" cursor="pointer" onClick={(point) => openTimelineSignal(point, "Proxy")} />
               </ComposedChart>
             </ResponsiveContainer>
           </div>
