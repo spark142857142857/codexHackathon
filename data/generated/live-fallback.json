@@ -1,0 +1,100 @@
+{
+  "fetchedAt": "2026-08-16T03:32:00.360Z",
+  "mode": "fallback",
+  "signals": [
+    {
+      "id": "117102785991799720",
+      "text": "The Senate must vote on the NO MORE CHANGING THE CLOCKS ACT as soon as possible. More sun later in the day is better (including for fighting crime!), but, even more importantly, NO MORE RIDICULOUSLY CHANGING CLOCKS AND WATCHES TWICE YEARLY, with all of the disruption and chaos it causes. FINALLY, GET IT DONE!!! President DJT",
+      "publishedAt": "2026-08-16T02:18:30.000Z",
+      "sourceUrl": "https://truthsocial.com/@realDonaldTrump/117102785991799720",
+      "topic": "Public statement",
+      "state": "Pending market session"
+    },
+    {
+      "id": "117101661290326953",
+      "text": "State Representative Kim Kendall is a Strong Champion for the Great People of Florida’s 18th State House District! A Highly Respected Air Traffic Controller and Small Business Owner, prior to becoming a distinguished State Representative, Kim has dedicated her life to serving her Community. In the State House, she is working hard to Protect Florida Values, Grow our Economy, Cut Taxes and Regulations, Promote MADE IN THE U.S.A., Stop Migrant Crime, Strengthen our Military, Veterans, and Law Enforcement, Champion Parental Rights, Advance Election Integrity, and Defend our always under siege Second Amendment. Kim Kendall has my Complete and Total Endorsement for Re-Election — SHE WILL NEVER LET YOU DOWN!",
+      "publishedAt": "2026-08-15T21:32:28.000Z",
+      "sourceUrl": "https://truthsocial.com/@realDonaldTrump/117101661290326953",
+      "topic": "Economy & rates",
+      "state": "Pending market session"
+    },
+    {
+      "id": "117101660036144509",
+      "text": "State Representative J.J. Grow is doing a terrific job representing the incredible people of Florida’s 23rd State House District! A Successful Entrepreneur and Civic Leader, before his service in the State House, J.J. is a Proven Leader who has dedicated his life to serving his Community. In the State House, he is working hard to Protect Florida Values, Champion our Amazing Farmers and Ranchers, Grow the Economy, Cut Taxes and Regulations, Promote MADE IN THE U.S.A., Stop Migrant Crime, Strengthen our Military/Veterans, Advance Election Integrity, and Defend our always under siege Second Amendment. J.J. Grow has my Complete and Total Endorsement for Re-Election — HE WILL NEVER LET YOU DOWN!",
+      "publishedAt": "2026-08-15T21:32:09.000Z",
+      "sourceUrl": "https://truthsocial.com/@realDonaldTrump/117101660036144509",
+      "topic": "Economy & rates",
+      "state": "Pending market session"
+    },
+    {
+      "id": "117101658723920664",
+      "text": "State Representative Jon Albert is doing a tremendous job representing the wonderful people of Florida’s 48th State House District! From bravely fighting for the U.S. Marine Corps, to strongly representing his Community as Mayor of Frostproof, and now, as a Highly Respected State Representative, Jon has served his State, and our Nation, with distinction. In the State House, he is working tirelessly to Protect Florida Values, Grow our Economy, Cut Taxes and Regulations, Promote MADE IN THE U.S.A. and American Energy DOMINANCE, Safeguard our Elections, Stop Migrant Crime, Strengthen our Military/Veterans, and Defend our always under siege Second Amendment. Jon Albert has my Complete and Total Endorsement for Re-Election — HE WILL NEVER LET YOU DOWN!",
+      "publishedAt": "2026-08-15T21:31:49.000Z",
+      "sourceUrl": "https://truthsocial.com/@realDonaldTrump/117101658723920664",
+      "topic": "Economy & rates",
+      "state": "Pending market session"
+    },
+    {
+      "id": "117101649709052792",
+      "text": "State Representative Bill Conerly is an America First Patriot doing a fantastic job representing Florida’s 72nd State House District! A Fifth Generation Floridian, and a Brave U.S. Navy Veteran, Bill knows the Wisdom and Courage that is required to Defend our Country, Support our Military/Veterans, and Ensure PEACE THROUGH STRENGTH. In the State House, he is working hard to Protect Florida Values, Stop Migrant Crime, Grow our Economy, Cut Taxes and Regulations, Promote MADE IN THE U.S.A., Champion Small Businesses and American Ingenuity, Ensure U.S. Energy DOMINANCE, Safeguard our Elections, and Defend our always under siege Second Amendment. Bill Conerly has my Complete and Total Endorsement for Re-Election — HE WILL NEVER LET YOU DOWN!",
+      "publishedAt": "2026-08-15T21:29:31.000Z",
+      "sourceUrl": "https://truthsocial.com/@realDonaldTrump/117101649709052792",
+      "topic": "Economy & rates",
+      "state": "Pending market session"
+    }
+  ],
+  "prices": {
+    "SPY": {
+      "price": 776.34,
+      "asOf": "2026-08-14"
+    },
+    "QQQ": {
+      "price": 731.07,
+      "asOf": "2026-08-14"
+    },
+    "TSLA": {
+      "price": 342.27,
+      "asOf": "2026-08-14"
+    },
+    "NVDA": {
+      "price": 225.16,
+      "asOf": "2026-08-14"
+    },
+    "MSFT": {
+      "price": 495.4,
+      "asOf": "2026-08-14"
+    }
+  },
+  "sources": [
+    {
+      "id": "trump-rss",
+      "label": "Trump public statements",
+      "provider": "Trump's Truth RSS",
+      "cadence": "Daily demo refresh",
+      "access": "Free",
+      "state": "Fresh",
+      "lastSuccessAt": "2026-08-16T03:32:00.360Z",
+      "note": "Independent public archive; production uses licensed Truth API."
+    },
+    {
+      "id": "market-data",
+      "label": "US market prices",
+      "provider": "Twelve Data / cached fallback",
+      "cadence": "Daily",
+      "access": "Free",
+      "state": "Fresh",
+      "lastSuccessAt": "2026-08-16T03:32:00.360Z",
+      "note": "Five-symbol demo scope. Display licensing required for commercial use."
+    },
+    {
+      "id": "x-connectors",
+      "label": "Musk and Altman live posts",
+      "provider": "X API",
+      "cadence": "Near real time in Pro",
+      "access": "Paid connector",
+      "state": "Stale",
+      "lastSuccessAt": "2026-08-16T03:32:00.360Z",
+      "note": "Historical cases are available; live X ingestion is intentionally disabled in Free."
+    }
+  ]
+}

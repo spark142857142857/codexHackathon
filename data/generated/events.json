@@ -1,0 +1,1154 @@
+[
+  {
+    "id": "altman-2069121360744550796",
+    "person": "altman",
+    "personName": "Sam Altman",
+    "role": "AI narrative power",
+    "platform": "X",
+    "publishedAt": "2026-06-22T12:00:00Z",
+    "text": "We want to help all companies be secure, working with the government and the security ecosystem.",
+    "sourceUrl": "https://x.com/sama/status/2069121360744550796",
+    "topic": "AI security",
+    "asset": "MSFT",
+    "benchmark": "QQQ",
+    "coverage": "Proxy",
+    "engagement": {
+      "likes": 6900,
+      "reposts": 467,
+      "views": 1000000
+    },
+    "metrics": {
+      "abnormalReturn1D": -2.82,
+      "volumeMultiple": 1.16,
+      "cumulativeAbnormal3D": 0.38,
+      "persistence": "Reversed"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -3.18,
+        "benchmark": -0.36
+      },
+      {
+        "day": 1,
+        "asset": -1.44,
+        "benchmark": -3.64
+      },
+      {
+        "day": 3,
+        "asset": -3.67,
+        "benchmark": -4.05
+      }
+    ],
+    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+  },
+  {
+    "id": "altman-2064088940932641225",
+    "person": "altman",
+    "personName": "Sam Altman",
+    "role": "AI narrative power",
+    "platform": "X",
+    "publishedAt": "2026-06-08T12:00:00Z",
+    "text": "Here is our current plan for OpenAI.",
+    "sourceUrl": "https://x.com/sama/status/2064088940932641225",
+    "topic": "AI strategy",
+    "asset": "MSFT",
+    "benchmark": "QQQ",
+    "coverage": "Proxy",
+    "engagement": {
+      "likes": 7700,
+      "reposts": 782,
+      "views": 1700000
+    },
+    "metrics": {
+      "abnormalReturn1D": -2.74,
+      "volumeMultiple": 0.87,
+      "cumulativeAbnormal3D": -3.02,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -1.18,
+        "benchmark": 1.56
+      },
+      {
+        "day": 1,
+        "asset": -3.18,
+        "benchmark": 0.39
+      },
+      {
+        "day": 3,
+        "asset": -4.63,
+        "benchmark": -1.61
+      }
+    ],
+    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+  },
+  {
+    "id": "altman-2062660086787613116",
+    "person": "altman",
+    "personName": "Sam Altman",
+    "role": "AI narrative power",
+    "platform": "X",
+    "publishedAt": "2026-06-04T12:00:00Z",
+    "text": "Big upgrade to ChatGPT memory rolling out today.",
+    "sourceUrl": "https://x.com/sama/status/2062660086787613116",
+    "topic": "AI products",
+    "asset": "MSFT",
+    "benchmark": "QQQ",
+    "coverage": "Proxy",
+    "engagement": {
+      "likes": 5500,
+      "reposts": 250,
+      "views": 781000
+    },
+    "metrics": {
+      "abnormalReturn1D": 0.65,
+      "volumeMultiple": 0.72,
+      "cumulativeAbnormal3D": 0.13,
+      "persistence": "Faded"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 0.17,
+        "benchmark": -0.48
+      },
+      {
+        "day": 1,
+        "asset": -2.5,
+        "benchmark": -5.26
+      },
+      {
+        "day": 3,
+        "asset": -3.65,
+        "benchmark": -3.78
+      }
+    ],
+    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+  },
+  {
+    "id": "altman-2061117302528188712",
+    "person": "altman",
+    "personName": "Sam Altman",
+    "role": "AI narrative power",
+    "platform": "X",
+    "publishedAt": "2026-05-31T12:00:00Z",
+    "text": "OpenAI Robotics is hiring to help program and manufacture robots that are useful for society.",
+    "sourceUrl": "https://x.com/sama/status/2061117302528188712",
+    "topic": "Robotics",
+    "asset": "NVDA",
+    "benchmark": "QQQ",
+    "coverage": "Proxy",
+    "engagement": {
+      "likes": 13000,
+      "reposts": 1000,
+      "views": 3000000
+    },
+    "metrics": {
+      "abnormalReturn1D": 5.66,
+      "volumeMultiple": 1.28,
+      "cumulativeAbnormal3D": 0.91,
+      "persistence": "Faded"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 6.26,
+        "benchmark": 0.6
+      },
+      {
+        "day": 1,
+        "asset": 5.53,
+        "benchmark": 1.06
+      },
+      {
+        "day": 3,
+        "asset": 1.71,
+        "benchmark": 0.8
+      }
+    ],
+    "rationale": "NVDA is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+  },
+  {
+    "id": "altman-2057203171198636251",
+    "person": "altman",
+    "personName": "Sam Altman",
+    "role": "AI narrative power",
+    "platform": "X",
+    "publishedAt": "2026-05-20T12:00:00Z",
+    "text": "A general-purpose model solved a major open problem in mathematics. This is a big milestone.",
+    "sourceUrl": "https://x.com/sama/status/2057203171198636251",
+    "topic": "AI capability",
+    "asset": "NVDA",
+    "benchmark": "QQQ",
+    "coverage": "Proxy",
+    "engagement": {
+      "likes": 6600,
+      "reposts": 361,
+      "views": 746000
+    },
+    "metrics": {
+      "abnormalReturn1D": -0.36,
+      "volumeMultiple": 1.18,
+      "cumulativeAbnormal3D": -4.68,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 1.3,
+        "benchmark": 1.66
+      },
+      {
+        "day": 1,
+        "asset": -0.5,
+        "benchmark": 1.85
+      },
+      {
+        "day": 3,
+        "asset": -2.39,
+        "benchmark": 2.28
+      }
+    ],
+    "rationale": "NVDA is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+  },
+  {
+    "id": "altman-2056435834333934051",
+    "person": "altman",
+    "personName": "Sam Altman",
+    "role": "AI narrative power",
+    "platform": "X",
+    "publishedAt": "2026-05-18T12:00:00Z",
+    "text": "ChatGPT has gotten so much better with the latest update. Really proud of the team for this one.",
+    "sourceUrl": "https://x.com/sama/status/2056435834333934051",
+    "topic": "Model update",
+    "asset": "MSFT",
+    "benchmark": "QQQ",
+    "coverage": "Proxy",
+    "engagement": {
+      "likes": 16000,
+      "reposts": 551,
+      "views": 1400000
+    },
+    "metrics": {
+      "abnormalReturn1D": 0.81,
+      "volumeMultiple": 0.94,
+      "cumulativeAbnormal3D": -0.8,
+      "persistence": "Reversed"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 0.38,
+        "benchmark": -0.43
+      },
+      {
+        "day": 1,
+        "asset": -1.07,
+        "benchmark": -1.04
+      },
+      {
+        "day": 3,
+        "asset": -0.2,
+        "benchmark": 0.6
+      }
+    ],
+    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+  },
+  {
+    "id": "altman-2054626219858293128",
+    "person": "altman",
+    "personName": "Sam Altman",
+    "role": "AI narrative power",
+    "platform": "X",
+    "publishedAt": "2026-05-13T12:00:00Z",
+    "text": "Codex is the best AI coding product and we want to make it easy to try.",
+    "sourceUrl": "https://x.com/sama/status/2054626219858293128",
+    "topic": "AI products",
+    "asset": "MSFT",
+    "benchmark": "QQQ",
+    "coverage": "Proxy",
+    "engagement": {
+      "likes": 21000,
+      "reposts": 875,
+      "views": 2300000
+    },
+    "metrics": {
+      "abnormalReturn1D": -1.68,
+      "volumeMultiple": 0.83,
+      "cumulativeAbnormal3D": 3.23,
+      "persistence": "Reversed"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -0.63,
+        "benchmark": 1.06
+      },
+      {
+        "day": 1,
+        "asset": 0.41,
+        "benchmark": 1.77
+      },
+      {
+        "day": 3,
+        "asset": 3.47,
+        "benchmark": 0.24
+      }
+    ],
+    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+  },
+  {
+    "id": "altman-2049712078836170843",
+    "person": "altman",
+    "personName": "Sam Altman",
+    "role": "AI narrative power",
+    "platform": "X",
+    "publishedAt": "2026-04-30T12:00:00Z",
+    "text": "We're starting rollout of GPT-5.5-Cyber, a frontier cybersecurity model, to critical cyber defenders in the next few days.",
+    "sourceUrl": "https://x.com/sama/status/2049712078836170843",
+    "topic": "AI security",
+    "asset": "NVDA",
+    "benchmark": "QQQ",
+    "coverage": "Proxy",
+    "engagement": {
+      "likes": 13000,
+      "reposts": 800,
+      "views": 1000000
+    },
+    "metrics": {
+      "abnormalReturn1D": -5.56,
+      "volumeMultiple": 1.55,
+      "cumulativeAbnormal3D": -6.86,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -4.63,
+        "benchmark": 0.93
+      },
+      {
+        "day": 1,
+        "asset": -5.16,
+        "benchmark": 1.9
+      },
+      {
+        "day": 3,
+        "asset": -5.15,
+        "benchmark": 1.71
+      }
+    ],
+    "rationale": "NVDA is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+  },
+  {
+    "id": "trump-114664632971715644",
+    "person": "trump",
+    "personName": "Donald Trump",
+    "role": "Policy power",
+    "platform": "Truth Social",
+    "publishedAt": "2025-06-11 12:04:07+00:00",
+    "text": "OUR DEAL WITH CHINA IS DONE, SUBJECT TO FINAL APPROVAL WITH PRESIDENT XI AND ME. FULL MAGNETS, AND ANY NECESSARY RARE EARTHS, WILL BE SUPPLIED, UP FRONT, BY CHINA. LIKEWISE, WE WILL PROVIDE TO CHINA WHAT WAS AGREED TO, INCLUDING CHINESE STUDENTS USING OUR COLLEGES AND UNIVERSITIES (WHICH HAS ALWAYS BEEN GOOD WITH ME!). WE ARE GETTING A TOTAL OF 55% TARIFFS, CHINA IS GETTING 10%. RELATIONSHIP IS EXCELLENT! THANK YOU FOR YOUR ATTENTION TO THIS MATTER!",
+    "sourceUrl": "https://truthsocial.com/@realDonaldTrump/posts/114664632971715644",
+    "topic": "Trade & tariffs",
+    "asset": "QQQ",
+    "benchmark": "SPY",
+    "coverage": "Policy",
+    "engagement": {
+      "likes": 50516,
+      "reposts": 10387,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": -0.05,
+      "volumeMultiple": 1.07,
+      "cumulativeAbnormal3D": -0.35,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -0.34,
+        "benchmark": -0.29
+      },
+      {
+        "day": 1,
+        "asset": -0.1,
+        "benchmark": 0.11
+      },
+      {
+        "day": 3,
+        "asset": -1.36,
+        "benchmark": -1.01
+      }
+    ],
+    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control."
+  },
+  {
+    "id": "trump-114352766082542122",
+    "person": "trump",
+    "personName": "Donald Trump",
+    "role": "Policy power",
+    "platform": "Truth Social",
+    "publishedAt": "2025-04-17 10:12:16+00:00",
+    "text": "The ECB is expected to cut interest rates for the 7th time, and yet, “Too Late” Jerome Powell of the Fed, who is always TOO LATE AND WRONG, yesterday issued a report which was another, and typical, complete “mess!” Oil prices are down, groceries (even eggs!) are down, and the USA is getting RICH ON TARIFFS. Too Late should have lowered Interest Rates, like the ECB, long ago, but he should certainly lower them now. Powell’s termination cannot come fast enough!",
+    "sourceUrl": "https://truthsocial.com/@realDonaldTrump/posts/114352766082542122",
+    "topic": "Trade & tariffs",
+    "asset": "QQQ",
+    "benchmark": "SPY",
+    "coverage": "Policy",
+    "engagement": {
+      "likes": 31116,
+      "reposts": 7229,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": -0.16,
+      "volumeMultiple": 0.7,
+      "cumulativeAbnormal3D": -0.23,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -0.02,
+        "benchmark": 0.14
+      },
+      {
+        "day": 1,
+        "asset": -2.49,
+        "benchmark": -2.24
+      },
+      {
+        "day": 3,
+        "asset": 0.07,
+        "benchmark": 0.3
+      }
+    ],
+    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control."
+  },
+  {
+    "id": "trump-114341773968885783",
+    "person": "trump",
+    "personName": "Donald Trump",
+    "role": "Policy power",
+    "platform": "Truth Social",
+    "publishedAt": "2025-04-15 11:36:50+00:00",
+    "text": "NVIDIA COMMITS 500 BILLION DOLLARS TO BUILD A.I. SUPERCOMPUTERS, PLUS, IN THE UNITED STATES, EXCLUSIVELY. This is very big and exciting news. All necessary permits will be expedited and quickly delivered to NVIDIA, as they will to all companies committing to be part of the Golden Age of America!",
+    "sourceUrl": "https://truthsocial.com/@realDonaldTrump/posts/114341773968885783",
+    "topic": "Technology policy",
+    "asset": "NVDA",
+    "benchmark": "QQQ",
+    "coverage": "Policy",
+    "engagement": {
+      "likes": 38848,
+      "reposts": 7775,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": 1.23,
+      "volumeMultiple": 0.7,
+      "cumulativeAbnormal3D": -5.4,
+      "persistence": "Reversed"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 1.35,
+        "benchmark": 0.11
+      },
+      {
+        "day": 1,
+        "asset": -5.62,
+        "benchmark": -2.91
+      },
+      {
+        "day": 3,
+        "asset": -8.33,
+        "benchmark": -2.92
+      }
+    ],
+    "rationale": "Policy-language match linked to NVDA; QQQ is shown as the broad-market control."
+  },
+  {
+    "id": "trump-1909258777380974625",
+    "person": "trump",
+    "personName": "Donald Trump",
+    "role": "Policy power",
+    "platform": "Twitter",
+    "publishedAt": "2025-04-07 14:55:39+00:00",
+    "text": "Oil prices are down, interest rates are down (the slow moving Fed should cut rates!), food prices are down, there is NO INFLATION, and the long time abused USA is bringing in Billions of Dollars a week from the abusing countries on Tariffs that are already in place. This is",
+    "sourceUrl": "https://x.com/realdonaldtrump/status/1909258777380974625",
+    "topic": "Trade & tariffs",
+    "asset": "QQQ",
+    "benchmark": "SPY",
+    "coverage": "Policy",
+    "engagement": {
+      "likes": 32638,
+      "reposts": 0,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": 0.42,
+      "volumeMultiple": 3.27,
+      "cumulativeAbnormal3D": 1.67,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 0.24,
+        "benchmark": -0.18
+      },
+      {
+        "day": 1,
+        "asset": -1.56,
+        "benchmark": -1.74
+      },
+      {
+        "day": 3,
+        "asset": 10.25,
+        "benchmark": 8.58
+      }
+    ],
+    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control."
+  },
+  {
+    "id": "musk-1906727530607808546",
+    "person": "musk",
+    "personName": "Elon Musk",
+    "role": "Founder power",
+    "platform": "X",
+    "publishedAt": "2025-03-31 15:17:23+00:00",
+    "text": "As I’ve said previously, unsupervised full self-driving Teslas will be carrying passengers in Austin in June and many cities in America by end of year. This will enable passenger cars to increase in utility by roughly half an order of magnitude overnight with a software update.",
+    "sourceUrl": "https://x.com/elonmusk/status/1906727530607808546",
+    "topic": "Tesla & EV",
+    "asset": "TSLA",
+    "benchmark": "QQQ",
+    "coverage": "Direct",
+    "engagement": {
+      "likes": 57645,
+      "reposts": 9598,
+      "views": 10783219
+    },
+    "metrics": {
+      "abnormalReturn1D": -1.66,
+      "volumeMultiple": 1.04,
+      "cumulativeAbnormal3D": 5.75,
+      "persistence": "Reversed"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -1.67,
+        "benchmark": 0
+      },
+      {
+        "day": 1,
+        "asset": 1.86,
+        "benchmark": 0.8
+      },
+      {
+        "day": 3,
+        "asset": 7.29,
+        "benchmark": 1.54
+      }
+    ],
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+  },
+  {
+    "id": "musk-1884467091899593076",
+    "person": "musk",
+    "personName": "Elon Musk",
+    "role": "Founder power",
+    "platform": "X",
+    "publishedAt": "2025-01-29 05:02:21+00:00",
+    "text": "Unsupervised full self-driving begins",
+    "sourceUrl": "https://x.com/elonmusk/status/1884467091899593076",
+    "topic": "Tesla & EV",
+    "asset": "TSLA",
+    "benchmark": "QQQ",
+    "coverage": "Direct",
+    "engagement": {
+      "likes": 224554,
+      "reposts": 26356,
+      "views": 53132047
+    },
+    "metrics": {
+      "abnormalReturn1D": -2.07,
+      "volumeMultiple": 0.92,
+      "cumulativeAbnormal3D": 1.54,
+      "persistence": "Reversed"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -2.26,
+        "benchmark": -0.19
+      },
+      {
+        "day": 1,
+        "asset": 0.55,
+        "benchmark": 0.24
+      },
+      {
+        "day": 3,
+        "asset": 1.64,
+        "benchmark": 0.09
+      }
+    ],
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+  },
+  {
+    "id": "trump-113683654440040843",
+    "person": "trump",
+    "personName": "Donald Trump",
+    "role": "Policy power",
+    "platform": "Truth Social",
+    "publishedAt": "2024-12-20 06:08:22+00:00",
+    "text": "I told the European Union that they must make up their tremendous deficit with the United States by the large scale purchase of our oil and gas. Otherwise, it is TARIFFS all the way!!!",
+    "sourceUrl": "https://truthsocial.com/@realDonaldTrump/posts/113683654440040843",
+    "topic": "Trade & tariffs",
+    "asset": "QQQ",
+    "benchmark": "SPY",
+    "coverage": "Policy",
+    "engagement": {
+      "likes": 30020,
+      "reposts": 6699,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": 0.01,
+      "volumeMultiple": 2.18,
+      "cumulativeAbnormal3D": 0.48,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 0.87,
+        "benchmark": 0.86
+      },
+      {
+        "day": 1,
+        "asset": 1.69,
+        "benchmark": 1.47
+      },
+      {
+        "day": 3,
+        "asset": 3.07,
+        "benchmark": 2.59
+      }
+    ],
+    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control."
+  },
+  {
+    "id": "trump-113573130299319701",
+    "person": "trump",
+    "personName": "Donald Trump",
+    "role": "Policy power",
+    "platform": "Truth Social",
+    "publishedAt": "2024-11-30 17:40:38+00:00",
+    "text": "The idea that the BRICS Countries are trying to move away from the Dollar while we stand by and watch is OVER. We require a commitment from these Countries that they will neither create a new BRICS Currency, nor back any other Currency to replace the mighty U.S. Dollar or, they will face 100% Tariffs, and should expect to say goodbye to selling into the wonderful U.S. Economy. They can go find another “sucker!” There is no chance that the BRICS will replace the U.S. Dollar in International Trade, and any Country that tries should wave goodbye to America.",
+    "sourceUrl": "https://truthsocial.com/@realDonaldTrump/posts/113573130299319701",
+    "topic": "Trade & tariffs",
+    "asset": "QQQ",
+    "benchmark": "SPY",
+    "coverage": "Policy",
+    "engagement": {
+      "likes": 32410,
+      "reposts": 8327,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": 0.91,
+      "volumeMultiple": 0.89,
+      "cumulativeAbnormal3D": 1.8,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 1.09,
+        "benchmark": 0.18
+      },
+      {
+        "day": 1,
+        "asset": 1.4,
+        "benchmark": 0.23
+      },
+      {
+        "day": 3,
+        "asset": 2.65,
+        "benchmark": 0.85
+      }
+    ],
+    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control."
+  },
+  {
+    "id": "trump-113546215051155542",
+    "person": "trump",
+    "personName": "Donald Trump",
+    "role": "Policy power",
+    "platform": "Truth Social",
+    "publishedAt": "2024-11-25 23:35:44+00:00",
+    "text": "As everyone is aware, thousands of people are pouring through Mexico and Canada, bringing Crime and Drugs at levels never seen before. Right now a Caravan coming from Mexico, composed of thousands of people, seems to be unstoppable in its quest to come through our currently Open Border. On January 20th, as one of my many first Executive Orders, I will sign all necessary documents to charge Mexico and Canada a 25% Tariff on ALL products coming into the United States, and its ridiculous Open Borders. This Tariff will remain in effect until such time as Drugs, in particular Fentanyl, and all Illegal Aliens stop this Invasion of our Country! Both Mexico and Canada have the absolute right and power to easily solve this long simmering problem. We hereby demand that they use this power, and until such time that they do, it is time for them to pay a very big price!",
+    "sourceUrl": "https://truthsocial.com/@realDonaldTrump/posts/113546215051155542",
+    "topic": "Trade & tariffs",
+    "asset": "QQQ",
+    "benchmark": "SPY",
+    "coverage": "Policy",
+    "engagement": {
+      "likes": 50686,
+      "reposts": 12598,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": 0.01,
+      "volumeMultiple": 0.89,
+      "cumulativeAbnormal3D": -0.22,
+      "persistence": "Reversed"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 0.54,
+        "benchmark": 0.52
+      },
+      {
+        "day": 1,
+        "asset": -0.25,
+        "benchmark": 0.22
+      },
+      {
+        "day": 3,
+        "asset": 0.62,
+        "benchmark": 0.84
+      }
+    ],
+    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control."
+  },
+  {
+    "id": "trump-112909351574797350",
+    "person": "trump",
+    "personName": "Donald Trump",
+    "role": "Policy power",
+    "platform": "Truth Social",
+    "publishedAt": "2024-08-05 12:12:58+00:00",
+    "text": "STOCK MARKETS ARE CRASHING, JOBS NUMBERS ARE TERRIBLE, WE ARE HEADING TO WORLD WAR lll, AND WE HAVE TWO OF THE MOST INCOMPETENT “LEADERS” IN HISTORY. THIS IS NOT GOOD!!!",
+    "sourceUrl": "https://truthsocial.com/@realDonaldTrump/posts/112909351574797350",
+    "topic": "Economy & rates",
+    "asset": "SPY",
+    "benchmark": "QQQ",
+    "coverage": "Policy",
+    "engagement": {
+      "likes": 43669,
+      "reposts": 13090,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": 0.07,
+      "volumeMultiple": 2.81,
+      "cumulativeAbnormal3D": 0.44,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -2.91,
+        "benchmark": -2.98
+      },
+      {
+        "day": 1,
+        "asset": -2.02,
+        "benchmark": -2.05
+      },
+      {
+        "day": 3,
+        "asset": -2.67,
+        "benchmark": -3.12
+      }
+    ],
+    "rationale": "Policy-language match linked to SPY; QQQ is shown as the broad-market control."
+  },
+  {
+    "id": "musk-1819797937414611313",
+    "person": "musk",
+    "personName": "Elon Musk",
+    "role": "Founder power",
+    "platform": "X",
+    "publishedAt": "2024-08-03 18:10:13+00:00",
+    "text": "Just did a walkthrough of the Tesla supercompute cluster at Giga Texas (aka Cortex). This will be ~100k H100/H200 with massive storage for video training of FSD & Optimus. Great work by the Tesla team!",
+    "sourceUrl": "https://x.com/elonmusk/status/1819797937414611313",
+    "topic": "Tesla & EV",
+    "asset": "TSLA",
+    "benchmark": "QQQ",
+    "coverage": "Direct",
+    "engagement": {
+      "likes": 152943,
+      "reposts": 12845,
+      "views": 46494207
+    },
+    "metrics": {
+      "abnormalReturn1D": -1.25,
+      "volumeMultiple": 0.82,
+      "cumulativeAbnormal3D": -4.55,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -4.23,
+        "benchmark": -2.98
+      },
+      {
+        "day": 1,
+        "asset": -3.39,
+        "benchmark": -2.05
+      },
+      {
+        "day": 3,
+        "asset": -7.66,
+        "benchmark": -3.12
+      }
+    ],
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+  },
+  {
+    "id": "musk-1785406795814510785",
+    "person": "musk",
+    "personName": "Elon Musk",
+    "role": "Founder power",
+    "platform": "X",
+    "publishedAt": "2024-04-30 20:32:06+00:00",
+    "text": "Tesla still plans to grow the Supercharger network, just at a slower pace for new locations and more focus on 100% uptime and expansion of existing locations",
+    "sourceUrl": "https://x.com/elonmusk/status/1785406795814510785",
+    "topic": "Tesla & EV",
+    "asset": "TSLA",
+    "benchmark": "QQQ",
+    "coverage": "Direct",
+    "engagement": {
+      "likes": 106801,
+      "reposts": 10433,
+      "views": 57196711
+    },
+    "metrics": {
+      "abnormalReturn1D": -1.07,
+      "volumeMultiple": 0.81,
+      "cumulativeAbnormal3D": -3.71,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -1.8,
+        "benchmark": -0.72
+      },
+      {
+        "day": 1,
+        "asset": -1.78,
+        "benchmark": 0.54
+      },
+      {
+        "day": 3,
+        "asset": -1.14,
+        "benchmark": 2.56
+      }
+    ],
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+  },
+  {
+    "id": "musk-1778881361249800203",
+    "person": "musk",
+    "personName": "Elon Musk",
+    "role": "Founder power",
+    "platform": "X",
+    "publishedAt": "2024-04-12 20:22:21+00:00",
+    "text": "Supervised full self-driving now $99/month",
+    "sourceUrl": "https://x.com/elonmusk/status/1778881361249800203",
+    "topic": "Tesla & EV",
+    "asset": "TSLA",
+    "benchmark": "QQQ",
+    "coverage": "Direct",
+    "engagement": {
+      "likes": 59736,
+      "reposts": 6214,
+      "views": 37024233
+    },
+    "metrics": {
+      "abnormalReturn1D": -3.95,
+      "volumeMultiple": 1.08,
+      "cumulativeAbnormal3D": -6.28,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -5.59,
+        "benchmark": -1.65
+      },
+      {
+        "day": 1,
+        "asset": -8.15,
+        "benchmark": -1.64
+      },
+      {
+        "day": 3,
+        "asset": -9.12,
+        "benchmark": -2.84
+      }
+    ],
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+  },
+  {
+    "id": "musk-1756751879701156059",
+    "person": "musk",
+    "personName": "Elon Musk",
+    "role": "Founder power",
+    "platform": "X",
+    "publishedAt": "2024-02-11 18:47:41+00:00",
+    "text": "Since most people don’t love to buy cars in the middle of winter, Tesla is offering a $1000 incentive to do so. This is the essential quandary of manufacturing: factories need continuous production for efficiency, but consumer demand is seasonal.",
+    "sourceUrl": "https://x.com/elonmusk/status/1756751879701156059",
+    "topic": "Tesla & EV",
+    "asset": "TSLA",
+    "benchmark": "QQQ",
+    "coverage": "Direct",
+    "engagement": {
+      "likes": 60972,
+      "reposts": 6309,
+      "views": 25152092
+    },
+    "metrics": {
+      "abnormalReturn1D": -2.42,
+      "volumeMultiple": 0.84,
+      "cumulativeAbnormal3D": -1.63,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -2.81,
+        "benchmark": -0.39
+      },
+      {
+        "day": 1,
+        "asset": -4.93,
+        "benchmark": -1.94
+      },
+      {
+        "day": 3,
+        "asset": -2.51,
+        "benchmark": -0.88
+      }
+    ],
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+  },
+  {
+    "id": "musk-1752922071229722990",
+    "person": "musk",
+    "personName": "Elon Musk",
+    "role": "Founder power",
+    "platform": "X",
+    "publishedAt": "2024-02-01 05:09:24+00:00",
+    "text": "The public vote is unequivocally in favor of Texas! Tesla will move immediately to hold a shareholder vote to transfer state of incorporation to Texas.",
+    "sourceUrl": "https://x.com/elonmusk/status/1752922071229722990",
+    "topic": "Tesla & EV",
+    "asset": "TSLA",
+    "benchmark": "QQQ",
+    "coverage": "Direct",
+    "engagement": {
+      "likes": 212435,
+      "reposts": 24339,
+      "views": 37060245
+    },
+    "metrics": {
+      "abnormalReturn1D": -0.34,
+      "volumeMultiple": 0.82,
+      "cumulativeAbnormal3D": -6.08,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 0.84,
+        "benchmark": 1.18
+      },
+      {
+        "day": 1,
+        "asset": 0.33,
+        "benchmark": 2.89
+      },
+      {
+        "day": 3,
+        "asset": -3.33,
+        "benchmark": 2.75
+      }
+    ],
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+  },
+  {
+    "id": "musk-1730278921248161877",
+    "person": "musk",
+    "personName": "Elon Musk",
+    "role": "Founder power",
+    "platform": "X",
+    "publishedAt": "2023-11-30 17:33:36+00:00",
+    "text": "Cybertruck production line https://t.co/sGYuVFLy3c",
+    "sourceUrl": "https://x.com/elonmusk/status/1730278921248161877",
+    "topic": "Tesla & EV",
+    "asset": "TSLA",
+    "benchmark": "QQQ",
+    "coverage": "Direct",
+    "engagement": {
+      "likes": 523657,
+      "reposts": 37176,
+      "views": 47108867
+    },
+    "metrics": {
+      "abnormalReturn1D": -1.41,
+      "volumeMultiple": 1.05,
+      "cumulativeAbnormal3D": -2.61,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -1.66,
+        "benchmark": -0.25
+      },
+      {
+        "day": 1,
+        "asset": -2.17,
+        "benchmark": 0.03
+      },
+      {
+        "day": 3,
+        "asset": -3.51,
+        "benchmark": -0.9
+      }
+    ],
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+  }
+]
