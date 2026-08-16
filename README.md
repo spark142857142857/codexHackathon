@@ -12,7 +12,7 @@ The core path is deliberately inspectable:
 
 The product now separates the full source universe from the reviewed demo layer:
 
-`145,442 raw rows → 32,393 eligible originals → 1,162 cluster representatives → 200 evidence-ready signals → 28 reviewed showcases`
+`145,442 raw rows → 32,393 eligible originals → 1,162 cluster representatives → 200 evidence-ready Atlas signals`
 
 ## Demo scope
 
@@ -21,7 +21,8 @@ The product now separates the full source universe from the reviewed demo layer:
 - Assets: SPY, QQQ, TSLA, NVDA, MSFT, BTC-USD, and SOXX
 - Candidate universe: all 32,393 non-reply/non-repost Musk and Trump originals since 2023, searchable through a paginated server API
 - Evidence universe: one representative per 1,162 cluster, with deterministic market and attention enrichment for 200 priority signals
-- Reviewed library: 28 human-reviewed showcases, including 24 person-led social cases and four cross-source cases
+- Main Signal Atlas: all 200 evidence-ready Trump/Musk signals with price, attention, and six-stage reports
+- Reviewed reference library: 28 retained source records, no longer used as the main Atlas list
 - Current signal: Trump public statements from an independent public RSS archive
 - Market refresh: five daily prices through Twelve Data when configured
 - Metrics: Abnormal Return 1D, Volume Multiple, and 3D Persistence
@@ -79,7 +80,7 @@ Large source CSVs are intentionally excluded from Git and production. `scripts/b
 - Current prices: [Twelve Data Basic](https://twelvedata.com/pricing)
 - Paid roadmap: official [X Search API](https://docs.x.com/x-api/posts/search/introduction)
 
-The current corpus boundary is explicit: complete local history is available for Musk and Trump, while Sam Altman remains limited to eight reviewed cases because no complete local source corpus is available.
+The current corpus boundary is explicit: the 200-signal Atlas uses complete local Musk and Trump history. Sam Altman remains only in the retained reviewed reference data because no complete local source corpus is available.
 
 ## Full-corpus evidence orchestration
 

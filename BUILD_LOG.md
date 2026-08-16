@@ -64,3 +64,4 @@ Codex was used to inspect the source datasets, define the product boundary, impl
 - Added actual D-5 through D+5 closes, abnormal return, volume multiple, volatility multiple, persistence, tracked-corpus mentions, and linked-media references to the priority layer.
 - Renamed the visible workflow to Evidence Research and positioned it as AI-ready conditional orchestration rather than completed AI analysis.
 - Added an explicit latest-signal `Pending` state so an RSS arrival is never shown as a confirmed market reaction.
+- Replaced the main Signal Atlas 28-case list with the 200 evidence-ready signals; the 28 reviewed records remain a separate reference artifact only.
