@@ -56,7 +56,7 @@ const copy = {
     kicker: "CROSS-DOMAIN SIGNAL INTELLIGENCE",
     heroA: "See how a signal spreads",
     heroB: "across markets, media, and attention.",
-    hero: "Track one public signal across actual prices, news publication volume, and public-attention evidence—then inspect how an AI research desk audits the conclusion.",
+    hero: "Track one public signal across actual prices, news publication volume, and public-attention evidence—then inspect a transparent, AI-ready evidence audit.",
     explore: "Open the atlas",
     how: "How we measure",
     signal: "Signal",
@@ -153,7 +153,7 @@ const copy = {
     kicker: "시장·미디어·관심도 통합 시그널 인텔리전스",
     heroA: "하나의 시그널이",
     heroB: "어디까지 퍼지는지 확인하세요.",
-    hero: "공개 시그널 전후의 실제 가격, 뉴스 발행량, 대중 관심 근거를 함께 추적하고 AI 리서치 데스크가 결론을 어떻게 검증했는지 확인합니다.",
+    hero: "공개 시그널 전후의 실제 가격, 뉴스 발행량, 대중 관심 근거를 함께 추적하고 투명한 AI-ready 증거 감사 과정을 확인합니다.",
     explore: "시그널 지도 열기",
     how: "분석 방식 보기",
     signal: "시그널",
@@ -258,11 +258,9 @@ function PersonMark({ person, size = "md" }: { person: PersonId; size?: "sm" | "
   const meta = people[person];
   return <span className={`person-mark ${meta.accent} ${size}`}>{meta.initials}</span>;
 }
-
 function formatPercent(value: number) {
   return `${value > 0 ? "+" : ""}${value.toFixed(2)}%`;
 }
-
 function formatCompact(value: number | null, locale: Locale) {
   if (value === null) return "—";
   return new Intl.NumberFormat(locale === "ko" ? "ko-KR" : "en", { notation: "compact", maximumFractionDigits: 1 }).format(value);
@@ -363,6 +361,7 @@ export function SignalAtlasDashboard({ events, initialLive, locale = "en" }: { e
   const formatTime = (value: string) => new Intl.DateTimeFormat(dateLocale, { timeZone: "Asia/Seoul", hour12: false, month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(value));
 
   const sourceState = live.sources.some((source) => source.state === "Fresh") ? "Fresh" : "Stale";
+  const latestSignal = live.signals[0];
   const activeResearch = research ?? selected.orchestration;
   const hasNewsData = selected.attentionWindow.some((point) => point.newsCount !== null);
   const newsCases = events.filter((event) => event.attentionWindow.some((point) => point.newsCount !== null));
@@ -400,8 +399,10 @@ export function SignalAtlasDashboard({ events, initialLive, locale = "en" }: { e
         <div className="stat-card"><div className="stat-icon"><Database size={18} /></div><div><span>{c.reviewed}</span><strong>{events.length}</strong><small>{locale === "ko" ? "원문 링크가 있는 큐레이션 사례" : "Curated cases with original links"}</small></div></div>
         <div className="stat-card"><div className="stat-icon"><CircleDot size={18} /></div><div><span>{c.classes}</span><strong>4</strong><small>{locale === "ko" ? "SNS · 뉴스 · 공시 · 청문회" : "Social · News · Filing · Hearing"}</small></div></div>
         <div className="stat-card"><div className="stat-icon"><BarChart3 size={18} /></div><div><span>{c.largest}</span><strong>{formatPercent(Math.abs(largest.metrics.abnormalReturn1D))}</strong><small>{largest.asset} vs {largest.benchmark}</small></div></div>
-        <div className="stat-card live-card"><div className="stat-icon"><RefreshCw size={18} className={liveLoading ? "spin" : ""} /></div><div><span>{c.sync}</span><strong>{live.mode === "live" ? "Live" : c.snapshotMode}</strong><small>{formatTime(live.fetchedAt)}</small></div><SourceState state={sourceState} locale={locale} /></div>
+        <div className="stat-card live-card"><div className="stat-icon"><RefreshCw size={18} className={liveLoading ? "spin" : ""} /></div><div><span>{c.sync}</span><strong>{live.mode === "live" ? (locale === "ko" ? "RSS 최신" : "RSS current") : c.snapshotMode}</strong><small>{formatTime(live.fetchedAt)}</small></div><SourceState state={sourceState} locale={locale} /></div>
       </section>
+
+      {latestSignal && <section className="latest-signal section-shell"><div><span className="pending-pill"><Clock3 size={13} />Pending</span><div><small>{locale === "ko" ? "최신 TRUMP 시그널 · 시장 반응 대기" : "LATEST TRUMP SIGNAL · MARKET REACTION PENDING"}</small><p>{latestSignal.text}</p><span>{latestSignal.topic} · {formatTime(latestSignal.publishedAt)}</span></div></div><a href={latestSignal.sourceUrl} target="_blank" rel="noreferrer">{locale === "ko" ? "원문 보기" : "View source"}<ExternalLink size={13} /></a><p>{locale === "ko" ? "시장 세션 정렬과 후속 근거가 완성될 때까지 반응 수치를 확정하지 않습니다." : "Reaction metrics remain unconfirmed until the market session aligns and follow-up evidence matures."}</p></section>}
 
       <SignalUniverse locale={locale} />
 
@@ -426,7 +427,7 @@ export function SignalAtlasDashboard({ events, initialLive, locale = "en" }: { e
             <div className="attention-layer"><div className="attention-title"><span>{locale === "ko" ? "관심도 근거와 범위" : "ATTENTION EVIDENCE & SCOPE"}</span><small>{selected.hashtags.length ? selected.hashtags.join(" · ") : (locale === "ko" ? "해시태그 없음" : "No observed hashtags")}</small></div><div className="attention-bars">{[[c.likes, selected.engagement.likes], [c.reposts, selected.engagement.reposts], [c.views, selected.engagement.views]].filter((item) => item[1] !== null).map(([label, value]) => <div key={String(label)}><span>{label}</span><div><i style={{ width: `${Math.min(100, Math.max(8, Math.log10(Number(value) + 1) * 18))}%` }} /></div><strong>{formatCompact(Number(value), locale)}</strong></div>)}</div><p className="coverage-note">{selected.attentionCoverage}</p></div>
           </article>
 
-          <aside className="live-panel research-desk"><div className="live-head"><div><Bot size={15} /><strong>{locale === "ko" ? "AI 리서치 데스크" : "AI RESEARCH DESK"}</strong></div><span>{activeResearch.mode === "openai" ? "OpenAI" : (locale === "ko" ? "검토 스냅샷" : "Reviewed snapshot")}</span></div><div className="research-verdict"><span>{locale === "ko" ? "증거 판정" : "EVIDENCE VERDICT"}</span><strong>{locale === "ko" ? (activeResearch.verdict === "Reaction detected" ? "반응 관찰" : activeResearch.verdict === "Mixed evidence" ? "혼합된 증거" : "증거 부족") : activeResearch.verdict}</strong><small>{locale === "ko" ? `신뢰도 ${confidenceLabel(activeResearch.confidence, locale)}` : `${activeResearch.confidence} confidence`}</small><p>{locale === "ko" ? activeResearch.summaryKo : activeResearch.summaryEn}</p></div><button className="run-research" onClick={runResearch} disabled={researchLoading}><Sparkles size={15} className={researchLoading ? "spin" : ""} />{researchLoading ? (locale === "ko" ? "에이전트 분석 중…" : "Agents are analyzing…") : (locale === "ko" ? "AI 리서치 실행" : "Run AI research")}</button><div className="agent-pipeline">{activeResearch.stages.map((stage, index) => <div className={`agent-stage ${stage.state.toLowerCase()}`} key={stage.id}><span className="stage-index">{String(index + 1).padStart(2, "0")}</span><div><strong>{stage.id === "classify" ? (locale === "ko" ? "시그널 분류" : "Signal Classifier") : stage.id === "map" ? (locale === "ko" ? "온톨로지 매핑" : "Ontology Mapper") : stage.id === "amplify" ? (locale === "ko" ? "정보 확산 분석" : "Amplification") : stage.id === "market" ? (locale === "ko" ? "시장 반응 계산" : "Market Reaction") : stage.id === "audit" ? (locale === "ko" ? "신뢰도 감사" : "Confidence Auditor") : (locale === "ko" ? "리포트 작성" : "Report Writer")}</strong><p>{locale === "ko" ? stage.summaryKo : stage.summaryEn}</p><small>{stage.state} · {confidenceLabel(stage.confidence, locale)}</small></div>{stage.state === "Complete" ? <CheckCircle2 size={14} /> : <Clock3 size={14} />}</div>)}</div><div className="market-snapshot"><div className="aside-title"><span>{locale === "ko" ? "증거 성숙 단계" : "EVIDENCE MATURITY"}</span><small>{locale === "ko" ? "사후 검증형" : "Post-event"}</small></div><div className="maturity-track"><span className="done">Initial</span><span className="done">Amplification</span><span className="done">Market</span><span className="done">Report</span></div></div><div className="live-note"><ShieldCheck size={15} />{c.association}</div></aside>
+          <aside className="live-panel research-desk"><div className="live-head"><div><Bot size={15} /><strong>{locale === "ko" ? "증거 리서치 데스크" : "EVIDENCE RESEARCH DESK"}</strong></div><span>{activeResearch.mode === "deterministic" ? (locale === "ko" ? "결정론적 감사" : "Deterministic audit") : (locale === "ko" ? "검토 스냅샷" : "Reviewed snapshot")}</span></div><div className="research-verdict"><span>{locale === "ko" ? "증거 판정" : "EVIDENCE VERDICT"}</span><strong>{locale === "ko" ? (activeResearch.verdict === "Reaction detected" ? "반응 관찰" : activeResearch.verdict === "Mixed evidence" ? "혼합된 증거" : "증거 부족") : activeResearch.verdict}</strong><small>{locale === "ko" ? `신뢰도 ${confidenceLabel(activeResearch.confidence, locale)}` : `${activeResearch.confidence} confidence`}</small><p>{locale === "ko" ? activeResearch.summaryKo : activeResearch.summaryEn}</p></div><button className="run-research" onClick={runResearch} disabled={researchLoading}><Sparkles size={15} className={researchLoading ? "spin" : ""} />{researchLoading ? (locale === "ko" ? "근거 감사 중…" : "Auditing evidence…") : (locale === "ko" ? "증거 감사 실행" : "Run evidence audit")}</button><div className="agent-pipeline">{activeResearch.stages.map((stage, index) => <div className={`agent-stage ${stage.state.toLowerCase()}`} key={stage.id}><span className="stage-index">{String(index + 1).padStart(2, "0")}</span><div><strong>{stage.id === "classify" ? (locale === "ko" ? "시그널 분류" : "Signal Classifier") : stage.id === "map" ? (locale === "ko" ? "온톨로지 매핑" : "Ontology Mapper") : stage.id === "amplify" ? (locale === "ko" ? "정보 확산 분석" : "Amplification") : stage.id === "market" ? (locale === "ko" ? "시장 반응 계산" : "Market Reaction") : stage.id === "audit" ? (locale === "ko" ? "신뢰도 감사" : "Confidence Auditor") : (locale === "ko" ? "리포트 작성" : "Report Writer")}</strong><p>{locale === "ko" ? stage.summaryKo : stage.summaryEn}</p><small>{stage.state} · {confidenceLabel(stage.confidence, locale)}</small></div>{stage.state === "Complete" ? <CheckCircle2 size={14} /> : <Clock3 size={14} />}</div>)}</div><div className="market-snapshot"><div className="aside-title"><span>{locale === "ko" ? "증거 성숙 단계" : "EVIDENCE MATURITY"}</span><small>{locale === "ko" ? "사후 검증형" : "Post-event"}</small></div><div className="maturity-track"><span className="done">Initial</span><span className="done">Amplification</span><span className="done">Market</span><span className="done">Report</span></div></div><div className="live-note"><ShieldCheck size={15} />{c.association}</div></aside>
         </div>
       </section>
 
@@ -444,3 +445,4 @@ export function SignalAtlasDashboard({ events, initialLive, locale = "en" }: { e
     </main>
   );
 }
+
