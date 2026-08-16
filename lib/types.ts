@@ -17,7 +17,7 @@ export interface WindowPoint {
 export interface PricePoint {
   session: number;
   date: string;
-  close: number;
+  close: number | null;
 }
 
 export interface AttentionPoint {
@@ -67,6 +67,7 @@ export interface MarketEvent {
   topic: string;
   signalType: SignalType;
   tags: string[];
+  relatedAssets: string[];
   hashtags: string[];
   summaryKo: string;
   asset: string;
@@ -80,6 +81,7 @@ export interface MarketEvent {
   metrics: ReactionMetrics;
   window: WindowPoint[];
   priceWindow: PricePoint[];
+  priceWindows: Record<string, PricePoint[]>;
   attentionWindow: AttentionPoint[];
   attentionCoverage: string;
   eventSession: string;
@@ -155,18 +157,39 @@ export interface NewsArticle {
   publishedAt: string | null;
 }
 
+export interface SocialPostEvidence {
+  text: string;
+  url: string;
+  author: string;
+  publishedAt: string;
+}
+
+export interface SocialEvidence {
+  status: "live" | "snapshot" | "unavailable";
+  provider: string;
+  query: string;
+  counts: Record<string, number>;
+  hashtagCounts: Record<string, number>;
+  hashtags: Array<{ tag: string; count: number }>;
+  posts: SocialPostEvidence[];
+  message: string;
+}
+
 export interface NewsEvidencePayload {
   eventId: string;
   status: "live" | "snapshot" | "unavailable";
   fetchedAt: string;
+  provider: string;
   query: string;
   counts: Record<string, number>;
   articles: NewsArticle[];
+  social: SocialEvidence;
   message: string;
 }
 
 export interface CandidateEvidence {
   asset: string;
+  relatedAssets: string[];
   benchmark: string;
   eventSession: string;
   abnormalReturn1D: number;
@@ -178,6 +201,7 @@ export interface CandidateEvidence {
   linkedMediaReferences: number;
   attentionCoverage: string;
   priceWindow: PricePoint[];
+  priceWindows: Record<string, PricePoint[]>;
   window: WindowPoint[];
   attentionWindow: AttentionPoint[];
   orchestration: OrchestrationReport;

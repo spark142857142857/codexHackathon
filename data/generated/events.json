@@ -17,6 +17,12 @@
       "MSFT",
       "Sam Altman"
     ],
+    "relatedAssets": [
+      "MSFT",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "정부 및 보안 생태계와 협력해 모든 기업의 AI 보안을 지원하겠다는 계획을 밝혔다.",
     "asset": "MSFT",
@@ -112,6 +118,236 @@
         "close": 368.57
       }
     ],
+    "priceWindows": {
+      "MSFT": [
+        {
+          "session": -5,
+          "date": "2026-06-12",
+          "close": 390.74
+        },
+        {
+          "session": -4,
+          "date": "2026-06-15",
+          "close": 399.76
+        },
+        {
+          "session": -3,
+          "date": "2026-06-16",
+          "close": 393.83
+        },
+        {
+          "session": -2,
+          "date": "2026-06-17",
+          "close": 378.91
+        },
+        {
+          "session": -1,
+          "date": "2026-06-18",
+          "close": 379.4
+        },
+        {
+          "session": 0,
+          "date": "2026-06-22",
+          "close": 367.34
+        },
+        {
+          "session": 1,
+          "date": "2026-06-23",
+          "close": 373.94
+        },
+        {
+          "session": 2,
+          "date": "2026-06-24",
+          "close": 365.46
+        },
+        {
+          "session": 3,
+          "date": "2026-06-25",
+          "close": 352.83
+        },
+        {
+          "session": 4,
+          "date": "2026-06-26",
+          "close": 372.97
+        },
+        {
+          "session": 5,
+          "date": "2026-06-29",
+          "close": 368.57
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2026-06-12",
+          "close": 741.75
+        },
+        {
+          "session": -4,
+          "date": "2026-06-15",
+          "close": 754.83
+        },
+        {
+          "session": -3,
+          "date": "2026-06-16",
+          "close": 750.33
+        },
+        {
+          "session": -2,
+          "date": "2026-06-17",
+          "close": 740.96
+        },
+        {
+          "session": -1,
+          "date": "2026-06-18",
+          "close": 746.74
+        },
+        {
+          "session": 0,
+          "date": "2026-06-22",
+          "close": 744.39
+        },
+        {
+          "session": 1,
+          "date": "2026-06-23",
+          "close": 733.58
+        },
+        {
+          "session": 2,
+          "date": "2026-06-24",
+          "close": 733.24
+        },
+        {
+          "session": 3,
+          "date": "2026-06-25",
+          "close": 734.3
+        },
+        {
+          "session": 4,
+          "date": "2026-06-26",
+          "close": 728.99
+        },
+        {
+          "session": 5,
+          "date": "2026-06-29",
+          "close": 741
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2026-06-12",
+          "close": 721.34
+        },
+        {
+          "session": -4,
+          "date": "2026-06-15",
+          "close": 744
+        },
+        {
+          "session": -3,
+          "date": "2026-06-16",
+          "close": 729.86
+        },
+        {
+          "session": -2,
+          "date": "2026-06-17",
+          "close": 722.51
+        },
+        {
+          "session": -1,
+          "date": "2026-06-18",
+          "close": 740.62
+        },
+        {
+          "session": 0,
+          "date": "2026-06-22",
+          "close": 737.95
+        },
+        {
+          "session": 1,
+          "date": "2026-06-23",
+          "close": 713.65
+        },
+        {
+          "session": 2,
+          "date": "2026-06-24",
+          "close": 710.62
+        },
+        {
+          "session": 3,
+          "date": "2026-06-25",
+          "close": 716.38
+        },
+        {
+          "session": 4,
+          "date": "2026-06-26",
+          "close": 706.52
+        },
+        {
+          "session": 5,
+          "date": "2026-06-29",
+          "close": 724.08
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2026-06-12",
+          "close": 63543.2
+        },
+        {
+          "session": -4,
+          "date": "2026-06-15",
+          "close": 66289.5
+        },
+        {
+          "session": -3,
+          "date": "2026-06-16",
+          "close": 65600.64
+        },
+        {
+          "session": -2,
+          "date": "2026-06-17",
+          "close": 64418.45
+        },
+        {
+          "session": -1,
+          "date": "2026-06-18",
+          "close": 62896.47
+        },
+        {
+          "session": 0,
+          "date": "2026-06-22",
+          "close": 63952.11
+        },
+        {
+          "session": 1,
+          "date": "2026-06-23",
+          "close": 62668.02
+        },
+        {
+          "session": 2,
+          "date": "2026-06-24",
+          "close": 60995.13
+        },
+        {
+          "session": 3,
+          "date": "2026-06-25",
+          "close": 59721.68
+        },
+        {
+          "session": 4,
+          "date": "2026-06-26",
+          "close": 60016.43
+        },
+        {
+          "session": 5,
+          "date": "2026-06-29",
+          "close": 60138.38
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -269,6 +505,12 @@
       "MSFT",
       "Sam Altman"
     ],
+    "relatedAssets": [
+      "MSFT",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "OpenAI의 현재 전략과 향후 계획을 공개했다.",
     "asset": "MSFT",
@@ -364,6 +606,236 @@
         "close": 399.76
       }
     ],
+    "priceWindows": {
+      "MSFT": [
+        {
+          "session": -5,
+          "date": "2026-06-01",
+          "close": 460.52
+        },
+        {
+          "session": -4,
+          "date": "2026-06-02",
+          "close": 441.31
+        },
+        {
+          "session": -3,
+          "date": "2026-06-03",
+          "close": 427.34
+        },
+        {
+          "session": -2,
+          "date": "2026-06-04",
+          "close": 428.05
+        },
+        {
+          "session": -1,
+          "date": "2026-06-05",
+          "close": 416.67
+        },
+        {
+          "session": 0,
+          "date": "2026-06-08",
+          "close": 411.74
+        },
+        {
+          "session": 1,
+          "date": "2026-06-09",
+          "close": 403.41
+        },
+        {
+          "session": 2,
+          "date": "2026-06-10",
+          "close": 397.36
+        },
+        {
+          "session": 3,
+          "date": "2026-06-11",
+          "close": 390.34
+        },
+        {
+          "session": 4,
+          "date": "2026-06-12",
+          "close": 390.74
+        },
+        {
+          "session": 5,
+          "date": "2026-06-15",
+          "close": 399.76
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2026-06-01",
+          "close": 758.54
+        },
+        {
+          "session": -4,
+          "date": "2026-06-02",
+          "close": 759.57
+        },
+        {
+          "session": -3,
+          "date": "2026-06-03",
+          "close": 754.24
+        },
+        {
+          "session": -2,
+          "date": "2026-06-04",
+          "close": 757.09
+        },
+        {
+          "session": -1,
+          "date": "2026-06-05",
+          "close": 737.55
+        },
+        {
+          "session": 0,
+          "date": "2026-06-08",
+          "close": 739.22
+        },
+        {
+          "session": 1,
+          "date": "2026-06-09",
+          "close": 737.05
+        },
+        {
+          "session": 2,
+          "date": "2026-06-10",
+          "close": 725.43
+        },
+        {
+          "session": 3,
+          "date": "2026-06-11",
+          "close": 737.76
+        },
+        {
+          "session": 4,
+          "date": "2026-06-12",
+          "close": 741.75
+        },
+        {
+          "session": 5,
+          "date": "2026-06-15",
+          "close": 754.83
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2026-06-01",
+          "close": 742.74
+        },
+        {
+          "session": -4,
+          "date": "2026-06-02",
+          "close": 746.16
+        },
+        {
+          "session": -3,
+          "date": "2026-06-03",
+          "close": 744.21
+        },
+        {
+          "session": -2,
+          "date": "2026-06-04",
+          "close": 740.61
+        },
+        {
+          "session": -1,
+          "date": "2026-06-05",
+          "close": 705.06
+        },
+        {
+          "session": 0,
+          "date": "2026-06-08",
+          "close": 716.07
+        },
+        {
+          "session": 1,
+          "date": "2026-06-09",
+          "close": 707.83
+        },
+        {
+          "session": 2,
+          "date": "2026-06-10",
+          "close": 693.69
+        },
+        {
+          "session": 3,
+          "date": "2026-06-11",
+          "close": 717.12
+        },
+        {
+          "session": 4,
+          "date": "2026-06-12",
+          "close": 721.34
+        },
+        {
+          "session": 5,
+          "date": "2026-06-15",
+          "close": 744
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2026-06-01",
+          "close": 71319.77
+        },
+        {
+          "session": -4,
+          "date": "2026-06-02",
+          "close": 66703.66
+        },
+        {
+          "session": -3,
+          "date": "2026-06-03",
+          "close": 64014.37
+        },
+        {
+          "session": -2,
+          "date": "2026-06-04",
+          "close": 63801.57
+        },
+        {
+          "session": -1,
+          "date": "2026-06-05",
+          "close": 60922.67
+        },
+        {
+          "session": 0,
+          "date": "2026-06-08",
+          "close": 63090.59
+        },
+        {
+          "session": 1,
+          "date": "2026-06-09",
+          "close": 61643.78
+        },
+        {
+          "session": 2,
+          "date": "2026-06-10",
+          "close": 61449.29
+        },
+        {
+          "session": 3,
+          "date": "2026-06-11",
+          "close": 63561.05
+        },
+        {
+          "session": 4,
+          "date": "2026-06-12",
+          "close": 63543.2
+        },
+        {
+          "session": 5,
+          "date": "2026-06-15",
+          "close": 66289.5
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -521,6 +993,12 @@
       "MSFT",
       "Sam Altman"
     ],
+    "relatedAssets": [
+      "MSFT",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "ChatGPT 메모리 기능의 대규모 업그레이드 배포를 발표했다.",
     "asset": "MSFT",
@@ -616,6 +1094,236 @@
         "close": 390.34
       }
     ],
+    "priceWindows": {
+      "MSFT": [
+        {
+          "session": -5,
+          "date": "2026-05-28",
+          "close": 426.99
+        },
+        {
+          "session": -4,
+          "date": "2026-05-29",
+          "close": 450.24
+        },
+        {
+          "session": -3,
+          "date": "2026-06-01",
+          "close": 460.52
+        },
+        {
+          "session": -2,
+          "date": "2026-06-02",
+          "close": 441.31
+        },
+        {
+          "session": -1,
+          "date": "2026-06-03",
+          "close": 427.34
+        },
+        {
+          "session": 0,
+          "date": "2026-06-04",
+          "close": 428.05
+        },
+        {
+          "session": 1,
+          "date": "2026-06-05",
+          "close": 416.67
+        },
+        {
+          "session": 2,
+          "date": "2026-06-08",
+          "close": 411.74
+        },
+        {
+          "session": 3,
+          "date": "2026-06-09",
+          "close": 403.41
+        },
+        {
+          "session": 4,
+          "date": "2026-06-10",
+          "close": 397.36
+        },
+        {
+          "session": 5,
+          "date": "2026-06-11",
+          "close": 390.34
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2026-05-28",
+          "close": 754.6
+        },
+        {
+          "session": -4,
+          "date": "2026-05-29",
+          "close": 756.48
+        },
+        {
+          "session": -3,
+          "date": "2026-06-01",
+          "close": 758.54
+        },
+        {
+          "session": -2,
+          "date": "2026-06-02",
+          "close": 759.57
+        },
+        {
+          "session": -1,
+          "date": "2026-06-03",
+          "close": 754.24
+        },
+        {
+          "session": 0,
+          "date": "2026-06-04",
+          "close": 757.09
+        },
+        {
+          "session": 1,
+          "date": "2026-06-05",
+          "close": 737.55
+        },
+        {
+          "session": 2,
+          "date": "2026-06-08",
+          "close": 739.22
+        },
+        {
+          "session": 3,
+          "date": "2026-06-09",
+          "close": 737.05
+        },
+        {
+          "session": 4,
+          "date": "2026-06-10",
+          "close": 725.43
+        },
+        {
+          "session": 5,
+          "date": "2026-06-11",
+          "close": 737.76
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2026-05-28",
+          "close": 735.6
+        },
+        {
+          "session": -4,
+          "date": "2026-05-29",
+          "close": 738.31
+        },
+        {
+          "session": -3,
+          "date": "2026-06-01",
+          "close": 742.74
+        },
+        {
+          "session": -2,
+          "date": "2026-06-02",
+          "close": 746.16
+        },
+        {
+          "session": -1,
+          "date": "2026-06-03",
+          "close": 744.21
+        },
+        {
+          "session": 0,
+          "date": "2026-06-04",
+          "close": 740.61
+        },
+        {
+          "session": 1,
+          "date": "2026-06-05",
+          "close": 705.06
+        },
+        {
+          "session": 2,
+          "date": "2026-06-08",
+          "close": 716.07
+        },
+        {
+          "session": 3,
+          "date": "2026-06-09",
+          "close": 707.83
+        },
+        {
+          "session": 4,
+          "date": "2026-06-10",
+          "close": 693.69
+        },
+        {
+          "session": 5,
+          "date": "2026-06-11",
+          "close": 717.12
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2026-05-28",
+          "close": 73536.55
+        },
+        {
+          "session": -4,
+          "date": "2026-05-29",
+          "close": 73372.52
+        },
+        {
+          "session": -3,
+          "date": "2026-06-01",
+          "close": 71319.77
+        },
+        {
+          "session": -2,
+          "date": "2026-06-02",
+          "close": 66703.66
+        },
+        {
+          "session": -1,
+          "date": "2026-06-03",
+          "close": 64014.37
+        },
+        {
+          "session": 0,
+          "date": "2026-06-04",
+          "close": 63801.57
+        },
+        {
+          "session": 1,
+          "date": "2026-06-05",
+          "close": 60922.67
+        },
+        {
+          "session": 2,
+          "date": "2026-06-08",
+          "close": 63090.59
+        },
+        {
+          "session": 3,
+          "date": "2026-06-09",
+          "close": 61643.78
+        },
+        {
+          "session": 4,
+          "date": "2026-06-10",
+          "close": 61449.29
+        },
+        {
+          "session": 5,
+          "date": "2026-06-11",
+          "close": 63561.05
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -773,6 +1481,12 @@
       "NVDA",
       "Sam Altman"
     ],
+    "relatedAssets": [
+      "NVDA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "사회에 유용한 로봇을 개발·생산하기 위한 OpenAI 로보틱스 채용을 알렸다.",
     "asset": "NVDA",
@@ -868,6 +1582,236 @@
         "close": 208.64
       }
     ],
+    "priceWindows": {
+      "NVDA": [
+        {
+          "session": -5,
+          "date": "2026-05-22",
+          "close": 215.33
+        },
+        {
+          "session": -4,
+          "date": "2026-05-26",
+          "close": 214.86
+        },
+        {
+          "session": -3,
+          "date": "2026-05-27",
+          "close": 212.6
+        },
+        {
+          "session": -2,
+          "date": "2026-05-28",
+          "close": 214.25
+        },
+        {
+          "session": -1,
+          "date": "2026-05-29",
+          "close": 211.14
+        },
+        {
+          "session": 0,
+          "date": "2026-06-01",
+          "close": 224.36
+        },
+        {
+          "session": 1,
+          "date": "2026-06-02",
+          "close": 222.82
+        },
+        {
+          "session": 2,
+          "date": "2026-06-03",
+          "close": 214.75
+        },
+        {
+          "session": 3,
+          "date": "2026-06-04",
+          "close": 218.66
+        },
+        {
+          "session": 4,
+          "date": "2026-06-05",
+          "close": 205.1
+        },
+        {
+          "session": 5,
+          "date": "2026-06-08",
+          "close": 208.64
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2026-05-22",
+          "close": 745.64
+        },
+        {
+          "session": -4,
+          "date": "2026-05-26",
+          "close": 750.59
+        },
+        {
+          "session": -3,
+          "date": "2026-05-27",
+          "close": 750.46
+        },
+        {
+          "session": -2,
+          "date": "2026-05-28",
+          "close": 754.6
+        },
+        {
+          "session": -1,
+          "date": "2026-05-29",
+          "close": 756.48
+        },
+        {
+          "session": 0,
+          "date": "2026-06-01",
+          "close": 758.54
+        },
+        {
+          "session": 1,
+          "date": "2026-06-02",
+          "close": 759.57
+        },
+        {
+          "session": 2,
+          "date": "2026-06-03",
+          "close": 754.24
+        },
+        {
+          "session": 3,
+          "date": "2026-06-04",
+          "close": 757.09
+        },
+        {
+          "session": 4,
+          "date": "2026-06-05",
+          "close": 737.55
+        },
+        {
+          "session": 5,
+          "date": "2026-06-08",
+          "close": 739.22
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2026-05-22",
+          "close": 717.54
+        },
+        {
+          "session": -4,
+          "date": "2026-05-26",
+          "close": 730.28
+        },
+        {
+          "session": -3,
+          "date": "2026-05-27",
+          "close": 729.45
+        },
+        {
+          "session": -2,
+          "date": "2026-05-28",
+          "close": 735.6
+        },
+        {
+          "session": -1,
+          "date": "2026-05-29",
+          "close": 738.31
+        },
+        {
+          "session": 0,
+          "date": "2026-06-01",
+          "close": 742.74
+        },
+        {
+          "session": 1,
+          "date": "2026-06-02",
+          "close": 746.16
+        },
+        {
+          "session": 2,
+          "date": "2026-06-03",
+          "close": 744.21
+        },
+        {
+          "session": 3,
+          "date": "2026-06-04",
+          "close": 740.61
+        },
+        {
+          "session": 4,
+          "date": "2026-06-05",
+          "close": 705.06
+        },
+        {
+          "session": 5,
+          "date": "2026-06-08",
+          "close": 716.07
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2026-05-22",
+          "close": 75488.24
+        },
+        {
+          "session": -4,
+          "date": "2026-05-26",
+          "close": 75825.73
+        },
+        {
+          "session": -3,
+          "date": "2026-05-27",
+          "close": 74344.7
+        },
+        {
+          "session": -2,
+          "date": "2026-05-28",
+          "close": 73536.55
+        },
+        {
+          "session": -1,
+          "date": "2026-05-29",
+          "close": 73372.52
+        },
+        {
+          "session": 0,
+          "date": "2026-06-01",
+          "close": 71319.77
+        },
+        {
+          "session": 1,
+          "date": "2026-06-02",
+          "close": 66703.66
+        },
+        {
+          "session": 2,
+          "date": "2026-06-03",
+          "close": 64014.37
+        },
+        {
+          "session": 3,
+          "date": "2026-06-04",
+          "close": 63801.57
+        },
+        {
+          "session": 4,
+          "date": "2026-06-05",
+          "close": 60922.67
+        },
+        {
+          "session": 5,
+          "date": "2026-06-08",
+          "close": 63090.59
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -1025,6 +1969,12 @@
       "NVDA",
       "Sam Altman"
     ],
+    "relatedAssets": [
+      "NVDA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "범용 AI 모델이 수학의 주요 미해결 문제를 풀었다는 연구 성과를 발표했다.",
     "asset": "NVDA",
@@ -1120,6 +2070,236 @@
         "close": 214.25
       }
     ],
+    "priceWindows": {
+      "NVDA": [
+        {
+          "session": -5,
+          "date": "2026-05-13",
+          "close": 225.83
+        },
+        {
+          "session": -4,
+          "date": "2026-05-14",
+          "close": 235.74
+        },
+        {
+          "session": -3,
+          "date": "2026-05-15",
+          "close": 225.32
+        },
+        {
+          "session": -2,
+          "date": "2026-05-18",
+          "close": 222.32
+        },
+        {
+          "session": -1,
+          "date": "2026-05-19",
+          "close": 220.61
+        },
+        {
+          "session": 0,
+          "date": "2026-05-20",
+          "close": 223.47
+        },
+        {
+          "session": 1,
+          "date": "2026-05-21",
+          "close": 219.51
+        },
+        {
+          "session": 2,
+          "date": "2026-05-22",
+          "close": 215.33
+        },
+        {
+          "session": 3,
+          "date": "2026-05-26",
+          "close": 214.86
+        },
+        {
+          "session": 4,
+          "date": "2026-05-27",
+          "close": 212.6
+        },
+        {
+          "session": 5,
+          "date": "2026-05-28",
+          "close": 214.25
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2026-05-13",
+          "close": 742.31
+        },
+        {
+          "session": -4,
+          "date": "2026-05-14",
+          "close": 748.17
+        },
+        {
+          "session": -3,
+          "date": "2026-05-15",
+          "close": 739.17
+        },
+        {
+          "session": -2,
+          "date": "2026-05-18",
+          "close": 738.65
+        },
+        {
+          "session": -1,
+          "date": "2026-05-19",
+          "close": 733.73
+        },
+        {
+          "session": 0,
+          "date": "2026-05-20",
+          "close": 741.25
+        },
+        {
+          "session": 1,
+          "date": "2026-05-21",
+          "close": 742.72
+        },
+        {
+          "session": 2,
+          "date": "2026-05-22",
+          "close": 745.64
+        },
+        {
+          "session": 3,
+          "date": "2026-05-26",
+          "close": 750.59
+        },
+        {
+          "session": 4,
+          "date": "2026-05-27",
+          "close": 750.46
+        },
+        {
+          "session": 5,
+          "date": "2026-05-28",
+          "close": 754.6
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2026-05-13",
+          "close": 714.71
+        },
+        {
+          "session": -4,
+          "date": "2026-05-14",
+          "close": 719.79
+        },
+        {
+          "session": -3,
+          "date": "2026-05-15",
+          "close": 708.93
+        },
+        {
+          "session": -2,
+          "date": "2026-05-18",
+          "close": 705.88
+        },
+        {
+          "session": -1,
+          "date": "2026-05-19",
+          "close": 701.53
+        },
+        {
+          "session": 0,
+          "date": "2026-05-20",
+          "close": 713.15
+        },
+        {
+          "session": 1,
+          "date": "2026-05-21",
+          "close": 714.51
+        },
+        {
+          "session": 2,
+          "date": "2026-05-22",
+          "close": 717.54
+        },
+        {
+          "session": 3,
+          "date": "2026-05-26",
+          "close": 730.28
+        },
+        {
+          "session": 4,
+          "date": "2026-05-27",
+          "close": 729.45
+        },
+        {
+          "session": 5,
+          "date": "2026-05-28",
+          "close": 735.6
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2026-05-13",
+          "close": 79277.12
+        },
+        {
+          "session": -4,
+          "date": "2026-05-14",
+          "close": 81051.25
+        },
+        {
+          "session": -3,
+          "date": "2026-05-15",
+          "close": 79065.68
+        },
+        {
+          "session": -2,
+          "date": "2026-05-18",
+          "close": 76954.17
+        },
+        {
+          "session": -1,
+          "date": "2026-05-19",
+          "close": 76750.91
+        },
+        {
+          "session": 0,
+          "date": "2026-05-20",
+          "close": 77457.77
+        },
+        {
+          "session": 1,
+          "date": "2026-05-21",
+          "close": 77539.17
+        },
+        {
+          "session": 2,
+          "date": "2026-05-22",
+          "close": 75488.24
+        },
+        {
+          "session": 3,
+          "date": "2026-05-26",
+          "close": 75825.73
+        },
+        {
+          "session": 4,
+          "date": "2026-05-27",
+          "close": 74344.7
+        },
+        {
+          "session": 5,
+          "date": "2026-05-28",
+          "close": 73536.55
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -1277,6 +2457,12 @@
       "MSFT",
       "Sam Altman"
     ],
+    "relatedAssets": [
+      "MSFT",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "최신 업데이트로 ChatGPT 성능이 크게 향상됐다고 밝혔다.",
     "asset": "MSFT",
@@ -1372,6 +2558,236 @@
         "close": 416.03
       }
     ],
+    "priceWindows": {
+      "MSFT": [
+        {
+          "session": -5,
+          "date": "2026-05-11",
+          "close": 412.66
+        },
+        {
+          "session": -4,
+          "date": "2026-05-12",
+          "close": 407.77
+        },
+        {
+          "session": -3,
+          "date": "2026-05-13",
+          "close": 405.21
+        },
+        {
+          "session": -2,
+          "date": "2026-05-14",
+          "close": 409.43
+        },
+        {
+          "session": -1,
+          "date": "2026-05-15",
+          "close": 421.92
+        },
+        {
+          "session": 0,
+          "date": "2026-05-18",
+          "close": 423.54
+        },
+        {
+          "session": 1,
+          "date": "2026-05-19",
+          "close": 417.42
+        },
+        {
+          "session": 2,
+          "date": "2026-05-20",
+          "close": 421.06
+        },
+        {
+          "session": 3,
+          "date": "2026-05-21",
+          "close": 419.09
+        },
+        {
+          "session": 4,
+          "date": "2026-05-22",
+          "close": 418.57
+        },
+        {
+          "session": 5,
+          "date": "2026-05-26",
+          "close": 416.03
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2026-05-11",
+          "close": 739.3
+        },
+        {
+          "session": -4,
+          "date": "2026-05-12",
+          "close": 738.18
+        },
+        {
+          "session": -3,
+          "date": "2026-05-13",
+          "close": 742.31
+        },
+        {
+          "session": -2,
+          "date": "2026-05-14",
+          "close": 748.17
+        },
+        {
+          "session": -1,
+          "date": "2026-05-15",
+          "close": 739.17
+        },
+        {
+          "session": 0,
+          "date": "2026-05-18",
+          "close": 738.65
+        },
+        {
+          "session": 1,
+          "date": "2026-05-19",
+          "close": 733.73
+        },
+        {
+          "session": 2,
+          "date": "2026-05-20",
+          "close": 741.25
+        },
+        {
+          "session": 3,
+          "date": "2026-05-21",
+          "close": 742.72
+        },
+        {
+          "session": 4,
+          "date": "2026-05-22",
+          "close": 745.64
+        },
+        {
+          "session": 5,
+          "date": "2026-05-26",
+          "close": 750.59
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2026-05-11",
+          "close": 713.29
+        },
+        {
+          "session": -4,
+          "date": "2026-05-12",
+          "close": 707.24
+        },
+        {
+          "session": -3,
+          "date": "2026-05-13",
+          "close": 714.71
+        },
+        {
+          "session": -2,
+          "date": "2026-05-14",
+          "close": 719.79
+        },
+        {
+          "session": -1,
+          "date": "2026-05-15",
+          "close": 708.93
+        },
+        {
+          "session": 0,
+          "date": "2026-05-18",
+          "close": 705.88
+        },
+        {
+          "session": 1,
+          "date": "2026-05-19",
+          "close": 701.53
+        },
+        {
+          "session": 2,
+          "date": "2026-05-20",
+          "close": 713.15
+        },
+        {
+          "session": 3,
+          "date": "2026-05-21",
+          "close": 714.51
+        },
+        {
+          "session": 4,
+          "date": "2026-05-22",
+          "close": 717.54
+        },
+        {
+          "session": 5,
+          "date": "2026-05-26",
+          "close": 730.28
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2026-05-11",
+          "close": 81728.3
+        },
+        {
+          "session": -4,
+          "date": "2026-05-12",
+          "close": 80477.49
+        },
+        {
+          "session": -3,
+          "date": "2026-05-13",
+          "close": 79277.12
+        },
+        {
+          "session": -2,
+          "date": "2026-05-14",
+          "close": 81051.25
+        },
+        {
+          "session": -1,
+          "date": "2026-05-15",
+          "close": 79065.68
+        },
+        {
+          "session": 0,
+          "date": "2026-05-18",
+          "close": 76954.17
+        },
+        {
+          "session": 1,
+          "date": "2026-05-19",
+          "close": 76750.91
+        },
+        {
+          "session": 2,
+          "date": "2026-05-20",
+          "close": 77457.77
+        },
+        {
+          "session": 3,
+          "date": "2026-05-21",
+          "close": 77539.17
+        },
+        {
+          "session": 4,
+          "date": "2026-05-22",
+          "close": 75488.24
+        },
+        {
+          "session": 5,
+          "date": "2026-05-26",
+          "close": 75825.73
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -1529,6 +2945,12 @@
       "MSFT",
       "Sam Altman"
     ],
+    "relatedAssets": [
+      "MSFT",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "AI 코딩 제품 Codex의 품질과 접근성 확대 계획을 강조했다.",
     "asset": "MSFT",
@@ -1624,6 +3046,236 @@
         "close": 421.06
       }
     ],
+    "priceWindows": {
+      "MSFT": [
+        {
+          "session": -5,
+          "date": "2026-05-06",
+          "close": 413.96
+        },
+        {
+          "session": -4,
+          "date": "2026-05-07",
+          "close": 420.77
+        },
+        {
+          "session": -3,
+          "date": "2026-05-08",
+          "close": 415.12
+        },
+        {
+          "session": -2,
+          "date": "2026-05-11",
+          "close": 412.66
+        },
+        {
+          "session": -1,
+          "date": "2026-05-12",
+          "close": 407.77
+        },
+        {
+          "session": 0,
+          "date": "2026-05-13",
+          "close": 405.21
+        },
+        {
+          "session": 1,
+          "date": "2026-05-14",
+          "close": 409.43
+        },
+        {
+          "session": 2,
+          "date": "2026-05-15",
+          "close": 421.92
+        },
+        {
+          "session": 3,
+          "date": "2026-05-18",
+          "close": 423.54
+        },
+        {
+          "session": 4,
+          "date": "2026-05-19",
+          "close": 417.42
+        },
+        {
+          "session": 5,
+          "date": "2026-05-20",
+          "close": 421.06
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2026-05-06",
+          "close": 733.83
+        },
+        {
+          "session": -4,
+          "date": "2026-05-07",
+          "close": 731.58
+        },
+        {
+          "session": -3,
+          "date": "2026-05-08",
+          "close": 737.62
+        },
+        {
+          "session": -2,
+          "date": "2026-05-11",
+          "close": 739.3
+        },
+        {
+          "session": -1,
+          "date": "2026-05-12",
+          "close": 738.18
+        },
+        {
+          "session": 0,
+          "date": "2026-05-13",
+          "close": 742.31
+        },
+        {
+          "session": 1,
+          "date": "2026-05-14",
+          "close": 748.17
+        },
+        {
+          "session": 2,
+          "date": "2026-05-15",
+          "close": 739.17
+        },
+        {
+          "session": 3,
+          "date": "2026-05-18",
+          "close": 738.65
+        },
+        {
+          "session": 4,
+          "date": "2026-05-19",
+          "close": 733.73
+        },
+        {
+          "session": 5,
+          "date": "2026-05-20",
+          "close": 741.25
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2026-05-06",
+          "close": 695.77
+        },
+        {
+          "session": -4,
+          "date": "2026-05-07",
+          "close": 694.94
+        },
+        {
+          "session": -3,
+          "date": "2026-05-08",
+          "close": 711.23
+        },
+        {
+          "session": -2,
+          "date": "2026-05-11",
+          "close": 713.29
+        },
+        {
+          "session": -1,
+          "date": "2026-05-12",
+          "close": 707.24
+        },
+        {
+          "session": 0,
+          "date": "2026-05-13",
+          "close": 714.71
+        },
+        {
+          "session": 1,
+          "date": "2026-05-14",
+          "close": 719.79
+        },
+        {
+          "session": 2,
+          "date": "2026-05-15",
+          "close": 708.93
+        },
+        {
+          "session": 3,
+          "date": "2026-05-18",
+          "close": 705.88
+        },
+        {
+          "session": 4,
+          "date": "2026-05-19",
+          "close": 701.53
+        },
+        {
+          "session": 5,
+          "date": "2026-05-20",
+          "close": 713.15
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2026-05-06",
+          "close": 81427.53
+        },
+        {
+          "session": -4,
+          "date": "2026-05-07",
+          "close": 80009.99
+        },
+        {
+          "session": -3,
+          "date": "2026-05-08",
+          "close": 80186.77
+        },
+        {
+          "session": -2,
+          "date": "2026-05-11",
+          "close": 81728.3
+        },
+        {
+          "session": -1,
+          "date": "2026-05-12",
+          "close": 80477.49
+        },
+        {
+          "session": 0,
+          "date": "2026-05-13",
+          "close": 79277.12
+        },
+        {
+          "session": 1,
+          "date": "2026-05-14",
+          "close": 81051.25
+        },
+        {
+          "session": 2,
+          "date": "2026-05-15",
+          "close": 79065.68
+        },
+        {
+          "session": 3,
+          "date": "2026-05-18",
+          "close": 76954.17
+        },
+        {
+          "session": 4,
+          "date": "2026-05-19",
+          "close": 76750.91
+        },
+        {
+          "session": 5,
+          "date": "2026-05-20",
+          "close": 77457.77
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -1781,6 +3433,12 @@
       "NVDA",
       "Sam Altman"
     ],
+    "relatedAssets": [
+      "NVDA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "핵심 사이버 방어 기관을 대상으로 GPT-5.5-Cyber 배포를 시작한다고 발표했다.",
     "asset": "NVDA",
@@ -1876,6 +3534,236 @@
         "close": 211.5
       }
     ],
+    "priceWindows": {
+      "NVDA": [
+        {
+          "session": -5,
+          "date": "2026-04-23",
+          "close": 199.64
+        },
+        {
+          "session": -4,
+          "date": "2026-04-24",
+          "close": 208.27
+        },
+        {
+          "session": -3,
+          "date": "2026-04-27",
+          "close": 216.61
+        },
+        {
+          "session": -2,
+          "date": "2026-04-28",
+          "close": 213.17
+        },
+        {
+          "session": -1,
+          "date": "2026-04-29",
+          "close": 209.25
+        },
+        {
+          "session": 0,
+          "date": "2026-04-30",
+          "close": 199.57
+        },
+        {
+          "session": 1,
+          "date": "2026-05-01",
+          "close": 198.45
+        },
+        {
+          "session": 2,
+          "date": "2026-05-04",
+          "close": 198.48
+        },
+        {
+          "session": 3,
+          "date": "2026-05-05",
+          "close": 196.5
+        },
+        {
+          "session": 4,
+          "date": "2026-05-06",
+          "close": 207.83
+        },
+        {
+          "session": 5,
+          "date": "2026-05-07",
+          "close": 211.5
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2026-04-23",
+          "close": 708.45
+        },
+        {
+          "session": -4,
+          "date": "2026-04-24",
+          "close": 713.94
+        },
+        {
+          "session": -3,
+          "date": "2026-04-27",
+          "close": 715.17
+        },
+        {
+          "session": -2,
+          "date": "2026-04-28",
+          "close": 711.69
+        },
+        {
+          "session": -1,
+          "date": "2026-04-29",
+          "close": 711.58
+        },
+        {
+          "session": 0,
+          "date": "2026-04-30",
+          "close": 718.66
+        },
+        {
+          "session": 1,
+          "date": "2026-05-01",
+          "close": 720.65
+        },
+        {
+          "session": 2,
+          "date": "2026-05-04",
+          "close": 718.01
+        },
+        {
+          "session": 3,
+          "date": "2026-05-05",
+          "close": 723.77
+        },
+        {
+          "session": 4,
+          "date": "2026-05-06",
+          "close": 733.83
+        },
+        {
+          "session": 5,
+          "date": "2026-05-07",
+          "close": 731.58
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2026-04-23",
+          "close": 651.42
+        },
+        {
+          "session": -4,
+          "date": "2026-04-24",
+          "close": 663.88
+        },
+        {
+          "session": -3,
+          "date": "2026-04-27",
+          "close": 664.23
+        },
+        {
+          "session": -2,
+          "date": "2026-04-28",
+          "close": 657.55
+        },
+        {
+          "session": -1,
+          "date": "2026-04-29",
+          "close": 661.57
+        },
+        {
+          "session": 0,
+          "date": "2026-04-30",
+          "close": 667.74
+        },
+        {
+          "session": 1,
+          "date": "2026-05-01",
+          "close": 674.15
+        },
+        {
+          "session": 2,
+          "date": "2026-05-04",
+          "close": 672.88
+        },
+        {
+          "session": 3,
+          "date": "2026-05-05",
+          "close": 681.61
+        },
+        {
+          "session": 4,
+          "date": "2026-05-06",
+          "close": 695.77
+        },
+        {
+          "session": 5,
+          "date": "2026-05-07",
+          "close": 694.94
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2026-04-23",
+          "close": 78268.95
+        },
+        {
+          "session": -4,
+          "date": "2026-04-24",
+          "close": 77455.31
+        },
+        {
+          "session": -3,
+          "date": "2026-04-27",
+          "close": 77366.63
+        },
+        {
+          "session": -2,
+          "date": "2026-04-28",
+          "close": 76350.67
+        },
+        {
+          "session": -1,
+          "date": "2026-04-29",
+          "close": 75776.13
+        },
+        {
+          "session": 0,
+          "date": "2026-04-30",
+          "close": 76304.32
+        },
+        {
+          "session": 1,
+          "date": "2026-05-01",
+          "close": 78179
+        },
+        {
+          "session": 2,
+          "date": "2026-05-04",
+          "close": 79827.91
+        },
+        {
+          "session": 3,
+          "date": "2026-05-05",
+          "close": 80927.05
+        },
+        {
+          "session": 4,
+          "date": "2026-05-06",
+          "close": 81427.53
+        },
+        {
+          "session": 5,
+          "date": "2026-05-07",
+          "close": 80009.99
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -2033,6 +3921,11 @@
       "QQQ",
       "Donald Trump"
     ],
+    "relatedAssets": [
+      "QQQ",
+      "SPY",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "미·중 희토류 공급과 관세 조건을 포함한 무역 합의가 최종 승인 단계라고 밝혔다.",
     "asset": "QQQ",
@@ -2128,6 +4021,179 @@
         "close": 528.99
       }
     ],
+    "priceWindows": {
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2025-06-04",
+          "close": 528.77
+        },
+        {
+          "session": -4,
+          "date": "2025-06-05",
+          "close": 524.79
+        },
+        {
+          "session": -3,
+          "date": "2025-06-06",
+          "close": 529.92
+        },
+        {
+          "session": -2,
+          "date": "2025-06-09",
+          "close": 530.7
+        },
+        {
+          "session": -1,
+          "date": "2025-06-10",
+          "close": 534.21
+        },
+        {
+          "session": 0,
+          "date": "2025-06-11",
+          "close": 532.41
+        },
+        {
+          "session": 1,
+          "date": "2025-06-12",
+          "close": 533.66
+        },
+        {
+          "session": 2,
+          "date": "2025-06-13",
+          "close": 526.96
+        },
+        {
+          "session": 3,
+          "date": "2025-06-16",
+          "close": 534.29
+        },
+        {
+          "session": 4,
+          "date": "2025-06-17",
+          "close": 529.08
+        },
+        {
+          "session": 5,
+          "date": "2025-06-18",
+          "close": 528.99
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2025-06-04",
+          "close": 595.93
+        },
+        {
+          "session": -4,
+          "date": "2025-06-05",
+          "close": 593.05
+        },
+        {
+          "session": -3,
+          "date": "2025-06-06",
+          "close": 599.14
+        },
+        {
+          "session": -2,
+          "date": "2025-06-09",
+          "close": 599.68
+        },
+        {
+          "session": -1,
+          "date": "2025-06-10",
+          "close": 603.08
+        },
+        {
+          "session": 0,
+          "date": "2025-06-11",
+          "close": 601.36
+        },
+        {
+          "session": 1,
+          "date": "2025-06-12",
+          "close": 603.75
+        },
+        {
+          "session": 2,
+          "date": "2025-06-13",
+          "close": 597
+        },
+        {
+          "session": 3,
+          "date": "2025-06-16",
+          "close": 602.68
+        },
+        {
+          "session": 4,
+          "date": "2025-06-17",
+          "close": 597.53
+        },
+        {
+          "session": 5,
+          "date": "2025-06-18",
+          "close": 597.44
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2025-06-04",
+          "close": 104731.98
+        },
+        {
+          "session": -4,
+          "date": "2025-06-05",
+          "close": 101575.95
+        },
+        {
+          "session": -3,
+          "date": "2025-06-06",
+          "close": 104390.34
+        },
+        {
+          "session": -2,
+          "date": "2025-06-09",
+          "close": 110294.1
+        },
+        {
+          "session": -1,
+          "date": "2025-06-10",
+          "close": 110257.23
+        },
+        {
+          "session": 0,
+          "date": "2025-06-11",
+          "close": 108686.63
+        },
+        {
+          "session": 1,
+          "date": "2025-06-12",
+          "close": 105929.05
+        },
+        {
+          "session": 2,
+          "date": "2025-06-13",
+          "close": 106090.97
+        },
+        {
+          "session": 3,
+          "date": "2025-06-16",
+          "close": 106796.76
+        },
+        {
+          "session": 4,
+          "date": "2025-06-17",
+          "close": 104601.12
+        },
+        {
+          "session": 5,
+          "date": "2025-06-18",
+          "close": 104883.33
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -2287,6 +4353,11 @@
       "NVIDIA",
       "Microsoft"
     ],
+    "relatedAssets": [
+      "QQQ",
+      "SPY",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "샘 올트먼·리사 수·브래드 스미스 등이 참석한 미 상원 청문회에서 미국의 AI 컴퓨팅 역량과 혁신 정책을 논의했다.",
     "asset": "QQQ",
@@ -2382,6 +4453,179 @@
         "close": 519.25
       }
     ],
+    "priceWindows": {
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2025-05-01",
+          "close": 481.68
+        },
+        {
+          "session": -4,
+          "date": "2025-05-02",
+          "close": 488.83
+        },
+        {
+          "session": -3,
+          "date": "2025-05-05",
+          "close": 485.93
+        },
+        {
+          "session": -2,
+          "date": "2025-05-06",
+          "close": 481.41
+        },
+        {
+          "session": -1,
+          "date": "2025-05-07",
+          "close": 483.3
+        },
+        {
+          "session": 0,
+          "date": "2025-05-08",
+          "close": 488.29
+        },
+        {
+          "session": 1,
+          "date": "2025-05-09",
+          "close": 487.97
+        },
+        {
+          "session": 2,
+          "date": "2025-05-12",
+          "close": 507.85
+        },
+        {
+          "session": 3,
+          "date": "2025-05-13",
+          "close": 515.59
+        },
+        {
+          "session": 4,
+          "date": "2025-05-14",
+          "close": 518.68
+        },
+        {
+          "session": 5,
+          "date": "2025-05-15",
+          "close": 519.25
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2025-05-01",
+          "close": 558.47
+        },
+        {
+          "session": -4,
+          "date": "2025-05-02",
+          "close": 566.76
+        },
+        {
+          "session": -3,
+          "date": "2025-05-05",
+          "close": 563.51
+        },
+        {
+          "session": -2,
+          "date": "2025-05-06",
+          "close": 558.8
+        },
+        {
+          "session": -1,
+          "date": "2025-05-07",
+          "close": 561.15
+        },
+        {
+          "session": 0,
+          "date": "2025-05-08",
+          "close": 565.06
+        },
+        {
+          "session": 1,
+          "date": "2025-05-09",
+          "close": 564.34
+        },
+        {
+          "session": 2,
+          "date": "2025-05-12",
+          "close": 582.99
+        },
+        {
+          "session": 3,
+          "date": "2025-05-13",
+          "close": 586.84
+        },
+        {
+          "session": 4,
+          "date": "2025-05-14",
+          "close": 587.59
+        },
+        {
+          "session": 5,
+          "date": "2025-05-15",
+          "close": 590.46
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2025-05-01",
+          "close": 96492.34
+        },
+        {
+          "session": -4,
+          "date": "2025-05-02",
+          "close": 96910.07
+        },
+        {
+          "session": -3,
+          "date": "2025-05-05",
+          "close": 94748.05
+        },
+        {
+          "session": -2,
+          "date": "2025-05-06",
+          "close": 96802.48
+        },
+        {
+          "session": -1,
+          "date": "2025-05-07",
+          "close": 97032.32
+        },
+        {
+          "session": 0,
+          "date": "2025-05-08",
+          "close": 103241.46
+        },
+        {
+          "session": 1,
+          "date": "2025-05-09",
+          "close": 102970.85
+        },
+        {
+          "session": 2,
+          "date": "2025-05-12",
+          "close": 102812.95
+        },
+        {
+          "session": 3,
+          "date": "2025-05-13",
+          "close": 104169.81
+        },
+        {
+          "session": 4,
+          "date": "2025-05-14",
+          "close": 103539.41
+        },
+        {
+          "session": 5,
+          "date": "2025-05-15",
+          "close": 103744.64
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -2539,6 +4783,12 @@
       "8-K",
       "SEC filing"
     ],
+    "relatedAssets": [
+      "TSLA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "Tesla가 미국 장 마감 후 Form 8-K를 통해 2025년 1분기 실적 자료를 공시했다.",
     "asset": "TSLA",
@@ -2634,6 +4884,236 @@
         "close": 282.16
       }
     ],
+    "priceWindows": {
+      "TSLA": [
+        {
+          "session": -5,
+          "date": "2025-04-15",
+          "close": 254.11
+        },
+        {
+          "session": -4,
+          "date": "2025-04-16",
+          "close": 241.55
+        },
+        {
+          "session": -3,
+          "date": "2025-04-17",
+          "close": 241.37
+        },
+        {
+          "session": -2,
+          "date": "2025-04-21",
+          "close": 227.5
+        },
+        {
+          "session": -1,
+          "date": "2025-04-22",
+          "close": 237.97
+        },
+        {
+          "session": 0,
+          "date": "2025-04-23",
+          "close": 250.74
+        },
+        {
+          "session": 1,
+          "date": "2025-04-24",
+          "close": 259.51
+        },
+        {
+          "session": 2,
+          "date": "2025-04-25",
+          "close": 284.95
+        },
+        {
+          "session": 3,
+          "date": "2025-04-28",
+          "close": 285.88
+        },
+        {
+          "session": 4,
+          "date": "2025-04-29",
+          "close": 292.03
+        },
+        {
+          "session": 5,
+          "date": "2025-04-30",
+          "close": 282.16
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2025-04-15",
+          "close": 537.61
+        },
+        {
+          "session": -4,
+          "date": "2025-04-16",
+          "close": 525.66
+        },
+        {
+          "session": -3,
+          "date": "2025-04-17",
+          "close": 526.41
+        },
+        {
+          "session": -2,
+          "date": "2025-04-21",
+          "close": 513.88
+        },
+        {
+          "session": -1,
+          "date": "2025-04-22",
+          "close": 527.25
+        },
+        {
+          "session": 0,
+          "date": "2025-04-23",
+          "close": 535.42
+        },
+        {
+          "session": 1,
+          "date": "2025-04-24",
+          "close": 546.69
+        },
+        {
+          "session": 2,
+          "date": "2025-04-25",
+          "close": 550.64
+        },
+        {
+          "session": 3,
+          "date": "2025-04-28",
+          "close": 550.85
+        },
+        {
+          "session": 4,
+          "date": "2025-04-29",
+          "close": 554.32
+        },
+        {
+          "session": 5,
+          "date": "2025-04-30",
+          "close": 554.54
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2025-04-15",
+          "close": 457.99
+        },
+        {
+          "session": -4,
+          "date": "2025-04-16",
+          "close": 444.18
+        },
+        {
+          "session": -3,
+          "date": "2025-04-17",
+          "close": 444.1
+        },
+        {
+          "session": -2,
+          "date": "2025-04-21",
+          "close": 433.11
+        },
+        {
+          "session": -1,
+          "date": "2025-04-22",
+          "close": 444.48
+        },
+        {
+          "session": 0,
+          "date": "2025-04-23",
+          "close": 454.56
+        },
+        {
+          "session": 1,
+          "date": "2025-04-24",
+          "close": 467.35
+        },
+        {
+          "session": 2,
+          "date": "2025-04-25",
+          "close": 472.56
+        },
+        {
+          "session": 3,
+          "date": "2025-04-28",
+          "close": 472.41
+        },
+        {
+          "session": 4,
+          "date": "2025-04-29",
+          "close": 475.53
+        },
+        {
+          "session": 5,
+          "date": "2025-04-30",
+          "close": 475.47
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2025-04-15",
+          "close": 83668.99
+        },
+        {
+          "session": -4,
+          "date": "2025-04-16",
+          "close": 84033.87
+        },
+        {
+          "session": -3,
+          "date": "2025-04-17",
+          "close": 84895.75
+        },
+        {
+          "session": -2,
+          "date": "2025-04-21",
+          "close": 87518.91
+        },
+        {
+          "session": -1,
+          "date": "2025-04-22",
+          "close": 93441.89
+        },
+        {
+          "session": 0,
+          "date": "2025-04-23",
+          "close": 93699.11
+        },
+        {
+          "session": 1,
+          "date": "2025-04-24",
+          "close": 93943.8
+        },
+        {
+          "session": 2,
+          "date": "2025-04-25",
+          "close": 94720.5
+        },
+        {
+          "session": 3,
+          "date": "2025-04-28",
+          "close": 94978.75
+        },
+        {
+          "session": 4,
+          "date": "2025-04-29",
+          "close": 94284.79
+        },
+        {
+          "session": 5,
+          "date": "2025-04-30",
+          "close": 94207.31
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -2790,6 +5270,11 @@
       "QQQ",
       "Donald Trump"
     ],
+    "relatedAssets": [
+      "QQQ",
+      "SPY",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "ECB의 금리 인하를 언급하며 연준과 제롬 파월에게 즉각적인 금리 인하를 요구했다.",
     "asset": "QQQ",
@@ -2885,6 +5370,179 @@
         "close": 472.56
       }
     ],
+    "priceWindows": {
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2025-04-10",
+          "close": 446.18
+        },
+        {
+          "session": -4,
+          "date": "2025-04-11",
+          "close": 454.4
+        },
+        {
+          "session": -3,
+          "date": "2025-04-14",
+          "close": 457.48
+        },
+        {
+          "session": -2,
+          "date": "2025-04-15",
+          "close": 457.99
+        },
+        {
+          "session": -1,
+          "date": "2025-04-16",
+          "close": 444.18
+        },
+        {
+          "session": 0,
+          "date": "2025-04-17",
+          "close": 444.1
+        },
+        {
+          "session": 1,
+          "date": "2025-04-21",
+          "close": 433.11
+        },
+        {
+          "session": 2,
+          "date": "2025-04-22",
+          "close": 444.48
+        },
+        {
+          "session": 3,
+          "date": "2025-04-23",
+          "close": 454.56
+        },
+        {
+          "session": 4,
+          "date": "2025-04-24",
+          "close": 467.35
+        },
+        {
+          "session": 5,
+          "date": "2025-04-25",
+          "close": 472.56
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2025-04-10",
+          "close": 524.58
+        },
+        {
+          "session": -4,
+          "date": "2025-04-11",
+          "close": 533.94
+        },
+        {
+          "session": -3,
+          "date": "2025-04-14",
+          "close": 539.12
+        },
+        {
+          "session": -2,
+          "date": "2025-04-15",
+          "close": 537.61
+        },
+        {
+          "session": -1,
+          "date": "2025-04-16",
+          "close": 525.66
+        },
+        {
+          "session": 0,
+          "date": "2025-04-17",
+          "close": 526.41
+        },
+        {
+          "session": 1,
+          "date": "2025-04-21",
+          "close": 513.88
+        },
+        {
+          "session": 2,
+          "date": "2025-04-22",
+          "close": 527.25
+        },
+        {
+          "session": 3,
+          "date": "2025-04-23",
+          "close": 535.42
+        },
+        {
+          "session": 4,
+          "date": "2025-04-24",
+          "close": 546.69
+        },
+        {
+          "session": 5,
+          "date": "2025-04-25",
+          "close": 550.64
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2025-04-10",
+          "close": 79626.14
+        },
+        {
+          "session": -4,
+          "date": "2025-04-11",
+          "close": 83404.84
+        },
+        {
+          "session": -3,
+          "date": "2025-04-14",
+          "close": 84542.39
+        },
+        {
+          "session": -2,
+          "date": "2025-04-15",
+          "close": 83668.99
+        },
+        {
+          "session": -1,
+          "date": "2025-04-16",
+          "close": 84033.87
+        },
+        {
+          "session": 0,
+          "date": "2025-04-17",
+          "close": 84895.75
+        },
+        {
+          "session": 1,
+          "date": "2025-04-21",
+          "close": 87518.91
+        },
+        {
+          "session": 2,
+          "date": "2025-04-22",
+          "close": 93441.89
+        },
+        {
+          "session": 3,
+          "date": "2025-04-23",
+          "close": 93699.11
+        },
+        {
+          "session": 4,
+          "date": "2025-04-24",
+          "close": 93943.8
+        },
+        {
+          "session": 5,
+          "date": "2025-04-25",
+          "close": 94720.5
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -3041,6 +5699,12 @@
       "NVDA",
       "Donald Trump"
     ],
+    "relatedAssets": [
+      "NVDA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "NVIDIA가 미국 내 AI 슈퍼컴퓨터 생산에 5천억 달러를 투자한다고 발표했다.",
     "asset": "NVDA",
@@ -3136,6 +5800,236 @@
         "close": 102.71
       }
     ],
+    "priceWindows": {
+      "NVDA": [
+        {
+          "session": -5,
+          "date": "2025-04-08",
+          "close": 96.3
+        },
+        {
+          "session": -4,
+          "date": "2025-04-09",
+          "close": 114.33
+        },
+        {
+          "session": -3,
+          "date": "2025-04-10",
+          "close": 107.57
+        },
+        {
+          "session": -2,
+          "date": "2025-04-11",
+          "close": 110.93
+        },
+        {
+          "session": -1,
+          "date": "2025-04-14",
+          "close": 110.71
+        },
+        {
+          "session": 0,
+          "date": "2025-04-15",
+          "close": 112.2
+        },
+        {
+          "session": 1,
+          "date": "2025-04-16",
+          "close": 104.49
+        },
+        {
+          "session": 2,
+          "date": "2025-04-17",
+          "close": 101.49
+        },
+        {
+          "session": 3,
+          "date": "2025-04-21",
+          "close": 96.91
+        },
+        {
+          "session": 4,
+          "date": "2025-04-22",
+          "close": 98.89
+        },
+        {
+          "session": 5,
+          "date": "2025-04-23",
+          "close": 102.71
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2025-04-08",
+          "close": 496.48
+        },
+        {
+          "session": -4,
+          "date": "2025-04-09",
+          "close": 548.62
+        },
+        {
+          "session": -3,
+          "date": "2025-04-10",
+          "close": 524.58
+        },
+        {
+          "session": -2,
+          "date": "2025-04-11",
+          "close": 533.94
+        },
+        {
+          "session": -1,
+          "date": "2025-04-14",
+          "close": 539.12
+        },
+        {
+          "session": 0,
+          "date": "2025-04-15",
+          "close": 537.61
+        },
+        {
+          "session": 1,
+          "date": "2025-04-16",
+          "close": 525.66
+        },
+        {
+          "session": 2,
+          "date": "2025-04-17",
+          "close": 526.41
+        },
+        {
+          "session": 3,
+          "date": "2025-04-21",
+          "close": 513.88
+        },
+        {
+          "session": 4,
+          "date": "2025-04-22",
+          "close": 527.25
+        },
+        {
+          "session": 5,
+          "date": "2025-04-23",
+          "close": 535.42
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2025-04-08",
+          "close": 416.06
+        },
+        {
+          "session": -4,
+          "date": "2025-04-09",
+          "close": 466
+        },
+        {
+          "session": -3,
+          "date": "2025-04-10",
+          "close": 446.18
+        },
+        {
+          "session": -2,
+          "date": "2025-04-11",
+          "close": 454.4
+        },
+        {
+          "session": -1,
+          "date": "2025-04-14",
+          "close": 457.48
+        },
+        {
+          "session": 0,
+          "date": "2025-04-15",
+          "close": 457.99
+        },
+        {
+          "session": 1,
+          "date": "2025-04-16",
+          "close": 444.18
+        },
+        {
+          "session": 2,
+          "date": "2025-04-17",
+          "close": 444.1
+        },
+        {
+          "session": 3,
+          "date": "2025-04-21",
+          "close": 433.11
+        },
+        {
+          "session": 4,
+          "date": "2025-04-22",
+          "close": 444.48
+        },
+        {
+          "session": 5,
+          "date": "2025-04-23",
+          "close": 454.56
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2025-04-08",
+          "close": 76271.95
+        },
+        {
+          "session": -4,
+          "date": "2025-04-09",
+          "close": 82573.95
+        },
+        {
+          "session": -3,
+          "date": "2025-04-10",
+          "close": 79626.14
+        },
+        {
+          "session": -2,
+          "date": "2025-04-11",
+          "close": 83404.84
+        },
+        {
+          "session": -1,
+          "date": "2025-04-14",
+          "close": 84542.39
+        },
+        {
+          "session": 0,
+          "date": "2025-04-15",
+          "close": 83668.99
+        },
+        {
+          "session": 1,
+          "date": "2025-04-16",
+          "close": 84033.87
+        },
+        {
+          "session": 2,
+          "date": "2025-04-17",
+          "close": 84895.75
+        },
+        {
+          "session": 3,
+          "date": "2025-04-21",
+          "close": 87518.91
+        },
+        {
+          "session": 4,
+          "date": "2025-04-22",
+          "close": 93441.89
+        },
+        {
+          "session": 5,
+          "date": "2025-04-23",
+          "close": 93699.11
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -3293,6 +6187,12 @@
       "manufacturing",
       "chips"
     ],
+    "relatedAssets": [
+      "NVDA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "NVIDIA가 협력사들과 함께 미국에서 처음으로 NVIDIA AI 슈퍼컴퓨터를 생산할 계획이라고 발표했다.",
     "asset": "NVDA",
@@ -3388,6 +6288,236 @@
         "close": 98.89
       }
     ],
+    "priceWindows": {
+      "NVDA": [
+        {
+          "session": -5,
+          "date": "2025-04-07",
+          "close": 97.64
+        },
+        {
+          "session": -4,
+          "date": "2025-04-08",
+          "close": 96.3
+        },
+        {
+          "session": -3,
+          "date": "2025-04-09",
+          "close": 114.33
+        },
+        {
+          "session": -2,
+          "date": "2025-04-10",
+          "close": 107.57
+        },
+        {
+          "session": -1,
+          "date": "2025-04-11",
+          "close": 110.93
+        },
+        {
+          "session": 0,
+          "date": "2025-04-14",
+          "close": 110.71
+        },
+        {
+          "session": 1,
+          "date": "2025-04-15",
+          "close": 112.2
+        },
+        {
+          "session": 2,
+          "date": "2025-04-16",
+          "close": 104.49
+        },
+        {
+          "session": 3,
+          "date": "2025-04-17",
+          "close": 101.49
+        },
+        {
+          "session": 4,
+          "date": "2025-04-21",
+          "close": 96.91
+        },
+        {
+          "session": 5,
+          "date": "2025-04-22",
+          "close": 98.89
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2025-04-07",
+          "close": 504.38
+        },
+        {
+          "session": -4,
+          "date": "2025-04-08",
+          "close": 496.48
+        },
+        {
+          "session": -3,
+          "date": "2025-04-09",
+          "close": 548.62
+        },
+        {
+          "session": -2,
+          "date": "2025-04-10",
+          "close": 524.58
+        },
+        {
+          "session": -1,
+          "date": "2025-04-11",
+          "close": 533.94
+        },
+        {
+          "session": 0,
+          "date": "2025-04-14",
+          "close": 539.12
+        },
+        {
+          "session": 1,
+          "date": "2025-04-15",
+          "close": 537.61
+        },
+        {
+          "session": 2,
+          "date": "2025-04-16",
+          "close": 525.66
+        },
+        {
+          "session": 3,
+          "date": "2025-04-17",
+          "close": 526.41
+        },
+        {
+          "session": 4,
+          "date": "2025-04-21",
+          "close": 513.88
+        },
+        {
+          "session": 5,
+          "date": "2025-04-22",
+          "close": 527.25
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2025-04-07",
+          "close": 423.69
+        },
+        {
+          "session": -4,
+          "date": "2025-04-08",
+          "close": 416.06
+        },
+        {
+          "session": -3,
+          "date": "2025-04-09",
+          "close": 466
+        },
+        {
+          "session": -2,
+          "date": "2025-04-10",
+          "close": 446.18
+        },
+        {
+          "session": -1,
+          "date": "2025-04-11",
+          "close": 454.4
+        },
+        {
+          "session": 0,
+          "date": "2025-04-14",
+          "close": 457.48
+        },
+        {
+          "session": 1,
+          "date": "2025-04-15",
+          "close": 457.99
+        },
+        {
+          "session": 2,
+          "date": "2025-04-16",
+          "close": 444.18
+        },
+        {
+          "session": 3,
+          "date": "2025-04-17",
+          "close": 444.1
+        },
+        {
+          "session": 4,
+          "date": "2025-04-21",
+          "close": 433.11
+        },
+        {
+          "session": 5,
+          "date": "2025-04-22",
+          "close": 444.48
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2025-04-07",
+          "close": 79235.34
+        },
+        {
+          "session": -4,
+          "date": "2025-04-08",
+          "close": 76271.95
+        },
+        {
+          "session": -3,
+          "date": "2025-04-09",
+          "close": 82573.95
+        },
+        {
+          "session": -2,
+          "date": "2025-04-10",
+          "close": 79626.14
+        },
+        {
+          "session": -1,
+          "date": "2025-04-11",
+          "close": 83404.84
+        },
+        {
+          "session": 0,
+          "date": "2025-04-14",
+          "close": 84542.39
+        },
+        {
+          "session": 1,
+          "date": "2025-04-15",
+          "close": 83668.99
+        },
+        {
+          "session": 2,
+          "date": "2025-04-16",
+          "close": 84033.87
+        },
+        {
+          "session": 3,
+          "date": "2025-04-17",
+          "close": 84895.75
+        },
+        {
+          "session": 4,
+          "date": "2025-04-21",
+          "close": 87518.91
+        },
+        {
+          "session": 5,
+          "date": "2025-04-22",
+          "close": 93441.89
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -3544,6 +6674,11 @@
       "QQQ",
       "Donald Trump"
     ],
+    "relatedAssets": [
+      "QQQ",
+      "SPY",
+      "BTC-USD"
+    ],
     "hashtags": [
       "#1",
       "#storylink"
@@ -3642,6 +6777,179 @@
         "close": 457.48
       }
     ],
+    "priceWindows": {
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2025-03-31",
+          "close": 468.92
+        },
+        {
+          "session": -4,
+          "date": "2025-04-01",
+          "close": 472.7
+        },
+        {
+          "session": -3,
+          "date": "2025-04-02",
+          "close": 476.15
+        },
+        {
+          "session": -2,
+          "date": "2025-04-03",
+          "close": 450.66
+        },
+        {
+          "session": -1,
+          "date": "2025-04-04",
+          "close": 422.67
+        },
+        {
+          "session": 0,
+          "date": "2025-04-07",
+          "close": 423.69
+        },
+        {
+          "session": 1,
+          "date": "2025-04-08",
+          "close": 416.06
+        },
+        {
+          "session": 2,
+          "date": "2025-04-09",
+          "close": 466
+        },
+        {
+          "session": 3,
+          "date": "2025-04-10",
+          "close": 446.18
+        },
+        {
+          "session": 4,
+          "date": "2025-04-11",
+          "close": 454.4
+        },
+        {
+          "session": 5,
+          "date": "2025-04-14",
+          "close": 457.48
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2025-03-31",
+          "close": 559.39
+        },
+        {
+          "session": -4,
+          "date": "2025-04-01",
+          "close": 560.97
+        },
+        {
+          "session": -3,
+          "date": "2025-04-02",
+          "close": 564.52
+        },
+        {
+          "session": -2,
+          "date": "2025-04-03",
+          "close": 536.7
+        },
+        {
+          "session": -1,
+          "date": "2025-04-04",
+          "close": 505.28
+        },
+        {
+          "session": 0,
+          "date": "2025-04-07",
+          "close": 504.38
+        },
+        {
+          "session": 1,
+          "date": "2025-04-08",
+          "close": 496.48
+        },
+        {
+          "session": 2,
+          "date": "2025-04-09",
+          "close": 548.62
+        },
+        {
+          "session": 3,
+          "date": "2025-04-10",
+          "close": 524.58
+        },
+        {
+          "session": 4,
+          "date": "2025-04-11",
+          "close": 533.94
+        },
+        {
+          "session": 5,
+          "date": "2025-04-14",
+          "close": 539.12
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2025-03-31",
+          "close": 82548.91
+        },
+        {
+          "session": -4,
+          "date": "2025-04-01",
+          "close": 85169.17
+        },
+        {
+          "session": -3,
+          "date": "2025-04-02",
+          "close": 82485.71
+        },
+        {
+          "session": -2,
+          "date": "2025-04-03",
+          "close": 83102.83
+        },
+        {
+          "session": -1,
+          "date": "2025-04-04",
+          "close": 83843.8
+        },
+        {
+          "session": 0,
+          "date": "2025-04-07",
+          "close": 79235.34
+        },
+        {
+          "session": 1,
+          "date": "2025-04-08",
+          "close": 76271.95
+        },
+        {
+          "session": 2,
+          "date": "2025-04-09",
+          "close": 82573.95
+        },
+        {
+          "session": 3,
+          "date": "2025-04-10",
+          "close": 79626.14
+        },
+        {
+          "session": 4,
+          "date": "2025-04-11",
+          "close": 83404.84
+        },
+        {
+          "session": 5,
+          "date": "2025-04-14",
+          "close": 84542.39
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -3798,6 +7106,12 @@
       "TSLA",
       "Elon Musk"
     ],
+    "relatedAssets": [
+      "TSLA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [
       "#1"
     ],
@@ -3895,6 +7209,236 @@
         "close": 233.29
       }
     ],
+    "priceWindows": {
+      "TSLA": [
+        {
+          "session": -5,
+          "date": "2025-03-24",
+          "close": 278.39
+        },
+        {
+          "session": -4,
+          "date": "2025-03-25",
+          "close": 288.14
+        },
+        {
+          "session": -3,
+          "date": "2025-03-26",
+          "close": 272.06
+        },
+        {
+          "session": -2,
+          "date": "2025-03-27",
+          "close": 273.13
+        },
+        {
+          "session": -1,
+          "date": "2025-03-28",
+          "close": 263.55
+        },
+        {
+          "session": 0,
+          "date": "2025-03-31",
+          "close": 259.16
+        },
+        {
+          "session": 1,
+          "date": "2025-04-01",
+          "close": 268.46
+        },
+        {
+          "session": 2,
+          "date": "2025-04-02",
+          "close": 282.76
+        },
+        {
+          "session": 3,
+          "date": "2025-04-03",
+          "close": 267.28
+        },
+        {
+          "session": 4,
+          "date": "2025-04-04",
+          "close": 239.43
+        },
+        {
+          "session": 5,
+          "date": "2025-04-07",
+          "close": 233.29
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2025-03-24",
+          "close": 574.08
+        },
+        {
+          "session": -4,
+          "date": "2025-03-25",
+          "close": 575.46
+        },
+        {
+          "session": -3,
+          "date": "2025-03-26",
+          "close": 568.59
+        },
+        {
+          "session": -2,
+          "date": "2025-03-27",
+          "close": 567.08
+        },
+        {
+          "session": -1,
+          "date": "2025-03-28",
+          "close": 555.66
+        },
+        {
+          "session": 0,
+          "date": "2025-03-31",
+          "close": 559.39
+        },
+        {
+          "session": 1,
+          "date": "2025-04-01",
+          "close": 560.97
+        },
+        {
+          "session": 2,
+          "date": "2025-04-02",
+          "close": 564.52
+        },
+        {
+          "session": 3,
+          "date": "2025-04-03",
+          "close": 536.7
+        },
+        {
+          "session": 4,
+          "date": "2025-04-04",
+          "close": 505.28
+        },
+        {
+          "session": 5,
+          "date": "2025-04-07",
+          "close": 504.38
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2025-03-24",
+          "close": 490.66
+        },
+        {
+          "session": -4,
+          "date": "2025-03-25",
+          "close": 493.46
+        },
+        {
+          "session": -3,
+          "date": "2025-03-26",
+          "close": 484.38
+        },
+        {
+          "session": -2,
+          "date": "2025-03-27",
+          "close": 481.62
+        },
+        {
+          "session": -1,
+          "date": "2025-03-28",
+          "close": 468.94
+        },
+        {
+          "session": 0,
+          "date": "2025-03-31",
+          "close": 468.92
+        },
+        {
+          "session": 1,
+          "date": "2025-04-01",
+          "close": 472.7
+        },
+        {
+          "session": 2,
+          "date": "2025-04-02",
+          "close": 476.15
+        },
+        {
+          "session": 3,
+          "date": "2025-04-03",
+          "close": 450.66
+        },
+        {
+          "session": 4,
+          "date": "2025-04-04",
+          "close": 422.67
+        },
+        {
+          "session": 5,
+          "date": "2025-04-07",
+          "close": 423.69
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2025-03-24",
+          "close": 87498.91
+        },
+        {
+          "session": -4,
+          "date": "2025-03-25",
+          "close": 87471.7
+        },
+        {
+          "session": -3,
+          "date": "2025-03-26",
+          "close": 86900.88
+        },
+        {
+          "session": -2,
+          "date": "2025-03-27",
+          "close": 87177.1
+        },
+        {
+          "session": -1,
+          "date": "2025-03-28",
+          "close": 84353.15
+        },
+        {
+          "session": 0,
+          "date": "2025-03-31",
+          "close": 82548.91
+        },
+        {
+          "session": 1,
+          "date": "2025-04-01",
+          "close": 85169.17
+        },
+        {
+          "session": 2,
+          "date": "2025-04-02",
+          "close": 82485.71
+        },
+        {
+          "session": 3,
+          "date": "2025-04-03",
+          "close": 83102.83
+        },
+        {
+          "session": 4,
+          "date": "2025-04-04",
+          "close": 83843.8
+        },
+        {
+          "session": 5,
+          "date": "2025-04-07",
+          "close": 79235.34
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -4052,6 +7596,12 @@
       "model launch",
       "AI"
     ],
+    "relatedAssets": [
+      "MSFT",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "OpenAI가 당시 가장 크고 지식이 풍부한 채팅 모델로 GPT-4.5 연구 프리뷰를 공개했다.",
     "asset": "MSFT",
@@ -4147,6 +7697,236 @@
         "close": 396.89
       }
     ],
+    "priceWindows": {
+      "MSFT": [
+        {
+          "session": -5,
+          "date": "2025-02-20",
+          "close": 416.13
+        },
+        {
+          "session": -4,
+          "date": "2025-02-21",
+          "close": 408.21
+        },
+        {
+          "session": -3,
+          "date": "2025-02-24",
+          "close": 404
+        },
+        {
+          "session": -2,
+          "date": "2025-02-25",
+          "close": 397.9
+        },
+        {
+          "session": -1,
+          "date": "2025-02-26",
+          "close": 399.73
+        },
+        {
+          "session": 0,
+          "date": "2025-02-27",
+          "close": 392.53
+        },
+        {
+          "session": 1,
+          "date": "2025-02-28",
+          "close": 396.99
+        },
+        {
+          "session": 2,
+          "date": "2025-03-03",
+          "close": 388.49
+        },
+        {
+          "session": 3,
+          "date": "2025-03-04",
+          "close": 388.61
+        },
+        {
+          "session": 4,
+          "date": "2025-03-05",
+          "close": 401.02
+        },
+        {
+          "session": 5,
+          "date": "2025-03-06",
+          "close": 396.89
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2025-02-20",
+          "close": 610.38
+        },
+        {
+          "session": -4,
+          "date": "2025-02-21",
+          "close": 599.94
+        },
+        {
+          "session": -3,
+          "date": "2025-02-24",
+          "close": 597.21
+        },
+        {
+          "session": -2,
+          "date": "2025-02-25",
+          "close": 594.24
+        },
+        {
+          "session": -1,
+          "date": "2025-02-26",
+          "close": 594.54
+        },
+        {
+          "session": 0,
+          "date": "2025-02-27",
+          "close": 585.05
+        },
+        {
+          "session": 1,
+          "date": "2025-02-28",
+          "close": 594.18
+        },
+        {
+          "session": 2,
+          "date": "2025-03-03",
+          "close": 583.77
+        },
+        {
+          "session": 3,
+          "date": "2025-03-04",
+          "close": 576.86
+        },
+        {
+          "session": 4,
+          "date": "2025-03-05",
+          "close": 583.06
+        },
+        {
+          "session": 5,
+          "date": "2025-03-06",
+          "close": 572.71
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2025-02-20",
+          "close": 537.23
+        },
+        {
+          "session": -4,
+          "date": "2025-02-21",
+          "close": 526.08
+        },
+        {
+          "session": -3,
+          "date": "2025-02-24",
+          "close": 519.87
+        },
+        {
+          "session": -2,
+          "date": "2025-02-25",
+          "close": 513.32
+        },
+        {
+          "session": -1,
+          "date": "2025-02-26",
+          "close": 514.56
+        },
+        {
+          "session": 0,
+          "date": "2025-02-27",
+          "close": 500.27
+        },
+        {
+          "session": 1,
+          "date": "2025-02-28",
+          "close": 508.17
+        },
+        {
+          "session": 2,
+          "date": "2025-03-03",
+          "close": 497.05
+        },
+        {
+          "session": 3,
+          "date": "2025-03-04",
+          "close": 495.55
+        },
+        {
+          "session": 4,
+          "date": "2025-03-05",
+          "close": 502.01
+        },
+        {
+          "session": 5,
+          "date": "2025-03-06",
+          "close": 488.2
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2025-02-20",
+          "close": 98333.94
+        },
+        {
+          "session": -4,
+          "date": "2025-02-21",
+          "close": 96125.55
+        },
+        {
+          "session": -3,
+          "date": "2025-02-24",
+          "close": 91418.17
+        },
+        {
+          "session": -2,
+          "date": "2025-02-25",
+          "close": 88736.17
+        },
+        {
+          "session": -1,
+          "date": "2025-02-26",
+          "close": 84347.02
+        },
+        {
+          "session": 0,
+          "date": "2025-02-27",
+          "close": 84704.23
+        },
+        {
+          "session": 1,
+          "date": "2025-02-28",
+          "close": 84373.01
+        },
+        {
+          "session": 2,
+          "date": "2025-03-03",
+          "close": 86065.67
+        },
+        {
+          "session": 3,
+          "date": "2025-03-04",
+          "close": 87222.2
+        },
+        {
+          "session": 4,
+          "date": "2025-03-05",
+          "close": 90623.56
+        },
+        {
+          "session": 5,
+          "date": "2025-03-06",
+          "close": 89961.73
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -4304,6 +8084,12 @@
       "TSLA",
       "Elon Musk"
     ],
+    "relatedAssets": [
+      "TSLA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [
       "#1"
     ],
@@ -4401,6 +8187,236 @@
         "close": 378.17
       }
     ],
+    "priceWindows": {
+      "TSLA": [
+        {
+          "session": -5,
+          "date": "2025-01-22",
+          "close": 415.11
+        },
+        {
+          "session": -4,
+          "date": "2025-01-23",
+          "close": 412.38
+        },
+        {
+          "session": -3,
+          "date": "2025-01-24",
+          "close": 406.58
+        },
+        {
+          "session": -2,
+          "date": "2025-01-27",
+          "close": 397.15
+        },
+        {
+          "session": -1,
+          "date": "2025-01-28",
+          "close": 398.09
+        },
+        {
+          "session": 0,
+          "date": "2025-01-29",
+          "close": 389.1
+        },
+        {
+          "session": 1,
+          "date": "2025-01-30",
+          "close": 400.28
+        },
+        {
+          "session": 2,
+          "date": "2025-01-31",
+          "close": 404.6
+        },
+        {
+          "session": 3,
+          "date": "2025-02-03",
+          "close": 383.68
+        },
+        {
+          "session": 4,
+          "date": "2025-02-04",
+          "close": 392.21
+        },
+        {
+          "session": 5,
+          "date": "2025-02-05",
+          "close": 378.17
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2025-01-22",
+          "close": 606.44
+        },
+        {
+          "session": -4,
+          "date": "2025-01-23",
+          "close": 609.75
+        },
+        {
+          "session": -3,
+          "date": "2025-01-24",
+          "close": 607.97
+        },
+        {
+          "session": -2,
+          "date": "2025-01-27",
+          "close": 599.37
+        },
+        {
+          "session": -1,
+          "date": "2025-01-28",
+          "close": 604.52
+        },
+        {
+          "session": 0,
+          "date": "2025-01-29",
+          "close": 601.81
+        },
+        {
+          "session": 1,
+          "date": "2025-01-30",
+          "close": 605.04
+        },
+        {
+          "session": 2,
+          "date": "2025-01-31",
+          "close": 601.82
+        },
+        {
+          "session": 3,
+          "date": "2025-02-03",
+          "close": 597.77
+        },
+        {
+          "session": 4,
+          "date": "2025-02-04",
+          "close": 601.78
+        },
+        {
+          "session": 5,
+          "date": "2025-02-05",
+          "close": 604.22
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2025-01-22",
+          "close": 531.51
+        },
+        {
+          "session": -4,
+          "date": "2025-01-23",
+          "close": 532.64
+        },
+        {
+          "session": -3,
+          "date": "2025-01-24",
+          "close": 529.63
+        },
+        {
+          "session": -2,
+          "date": "2025-01-27",
+          "close": 514.21
+        },
+        {
+          "session": -1,
+          "date": "2025-01-28",
+          "close": 521.81
+        },
+        {
+          "session": 0,
+          "date": "2025-01-29",
+          "close": 520.83
+        },
+        {
+          "session": 1,
+          "date": "2025-01-30",
+          "close": 523.05
+        },
+        {
+          "session": 2,
+          "date": "2025-01-31",
+          "close": 522.29
+        },
+        {
+          "session": 3,
+          "date": "2025-02-03",
+          "close": 518.11
+        },
+        {
+          "session": 4,
+          "date": "2025-02-04",
+          "close": 524.47
+        },
+        {
+          "session": 5,
+          "date": "2025-02-05",
+          "close": 526.85
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2025-01-22",
+          "close": 103653.07
+        },
+        {
+          "session": -4,
+          "date": "2025-01-23",
+          "close": 103960.17
+        },
+        {
+          "session": -3,
+          "date": "2025-01-24",
+          "close": 104819.48
+        },
+        {
+          "session": -2,
+          "date": "2025-01-27",
+          "close": 102087.69
+        },
+        {
+          "session": -1,
+          "date": "2025-01-28",
+          "close": 101332.48
+        },
+        {
+          "session": 0,
+          "date": "2025-01-29",
+          "close": 103703.21
+        },
+        {
+          "session": 1,
+          "date": "2025-01-30",
+          "close": 104735.3
+        },
+        {
+          "session": 2,
+          "date": "2025-01-31",
+          "close": 102405.02
+        },
+        {
+          "session": 3,
+          "date": "2025-02-03",
+          "close": 101405.42
+        },
+        {
+          "session": 4,
+          "date": "2025-02-04",
+          "close": 97871.82
+        },
+        {
+          "session": 5,
+          "date": "2025-02-05",
+          "close": 96615.45
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -4559,6 +8575,12 @@
       "NVIDIA",
       "Microsoft"
     ],
+    "relatedAssets": [
+      "NVDA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "OpenAI와 SoftBank가 미국 AI 인프라에 4년간 5,000억 달러를 투자할 계획인 Stargate Project를 발표했다.",
     "asset": "NVDA",
@@ -4654,6 +8676,236 @@
         "close": 128.99
       }
     ],
+    "priceWindows": {
+      "NVDA": [
+        {
+          "session": -5,
+          "date": "2025-01-13",
+          "close": 133.23
+        },
+        {
+          "session": -4,
+          "date": "2025-01-14",
+          "close": 131.76
+        },
+        {
+          "session": -3,
+          "date": "2025-01-15",
+          "close": 136.24
+        },
+        {
+          "session": -2,
+          "date": "2025-01-16",
+          "close": 133.57
+        },
+        {
+          "session": -1,
+          "date": "2025-01-17",
+          "close": 137.71
+        },
+        {
+          "session": 0,
+          "date": "2025-01-21",
+          "close": 140.83
+        },
+        {
+          "session": 1,
+          "date": "2025-01-22",
+          "close": 147.07
+        },
+        {
+          "session": 2,
+          "date": "2025-01-23",
+          "close": 147.22
+        },
+        {
+          "session": 3,
+          "date": "2025-01-24",
+          "close": 142.62
+        },
+        {
+          "session": 4,
+          "date": "2025-01-27",
+          "close": 118.42
+        },
+        {
+          "session": 5,
+          "date": "2025-01-28",
+          "close": 128.99
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2025-01-13",
+          "close": 581.39
+        },
+        {
+          "session": -4,
+          "date": "2025-01-14",
+          "close": 582.19
+        },
+        {
+          "session": -3,
+          "date": "2025-01-15",
+          "close": 592.78
+        },
+        {
+          "session": -2,
+          "date": "2025-01-16",
+          "close": 591.64
+        },
+        {
+          "session": -1,
+          "date": "2025-01-17",
+          "close": 597.58
+        },
+        {
+          "session": 0,
+          "date": "2025-01-21",
+          "close": 603.05
+        },
+        {
+          "session": 1,
+          "date": "2025-01-22",
+          "close": 606.44
+        },
+        {
+          "session": 2,
+          "date": "2025-01-23",
+          "close": 609.75
+        },
+        {
+          "session": 3,
+          "date": "2025-01-24",
+          "close": 607.97
+        },
+        {
+          "session": 4,
+          "date": "2025-01-27",
+          "close": 599.37
+        },
+        {
+          "session": 5,
+          "date": "2025-01-28",
+          "close": 604.52
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2025-01-13",
+          "close": 505.56
+        },
+        {
+          "session": -4,
+          "date": "2025-01-14",
+          "close": 505.08
+        },
+        {
+          "session": -3,
+          "date": "2025-01-15",
+          "close": 516.7
+        },
+        {
+          "session": -2,
+          "date": "2025-01-16",
+          "close": 513.08
+        },
+        {
+          "session": -1,
+          "date": "2025-01-17",
+          "close": 521.74
+        },
+        {
+          "session": 0,
+          "date": "2025-01-21",
+          "close": 524.8
+        },
+        {
+          "session": 1,
+          "date": "2025-01-22",
+          "close": 531.51
+        },
+        {
+          "session": 2,
+          "date": "2025-01-23",
+          "close": 532.64
+        },
+        {
+          "session": 3,
+          "date": "2025-01-24",
+          "close": 529.63
+        },
+        {
+          "session": 4,
+          "date": "2025-01-27",
+          "close": 514.21
+        },
+        {
+          "session": 5,
+          "date": "2025-01-28",
+          "close": 521.81
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2025-01-13",
+          "close": 94516.52
+        },
+        {
+          "session": -4,
+          "date": "2025-01-14",
+          "close": 96534.05
+        },
+        {
+          "session": -3,
+          "date": "2025-01-15",
+          "close": 100504.49
+        },
+        {
+          "session": -2,
+          "date": "2025-01-16",
+          "close": 99756.91
+        },
+        {
+          "session": -1,
+          "date": "2025-01-17",
+          "close": 104462.04
+        },
+        {
+          "session": 0,
+          "date": "2025-01-21",
+          "close": 106146.27
+        },
+        {
+          "session": 1,
+          "date": "2025-01-22",
+          "close": 103653.07
+        },
+        {
+          "session": 2,
+          "date": "2025-01-23",
+          "close": 103960.17
+        },
+        {
+          "session": 3,
+          "date": "2025-01-24",
+          "close": 104819.48
+        },
+        {
+          "session": 4,
+          "date": "2025-01-27",
+          "close": 102087.69
+        },
+        {
+          "session": 5,
+          "date": "2025-01-28",
+          "close": 101332.48
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -4811,6 +9063,11 @@
       "QQQ",
       "Donald Trump"
     ],
+    "relatedAssets": [
+      "QQQ",
+      "SPY",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "EU가 미국산 석유와 가스를 대규모로 구매하지 않으면 관세를 부과하겠다고 밝혔다.",
     "asset": "QQQ",
@@ -4906,6 +9163,179 @@
         "close": 515.61
       }
     ],
+    "priceWindows": {
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2024-12-13",
+          "close": 530.53
+        },
+        {
+          "session": -4,
+          "date": "2024-12-16",
+          "close": 538.17
+        },
+        {
+          "session": -3,
+          "date": "2024-12-17",
+          "close": 535.8
+        },
+        {
+          "session": -2,
+          "date": "2024-12-18",
+          "close": 516.47
+        },
+        {
+          "session": -1,
+          "date": "2024-12-19",
+          "close": 514.17
+        },
+        {
+          "session": 0,
+          "date": "2024-12-20",
+          "close": 518.66
+        },
+        {
+          "session": 1,
+          "date": "2024-12-23",
+          "close": 522.87
+        },
+        {
+          "session": 2,
+          "date": "2024-12-24",
+          "close": 529.96
+        },
+        {
+          "session": 3,
+          "date": "2024-12-26",
+          "close": 529.6
+        },
+        {
+          "session": 4,
+          "date": "2024-12-27",
+          "close": 522.56
+        },
+        {
+          "session": 5,
+          "date": "2024-12-30",
+          "close": 515.61
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2024-12-13",
+          "close": 604.21
+        },
+        {
+          "session": -4,
+          "date": "2024-12-16",
+          "close": 606.79
+        },
+        {
+          "session": -3,
+          "date": "2024-12-17",
+          "close": 604.29
+        },
+        {
+          "session": -2,
+          "date": "2024-12-18",
+          "close": 586.28
+        },
+        {
+          "session": -1,
+          "date": "2024-12-19",
+          "close": 586.1
+        },
+        {
+          "session": 0,
+          "date": "2024-12-20",
+          "close": 591.15
+        },
+        {
+          "session": 1,
+          "date": "2024-12-23",
+          "close": 594.69
+        },
+        {
+          "session": 2,
+          "date": "2024-12-24",
+          "close": 601.3
+        },
+        {
+          "session": 3,
+          "date": "2024-12-26",
+          "close": 601.34
+        },
+        {
+          "session": 4,
+          "date": "2024-12-27",
+          "close": 595.01
+        },
+        {
+          "session": 5,
+          "date": "2024-12-30",
+          "close": 588.22
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2024-12-13",
+          "close": 101459.26
+        },
+        {
+          "session": -4,
+          "date": "2024-12-16",
+          "close": 106029.72
+        },
+        {
+          "session": -3,
+          "date": "2024-12-17",
+          "close": 106140.6
+        },
+        {
+          "session": -2,
+          "date": "2024-12-18",
+          "close": 100041.54
+        },
+        {
+          "session": -1,
+          "date": "2024-12-19",
+          "close": 97490.95
+        },
+        {
+          "session": 0,
+          "date": "2024-12-20",
+          "close": 97755.93
+        },
+        {
+          "session": 1,
+          "date": "2024-12-23",
+          "close": 94686.24
+        },
+        {
+          "session": 2,
+          "date": "2024-12-24",
+          "close": 98676.09
+        },
+        {
+          "session": 3,
+          "date": "2024-12-26",
+          "close": 95795.52
+        },
+        {
+          "session": 4,
+          "date": "2024-12-27",
+          "close": 94164.86
+        },
+        {
+          "session": 5,
+          "date": "2024-12-30",
+          "close": 92643.21
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -5062,6 +9492,11 @@
       "QQQ",
       "Donald Trump"
     ],
+    "relatedAssets": [
+      "QQQ",
+      "SPY",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "BRICS 국가가 달러 대체 통화를 추진하면 100% 관세를 부과하겠다고 경고했다.",
     "asset": "QQQ",
@@ -5157,6 +9592,179 @@
         "close": 522.38
       }
     ],
+    "priceWindows": {
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2024-11-22",
+          "close": 505.79
+        },
+        {
+          "session": -4,
+          "date": "2024-11-25",
+          "close": 506.59
+        },
+        {
+          "session": -3,
+          "date": "2024-11-26",
+          "close": 509.31
+        },
+        {
+          "session": -2,
+          "date": "2024-11-27",
+          "close": 505.3
+        },
+        {
+          "session": -1,
+          "date": "2024-11-29",
+          "close": 509.74
+        },
+        {
+          "session": 0,
+          "date": "2024-12-02",
+          "close": 515.29
+        },
+        {
+          "session": 1,
+          "date": "2024-12-03",
+          "close": 516.87
+        },
+        {
+          "session": 2,
+          "date": "2024-12-04",
+          "close": 523.26
+        },
+        {
+          "session": 3,
+          "date": "2024-12-05",
+          "close": 521.81
+        },
+        {
+          "session": 4,
+          "date": "2024-12-06",
+          "close": 526.48
+        },
+        {
+          "session": 5,
+          "date": "2024-12-09",
+          "close": 522.38
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2024-11-22",
+          "close": 595.51
+        },
+        {
+          "session": -4,
+          "date": "2024-11-25",
+          "close": 597.53
+        },
+        {
+          "session": -3,
+          "date": "2024-11-26",
+          "close": 600.65
+        },
+        {
+          "session": -2,
+          "date": "2024-11-27",
+          "close": 598.83
+        },
+        {
+          "session": -1,
+          "date": "2024-11-29",
+          "close": 602.55
+        },
+        {
+          "session": 0,
+          "date": "2024-12-02",
+          "close": 603.63
+        },
+        {
+          "session": 1,
+          "date": "2024-12-03",
+          "close": 603.91
+        },
+        {
+          "session": 2,
+          "date": "2024-12-04",
+          "close": 607.66
+        },
+        {
+          "session": 3,
+          "date": "2024-12-05",
+          "close": 606.66
+        },
+        {
+          "session": 4,
+          "date": "2024-12-06",
+          "close": 607.81
+        },
+        {
+          "session": 5,
+          "date": "2024-12-09",
+          "close": 604.68
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2024-11-22",
+          "close": 98997.66
+        },
+        {
+          "session": -4,
+          "date": "2024-11-25",
+          "close": 93102.3
+        },
+        {
+          "session": -3,
+          "date": "2024-11-26",
+          "close": 91985.32
+        },
+        {
+          "session": -2,
+          "date": "2024-11-27",
+          "close": 95962.53
+        },
+        {
+          "session": -1,
+          "date": "2024-11-29",
+          "close": 97461.52
+        },
+        {
+          "session": 0,
+          "date": "2024-12-02",
+          "close": 95865.3
+        },
+        {
+          "session": 1,
+          "date": "2024-12-03",
+          "close": 96002.16
+        },
+        {
+          "session": 2,
+          "date": "2024-12-04",
+          "close": 98768.53
+        },
+        {
+          "session": 3,
+          "date": "2024-12-05",
+          "close": 96593.57
+        },
+        {
+          "session": 4,
+          "date": "2024-12-06",
+          "close": 99920.71
+        },
+        {
+          "session": 5,
+          "date": "2024-12-09",
+          "close": 97432.72
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -5313,6 +9921,11 @@
       "QQQ",
       "Donald Trump"
     ],
+    "relatedAssets": [
+      "QQQ",
+      "SPY",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "멕시코와 캐나다산 모든 제품에 25% 관세를 부과하겠다는 계획을 발표했다.",
     "asset": "QQQ",
@@ -5408,6 +10021,179 @@
         "close": 523.26
       }
     ],
+    "priceWindows": {
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2024-11-19",
+          "close": 503.46
+        },
+        {
+          "session": -4,
+          "date": "2024-11-20",
+          "close": 503.17
+        },
+        {
+          "session": -3,
+          "date": "2024-11-21",
+          "close": 504.98
+        },
+        {
+          "session": -2,
+          "date": "2024-11-22",
+          "close": 505.79
+        },
+        {
+          "session": -1,
+          "date": "2024-11-25",
+          "close": 506.59
+        },
+        {
+          "session": 0,
+          "date": "2024-11-26",
+          "close": 509.31
+        },
+        {
+          "session": 1,
+          "date": "2024-11-27",
+          "close": 505.3
+        },
+        {
+          "session": 2,
+          "date": "2024-11-29",
+          "close": 509.74
+        },
+        {
+          "session": 3,
+          "date": "2024-12-02",
+          "close": 515.29
+        },
+        {
+          "session": 4,
+          "date": "2024-12-03",
+          "close": 516.87
+        },
+        {
+          "session": 5,
+          "date": "2024-12-04",
+          "close": 523.26
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2024-11-19",
+          "close": 590.3
+        },
+        {
+          "session": -4,
+          "date": "2024-11-20",
+          "close": 590.5
+        },
+        {
+          "session": -3,
+          "date": "2024-11-21",
+          "close": 593.67
+        },
+        {
+          "session": -2,
+          "date": "2024-11-22",
+          "close": 595.51
+        },
+        {
+          "session": -1,
+          "date": "2024-11-25",
+          "close": 597.53
+        },
+        {
+          "session": 0,
+          "date": "2024-11-26",
+          "close": 600.65
+        },
+        {
+          "session": 1,
+          "date": "2024-11-27",
+          "close": 598.83
+        },
+        {
+          "session": 2,
+          "date": "2024-11-29",
+          "close": 602.55
+        },
+        {
+          "session": 3,
+          "date": "2024-12-02",
+          "close": 603.63
+        },
+        {
+          "session": 4,
+          "date": "2024-12-03",
+          "close": 603.91
+        },
+        {
+          "session": 5,
+          "date": "2024-12-04",
+          "close": 607.66
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2024-11-19",
+          "close": 92343.79
+        },
+        {
+          "session": -4,
+          "date": "2024-11-20",
+          "close": 94339.49
+        },
+        {
+          "session": -3,
+          "date": "2024-11-21",
+          "close": 98504.73
+        },
+        {
+          "session": -2,
+          "date": "2024-11-22",
+          "close": 98997.66
+        },
+        {
+          "session": -1,
+          "date": "2024-11-25",
+          "close": 93102.3
+        },
+        {
+          "session": 0,
+          "date": "2024-11-26",
+          "close": 91985.32
+        },
+        {
+          "session": 1,
+          "date": "2024-11-27",
+          "close": 95962.53
+        },
+        {
+          "session": 2,
+          "date": "2024-11-29",
+          "close": 97461.52
+        },
+        {
+          "session": 3,
+          "date": "2024-12-02",
+          "close": 95865.3
+        },
+        {
+          "session": 4,
+          "date": "2024-12-03",
+          "close": 96002.16
+        },
+        {
+          "session": 5,
+          "date": "2024-12-04",
+          "close": 98768.53
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -5565,6 +10351,12 @@
       "search",
       "AI"
     ],
+    "relatedAssets": [
+      "MSFT",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "OpenAI가 최신 정보와 웹 출처 링크를 제공하는 ChatGPT 검색 기능을 공개했다.",
     "asset": "MSFT",
@@ -5660,6 +10452,236 @@
         "close": 425.43
       }
     ],
+    "priceWindows": {
+      "MSFT": [
+        {
+          "session": -5,
+          "date": "2024-10-24",
+          "close": 424.73
+        },
+        {
+          "session": -4,
+          "date": "2024-10-25",
+          "close": 428.15
+        },
+        {
+          "session": -3,
+          "date": "2024-10-28",
+          "close": 426.59
+        },
+        {
+          "session": -2,
+          "date": "2024-10-29",
+          "close": 431.95
+        },
+        {
+          "session": -1,
+          "date": "2024-10-30",
+          "close": 432.53
+        },
+        {
+          "session": 0,
+          "date": "2024-10-31",
+          "close": 406.35
+        },
+        {
+          "session": 1,
+          "date": "2024-11-01",
+          "close": 410.37
+        },
+        {
+          "session": 2,
+          "date": "2024-11-04",
+          "close": 408.46
+        },
+        {
+          "session": 3,
+          "date": "2024-11-05",
+          "close": 411.46
+        },
+        {
+          "session": 4,
+          "date": "2024-11-06",
+          "close": 420.18
+        },
+        {
+          "session": 5,
+          "date": "2024-11-07",
+          "close": 425.43
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2024-10-24",
+          "close": 579.24
+        },
+        {
+          "session": -4,
+          "date": "2024-10-25",
+          "close": 579.04
+        },
+        {
+          "session": -3,
+          "date": "2024-10-28",
+          "close": 580.83
+        },
+        {
+          "session": -2,
+          "date": "2024-10-29",
+          "close": 581.77
+        },
+        {
+          "session": -1,
+          "date": "2024-10-30",
+          "close": 580.01
+        },
+        {
+          "session": 0,
+          "date": "2024-10-31",
+          "close": 568.64
+        },
+        {
+          "session": 1,
+          "date": "2024-11-01",
+          "close": 571.04
+        },
+        {
+          "session": 2,
+          "date": "2024-11-04",
+          "close": 569.81
+        },
+        {
+          "session": 3,
+          "date": "2024-11-05",
+          "close": 576.7
+        },
+        {
+          "session": 4,
+          "date": "2024-11-06",
+          "close": 591.04
+        },
+        {
+          "session": 5,
+          "date": "2024-11-07",
+          "close": 595.61
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2024-10-24",
+          "close": 492.32
+        },
+        {
+          "session": -4,
+          "date": "2024-10-25",
+          "close": 495.32
+        },
+        {
+          "session": -3,
+          "date": "2024-10-28",
+          "close": 495.4
+        },
+        {
+          "session": -2,
+          "date": "2024-10-29",
+          "close": 500.16
+        },
+        {
+          "session": -1,
+          "date": "2024-10-30",
+          "close": 496.38
+        },
+        {
+          "session": 0,
+          "date": "2024-10-31",
+          "close": 483.85
+        },
+        {
+          "session": 1,
+          "date": "2024-11-01",
+          "close": 487.43
+        },
+        {
+          "session": 2,
+          "date": "2024-11-04",
+          "close": 486.01
+        },
+        {
+          "session": 3,
+          "date": "2024-11-05",
+          "close": 492.21
+        },
+        {
+          "session": 4,
+          "date": "2024-11-06",
+          "close": 505.58
+        },
+        {
+          "session": 5,
+          "date": "2024-11-07",
+          "close": 513.54
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2024-10-24",
+          "close": 68161.05
+        },
+        {
+          "session": -4,
+          "date": "2024-10-25",
+          "close": 66642.41
+        },
+        {
+          "session": -3,
+          "date": "2024-10-28",
+          "close": 69907.76
+        },
+        {
+          "session": -2,
+          "date": "2024-10-29",
+          "close": 72720.49
+        },
+        {
+          "session": -1,
+          "date": "2024-10-30",
+          "close": 72339.54
+        },
+        {
+          "session": 0,
+          "date": "2024-10-31",
+          "close": 70215.19
+        },
+        {
+          "session": 1,
+          "date": "2024-11-01",
+          "close": 69482.47
+        },
+        {
+          "session": 2,
+          "date": "2024-11-04",
+          "close": 67811.51
+        },
+        {
+          "session": 3,
+          "date": "2024-11-05",
+          "close": 69359.56
+        },
+        {
+          "session": 4,
+          "date": "2024-11-06",
+          "close": 75639.08
+        },
+        {
+          "session": 5,
+          "date": "2024-11-07",
+          "close": 75904.86
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -5817,6 +10839,11 @@
       "SPY",
       "Donald Trump"
     ],
+    "relatedAssets": [
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "주식시장 급락과 고용지표 악화를 강하게 언급했다.",
     "asset": "SPY",
@@ -5912,6 +10939,179 @@
         "close": 533.27
       }
     ],
+    "priceWindows": {
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2024-07-29",
+          "close": 544.76
+        },
+        {
+          "session": -4,
+          "date": "2024-07-30",
+          "close": 542
+        },
+        {
+          "session": -3,
+          "date": "2024-07-31",
+          "close": 550.81
+        },
+        {
+          "session": -2,
+          "date": "2024-08-01",
+          "close": 543.01
+        },
+        {
+          "session": -1,
+          "date": "2024-08-02",
+          "close": 532.9
+        },
+        {
+          "session": 0,
+          "date": "2024-08-05",
+          "close": 517.38
+        },
+        {
+          "session": 1,
+          "date": "2024-08-06",
+          "close": 522.15
+        },
+        {
+          "session": 2,
+          "date": "2024-08-07",
+          "close": 518.66
+        },
+        {
+          "session": 3,
+          "date": "2024-08-08",
+          "close": 530.65
+        },
+        {
+          "session": 4,
+          "date": "2024-08-09",
+          "close": 532.99
+        },
+        {
+          "session": 5,
+          "date": "2024-08-12",
+          "close": 533.27
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2024-07-29",
+          "close": 463.9
+        },
+        {
+          "session": -4,
+          "date": "2024-07-30",
+          "close": 457.53
+        },
+        {
+          "session": -3,
+          "date": "2024-07-31",
+          "close": 471.07
+        },
+        {
+          "session": -2,
+          "date": "2024-08-01",
+          "close": 459.66
+        },
+        {
+          "session": -1,
+          "date": "2024-08-02",
+          "close": 448.75
+        },
+        {
+          "session": 0,
+          "date": "2024-08-05",
+          "close": 435.37
+        },
+        {
+          "session": 1,
+          "date": "2024-08-06",
+          "close": 439.53
+        },
+        {
+          "session": 2,
+          "date": "2024-08-07",
+          "close": 434.77
+        },
+        {
+          "session": 3,
+          "date": "2024-08-08",
+          "close": 448.07
+        },
+        {
+          "session": 4,
+          "date": "2024-08-09",
+          "close": 450.41
+        },
+        {
+          "session": 5,
+          "date": "2024-08-12",
+          "close": 451.38
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2024-07-29",
+          "close": 66819.91
+        },
+        {
+          "session": -4,
+          "date": "2024-07-30",
+          "close": 66201.02
+        },
+        {
+          "session": -3,
+          "date": "2024-07-31",
+          "close": 64619.25
+        },
+        {
+          "session": -2,
+          "date": "2024-08-01",
+          "close": 65357.5
+        },
+        {
+          "session": -1,
+          "date": "2024-08-02",
+          "close": 61415.07
+        },
+        {
+          "session": 0,
+          "date": "2024-08-05",
+          "close": 53991.46
+        },
+        {
+          "session": 1,
+          "date": "2024-08-06",
+          "close": 56034.32
+        },
+        {
+          "session": 2,
+          "date": "2024-08-07",
+          "close": 55027.46
+        },
+        {
+          "session": 3,
+          "date": "2024-08-08",
+          "close": 61710.14
+        },
+        {
+          "session": 4,
+          "date": "2024-08-09",
+          "close": 60880.11
+        },
+        {
+          "session": 5,
+          "date": "2024-08-12",
+          "close": 59354.52
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -6068,6 +11268,12 @@
       "TSLA",
       "Elon Musk"
     ],
+    "relatedAssets": [
+      "TSLA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "FSD와 Optimus 학습을 위한 약 10만 개 H100/H200 규모의 Tesla 슈퍼컴퓨팅 클러스터를 공개했다.",
     "asset": "TSLA",
@@ -6163,6 +11369,236 @@
         "close": 197.49
       }
     ],
+    "priceWindows": {
+      "TSLA": [
+        {
+          "session": -5,
+          "date": "2024-07-29",
+          "close": 232.1
+        },
+        {
+          "session": -4,
+          "date": "2024-07-30",
+          "close": 222.62
+        },
+        {
+          "session": -3,
+          "date": "2024-07-31",
+          "close": 232.07
+        },
+        {
+          "session": -2,
+          "date": "2024-08-01",
+          "close": 216.86
+        },
+        {
+          "session": -1,
+          "date": "2024-08-02",
+          "close": 207.67
+        },
+        {
+          "session": 0,
+          "date": "2024-08-05",
+          "close": 198.88
+        },
+        {
+          "session": 1,
+          "date": "2024-08-06",
+          "close": 200.64
+        },
+        {
+          "session": 2,
+          "date": "2024-08-07",
+          "close": 191.76
+        },
+        {
+          "session": 3,
+          "date": "2024-08-08",
+          "close": 198.84
+        },
+        {
+          "session": 4,
+          "date": "2024-08-09",
+          "close": 200
+        },
+        {
+          "session": 5,
+          "date": "2024-08-12",
+          "close": 197.49
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2024-07-29",
+          "close": 544.76
+        },
+        {
+          "session": -4,
+          "date": "2024-07-30",
+          "close": 542
+        },
+        {
+          "session": -3,
+          "date": "2024-07-31",
+          "close": 550.81
+        },
+        {
+          "session": -2,
+          "date": "2024-08-01",
+          "close": 543.01
+        },
+        {
+          "session": -1,
+          "date": "2024-08-02",
+          "close": 532.9
+        },
+        {
+          "session": 0,
+          "date": "2024-08-05",
+          "close": 517.38
+        },
+        {
+          "session": 1,
+          "date": "2024-08-06",
+          "close": 522.15
+        },
+        {
+          "session": 2,
+          "date": "2024-08-07",
+          "close": 518.66
+        },
+        {
+          "session": 3,
+          "date": "2024-08-08",
+          "close": 530.65
+        },
+        {
+          "session": 4,
+          "date": "2024-08-09",
+          "close": 532.99
+        },
+        {
+          "session": 5,
+          "date": "2024-08-12",
+          "close": 533.27
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2024-07-29",
+          "close": 463.9
+        },
+        {
+          "session": -4,
+          "date": "2024-07-30",
+          "close": 457.53
+        },
+        {
+          "session": -3,
+          "date": "2024-07-31",
+          "close": 471.07
+        },
+        {
+          "session": -2,
+          "date": "2024-08-01",
+          "close": 459.66
+        },
+        {
+          "session": -1,
+          "date": "2024-08-02",
+          "close": 448.75
+        },
+        {
+          "session": 0,
+          "date": "2024-08-05",
+          "close": 435.37
+        },
+        {
+          "session": 1,
+          "date": "2024-08-06",
+          "close": 439.53
+        },
+        {
+          "session": 2,
+          "date": "2024-08-07",
+          "close": 434.77
+        },
+        {
+          "session": 3,
+          "date": "2024-08-08",
+          "close": 448.07
+        },
+        {
+          "session": 4,
+          "date": "2024-08-09",
+          "close": 450.41
+        },
+        {
+          "session": 5,
+          "date": "2024-08-12",
+          "close": 451.38
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2024-07-29",
+          "close": 66819.91
+        },
+        {
+          "session": -4,
+          "date": "2024-07-30",
+          "close": 66201.02
+        },
+        {
+          "session": -3,
+          "date": "2024-07-31",
+          "close": 64619.25
+        },
+        {
+          "session": -2,
+          "date": "2024-08-01",
+          "close": 65357.5
+        },
+        {
+          "session": -1,
+          "date": "2024-08-02",
+          "close": 61415.07
+        },
+        {
+          "session": 0,
+          "date": "2024-08-05",
+          "close": 53991.46
+        },
+        {
+          "session": 1,
+          "date": "2024-08-06",
+          "close": 56034.32
+        },
+        {
+          "session": 2,
+          "date": "2024-08-07",
+          "close": 55027.46
+        },
+        {
+          "session": 3,
+          "date": "2024-08-08",
+          "close": 61710.14
+        },
+        {
+          "session": 4,
+          "date": "2024-08-09",
+          "close": 60880.11
+        },
+        {
+          "session": 5,
+          "date": "2024-08-12",
+          "close": 59354.52
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -6320,6 +11756,12 @@
       "AI factories",
       "data centers"
     ],
+    "relatedAssets": [
+      "NVDA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "NVIDIA와 주요 컴퓨터 제조사들이 기업용 AI 팩토리와 데이터센터를 위한 Blackwell 기반 시스템을 발표했다.",
     "asset": "NVDA",
@@ -6415,6 +11857,236 @@
         "close": 121.79
       }
     ],
+    "priceWindows": {
+      "NVDA": [
+        {
+          "session": -5,
+          "date": "2024-05-24",
+          "close": 106.47
+        },
+        {
+          "session": -4,
+          "date": "2024-05-28",
+          "close": 113.9
+        },
+        {
+          "session": -3,
+          "date": "2024-05-29",
+          "close": 114.82
+        },
+        {
+          "session": -2,
+          "date": "2024-05-30",
+          "close": 110.5
+        },
+        {
+          "session": -1,
+          "date": "2024-05-31",
+          "close": 109.63
+        },
+        {
+          "session": 0,
+          "date": "2024-06-03",
+          "close": 115
+        },
+        {
+          "session": 1,
+          "date": "2024-06-04",
+          "close": 116.44
+        },
+        {
+          "session": 2,
+          "date": "2024-06-05",
+          "close": 122.44
+        },
+        {
+          "session": 3,
+          "date": "2024-06-06",
+          "close": 121
+        },
+        {
+          "session": 4,
+          "date": "2024-06-07",
+          "close": 120.89
+        },
+        {
+          "session": 5,
+          "date": "2024-06-10",
+          "close": 121.79
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2024-05-24",
+          "close": 529.44
+        },
+        {
+          "session": -4,
+          "date": "2024-05-28",
+          "close": 529.81
+        },
+        {
+          "session": -3,
+          "date": "2024-05-29",
+          "close": 526.1
+        },
+        {
+          "session": -2,
+          "date": "2024-05-30",
+          "close": 522.61
+        },
+        {
+          "session": -1,
+          "date": "2024-05-31",
+          "close": 527.37
+        },
+        {
+          "session": 0,
+          "date": "2024-06-03",
+          "close": 527.8
+        },
+        {
+          "session": 1,
+          "date": "2024-06-04",
+          "close": 528.39
+        },
+        {
+          "session": 2,
+          "date": "2024-06-05",
+          "close": 534.67
+        },
+        {
+          "session": 3,
+          "date": "2024-06-06",
+          "close": 534.66
+        },
+        {
+          "session": 4,
+          "date": "2024-06-07",
+          "close": 534.01
+        },
+        {
+          "session": 5,
+          "date": "2024-06-10",
+          "close": 535.66
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2024-05-24",
+          "close": 457.95
+        },
+        {
+          "session": -4,
+          "date": "2024-05-28",
+          "close": 459.68
+        },
+        {
+          "session": -3,
+          "date": "2024-05-29",
+          "close": 456.44
+        },
+        {
+          "session": -2,
+          "date": "2024-05-30",
+          "close": 451.55
+        },
+        {
+          "session": -1,
+          "date": "2024-05-31",
+          "close": 450.71
+        },
+        {
+          "session": 0,
+          "date": "2024-06-03",
+          "close": 453.13
+        },
+        {
+          "session": 1,
+          "date": "2024-06-04",
+          "close": 454.37
+        },
+        {
+          "session": 2,
+          "date": "2024-06-05",
+          "close": 463.53
+        },
+        {
+          "session": 3,
+          "date": "2024-06-06",
+          "close": 463.37
+        },
+        {
+          "session": 4,
+          "date": "2024-06-07",
+          "close": 462.96
+        },
+        {
+          "session": 5,
+          "date": "2024-06-10",
+          "close": 464.83
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2024-05-24",
+          "close": 68526.1
+        },
+        {
+          "session": -4,
+          "date": "2024-05-28",
+          "close": 68296.22
+        },
+        {
+          "session": -3,
+          "date": "2024-05-29",
+          "close": 67578.09
+        },
+        {
+          "session": -2,
+          "date": "2024-05-30",
+          "close": 68364.99
+        },
+        {
+          "session": -1,
+          "date": "2024-05-31",
+          "close": 67491.41
+        },
+        {
+          "session": 0,
+          "date": "2024-06-03",
+          "close": 68804.78
+        },
+        {
+          "session": 1,
+          "date": "2024-06-04",
+          "close": 70567.77
+        },
+        {
+          "session": 2,
+          "date": "2024-06-05",
+          "close": 71082.82
+        },
+        {
+          "session": 3,
+          "date": "2024-06-06",
+          "close": 70757.16
+        },
+        {
+          "session": 4,
+          "date": "2024-06-07",
+          "close": 69342.59
+        },
+        {
+          "session": 5,
+          "date": "2024-06-10",
+          "close": 69512.28
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -6572,6 +12244,12 @@
       "ChatGPT",
       "AI"
     ],
+    "relatedAssets": [
+      "MSFT",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "OpenAI가 새로운 플래그십 모델 GPT-4o를 공개하고 ChatGPT 무료 사용자에게 고급 기능을 확대했다.",
     "asset": "MSFT",
@@ -6667,6 +12345,236 @@
         "close": 425.34
       }
     ],
+    "priceWindows": {
+      "MSFT": [
+        {
+          "session": -5,
+          "date": "2024-05-06",
+          "close": 413.54
+        },
+        {
+          "session": -4,
+          "date": "2024-05-07",
+          "close": 409.34
+        },
+        {
+          "session": -3,
+          "date": "2024-05-08",
+          "close": 410.54
+        },
+        {
+          "session": -2,
+          "date": "2024-05-09",
+          "close": 412.32
+        },
+        {
+          "session": -1,
+          "date": "2024-05-10",
+          "close": 414.74
+        },
+        {
+          "session": 0,
+          "date": "2024-05-13",
+          "close": 413.72
+        },
+        {
+          "session": 1,
+          "date": "2024-05-14",
+          "close": 416.56
+        },
+        {
+          "session": 2,
+          "date": "2024-05-15",
+          "close": 423.08
+        },
+        {
+          "session": 3,
+          "date": "2024-05-16",
+          "close": 420.99
+        },
+        {
+          "session": 4,
+          "date": "2024-05-17",
+          "close": 420.21
+        },
+        {
+          "session": 5,
+          "date": "2024-05-20",
+          "close": 425.34
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2024-05-06",
+          "close": 516.57
+        },
+        {
+          "session": -4,
+          "date": "2024-05-07",
+          "close": 517.14
+        },
+        {
+          "session": -3,
+          "date": "2024-05-08",
+          "close": 517.19
+        },
+        {
+          "session": -2,
+          "date": "2024-05-09",
+          "close": 520.17
+        },
+        {
+          "session": -1,
+          "date": "2024-05-10",
+          "close": 520.84
+        },
+        {
+          "session": 0,
+          "date": "2024-05-13",
+          "close": 520.91
+        },
+        {
+          "session": 1,
+          "date": "2024-05-14",
+          "close": 523.3
+        },
+        {
+          "session": 2,
+          "date": "2024-05-15",
+          "close": 529.78
+        },
+        {
+          "session": 3,
+          "date": "2024-05-16",
+          "close": 528.69
+        },
+        {
+          "session": 4,
+          "date": "2024-05-17",
+          "close": 529.45
+        },
+        {
+          "session": 5,
+          "date": "2024-05-20",
+          "close": 530.06
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2024-05-06",
+          "close": 440.25
+        },
+        {
+          "session": -4,
+          "date": "2024-05-07",
+          "close": 440.32
+        },
+        {
+          "session": -3,
+          "date": "2024-05-08",
+          "close": 440.06
+        },
+        {
+          "session": -2,
+          "date": "2024-05-09",
+          "close": 441.02
+        },
+        {
+          "session": -1,
+          "date": "2024-05-10",
+          "close": 442.06
+        },
+        {
+          "session": 0,
+          "date": "2024-05-13",
+          "close": 443.08
+        },
+        {
+          "session": 1,
+          "date": "2024-05-14",
+          "close": 445.93
+        },
+        {
+          "session": 2,
+          "date": "2024-05-15",
+          "close": 452.9
+        },
+        {
+          "session": 3,
+          "date": "2024-05-16",
+          "close": 451.98
+        },
+        {
+          "session": 4,
+          "date": "2024-05-17",
+          "close": 451.76
+        },
+        {
+          "session": 5,
+          "date": "2024-05-20",
+          "close": 454.91
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2024-05-06",
+          "close": 63161.95
+        },
+        {
+          "session": -4,
+          "date": "2024-05-07",
+          "close": 62334.82
+        },
+        {
+          "session": -3,
+          "date": "2024-05-08",
+          "close": 61187.94
+        },
+        {
+          "session": -2,
+          "date": "2024-05-09",
+          "close": 63049.96
+        },
+        {
+          "session": -1,
+          "date": "2024-05-10",
+          "close": 60792.78
+        },
+        {
+          "session": 0,
+          "date": "2024-05-13",
+          "close": 62901.45
+        },
+        {
+          "session": 1,
+          "date": "2024-05-14",
+          "close": 61552.79
+        },
+        {
+          "session": 2,
+          "date": "2024-05-15",
+          "close": 66267.49
+        },
+        {
+          "session": 3,
+          "date": "2024-05-16",
+          "close": 65231.58
+        },
+        {
+          "session": 4,
+          "date": "2024-05-17",
+          "close": 67051.88
+        },
+        {
+          "session": 5,
+          "date": "2024-05-20",
+          "close": 71448.2
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -6824,6 +12732,12 @@
       "TSLA",
       "Elon Musk"
     ],
+    "relatedAssets": [
+      "TSLA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "Tesla Supercharger 신규 부지 확대 속도는 낮추되 기존 시설 확장과 가동률에 집중하겠다고 밝혔다.",
     "asset": "TSLA",
@@ -6919,6 +12833,236 @@
         "close": 174.72
       }
     ],
+    "priceWindows": {
+      "TSLA": [
+        {
+          "session": -5,
+          "date": "2024-04-24",
+          "close": 162.13
+        },
+        {
+          "session": -4,
+          "date": "2024-04-25",
+          "close": 170.18
+        },
+        {
+          "session": -3,
+          "date": "2024-04-26",
+          "close": 168.29
+        },
+        {
+          "session": -2,
+          "date": "2024-04-29",
+          "close": 194.05
+        },
+        {
+          "session": -1,
+          "date": "2024-04-30",
+          "close": 183.28
+        },
+        {
+          "session": 0,
+          "date": "2024-05-01",
+          "close": 179.99
+        },
+        {
+          "session": 1,
+          "date": "2024-05-02",
+          "close": 180.01
+        },
+        {
+          "session": 2,
+          "date": "2024-05-03",
+          "close": 181.19
+        },
+        {
+          "session": 3,
+          "date": "2024-05-06",
+          "close": 184.76
+        },
+        {
+          "session": 4,
+          "date": "2024-05-07",
+          "close": 177.81
+        },
+        {
+          "session": 5,
+          "date": "2024-05-08",
+          "close": 174.72
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2024-04-24",
+          "close": 505.41
+        },
+        {
+          "session": -4,
+          "date": "2024-04-25",
+          "close": 503.49
+        },
+        {
+          "session": -3,
+          "date": "2024-04-26",
+          "close": 508.26
+        },
+        {
+          "session": -2,
+          "date": "2024-04-29",
+          "close": 510.06
+        },
+        {
+          "session": -1,
+          "date": "2024-04-30",
+          "close": 501.98
+        },
+        {
+          "session": 0,
+          "date": "2024-05-01",
+          "close": 500.35
+        },
+        {
+          "session": 1,
+          "date": "2024-05-02",
+          "close": 505.03
+        },
+        {
+          "session": 2,
+          "date": "2024-05-03",
+          "close": 511.29
+        },
+        {
+          "session": 3,
+          "date": "2024-05-06",
+          "close": 516.57
+        },
+        {
+          "session": 4,
+          "date": "2024-05-07",
+          "close": 517.14
+        },
+        {
+          "session": 5,
+          "date": "2024-05-08",
+          "close": 517.19
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2024-04-24",
+          "close": 426.51
+        },
+        {
+          "session": -4,
+          "date": "2024-04-25",
+          "close": 424.45
+        },
+        {
+          "session": -3,
+          "date": "2024-04-26",
+          "close": 431
+        },
+        {
+          "session": -2,
+          "date": "2024-04-29",
+          "close": 432.75
+        },
+        {
+          "session": -1,
+          "date": "2024-04-30",
+          "close": 424.59
+        },
+        {
+          "session": 0,
+          "date": "2024-05-01",
+          "close": 421.52
+        },
+        {
+          "session": 1,
+          "date": "2024-05-02",
+          "close": 426.9
+        },
+        {
+          "session": 2,
+          "date": "2024-05-03",
+          "close": 435.48
+        },
+        {
+          "session": 3,
+          "date": "2024-05-06",
+          "close": 440.25
+        },
+        {
+          "session": 4,
+          "date": "2024-05-07",
+          "close": 440.32
+        },
+        {
+          "session": 5,
+          "date": "2024-05-08",
+          "close": 440.06
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2024-04-24",
+          "close": 64276.9
+        },
+        {
+          "session": -4,
+          "date": "2024-04-25",
+          "close": 64481.71
+        },
+        {
+          "session": -3,
+          "date": "2024-04-26",
+          "close": 63755.32
+        },
+        {
+          "session": -2,
+          "date": "2024-04-29",
+          "close": 63841.12
+        },
+        {
+          "session": -1,
+          "date": "2024-04-30",
+          "close": 60636.86
+        },
+        {
+          "session": 0,
+          "date": "2024-05-01",
+          "close": 58254.01
+        },
+        {
+          "session": 1,
+          "date": "2024-05-02",
+          "close": 59123.43
+        },
+        {
+          "session": 2,
+          "date": "2024-05-03",
+          "close": 62889.84
+        },
+        {
+          "session": 3,
+          "date": "2024-05-06",
+          "close": 63161.95
+        },
+        {
+          "session": 4,
+          "date": "2024-05-07",
+          "close": 62334.82
+        },
+        {
+          "session": 5,
+          "date": "2024-05-08",
+          "close": 61187.94
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -7075,6 +13219,12 @@
       "TSLA",
       "Elon Musk"
     ],
+    "relatedAssets": [
+      "TSLA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "감독형 FSD 구독료를 월 99달러로 인하한다고 발표했다.",
     "asset": "TSLA",
@@ -7170,6 +13320,236 @@
         "close": 142.05
       }
     ],
+    "priceWindows": {
+      "TSLA": [
+        {
+          "session": -5,
+          "date": "2024-04-08",
+          "close": 172.98
+        },
+        {
+          "session": -4,
+          "date": "2024-04-09",
+          "close": 176.88
+        },
+        {
+          "session": -3,
+          "date": "2024-04-10",
+          "close": 171.76
+        },
+        {
+          "session": -2,
+          "date": "2024-04-11",
+          "close": 174.6
+        },
+        {
+          "session": -1,
+          "date": "2024-04-12",
+          "close": 171.05
+        },
+        {
+          "session": 0,
+          "date": "2024-04-15",
+          "close": 161.48
+        },
+        {
+          "session": 1,
+          "date": "2024-04-16",
+          "close": 157.11
+        },
+        {
+          "session": 2,
+          "date": "2024-04-17",
+          "close": 155.45
+        },
+        {
+          "session": 3,
+          "date": "2024-04-18",
+          "close": 149.93
+        },
+        {
+          "session": 4,
+          "date": "2024-04-19",
+          "close": 147.05
+        },
+        {
+          "session": 5,
+          "date": "2024-04-22",
+          "close": 142.05
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2024-04-08",
+          "close": 518.72
+        },
+        {
+          "session": -4,
+          "date": "2024-04-09",
+          "close": 519.32
+        },
+        {
+          "session": -3,
+          "date": "2024-04-10",
+          "close": 514.12
+        },
+        {
+          "session": -2,
+          "date": "2024-04-11",
+          "close": 518
+        },
+        {
+          "session": -1,
+          "date": "2024-04-12",
+          "close": 510.85
+        },
+        {
+          "session": 0,
+          "date": "2024-04-15",
+          "close": 504.45
+        },
+        {
+          "session": 1,
+          "date": "2024-04-16",
+          "close": 503.53
+        },
+        {
+          "session": 2,
+          "date": "2024-04-17",
+          "close": 500.55
+        },
+        {
+          "session": 3,
+          "date": "2024-04-18",
+          "close": 499.52
+        },
+        {
+          "session": 4,
+          "date": "2024-04-19",
+          "close": 495.16
+        },
+        {
+          "session": 5,
+          "date": "2024-04-22",
+          "close": 499.72
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2024-04-08",
+          "close": 440.6
+        },
+        {
+          "session": -4,
+          "date": "2024-04-09",
+          "close": 442.23
+        },
+        {
+          "session": -3,
+          "date": "2024-04-10",
+          "close": 438.37
+        },
+        {
+          "session": -2,
+          "date": "2024-04-11",
+          "close": 445.37
+        },
+        {
+          "session": -1,
+          "date": "2024-04-12",
+          "close": 438.27
+        },
+        {
+          "session": 0,
+          "date": "2024-04-15",
+          "close": 431.06
+        },
+        {
+          "session": 1,
+          "date": "2024-04-16",
+          "close": 431.1
+        },
+        {
+          "session": 2,
+          "date": "2024-04-17",
+          "close": 425.84
+        },
+        {
+          "session": 3,
+          "date": "2024-04-18",
+          "close": 423.41
+        },
+        {
+          "session": 4,
+          "date": "2024-04-19",
+          "close": 414.65
+        },
+        {
+          "session": 5,
+          "date": "2024-04-22",
+          "close": 418.82
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2024-04-08",
+          "close": 71631.36
+        },
+        {
+          "session": -4,
+          "date": "2024-04-09",
+          "close": 69139.02
+        },
+        {
+          "session": -3,
+          "date": "2024-04-10",
+          "close": 70587.88
+        },
+        {
+          "session": -2,
+          "date": "2024-04-11",
+          "close": 70060.61
+        },
+        {
+          "session": -1,
+          "date": "2024-04-12",
+          "close": 67195.87
+        },
+        {
+          "session": 0,
+          "date": "2024-04-15",
+          "close": 63426.21
+        },
+        {
+          "session": 1,
+          "date": "2024-04-16",
+          "close": 63811.86
+        },
+        {
+          "session": 2,
+          "date": "2024-04-17",
+          "close": 61276.69
+        },
+        {
+          "session": 3,
+          "date": "2024-04-18",
+          "close": 63512.75
+        },
+        {
+          "session": 4,
+          "date": "2024-04-19",
+          "close": 63843.57
+        },
+        {
+          "session": 5,
+          "date": "2024-04-22",
+          "close": 66837.68
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -7327,6 +13707,12 @@
       "GPU",
       "generative AI"
     ],
+    "relatedAssets": [
+      "NVDA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "NVIDIA가 초거대 생성형 AI 실행을 위한 Blackwell 플랫폼을 발표했다.",
     "asset": "NVDA",
@@ -7422,6 +13808,236 @@
         "close": 95
       }
     ],
+    "priceWindows": {
+      "NVDA": [
+        {
+          "session": -5,
+          "date": "2024-03-11",
+          "close": 85.77
+        },
+        {
+          "session": -4,
+          "date": "2024-03-12",
+          "close": 91.91
+        },
+        {
+          "session": -3,
+          "date": "2024-03-13",
+          "close": 90.89
+        },
+        {
+          "session": -2,
+          "date": "2024-03-14",
+          "close": 87.94
+        },
+        {
+          "session": -1,
+          "date": "2024-03-15",
+          "close": 87.84
+        },
+        {
+          "session": 0,
+          "date": "2024-03-18",
+          "close": 88.46
+        },
+        {
+          "session": 1,
+          "date": "2024-03-19",
+          "close": 89.4
+        },
+        {
+          "session": 2,
+          "date": "2024-03-20",
+          "close": 90.37
+        },
+        {
+          "session": 3,
+          "date": "2024-03-21",
+          "close": 91.43
+        },
+        {
+          "session": 4,
+          "date": "2024-03-22",
+          "close": 94.29
+        },
+        {
+          "session": 5,
+          "date": "2024-03-25",
+          "close": 95
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2024-03-11",
+          "close": 511.28
+        },
+        {
+          "session": -4,
+          "date": "2024-03-12",
+          "close": 516.78
+        },
+        {
+          "session": -3,
+          "date": "2024-03-13",
+          "close": 515.97
+        },
+        {
+          "session": -2,
+          "date": "2024-03-14",
+          "close": 514.95
+        },
+        {
+          "session": -1,
+          "date": "2024-03-15",
+          "close": 509.83
+        },
+        {
+          "session": 0,
+          "date": "2024-03-18",
+          "close": 512.86
+        },
+        {
+          "session": 1,
+          "date": "2024-03-19",
+          "close": 515.71
+        },
+        {
+          "session": 2,
+          "date": "2024-03-20",
+          "close": 520.48
+        },
+        {
+          "session": 3,
+          "date": "2024-03-21",
+          "close": 522.2
+        },
+        {
+          "session": 4,
+          "date": "2024-03-22",
+          "close": 521.21
+        },
+        {
+          "session": 5,
+          "date": "2024-03-25",
+          "close": 519.77
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2024-03-11",
+          "close": 437.39
+        },
+        {
+          "session": -4,
+          "date": "2024-03-12",
+          "close": 443.66
+        },
+        {
+          "session": -3,
+          "date": "2024-03-13",
+          "close": 440.25
+        },
+        {
+          "session": -2,
+          "date": "2024-03-14",
+          "close": 439.14
+        },
+        {
+          "session": -1,
+          "date": "2024-03-15",
+          "close": 433.92
+        },
+        {
+          "session": 0,
+          "date": "2024-03-18",
+          "close": 437.48
+        },
+        {
+          "session": 1,
+          "date": "2024-03-19",
+          "close": 438.57
+        },
+        {
+          "session": 2,
+          "date": "2024-03-20",
+          "close": 443.77
+        },
+        {
+          "session": 3,
+          "date": "2024-03-21",
+          "close": 445.87
+        },
+        {
+          "session": 4,
+          "date": "2024-03-22",
+          "close": 446.38
+        },
+        {
+          "session": 5,
+          "date": "2024-03-25",
+          "close": 444.76
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2024-03-11",
+          "close": 72123.91
+        },
+        {
+          "session": -4,
+          "date": "2024-03-12",
+          "close": 71481.29
+        },
+        {
+          "session": -3,
+          "date": "2024-03-13",
+          "close": 73083.5
+        },
+        {
+          "session": -2,
+          "date": "2024-03-14",
+          "close": 71396.59
+        },
+        {
+          "session": -1,
+          "date": "2024-03-15",
+          "close": 69403.77
+        },
+        {
+          "session": 0,
+          "date": "2024-03-18",
+          "close": 67548.59
+        },
+        {
+          "session": 1,
+          "date": "2024-03-19",
+          "close": 61912.77
+        },
+        {
+          "session": 2,
+          "date": "2024-03-20",
+          "close": 67913.67
+        },
+        {
+          "session": 3,
+          "date": "2024-03-21",
+          "close": 65491.39
+        },
+        {
+          "session": 4,
+          "date": "2024-03-22",
+          "close": 63778.76
+        },
+        {
+          "session": 5,
+          "date": "2024-03-25",
+          "close": 69958.81
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -7578,6 +14194,12 @@
       "TSLA",
       "Elon Musk"
     ],
+    "relatedAssets": [
+      "TSLA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "겨울철 계절적 수요 둔화에 대응해 Tesla 차량에 1천 달러 인센티브를 제공한다고 밝혔다.",
     "asset": "TSLA",
@@ -7673,6 +14295,236 @@
         "close": 193.76
       }
     ],
+    "priceWindows": {
+      "TSLA": [
+        {
+          "session": -5,
+          "date": "2024-02-05",
+          "close": 181.06
+        },
+        {
+          "session": -4,
+          "date": "2024-02-06",
+          "close": 185.1
+        },
+        {
+          "session": -3,
+          "date": "2024-02-07",
+          "close": 187.58
+        },
+        {
+          "session": -2,
+          "date": "2024-02-08",
+          "close": 189.56
+        },
+        {
+          "session": -1,
+          "date": "2024-02-09",
+          "close": 193.57
+        },
+        {
+          "session": 0,
+          "date": "2024-02-12",
+          "close": 188.13
+        },
+        {
+          "session": 1,
+          "date": "2024-02-13",
+          "close": 184.02
+        },
+        {
+          "session": 2,
+          "date": "2024-02-14",
+          "close": 188.71
+        },
+        {
+          "session": 3,
+          "date": "2024-02-15",
+          "close": 200.45
+        },
+        {
+          "session": 4,
+          "date": "2024-02-16",
+          "close": 199.95
+        },
+        {
+          "session": 5,
+          "date": "2024-02-20",
+          "close": 193.76
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2024-02-05",
+          "close": 492.55
+        },
+        {
+          "session": -4,
+          "date": "2024-02-06",
+          "close": 493.98
+        },
+        {
+          "session": -3,
+          "date": "2024-02-07",
+          "close": 498.1
+        },
+        {
+          "session": -2,
+          "date": "2024-02-08",
+          "close": 498.32
+        },
+        {
+          "session": -1,
+          "date": "2024-02-09",
+          "close": 501.2
+        },
+        {
+          "session": 0,
+          "date": "2024-02-12",
+          "close": 500.98
+        },
+        {
+          "session": 1,
+          "date": "2024-02-13",
+          "close": 494.08
+        },
+        {
+          "session": 2,
+          "date": "2024-02-14",
+          "close": 498.57
+        },
+        {
+          "session": 3,
+          "date": "2024-02-15",
+          "close": 502.01
+        },
+        {
+          "session": 4,
+          "date": "2024-02-16",
+          "close": 499.51
+        },
+        {
+          "session": 5,
+          "date": "2024-02-20",
+          "close": 496.76
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2024-02-05",
+          "close": 428.45
+        },
+        {
+          "session": -4,
+          "date": "2024-02-06",
+          "close": 427.59
+        },
+        {
+          "session": -3,
+          "date": "2024-02-07",
+          "close": 431.99
+        },
+        {
+          "session": -2,
+          "date": "2024-02-08",
+          "close": 432.79
+        },
+        {
+          "session": -1,
+          "date": "2024-02-09",
+          "close": 437.05
+        },
+        {
+          "session": 0,
+          "date": "2024-02-12",
+          "close": 435.34
+        },
+        {
+          "session": 1,
+          "date": "2024-02-13",
+          "close": 428.55
+        },
+        {
+          "session": 2,
+          "date": "2024-02-14",
+          "close": 433.22
+        },
+        {
+          "session": 3,
+          "date": "2024-02-15",
+          "close": 434.51
+        },
+        {
+          "session": 4,
+          "date": "2024-02-16",
+          "close": 430.57
+        },
+        {
+          "session": 5,
+          "date": "2024-02-20",
+          "close": 427.32
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2024-02-05",
+          "close": 42658.67
+        },
+        {
+          "session": -4,
+          "date": "2024-02-06",
+          "close": 43084.67
+        },
+        {
+          "session": -3,
+          "date": "2024-02-07",
+          "close": 44318.22
+        },
+        {
+          "session": -2,
+          "date": "2024-02-08",
+          "close": 45301.57
+        },
+        {
+          "session": -1,
+          "date": "2024-02-09",
+          "close": 47147.2
+        },
+        {
+          "session": 0,
+          "date": "2024-02-12",
+          "close": 49958.22
+        },
+        {
+          "session": 1,
+          "date": "2024-02-13",
+          "close": 49742.44
+        },
+        {
+          "session": 2,
+          "date": "2024-02-14",
+          "close": 51826.7
+        },
+        {
+          "session": 3,
+          "date": "2024-02-15",
+          "close": 51938.55
+        },
+        {
+          "session": 4,
+          "date": "2024-02-16",
+          "close": 52160.2
+        },
+        {
+          "session": 5,
+          "date": "2024-02-20",
+          "close": 52284.88
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -7829,6 +14681,12 @@
       "TSLA",
       "Elon Musk"
     ],
+    "relatedAssets": [
+      "TSLA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "Tesla의 법인 소재지를 텍사스로 옮기는 주주 투표를 즉시 추진하겠다고 밝혔다.",
     "asset": "TSLA",
@@ -7924,6 +14782,236 @@
         "close": 189.56
       }
     ],
+    "priceWindows": {
+      "TSLA": [
+        {
+          "session": -5,
+          "date": "2024-01-25",
+          "close": 182.63
+        },
+        {
+          "session": -4,
+          "date": "2024-01-26",
+          "close": 183.25
+        },
+        {
+          "session": -3,
+          "date": "2024-01-29",
+          "close": 190.93
+        },
+        {
+          "session": -2,
+          "date": "2024-01-30",
+          "close": 191.59
+        },
+        {
+          "session": -1,
+          "date": "2024-01-31",
+          "close": 187.29
+        },
+        {
+          "session": 0,
+          "date": "2024-02-01",
+          "close": 188.86
+        },
+        {
+          "session": 1,
+          "date": "2024-02-02",
+          "close": 187.91
+        },
+        {
+          "session": 2,
+          "date": "2024-02-05",
+          "close": 181.06
+        },
+        {
+          "session": 3,
+          "date": "2024-02-06",
+          "close": 185.1
+        },
+        {
+          "session": 4,
+          "date": "2024-02-07",
+          "close": 187.58
+        },
+        {
+          "session": 5,
+          "date": "2024-02-08",
+          "close": 189.56
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2024-01-25",
+          "close": 488.03
+        },
+        {
+          "session": -4,
+          "date": "2024-01-26",
+          "close": 487.41
+        },
+        {
+          "session": -3,
+          "date": "2024-01-29",
+          "close": 491.27
+        },
+        {
+          "session": -2,
+          "date": "2024-01-30",
+          "close": 490.89
+        },
+        {
+          "session": -1,
+          "date": "2024-01-31",
+          "close": 482.88
+        },
+        {
+          "session": 0,
+          "date": "2024-02-01",
+          "close": 489.2
+        },
+        {
+          "session": 1,
+          "date": "2024-02-02",
+          "close": 494.35
+        },
+        {
+          "session": 2,
+          "date": "2024-02-05",
+          "close": 492.55
+        },
+        {
+          "session": 3,
+          "date": "2024-02-06",
+          "close": 493.98
+        },
+        {
+          "session": 4,
+          "date": "2024-02-07",
+          "close": 498.1
+        },
+        {
+          "session": 5,
+          "date": "2024-02-08",
+          "close": 498.32
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2024-01-25",
+          "close": 426.35
+        },
+        {
+          "session": -4,
+          "date": "2024-01-26",
+          "close": 423.81
+        },
+        {
+          "session": -3,
+          "date": "2024-01-29",
+          "close": 428.15
+        },
+        {
+          "session": -2,
+          "date": "2024-01-30",
+          "close": 425.3
+        },
+        {
+          "session": -1,
+          "date": "2024-01-31",
+          "close": 416.97
+        },
+        {
+          "session": 0,
+          "date": "2024-02-01",
+          "close": 421.88
+        },
+        {
+          "session": 1,
+          "date": "2024-02-02",
+          "close": 429.01
+        },
+        {
+          "session": 2,
+          "date": "2024-02-05",
+          "close": 428.45
+        },
+        {
+          "session": 3,
+          "date": "2024-02-06",
+          "close": 427.59
+        },
+        {
+          "session": 4,
+          "date": "2024-02-07",
+          "close": 431.99
+        },
+        {
+          "session": 5,
+          "date": "2024-02-08",
+          "close": 432.79
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2024-01-25",
+          "close": 39933.81
+        },
+        {
+          "session": -4,
+          "date": "2024-01-26",
+          "close": 41816.87
+        },
+        {
+          "session": -3,
+          "date": "2024-01-29",
+          "close": 43288.25
+        },
+        {
+          "session": -2,
+          "date": "2024-01-30",
+          "close": 42952.61
+        },
+        {
+          "session": -1,
+          "date": "2024-01-31",
+          "close": 42582.61
+        },
+        {
+          "session": 0,
+          "date": "2024-02-01",
+          "close": 43075.77
+        },
+        {
+          "session": 1,
+          "date": "2024-02-02",
+          "close": 43185.86
+        },
+        {
+          "session": 2,
+          "date": "2024-02-05",
+          "close": 42658.67
+        },
+        {
+          "session": 3,
+          "date": "2024-02-06",
+          "close": 43084.67
+        },
+        {
+          "session": 4,
+          "date": "2024-02-07",
+          "close": 44318.22
+        },
+        {
+          "session": 5,
+          "date": "2024-02-08",
+          "close": 45301.57
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,
@@ -8080,6 +15168,12 @@
       "TSLA",
       "Elon Musk"
     ],
+    "relatedAssets": [
+      "TSLA",
+      "SPY",
+      "QQQ",
+      "BTC-USD"
+    ],
     "hashtags": [],
     "summaryKo": "Cybertruck 생산 라인의 가동 모습을 공개했다.",
     "asset": "TSLA",
@@ -8175,6 +15269,236 @@
         "close": 242.64
       }
     ],
+    "priceWindows": {
+      "TSLA": [
+        {
+          "session": -5,
+          "date": "2023-11-22",
+          "close": 234.21
+        },
+        {
+          "session": -4,
+          "date": "2023-11-24",
+          "close": 235.45
+        },
+        {
+          "session": -3,
+          "date": "2023-11-27",
+          "close": 236.08
+        },
+        {
+          "session": -2,
+          "date": "2023-11-28",
+          "close": 246.72
+        },
+        {
+          "session": -1,
+          "date": "2023-11-29",
+          "close": 244.14
+        },
+        {
+          "session": 0,
+          "date": "2023-11-30",
+          "close": 240.08
+        },
+        {
+          "session": 1,
+          "date": "2023-12-01",
+          "close": 238.83
+        },
+        {
+          "session": 2,
+          "date": "2023-12-04",
+          "close": 235.58
+        },
+        {
+          "session": 3,
+          "date": "2023-12-05",
+          "close": 238.72
+        },
+        {
+          "session": 4,
+          "date": "2023-12-06",
+          "close": 239.37
+        },
+        {
+          "session": 5,
+          "date": "2023-12-07",
+          "close": 242.64
+        }
+      ],
+      "SPY": [
+        {
+          "session": -5,
+          "date": "2023-11-22",
+          "close": 455.02
+        },
+        {
+          "session": -4,
+          "date": "2023-11-24",
+          "close": 455.3
+        },
+        {
+          "session": -3,
+          "date": "2023-11-27",
+          "close": 454.48
+        },
+        {
+          "session": -2,
+          "date": "2023-11-28",
+          "close": 454.93
+        },
+        {
+          "session": -1,
+          "date": "2023-11-29",
+          "close": 454.61
+        },
+        {
+          "session": 0,
+          "date": "2023-11-30",
+          "close": 456.4
+        },
+        {
+          "session": 1,
+          "date": "2023-12-01",
+          "close": 459.1
+        },
+        {
+          "session": 2,
+          "date": "2023-12-04",
+          "close": 456.69
+        },
+        {
+          "session": 3,
+          "date": "2023-12-05",
+          "close": 456.6
+        },
+        {
+          "session": 4,
+          "date": "2023-12-06",
+          "close": 454.76
+        },
+        {
+          "session": 5,
+          "date": "2023-12-07",
+          "close": 458.23
+        }
+      ],
+      "QQQ": [
+        {
+          "session": -5,
+          "date": "2023-11-22",
+          "close": 390.06
+        },
+        {
+          "session": -4,
+          "date": "2023-11-24",
+          "close": 389.51
+        },
+        {
+          "session": -3,
+          "date": "2023-11-27",
+          "close": 389.17
+        },
+        {
+          "session": -2,
+          "date": "2023-11-28",
+          "close": 390.19
+        },
+        {
+          "session": -1,
+          "date": "2023-11-29",
+          "close": 389.81
+        },
+        {
+          "session": 0,
+          "date": "2023-11-30",
+          "close": 388.83
+        },
+        {
+          "session": 1,
+          "date": "2023-12-01",
+          "close": 389.94
+        },
+        {
+          "session": 2,
+          "date": "2023-12-04",
+          "close": 386.32
+        },
+        {
+          "session": 3,
+          "date": "2023-12-05",
+          "close": 387.29
+        },
+        {
+          "session": 4,
+          "date": "2023-12-06",
+          "close": 385.05
+        },
+        {
+          "session": 5,
+          "date": "2023-12-07",
+          "close": 390.43
+        }
+      ],
+      "BTC-USD": [
+        {
+          "session": -5,
+          "date": "2023-11-22",
+          "close": 37432.34
+        },
+        {
+          "session": -4,
+          "date": "2023-11-24",
+          "close": 37720.28
+        },
+        {
+          "session": -3,
+          "date": "2023-11-27",
+          "close": 37254.17
+        },
+        {
+          "session": -2,
+          "date": "2023-11-28",
+          "close": 37831.09
+        },
+        {
+          "session": -1,
+          "date": "2023-11-29",
+          "close": 37858.49
+        },
+        {
+          "session": 0,
+          "date": "2023-11-30",
+          "close": 37712.75
+        },
+        {
+          "session": 1,
+          "date": "2023-12-01",
+          "close": 38688.75
+        },
+        {
+          "session": 2,
+          "date": "2023-12-04",
+          "close": 41980.1
+        },
+        {
+          "session": 3,
+          "date": "2023-12-05",
+          "close": 44080.65
+        },
+        {
+          "session": 4,
+          "date": "2023-12-06",
+          "close": 43746.45
+        },
+        {
+          "session": 5,
+          "date": "2023-12-07",
+          "close": 43292.66
+        }
+      ]
+    },
     "attentionWindow": [
       {
         "session": -5,

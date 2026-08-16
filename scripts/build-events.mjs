@@ -6,6 +6,8 @@ import { XMLParser } from "fast-xml-parser";
 const root = process.cwd();
 const outputDir = path.join(root, "data", "generated");
 fs.mkdirSync(outputDir, { recursive: true });
+const MARKET_CONTEXT_ASSETS = ["SPY", "QQQ", "BTC-USD"];
+const ALL_ASSETS = [...MARKET_CONTEXT_ASSETS, "TSLA", "NVDA", "MSFT", "SOXX"];
 
 const cleanText = (value = "") =>
   value
@@ -269,6 +271,13 @@ function buildReaction(event, assetSeries, benchmarkSeries) {
   };
 }
 
+function alignedPriceWindows(priceWindow, series, assets) {
+  return Object.fromEntries(assets.map((symbol) => {
+    const byDate = new Map(series[symbol].map((row) => [row.date, row.close]));
+    return [symbol, priceWindow.map((point) => ({ ...point, close: byDate.has(point.date) ? pct(byDate.get(point.date)) : null }))];
+  }));
+}
+
 function buildAttention(event, priceWindow, trackedPosts, newsSnapshots) {
   const terms = defaultMentionTerms(event).map((term) => term.toLowerCase());
   const newsCounts = newsSnapshots.events[event.id]?.counts ?? {};
@@ -431,11 +440,18 @@ async function main() {
   const trackedPosts = loadTrackedPosts();
   if (raw.length < 20) throw new Error(`Expected at least 20 source events, got ${raw.length}`);
 
-  const symbols = ["SPY", "QQQ", "TSLA", "NVDA", "MSFT"];
+  const symbols = ALL_ASSETS;
   const series = Object.fromEntries(await Promise.all(symbols.map(async (symbol) => [symbol, await fetchChart(symbol)])));
   const events = raw.map((event) => {
     const classification = event.classification;
     const reaction = buildReaction(event, series[classification.asset], series[classification.benchmark]);
+    const relatedAssets = [...new Set([
+      classification.asset,
+      ...(event.relatedAssets ?? []),
+      ...(event.tags ?? []).filter((tag) => ALL_ASSETS.includes(tag)),
+      ...MARKET_CONTEXT_ASSETS,
+    ])];
+    const priceWindows = alignedPriceWindows(reaction.priceWindow, series, relatedAssets);
     const coverage = event.coverage ?? (event.person === "trump" ? "Policy" : event.person === "altman" ? "Proxy" : "Direct");
     const normalized = {
       ...event,
@@ -457,6 +473,7 @@ async function main() {
       topic: classification.topic,
       signalType: event.signalType ?? (event.person === "trump" ? "Policy signal" : event.person === "musk" ? "Executive signal" : "Industry signal"),
       tags: event.tags ?? [classification.topic, classification.asset, event.personName],
+      relatedAssets,
       hashtags: attention.hashtags,
       summaryKo: event.summaryKo ?? koreanSummaries[event.id] ?? event.text,
       asset: classification.asset,
@@ -466,6 +483,7 @@ async function main() {
       metrics: reaction.metrics,
       window: reaction.window,
       priceWindow: reaction.priceWindow,
+      priceWindows,
       attentionWindow: attention.points,
       attentionCoverage: attention.coverage,
       eventSession: reaction.sessionDate,

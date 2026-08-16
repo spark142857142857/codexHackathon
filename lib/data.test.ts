@@ -4,7 +4,9 @@ import { marketEvents, reviewedEvents } from "@/lib/data";
 describe("atlas event datasets", () => {
   it("uses every evidence-ready signal in the main atlas", () => {
     expect(marketEvents.length).toBeGreaterThan(300);
-    expect(new Set(marketEvents.map((event) => event.person))).toEqual(new Set(["trump", "musk", "nvidia", "openai"]));
+    expect(new Set(marketEvents.map((event) => event.person))).toEqual(
+      new Set(["trump", "musk", "nvidia", "openai", "tesla", "us-senate"]),
+    );
     expect(marketEvents.every((event) => event.orchestration.stages.length === 6)).toBe(true);
   });
 
@@ -15,9 +17,13 @@ describe("atlas event datasets", () => {
     }
   });
 
-  it("includes official newsroom signals in the uncapped atlas", () => {
+  it("includes reviewed cross-source signals in the uncapped atlas", () => {
     expect(marketEvents.filter((event) => event.sourceType === "News")).toHaveLength(7);
-    expect(marketEvents.filter((event) => event.sourceType === "Social")).toHaveLength(marketEvents.length - 7);
+    expect(marketEvents.filter((event) => event.sourceType === "Filing")).toHaveLength(1);
+    expect(marketEvents.filter((event) => event.sourceType === "Hearing")).toHaveLength(1);
+    expect(marketEvents.filter((event) => event.sourceType === "Social")).toHaveLength(
+      marketEvents.length - 9,
+    );
   });
 
   it("keeps unique IDs and inspectable source URLs", () => {
@@ -31,6 +37,12 @@ describe("atlas event datasets", () => {
       expect(event.priceWindow.find((point) => point.session === 0)?.date).toBe(event.eventSession);
       expect(event.metrics.volumeMultiple).toBeGreaterThan(0);
       expect(event.orchestration.stages).toHaveLength(6);
+      expect(event.relatedAssets).toEqual(
+        expect.arrayContaining(["SPY", "QQQ", "BTC-USD"]),
+      );
+      for (const symbol of ["SPY", "QQQ", "BTC-USD"]) {
+        expect(event.priceWindows[symbol]).toHaveLength(11);
+      }
     }
   });
 

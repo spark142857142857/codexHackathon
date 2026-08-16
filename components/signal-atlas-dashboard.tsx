@@ -3,10 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowRight,
-  ArrowUpRight,
   BarChart3,
-  Bell,
-  Bot,
   ChevronRight,
   CheckCircle2,
   CircleDot,
@@ -23,7 +20,6 @@ import {
   RefreshCw,
   Search,
   ShieldCheck,
-  Sparkles,
 } from "lucide-react";
 import {
   Bar,
@@ -31,7 +27,6 @@ import {
   ComposedChart,
   Line,
   LineChart,
-  ReferenceDot,
   ReferenceLine,
   ResponsiveContainer,
   Tooltip,
@@ -60,12 +55,11 @@ const copy = {
     sources: "Data sources",
     method: "Methodology",
     pricing: "Pricing",
-    request: "Request access",
     language: "한국어",
     kicker: "CROSS-DOMAIN SIGNAL INTELLIGENCE",
     heroA: "See how a signal spreads",
     heroB: "across markets, media, and attention.",
-    hero: "Track one public signal across actual prices, news publication volume, and public-attention evidence—then inspect a transparent, AI-ready evidence audit.",
+    hero: "Track one public signal across actual prices, news publication volume, and public-attention evidence, with every source and limitation kept visible.",
     explore: "Open the atlas",
     how: "How we measure",
     signal: "Signal",
@@ -166,12 +160,11 @@ const copy = {
     sources: "데이터 출처",
     method: "분석 방법",
     pricing: "요금제",
-    request: "접근 신청",
     language: "English",
     kicker: "시장·미디어·관심도 통합 시그널 인텔리전스",
     heroA: "하나의 시그널이",
     heroB: "어디까지 퍼지는지 확인하세요.",
-    hero: "공개 시그널 전후의 실제 가격, 뉴스 발행량, 대중 관심 근거를 함께 추적하고 투명한 AI-ready 증거 감사 과정을 확인합니다.",
+    hero: "공개 시그널 전후의 실제 가격, 뉴스 발행량, 대중 관심 근거를 함께 추적하고 각 출처와 한계를 확인합니다.",
     explore: "시그널 지도 열기",
     how: "분석 방식 보기",
     signal: "시그널",
@@ -401,6 +394,29 @@ function persistenceLabel(value: string, locale: Locale) {
       : "약화";
 }
 
+function eventTiming(event: MarketEvent, locale: Locale) {
+  if (event.timePrecision === "date") {
+    return locale === "ko"
+      ? `게시 시각 없음 · ${event.eventSession} 거래 세션에 정렬`
+      : `Publication time unavailable · aligned to the ${event.eventSession} session`;
+  }
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    weekday: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23",
+  }).formatToParts(new Date(event.publishedAt));
+  const value = (type: Intl.DateTimeFormatPartTypes) => parts.find((part) => part.type === type)?.value ?? "";
+  const minutes = Number(value("hour")) * 60 + Number(value("minute"));
+  const weekend = ["Sat", "Sun"].includes(value("weekday"));
+  const phase = weekend ? (locale === "ko" ? "비거래일" : "non-trading day")
+    : minutes < 570 ? (locale === "ko" ? "장 시작 전" : "pre-market")
+      : minutes < 960 ? (locale === "ko" ? "장중" : "in-session")
+        : (locale === "ko" ? "장 마감 후" : "after-hours");
+  return `${value("hour")}:${value("minute")} ET · ${phase} · ${event.eventSession} ${locale === "ko" ? "거래 세션에 정렬" : "event session"}`;
+}
+
 export function SignalAtlasDashboard({
   events,
   initialLive,
@@ -430,6 +446,7 @@ export function SignalAtlasDashboard({
   const [activeNav, setActiveNav] = useState<ResearchSection>("explorer");
   const [interpretStep, setInterpretStep] = useState(0);
   const [news, setNews] = useState<NewsEvidencePayload | null>(null);
+  const [displayAsset, setDisplayAsset] = useState(events[0]?.asset ?? "SPY");
   const navClickLock = useRef<ResearchSection | null>(null);
 
   useEffect(() => {
@@ -475,7 +492,7 @@ export function SignalAtlasDashboard({
   }, []);
 
   const assets = useMemo(
-    () => Array.from(new Set(events.map((event) => event.asset))).sort(),
+    () => Array.from(new Set(events.flatMap((event) => event.relatedAssets ?? [event.asset]))).sort(),
     [events],
   );
   const entities = useMemo(
@@ -491,7 +508,7 @@ export function SignalAtlasDashboard({
         .filter((event) => {
           const typeMatch =
             sourceType === "all" || event.sourceType === sourceType;
-          const assetMatch = asset === c.allAssets || event.asset === asset;
+        const assetMatch = asset === c.allAssets || (event.relatedAssets ?? [event.asset]).includes(asset);
           const entityMatch =
             entity === c.allEntities || event.personName === entity;
           const haystack =
@@ -530,14 +547,26 @@ export function SignalAtlasDashboard({
       Math.abs(b.metrics.abnormalReturn1D) -
       Math.abs(a.metrics.abnormalReturn1D),
   )[0];
+  const chartAssets = selected.relatedAssets ?? [selected.asset, "SPY", "QQQ", "BTC-USD"];
+  const activeChartAsset = chartAssets.includes(displayAsset) ? displayAsset : selected.asset;
+  const activePriceWindow = selected.priceWindows?.[activeChartAsset] ?? selected.priceWindow;
   const eventPrice =
-    selected.priceWindow.find((point) => point.session === 0)?.close ?? 0;
+    activePriceWindow.find((point) => point.session === 0)?.close ?? 0;
+  const timing = eventTiming(selected, locale);
   const activeNews = news?.eventId === selected.id ? news : null;
   const effectiveAttention = selected.attentionWindow.map((point) => ({
     ...point,
     newsCount: activeNews?.counts[point.date] ?? point.newsCount,
+    trackedMentions:
+      activeNews?.social.status === "live"
+        ? (activeNews.social.counts[point.date] ?? null)
+        : (activeNews?.social.counts[point.date] ?? point.trackedMentions),
+    hashtagCount:
+      activeNews?.social.status === "live"
+        ? (activeNews.social.hashtagCounts[point.date] ?? null)
+        : (activeNews?.social.hashtagCounts[point.date] ?? point.hashtagCount),
   }));
-  const chartData = selected.priceWindow.map((point, index) => ({
+  const chartData = activePriceWindow.map((point, index) => ({
     ...point,
     ...effectiveAttention[index],
     label:
@@ -564,32 +593,41 @@ export function SignalAtlasDashboard({
 
   const rssSource = live.sources.find((source) => source.id === "trump-rss");
   const sourceState = rssSource?.state ?? "Stale";
+  const contextualSources = [
+    {
+      id: "public-news",
+      label: locale === "ko" ? "관련 뉴스 검색" : "Related news search",
+      provider: activeNews?.provider ?? "Google News RSS / GDELT",
+      cadence: locale === "ko" ? "선택 시 수집 · 하루 캐시" : "On selection · daily cache",
+      access: "Free" as const,
+      state: (activeNews?.status === "live" ? "Fresh" : "Stale") as "Fresh" | "Stale",
+      lastSuccessAt: activeNews?.fetchedAt ?? live.fetchedAt,
+      note: locale === "ko" ? "이벤트 날짜 범위로 검색하며 반환 상한과 쿼리를 공개합니다." : "Queries the event window and discloses the returned-item cap and query.",
+    },
+    {
+      id: "public-social",
+      label: locale === "ko" ? "관련 공개 게시물·해시태그" : "Related public posts and hashtags",
+      provider: activeNews?.social.provider ?? "Bluesky public search",
+      cadence: locale === "ko" ? "선택 시 수집 · 하루 캐시" : "On selection · daily cache",
+      access: "Free" as const,
+      state: (activeNews?.social.status === "live" ? "Fresh" : "Stale") as "Fresh" | "Stale",
+      lastSuccessAt: activeNews?.fetchedAt ?? live.fetchedAt,
+      note: locale === "ko" ? "관련 공개 게시물 최대 100개 표본이며 X 전체 언급량이 아닙니다." : "A sample of up to 100 related public posts, not X-wide volume.",
+    },
+  ];
+  const displayedSources = [...contextualSources, ...live.sources];
   const latestSignal = live.signals[0];
   const activeResearch = research ?? selected.orchestration;
   const newsLoading = activeNews === null;
   const hasNewsData = effectiveAttention.some(
     (point) => point.newsCount !== null,
   );
-  const newsCases = events.filter((event) =>
-    event.attentionWindow.some((point) => point.newsCount !== null),
-  );
-  const peakNews = Math.max(
-    0,
-    ...events.flatMap((event) =>
-      event.attentionWindow.map((point) => point.newsCount ?? 0),
-    ),
-  );
-  const peakMentions = Math.max(
-    0,
-    ...events.flatMap((event) =>
-      event.attentionWindow.map((point) => point.trackedMentions ?? 0),
-    ),
-  );
 
   const selectSignal = (eventId: string) => {
     setSelectedId(eventId);
     const next = events.find((event) => event.id === eventId);
     setResearch(next?.orchestration ?? null);
+    if (next) setDisplayAsset(next.asset);
     setInterpretStep(0);
   };
 
@@ -610,9 +648,20 @@ export function SignalAtlasDashboard({
             eventId: selected.id,
             status: "unavailable",
             fetchedAt: new Date().toISOString(),
+            provider: "No news source",
             query: "",
             counts: {},
             articles: [],
+            social: {
+              status: "unavailable",
+              provider: "No social source",
+              query: "",
+              counts: {},
+              hashtagCounts: {},
+              hashtags: [],
+              posts: [],
+              message: "Public social evidence request failed",
+            },
             message: "News evidence request failed",
           });
       });
@@ -763,10 +812,6 @@ export function SignalAtlasDashboard({
             <a className="language-link" href={locale === "ko" ? "/" : "/ko"}>
               <Globe2 size={14} />
               {c.language}
-            </a>
-            <a className="header-cta" href="mailto:hello@marketmover.demo">
-              {c.request}
-              <ArrowUpRight size={14} />
             </a>
           </div>
         </header>
@@ -1121,6 +1166,11 @@ export function SignalAtlasDashboard({
                   </small>
                 </div>
               </div>
+              <p className="metric-basis-note">
+                {locale === "ko"
+                  ? `상단 반응 지표는 주요 연결 자산 ${selected.asset} 기준입니다. 아래 버튼은 각 자산의 실제 종가를 전환합니다.`
+                  : `Reaction metrics above use the primary mapping, ${selected.asset}. The controls below switch the actual close series.`}
+              </p>
               <div
                 className="reaction-lenses"
                 role="tablist"
@@ -1152,6 +1202,18 @@ export function SignalAtlasDashboard({
                   ),
                 )}
               </div>
+              <div className="chart-asset-switch">
+                <div>
+                  <span>{locale === "ko" ? "연결 자산" : "Linked assets"}</span>
+                  {chartAssets.map((symbol) => (
+                    <button key={symbol} className={activeChartAsset === symbol ? "active" : ""} onClick={() => setDisplayAsset(symbol)}>
+                      {symbol}
+                      {symbol === selected.asset ? <small>{locale === "ko" ? "주요" : "primary"}</small> : ["SPY", "QQQ", "BTC-USD"].includes(symbol) ? <small>{locale === "ko" ? "시장 기준" : "context"}</small> : null}
+                    </button>
+                  ))}
+                </div>
+                <p><Clock3 size={12} />{timing}</p>
+              </div>
               <div className="chart-head">
                 <div>
                   <span>
@@ -1166,19 +1228,19 @@ export function SignalAtlasDashboard({
                       ? c.actualTitle
                       : lens === "news"
                         ? locale === "ko"
-                          ? "GDELT 일별 뉴스 발행량"
-                          : "Daily GDELT article count"
+                          ? "공개 뉴스 검색 결과의 일별 기사 수"
+                          : "Daily articles returned by public news search"
                         : lens === "attention"
                           ? locale === "ko"
-                            ? "추적 계정 언급·해시태그 빈도"
-                            : "Tracked-account mentions and hashtags"
+                            ? "공개 소셜 검색 표본의 게시물·해시태그 수"
+                            : "Posts and hashtags in the public social sample"
                           : locale === "ko"
                             ? "실제 종가와 정보 확산을 같은 시점에서 비교"
                             : "Actual close and information diffusion on one timeline"}
                   </strong>
                 </div>
                 <div className="asset-pair">
-                  <b>{selected.asset}</b>
+                  <b>{activeChartAsset}</b>
                   <span>{c.eventClose}</span>${eventPrice.toFixed(2)}
                 </div>
               </div>
@@ -1213,30 +1275,23 @@ export function SignalAtlasDashboard({
                       <Tooltip
                         formatter={(value) => [
                           `$${Number(value).toFixed(2)}`,
-                          selected.asset,
+                          activeChartAsset,
                         ]}
                       />
                       <ReferenceLine
                         x={c.event}
-                        stroke="#6455c6"
+                        stroke="#a45f3f"
                         strokeDasharray="4 4"
+                        label={{ value: timing.split(" · ")[0], position: "insideTopRight", fill: "#a45f3f", fontSize: 8 }}
                       />
                       <Line
                         isAnimationActive={false}
                         type="monotone"
                         dataKey="close"
-                        name={selected.asset}
+                        name={activeChartAsset}
                         stroke="#237657"
                         strokeWidth={2.7}
                         dot={{ r: 2.7, fill: "#237657" }}
-                      />
-                      <ReferenceDot
-                        x={c.event}
-                        y={eventPrice}
-                        r={5}
-                        fill="#6455c6"
-                        stroke="#fff"
-                        strokeWidth={2}
                       />
                     </LineChart>
                   ) : (
@@ -1277,8 +1332,9 @@ export function SignalAtlasDashboard({
                       <Tooltip />
                       <ReferenceLine
                         x={c.event}
-                        stroke="#6455c6"
+                        stroke="#a45f3f"
                         strokeDasharray="4 4"
+                        label={{ value: timing.split(" · ")[0], position: "insideTopRight", fill: "#a45f3f", fontSize: 8 }}
                       />
                       {lens === "all" && (
                         <Line
@@ -1286,7 +1342,7 @@ export function SignalAtlasDashboard({
                           yAxisId="left"
                           type="monotone"
                           dataKey="close"
-                          name={`${selected.asset} ${locale === "ko" ? "종가" : "close"}`}
+                          name={`${activeChartAsset} ${locale === "ko" ? "종가" : "close"}`}
                           stroke="#237657"
                           strokeWidth={2.5}
                           dot={false}
@@ -1312,10 +1368,10 @@ export function SignalAtlasDashboard({
                           dataKey="trackedMentions"
                           name={
                             locale === "ko"
-                              ? "추적 계정 언급"
-                              : "Tracked mentions"
+                              ? "검색된 공개 게시물"
+                              : "Returned public posts"
                           }
-                          stroke="#7564c2"
+                          stroke="#49677a"
                           strokeWidth={2}
                           dot={{ r: 2 }}
                         />
@@ -1325,7 +1381,7 @@ export function SignalAtlasDashboard({
                           isAnimationActive={false}
                           yAxisId="right"
                           dataKey="hashtagCount"
-                          name={locale === "ko" ? "해시태그" : "Hashtags"}
+                          name={locale === "ko" ? "해시태그 출현" : "Hashtag occurrences"}
                           fill="#d2a95f"
                           radius={[3, 3, 0, 0]}
                         />
@@ -1339,8 +1395,8 @@ export function SignalAtlasDashboard({
                   <Newspaper size={15} />
                   <span>
                     {locale === "ko"
-                      ? "이 사례의 과거 뉴스 발행량 스냅샷은 없습니다. 값을 추정하지 않고 비워 둡니다."
-                      : "No historical news-volume snapshot is available for this case. The values are left empty rather than estimated."}
+                      ? "공개 뉴스 검색과 저장 스냅샷에서 관련 기사를 찾지 못했습니다. 값을 추정하지 않습니다."
+                      : "Neither public news search nor the stored snapshot returned related articles. No value is estimated."}
                   </span>
                 </div>
               )}
@@ -1352,12 +1408,12 @@ export function SignalAtlasDashboard({
                   <strong>
                     {newsLoading
                       ? locale === "ko"
-                        ? "GDELT 뉴스 근거 확인 중"
-                        : "Checking GDELT news evidence"
+                        ? "뉴스·공개 소셜 근거 수집 중"
+                        : "Collecting news and public social evidence"
                       : activeNews?.status === "live"
                         ? locale === "ko"
-                          ? "GDELT 실시간 응답"
-                          : "Live GDELT response"
+                          ? `${activeNews.provider} 응답`
+                          : `${activeNews.provider} response`
                         : activeNews?.status === "snapshot"
                           ? locale === "ko"
                             ? "검토된 뉴스 스냅샷"
@@ -1373,8 +1429,8 @@ export function SignalAtlasDashboard({
                         : "Failures resolve to a reviewed snapshot or no value."
                       : activeNews?.status === "live"
                         ? locale === "ko"
-                          ? `쿼리 ${activeNews.query} · 기사 제목 ${activeNews.articles.length}개`
-                          : `Query ${activeNews.query} · ${activeNews.articles.length} article headlines`
+                          ? `쿼리 ${activeNews.query} · 일별 집계 ${Object.keys(activeNews.counts).length}일 · 기사 링크 ${activeNews.articles.length}개`
+                          : `Query ${activeNews.query} · ${Object.keys(activeNews.counts).length} daily buckets · ${activeNews.articles.length} article links`
                         : activeNews?.status === "snapshot"
                           ? locale === "ko"
                             ? "저장된 실제 발행량만 표시하며 새 값을 만들지 않습니다."
@@ -1385,6 +1441,19 @@ export function SignalAtlasDashboard({
                   </span>
                 </div>
               </div>
+              {activeNews && (
+                <div className={`news-source-status social-source-status ${activeNews.social.status}`}>
+                  <MessageSquareText size={16} />
+                  <div>
+                    <strong>{activeNews.social.provider}</strong>
+                    <span>
+                      {locale === "ko"
+                        ? `쿼리 ${activeNews.social.query} · 공개 게시물 표본 ${Object.values(activeNews.social.counts).reduce((sum, count) => sum + count, 0)}개 · 관련 해시태그 ${activeNews.social.hashtags.length}개`
+                        : `Query ${activeNews.social.query} · ${Object.values(activeNews.social.counts).reduce((sum, count) => sum + count, 0)} sampled public posts · ${activeNews.social.hashtags.length} related hashtags`}
+                    </span>
+                  </div>
+                </div>
+              )}
               {!!activeNews?.articles.length && (
                 <div className="news-headlines">
                   {activeNews.articles.slice(0, 2).map((article) => (
@@ -1450,8 +1519,10 @@ export function SignalAtlasDashboard({
                       : "ATTENTION EVIDENCE & SCOPE"}
                   </span>
                   <small>
-                    {selected.hashtags.length
-                      ? selected.hashtags.join(" · ")
+                    {(activeNews?.social.hashtags.length ?? 0) > 0
+                      ? activeNews?.social.hashtags.slice(0, 8).map((item) => `${item.tag} (${item.count})`).join(" · ")
+                      : selected.hashtags.length
+                        ? selected.hashtags.join(" · ")
                       : locale === "ko"
                         ? "해시태그 없음"
                         : "No observed hashtags"}
@@ -1485,7 +1556,7 @@ export function SignalAtlasDashboard({
             <aside className="live-panel research-desk">
               <div className="live-head">
                 <div>
-                  <Bot size={15} />
+                  <ShieldCheck size={15} />
                   <strong>
                     {locale === "ko"
                       ? "증거 리서치 데스크"
@@ -1497,9 +1568,13 @@ export function SignalAtlasDashboard({
                     ? locale === "ko"
                       ? "결정론적 감사"
                       : "Deterministic audit"
-                    : locale === "ko"
-                      ? "검토 스냅샷"
-                      : "Reviewed snapshot"}
+                    : activeResearch.mode === "openai"
+                      ? locale === "ko"
+                        ? "OpenAI 보조 리포트"
+                        : "OpenAI-assisted report"
+                      : locale === "ko"
+                        ? "검토 스냅샷"
+                        : "Reviewed snapshot"}
                 </span>
               </div>
               <div className="research-verdict">
@@ -1531,7 +1606,7 @@ export function SignalAtlasDashboard({
                 onClick={runResearch}
                 disabled={researchLoading}
               >
-                <Sparkles size={15} className={researchLoading ? "spin" : ""} />
+                <Search size={15} className={researchLoading ? "spin" : ""} />
                 {researchLoading
                   ? locale === "ko"
                     ? "근거 감사 중…"
@@ -1674,21 +1749,21 @@ export function SignalAtlasDashboard({
                 <span>
                   {locale === "ko" ? "미디어 반응" : "Media reaction"}
                 </span>
-                <h3>{formatCompact(peakNews, locale)}</h3>
+                <h3>{locale === "ko" ? "선택 시 수집" : "On demand"}</h3>
                 <p>
                   {locale === "ko"
-                    ? "관찰 구간 최대 일별 뉴스 수"
-                    : "Peak daily article count in observed windows"}
+                    ? "이벤트 날짜 범위의 관련 뉴스 검색"
+                    : "Related-news search over each event window"}
                 </p>
                 <div>
                   <small>
-                    {newsCases.length}{" "}
-                    {locale === "ko" ? "개 GDELT 스냅샷" : "GDELT-backed cases"}
+                    {events.length}{" "}
+                    {locale === "ko" ? "개 시그널 조회 가능" : "signals queryable"}
                   </small>
                   <strong>
                     {locale === "ko"
-                      ? "원시 기사 수 · 쿼리 공개"
-                      : "Raw article count · query disclosed"}
+                      ? "Google News RSS · GDELT · 쿼리 공개"
+                      : "Google News RSS · GDELT · query disclosed"}
                   </strong>
                 </div>
               </div>
@@ -1699,17 +1774,17 @@ export function SignalAtlasDashboard({
                 <span>
                   {locale === "ko" ? "대중 관심" : "Public attention"}
                 </span>
-                <h3>{formatCompact(peakMentions, locale)}</h3>
+                <h3>{locale === "ko" ? "최대 100개" : "Up to 100"}</h3>
                 <p>
                   {locale === "ko"
-                    ? "관찰 구간 추적 계정 최대 언급 수"
-                    : "Peak tracked-account mentions"}
+                    ? "이벤트별 공개 소셜 검색 표본"
+                    : "Public social-search sample per event"}
                 </p>
                 <div>
                   <small>
                     {locale === "ko"
-                      ? "전체 SNS 수치가 아님"
-                      : "Not a platform-wide count"}
+                      ? "Bluesky 공개 검색"
+                      : "Bluesky public search"}
                   </small>
                   <strong>
                     {locale === "ko"
@@ -1740,7 +1815,7 @@ export function SignalAtlasDashboard({
                 <span>{c.access}</span>
                 <span>{c.status}</span>
               </div>
-              {live.sources.map((source) => (
+              {displayedSources.map((source) => (
                 <div className="source-row" key={source.id}>
                   <div>
                     <strong>{source.label}</strong>
@@ -1867,10 +1942,7 @@ export function SignalAtlasDashboard({
                 <span>/ month</span>
               </div>
               <p>{c.pro}</p>
-              <a href="mailto:hello@marketmover.demo">
-                {c.request}
-                <ArrowUpRight size={14} />
-              </a>
+              <span className="availability">{locale === "ko" ? "확장안" : "Concept"}</span>
             </div>
             <div className="price-card">
               <span className="plan">TEAM</span>
@@ -1879,7 +1951,7 @@ export function SignalAtlasDashboard({
                 <span>/ month</span>
               </div>
               <p>{c.team}</p>
-              <a href="mailto:hello@marketmover.demo">{c.request}</a>
+              <span className="availability">{locale === "ko" ? "확장안" : "Concept"}</span>
             </div>
           </div>
         </section>
@@ -1902,10 +1974,6 @@ export function SignalAtlasDashboard({
           <div>
             <a href="#methodology">{c.method}</a>
             <a href="#sources">{c.sources}</a>
-            <a href="mailto:hello@marketmover.demo">
-              <Bell size={14} />
-              {c.request}
-            </a>
           </div>
         </footer>
       </main>

@@ -3,8 +3,8 @@ import atlasEventsJson from "@/data/generated/atlas-events.json";
 import liveFallbackJson from "@/data/generated/live-fallback.json";
 import type { LivePayload, MarketEvent } from "@/lib/types";
 
-export const reviewedEvents = eventsJson as MarketEvent[];
-export const marketEvents = atlasEventsJson as MarketEvent[];
+export const reviewedEvents = eventsJson as unknown as MarketEvent[];
+export const marketEvents = atlasEventsJson as unknown as MarketEvent[];
 export const liveFallback = liveFallbackJson as LivePayload;
 
 export const people = [
