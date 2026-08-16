@@ -2,6 +2,8 @@
 
 Market Mover is an evidence-first dashboard that connects influential public statements to observable, benchmark-adjusted market reactions. It is a hackathon demo for individual investors and independent researchers—not a prediction product or investment adviser.
 
+**Live demo:** [market-mover.vercel.app](https://market-mover.vercel.app)
+
 The core path is deliberately inspectable:
 
 `person → original statement → linked asset → benchmark-adjusted reaction`
@@ -90,4 +92,3 @@ The demo includes pricing concepts only. It does not implement accounts, payment
 ## Disclaimer
 
 For research and monitoring only. Not investment advice. Historical association does not establish causality or predict future performance.
-
