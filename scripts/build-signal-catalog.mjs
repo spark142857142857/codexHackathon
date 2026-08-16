@@ -23,13 +23,15 @@ const numberOrNull = (value) => {
 };
 const hash = (value) => crypto.createHash("sha1").update(value).digest("hex").slice(0, 12);
 const hashtags = (text) => Array.from(new Set(text.match(/#[\p{L}\p{N}_]+/gu) ?? [])).slice(0, 8);
+const urls = (value = "") => Array.from(new Set(String(value).match(/https?:\/\/[^\s,'"\]]+/g) ?? [])).slice(0, 4);
 
 const topicRules = [
+  { topic: "Crypto", assets: ["BTC-USD"], pattern: /\b(bitcoin|btc|dogecoin|doge|crypto|cryptocurrency|blockchain)\b/i },
   { topic: "Trade & tariffs", assets: ["SPY", "QQQ"], pattern: /\b(tariffs?|trade|china|imports?|exports?|customs|sanctions?)\b/i },
   { topic: "Economy & rates", assets: ["SPY", "QQQ"], pattern: /\b(inflation|economy|economic|interest rates?|federal reserve|\bfed\b|jobs?|employment|gdp|recession|dollar)\b/i },
-  { topic: "Technology policy", assets: ["QQQ", "NVDA"], pattern: /\b(artificial intelligence|a\.i\.|semiconductors?|chips?|nvidia|technology|big tech|data centers?)\b/i },
+  { topic: "Technology policy", assets: ["SOXX", "QQQ", "NVDA"], pattern: /\b(artificial intelligence|a\.i\.|semiconductors?|chips?|nvidia|technology|big tech|data centers?)\b/i },
   { topic: "Tesla & EV", assets: ["TSLA"], pattern: /\b(tesla|cybertruck|model [3sxy]|electric vehicles?|\bev\b|fsd|full self.?driving|robotaxi|superchargers?)\b/i },
-  { topic: "AI & robotics", assets: ["QQQ", "NVDA", "MSFT"], pattern: /\b(xai|grok|openai|chatgpt|artificial intelligence|\bai\b|optimus|robots?|robotics|neuralink|language models?|foundation models?|ai models?|compute)\b/i },
+  { topic: "AI & robotics", assets: ["SOXX", "QQQ", "NVDA", "MSFT"], pattern: /\b(xai|grok|openai|chatgpt|artificial intelligence|\bai\b|optimus|robots?|robotics|neuralink|language models?|foundation models?|ai models?|compute)\b/i },
   { topic: "Corporate operations", assets: [], pattern: /\b(earnings|revenue|profits?|factory|production|deliveries|incorporat|shareholders?|board|ceo|company)\b/i },
   { topic: "Energy & climate", assets: ["SPY"], pattern: /\b(oil|gas|energy|electricity|solar|battery|climate|emissions?)\b/i },
 ];
@@ -73,6 +75,7 @@ function loadMusk(rows) {
       publishedAt: row.createdAt,
       text: cleanText(row.fullText),
       sourceUrl: row.url || row.twitterUrl,
+      externalUrls: urls(row.fullText).filter((url) => !/\b(x\.com|twitter\.com)\b/i.test(url)),
       engagement: {
         likes: numberOrNull(row.likeCount),
         reposts: numberOrNull(row.retweetCount),
@@ -94,6 +97,7 @@ function loadTrump(rows) {
       publishedAt: row.date,
       text: cleanText(row.text),
       sourceUrl: row.post_url,
+      externalUrls: urls(row.urls || row.text).filter((url) => !/\b(truthsocial\.com)\b/i.test(url)),
       engagement: {
         likes: numberOrNull(row.favorite_count),
         reposts: numberOrNull(row.repost_count),
@@ -138,6 +142,7 @@ function main() {
       publishedAt: new Date(row.publishedAt).toISOString(),
       text: row.text.slice(0, 420),
       sourceUrl: row.sourceUrl,
+      externalUrls: row.externalUrls,
       hashtags: hashtags(row.text),
       engagement: row.engagement,
       topic,
