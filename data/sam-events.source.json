@@ -1,0 +1,90 @@
+[
+  {
+    "id": "altman-2049712078836170843",
+    "publishedAt": "2026-04-30T12:00:00Z",
+    "text": "We're starting rollout of GPT-5.5-Cyber, a frontier cybersecurity model, to critical cyber defenders in the next few days.",
+    "sourceUrl": "https://x.com/sama/status/2049712078836170843",
+    "topic": "AI security",
+    "asset": "NVDA",
+    "likes": 13000,
+    "reposts": 800,
+    "views": 1000000
+  },
+  {
+    "id": "altman-2054626219858293128",
+    "publishedAt": "2026-05-13T12:00:00Z",
+    "text": "Codex is the best AI coding product and we want to make it easy to try.",
+    "sourceUrl": "https://x.com/sama/status/2054626219858293128",
+    "topic": "AI products",
+    "asset": "MSFT",
+    "likes": 21000,
+    "reposts": 875,
+    "views": 2300000
+  },
+  {
+    "id": "altman-2056435834333934051",
+    "publishedAt": "2026-05-18T12:00:00Z",
+    "text": "ChatGPT has gotten so much better with the latest update. Really proud of the team for this one.",
+    "sourceUrl": "https://x.com/sama/status/2056435834333934051",
+    "topic": "Model update",
+    "asset": "MSFT",
+    "likes": 16000,
+    "reposts": 551,
+    "views": 1400000
+  },
+  {
+    "id": "altman-2057203171198636251",
+    "publishedAt": "2026-05-20T12:00:00Z",
+    "text": "A general-purpose model solved a major open problem in mathematics. This is a big milestone.",
+    "sourceUrl": "https://x.com/sama/status/2057203171198636251",
+    "topic": "AI capability",
+    "asset": "NVDA",
+    "likes": 6600,
+    "reposts": 361,
+    "views": 746000
+  },
+  {
+    "id": "altman-2061117302528188712",
+    "publishedAt": "2026-05-31T12:00:00Z",
+    "text": "OpenAI Robotics is hiring to help program and manufacture robots that are useful for society.",
+    "sourceUrl": "https://x.com/sama/status/2061117302528188712",
+    "topic": "Robotics",
+    "asset": "NVDA",
+    "likes": 13000,
+    "reposts": 1000,
+    "views": 3000000
+  },
+  {
+    "id": "altman-2062660086787613116",
+    "publishedAt": "2026-06-04T12:00:00Z",
+    "text": "Big upgrade to ChatGPT memory rolling out today.",
+    "sourceUrl": "https://x.com/sama/status/2062660086787613116",
+    "topic": "AI products",
+    "asset": "MSFT",
+    "likes": 5500,
+    "reposts": 250,
+    "views": 781000
+  },
+  {
+    "id": "altman-2064088940932641225",
+    "publishedAt": "2026-06-08T12:00:00Z",
+    "text": "Here is our current plan for OpenAI.",
+    "sourceUrl": "https://x.com/sama/status/2064088940932641225",
+    "topic": "AI strategy",
+    "asset": "MSFT",
+    "likes": 7700,
+    "reposts": 782,
+    "views": 1700000
+  },
+  {
+    "id": "altman-2069121360744550796",
+    "publishedAt": "2026-06-22T12:00:00Z",
+    "text": "We want to help all companies be secure, working with the government and the security ecosystem.",
+    "sourceUrl": "https://x.com/sama/status/2069121360744550796",
+    "topic": "AI security",
+    "asset": "MSFT",
+    "likes": 6900,
+    "reposts": 467,
+    "views": 1000000
+  }
+]
