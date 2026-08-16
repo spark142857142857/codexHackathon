@@ -1,0 +1,12 @@
+.next/
+node_modules/
+coverage/
+.git/
+.env*
+!.env.example
+.vercel/
+all_musk_posts.csv
+musk_quote_tweets.csv
+Kaggle_Trump_2009_2025.csv
+codex_meetup_handoff_2026-08-15.md
+계획서 및 아이디어 발전 3beafaf8ce9780ab9274fcce9333895a.md

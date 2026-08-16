@@ -1,0 +1,19 @@
+# dependencies and builds
+node_modules/
+.next/
+out/
+coverage/
+
+# local environment and platform state
+.env*
+!.env.example
+.vercel/
+
+# generated caches
+data/generated/*.tmp
+
+# operating system
+.DS_Store
+Thumbs.db
+
+.vercel
