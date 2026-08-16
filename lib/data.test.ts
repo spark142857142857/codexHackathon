@@ -2,17 +2,22 @@ import { describe, expect, it } from "vitest";
 import { marketEvents, reviewedEvents } from "@/lib/data";
 
 describe("atlas event datasets", () => {
-  it("uses the 200 evidence-ready signals in the main atlas", () => {
-    expect(marketEvents).toHaveLength(200);
-    expect(new Set(marketEvents.map((event) => event.person))).toEqual(new Set(["trump", "musk"]));
-    expect(marketEvents.every((event) => event.orchestration.mode === "deterministic")).toBe(true);
+  it("uses every evidence-ready signal in the main atlas", () => {
+    expect(marketEvents.length).toBeGreaterThan(300);
+    expect(new Set(marketEvents.map((event) => event.person))).toEqual(new Set(["trump", "musk", "nvidia", "openai"]));
+    expect(marketEvents.every((event) => event.orchestration.stages.length === 6)).toBe(true);
   });
 
-  it("retains the 28 reviewed records as a separate reference dataset", () => {
-    expect(reviewedEvents).toHaveLength(28);
+  it("retains the expanded reviewed records as a separate reference dataset", () => {
+    expect(reviewedEvents).toHaveLength(33);
     for (const person of ["trump", "musk", "altman"]) {
       expect(reviewedEvents.filter((event) => event.person === person)).toHaveLength(8);
     }
+  });
+
+  it("includes official newsroom signals in the uncapped atlas", () => {
+    expect(marketEvents.filter((event) => event.sourceType === "News")).toHaveLength(7);
+    expect(marketEvents.filter((event) => event.sourceType === "Social")).toHaveLength(marketEvents.length - 7);
   });
 
   it("keeps unique IDs and inspectable source URLs", () => {

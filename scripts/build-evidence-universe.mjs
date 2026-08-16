@@ -3,6 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const catalogFile = path.join(root, "data", "generated", "signal-catalog.json");
+const reviewedFile = path.join(root, "data", "generated", "events.json");
 const outputFile = path.join(root, "data", "generated", "evidence-universe.json");
 const atlasFile = path.join(root, "data", "generated", "atlas-events.json");
 const ASSETS = ["SPY", "QQQ", "TSLA", "NVDA", "MSFT", "BTC-USD", "SOXX"];
@@ -150,13 +151,13 @@ function orchestration(row, mapping, reaction, attention) {
 async function main() {
   if (!fs.existsSync(catalogFile)) throw new Error("Run catalog:build first");
   const catalog = JSON.parse(fs.readFileSync(catalogFile, "utf8"));
+  const reviewedEvents = JSON.parse(fs.readFileSync(reviewedFile, "utf8"));
   const byCluster = new Map();
   for (const row of catalog.records) if (!byCluster.has(row.clusterId) || representativeScore(row) > representativeScore(byCluster.get(row.clusterId))) byCluster.set(row.clusterId, row);
   const representatives = [...byCluster.values()].sort((a, b) => relevanceScore(b) - relevanceScore(a) || b.publishedAt.localeCompare(a.publishedAt));
   const series = Object.fromEntries(await Promise.all(ASSETS.map(async (asset) => [asset, await fetchChart(asset)])));
   const evidence = [];
   for (const row of representatives) {
-    if (evidence.length >= 200) break;
     if (!MARKET_TOPICS.has(row.topic)) continue;
     const mapping = primaryMapping(row);
     const reaction = buildReaction(row, series, mapping);
@@ -170,7 +171,7 @@ async function main() {
   const payload = { meta: { generatedAt: new Date().toISOString(), representativeCount: representatives.length, enrichedCount: evidence.length, assetCoverage: ASSETS, methodology: ["One highest-evidence representative per rule-seeded cluster.", "Top market-relevant representatives receive deterministic price, volume, volatility and tracked-corpus attention evidence.", "No paid runtime API or generative model is required."] }, representativeIds: representatives.map((row) => row.id), evidence };
   fs.writeFileSync(outputFile, `${JSON.stringify(payload)}\n`);
   const recordsById = new Map(catalog.records.map((row) => [row.id, row]));
-  const atlasEvents = evidence.map((item) => {
+  const socialAtlasEvents = evidence.map((item) => {
     const row = recordsById.get(item.id);
     const signalType = row.entityId === "trump" ? "Policy signal" : "Executive signal";
     return {
@@ -208,6 +209,9 @@ async function main() {
       orchestration: item.orchestration,
     };
   });
+  const newsroomEvents = reviewedEvents.filter((event) => event.sourceType === "News");
+  const atlasEvents = [...newsroomEvents, ...socialAtlasEvents]
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
   fs.writeFileSync(atlasFile, `${JSON.stringify(atlasEvents)}\n`);
   console.log(`Generated ${representatives.length.toLocaleString()} representatives and ${evidence.length} evidence-ready signals.`);
 }

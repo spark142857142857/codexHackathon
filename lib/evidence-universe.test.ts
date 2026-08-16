@@ -12,9 +12,8 @@ describe("deterministic evidence universe", () => {
     expect(new Set(universe.representativeIds).size).toBe(catalog.meta.clusterCount);
   });
 
-  it("enriches a bounded market-relevant layer with BTC and semiconductors", () => {
-    expect(universe.evidence.length).toBeGreaterThanOrEqual(100);
-    expect(universe.evidence.length).toBeLessThanOrEqual(300);
+  it("enriches every eligible market-relevant cluster without a product cap", () => {
+    expect(universe.evidence.length).toBeGreaterThan(300);
     expect(universe.meta.assetCoverage).toContain("BTC-USD");
     expect(universe.meta.assetCoverage).toContain("SOXX");
     const enrichedAssets = new Set(universe.evidence.map((item) => item.asset));
