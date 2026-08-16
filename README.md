@@ -18,6 +18,8 @@
 
 ## 데모 화면
 
+- 유튜브 데모 링크: [Market Signal Atlas](https://youtu.be/1y7Zg1xRoZU)
+
 ![Market Signal Atlas 한국어 데모 화면](docs/images/market-signal-atlas-demo-2026-08-16.png)
 
 ## 빠른 시작
