@@ -745,6 +745,28 @@ export function SignalAtlasDashboard({
     }, 0);
   };
 
+  useEffect(() => {
+    const signalId = new URLSearchParams(window.location.search).get("signal");
+    const event = signalId ? events.find((item) => item.id === signalId) : undefined;
+    if (!event || event.id === selectedId) return;
+    const timer = window.setTimeout(() => {
+      setSourceType("all");
+      setAsset(c.allAssets);
+      setEntity(c.allEntities);
+      setTopic("all");
+      setCoverage("all");
+      setPrecision("all");
+      setQuery("");
+      userSelectedSignal.current = true;
+      setSelectedId(event.id);
+      setResearch(event.orchestration);
+      setDisplayAsset(event.asset);
+      setInterpretStep(0);
+      setReviewExpanded(false);
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, [c.allAssets, c.allEntities, events, selectedId]);
+
   const renderTimelineMarker = (
     shapeProps: unknown,
     mapping: MarketEvent["coverage"],
@@ -767,12 +789,15 @@ export function SignalAtlasDashboard({
     };
 
     return (
-      <g
-        className={`timeline-marker timeline-marker-${mapping.toLowerCase()}`}
-        data-event-id={event.id}
-        role="button"
-        tabIndex={0}
+      <a
+        href={`${locale === "ko" ? "/ko" : "/"}?signal=${encodeURIComponent(event.id)}#explorer`}
         aria-label={locale === "ko" ? `${label} 상세 사건 열기` : `Open ${label}`}
+      >
+        <g
+          className={`timeline-marker timeline-marker-${mapping.toLowerCase()}`}
+          data-event-id={event.id}
+          role="button"
+          tabIndex={0}
         onClick={(clickEvent) => {
           clickEvent.stopPropagation();
           activate();
@@ -783,16 +808,17 @@ export function SignalAtlasDashboard({
             activate();
           }
         }}
-      >
-        <circle cx={marker.cx} cy={marker.cy} r={12} fill="transparent" className="timeline-marker-hit" />
-        {shape === "circle" ? (
-          <circle {...commonProps} cx={marker.cx} cy={marker.cy} r={5.2} fill="#1f6f4a" />
-        ) : shape === "triangle" ? (
-          <polygon {...commonProps} points={`${marker.cx},${marker.cy - 6} ${marker.cx + 6},${marker.cy + 5} ${marker.cx - 6},${marker.cy + 5}`} fill="#a66a2d" />
-        ) : (
-          <polygon {...commonProps} points={`${marker.cx},${marker.cy - 6} ${marker.cx + 6},${marker.cy} ${marker.cx},${marker.cy + 6} ${marker.cx - 6},${marker.cy}`} fill="#75658c" />
-        )}
-      </g>
+        >
+          <circle cx={marker.cx} cy={marker.cy} r={12} fill="transparent" className="timeline-marker-hit" />
+          {shape === "circle" ? (
+            <circle {...commonProps} cx={marker.cx} cy={marker.cy} r={5.2} fill="#1f6f4a" />
+          ) : shape === "triangle" ? (
+            <polygon {...commonProps} points={`${marker.cx},${marker.cy - 6} ${marker.cx + 6},${marker.cy + 5} ${marker.cx - 6},${marker.cy + 5}`} fill="#a66a2d" />
+          ) : (
+            <polygon {...commonProps} points={`${marker.cx},${marker.cy - 6} ${marker.cx + 6},${marker.cy} ${marker.cx},${marker.cy + 6} ${marker.cx - 6},${marker.cy}`} fill="#75658c" />
+          )}
+        </g>
+      </a>
     );
   };
 
