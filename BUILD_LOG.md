@@ -55,3 +55,12 @@ Codex was used to inspect the source datasets, define the product boundary, impl
 - Added key-gated Batch upload, creation, status, and result-download scripts; they are implemented but intentionally not executed without billing credentials.
 - Routed deeper amplification, market, audit, and report work conditionally at the cluster level; missing news or platform-wide social coverage remains explicitly unavailable.
 - Added a bilingual Signal Universe UI with corpus counts, orchestration stages, search, filters, pagination, and the Sam Altman corpus limitation.
+
+## API-free evidence orchestration
+
+- Replaced the public live-model path with six deterministic roles that run from observed source, mapping, attention, and market fields.
+- Added one representative per cluster and a 200-signal priority layer, preserving all 32,393 originals for search while preventing repeated deep analysis.
+- Added committed build-time evidence for BTC-USD and SOXX alongside SPY, QQQ, TSLA, NVDA, and MSFT.
+- Added actual D-5 through D+5 closes, abnormal return, volume multiple, volatility multiple, persistence, tracked-corpus mentions, and linked-media references to the priority layer.
+- Renamed the visible workflow to Evidence Research and positioned it as AI-ready conditional orchestration rather than completed AI analysis.
+- Added an explicit latest-signal `Pending` state so an RSS arrival is never shown as a confirmed market reaction.
