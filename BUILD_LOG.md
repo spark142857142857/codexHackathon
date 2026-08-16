@@ -34,3 +34,13 @@ Codex was used to inspect the source datasets, define the product boundary, impl
 - Retained abnormal return, volume, and persistence as transparent context rather than restoring an opaque impact score.
 - Added signal-type comparison and public engagement as an attention evidence layer.
 - Added a dedicated `/ko` interface and reviewed Korean summaries while preserving every English original and source URL.
+
+## Cross-domain reaction and orchestration pivot
+
+- Split signal source (`Social`, `News`, `Filing`, `Hearing`) from thematic category (`Policy`, `Executive`, `Industry`).
+- Added four reviewed cross-source signals with original OpenAI, NVIDIA, SEC EDGAR, and U.S. Senate links.
+- Added Market, News, Public Attention, and combined reaction lenses. Price remains the actual D-5 through D+5 close; GDELT values remain raw article counts.
+- Stored GDELT `TimelineVolRaw` snapshots with the exact query and left unavailable histories empty instead of estimating them.
+- Scoped social mention and hashtag counts to the tracked Musk/Trump corpora and exposed that limitation in the UI.
+- Implemented a six-stage research desk: classifier, ontology mapper, amplification analyst, deterministic market analyst, confidence auditor, and bilingual report writer.
+- Added `POST /api/research`. It uses reviewed reports by default and can run live OpenAI orchestration only when explicitly enabled with server-side environment variables.
