@@ -9,7 +9,7 @@
 
 ## Data decisions
 
-- Selected eight non-repost, market-related historical cases per person rather than shipping large undifferentiated datasets.
+- Preserved 28 human-reviewed cases as an explainable showcase layer while moving the full eligible source corpus into a separate searchable catalog.
 - Preserved the original public-statement URL for every evidence record.
 - Used TSLA as Musk's direct linked asset and NVDA/MSFT as visibly labeled Altman AI proxies.
 - Aligned after-hours and non-trading-day statements to the next available market session.
@@ -44,3 +44,13 @@ Codex was used to inspect the source datasets, define the product boundary, impl
 - Scoped social mention and hashtag counts to the tracked Musk/Trump corpora and exposed that limitation in the UI.
 - Implemented a six-stage research desk: classifier, ontology mapper, amplification analyst, deterministic market analyst, confidence auditor, and bilingual report writer.
 - Added `POST /api/research`. It uses reviewed reports by default and can run live OpenAI orchestration only when explicitly enabled with server-side environment variables.
+
+## Full-corpus orchestration redesign
+
+- Ingested all 145,442 rows from the two complete local source files and retained every eligible original since 2023: 23,357 Trump posts and 9,036 Musk posts.
+- Removed the former per-person and total-event ceilings from the ingestion layer. The 28 reviewed records now remain only as evidence-rich demonstrations.
+- Added deterministic eligibility, preliminary topic mapping, exact-duplicate detection, and time/topic seed clustering for all 32,393 candidates.
+- Added a server-paginated `GET /api/signals` catalog so the full generated dataset stays on the server rather than entering the client bundle.
+- Added an OpenAI Batch JSONL preparation/import workflow. No AI-complete label appears until an actual result has been imported.
+- Routed deeper amplification, market, audit, and report work conditionally at the cluster level; missing news or platform-wide social coverage remains explicitly unavailable.
+- Added a bilingual Signal Universe UI with corpus counts, orchestration stages, search, filters, pagination, and the Sam Altman corpus limitation.

@@ -10,12 +10,17 @@ The core path is deliberately inspectable:
 
 `public signal → source + ontology → media/social amplification → actual market reaction → confidence audit → report`
 
+The product now separates the full source universe from the reviewed demo layer:
+
+`145,442 raw rows → 32,393 eligible originals → rules / AI Batch → 1,117 seed clusters → conditional evidence agents → 28 reviewed showcases`
+
 ## Demo scope
 
 - Sources: Social posts, company newsrooms, SEC filings, and public hearings
 - Core people: Donald Trump, Elon Musk, and Sam Altman
 - Assets: SPY, QQQ, TSLA, NVDA, and MSFT
-- Evidence library: 28 reviewed signals, including 24 person-led social cases and four cross-source cases
+- Candidate universe: all 32,393 non-reply/non-repost Musk and Trump originals since 2023, searchable through a paginated server API
+- Evidence library: 28 human-reviewed showcases, including 24 person-led social cases and four cross-source cases
 - Current signal: Trump public statements from an independent public RSS archive
 - Market refresh: five daily prices through Twelve Data when configured
 - Metrics: Abnormal Return 1D, Volume Multiple, and 3D Persistence
@@ -47,10 +52,15 @@ ENABLE_LIVE_AI=true
 
 The app remains usable without an OpenAI key: `/api/research` returns the bundled reviewed evidence report. Live AI orchestration runs only when both `OPENAI_API_KEY` and `ENABLE_LIVE_AI=true` are set.
 
+The public deployment does **not** claim that the full corpus has already been AI-classified. Until a completed Batch output is imported, catalog rows are visibly marked `Rules preclassified`, `Needs AI`, or `Reviewed`.
+
 ## Commands
 
 ```bash
 npm run data:build  # Rebuild the reviewed JSON artifacts from local source CSVs
+npm run catalog:build  # Rebuild all 32,393 candidate rows and rule-seeded clusters
+npm run ai:batch:prepare  # Create one /v1/responses JSONL request per candidate
+npm run ai:batch:import -- data/batch/completed-output.jsonl
 npm run lint
 npm run test
 npm run build
@@ -58,7 +68,7 @@ npm run build
 
 ## Data pipeline
 
-Large source CSVs are intentionally excluded from Git and production. `scripts/build-events.mjs` selects reviewed market-related originals, aligns them to trading sessions, downloads daily market history, and emits small JSON files under `data/generated/`.
+Large source CSVs are intentionally excluded from Git and production. `scripts/build-events.mjs` builds the reviewed market-reaction cases. `scripts/build-signal-catalog.mjs` ingests every eligible original from the complete local Musk and Trump corpora and emits a deployable, server-only catalog under `data/generated/`. The browser receives only the requested page, never the full 20 MB catalog.
 
 - Musk history: local `all_musk_posts.csv`
 - Trump history: local `Kaggle_Trump_2009_2025.csv`
@@ -69,6 +79,20 @@ Large source CSVs are intentionally excluded from Git and production. `scripts/b
 - Current Trump statements: independent [Trump's Truth public RSS archive](https://www.trumpstruth.org/about)
 - Current prices: [Twelve Data Basic](https://twelvedata.com/pricing)
 - Paid roadmap: official [X Search API](https://docs.x.com/x-api/posts/search/introduction)
+
+The current corpus boundary is explicit: complete local history is available for Musk and Trump, while Sam Altman remains limited to eight reviewed cases because no complete local source corpus is available.
+
+## Full-corpus AI orchestration
+
+Running six agents independently for every source row would create hundreds of thousands of synchronous model calls. The implemented router keeps the same analytical intent while making the workload operable:
+
+1. Deterministic eligibility rules ingest every original and preserve its source URL.
+2. Cheap rules create preliminary topics, assets, and time-bucket clusters without pretending to be AI.
+3. `ai:batch:prepare` writes 32,393 unique `/v1/responses` requests to a generated JSONL transport file.
+4. A completed Batch output is imported into `data/ai-classifications.source.json`, then `catalog:build` merges the AI decisions.
+5. Only relevant clusters advance to news/social amplification, market calculation, confidence audit, and reporting.
+
+OpenAI documents Batch as an asynchronous fit for large-dataset classification, with separate rate limits, lower cost, and a 24-hour completion window: [Batch API guide](https://developers.openai.com/api/docs/guides/batch). Batch input/output JSONL files are reproducible transport artifacts and remain outside Git; the compact merged catalog and classification source are committed.
 
 Original statement URLs are preserved in every event record. The independent Trump archive is suitable for this free demo; a commercial version should use a licensed official feed and review market-data display rights.
 
@@ -87,6 +111,7 @@ The News lens displays raw GDELT article counts only for captured historical win
 ## API and scheduled refresh
 
 - `GET /api/live` returns the latest Trump signals, five-symbol snapshot, and source freshness.
+- `GET /api/signals` searches and paginates the full candidate universe with entity, topic, and classification-stage filters.
 - `POST /api/research` orchestrates the research roles when live AI is enabled and otherwise returns the reviewed snapshot for the selected signal.
 - `GET /api/cron/refresh` requires `Authorization: Bearer $CRON_SECRET` and refreshes the upstream caches.
 - `vercel.json` schedules the refresh for `23:00 UTC` once daily, compatible with Vercel Hobby limits.
