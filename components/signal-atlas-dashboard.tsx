@@ -50,7 +50,7 @@ type SourceFilter = SourceType | "all";
 type ReactionLens = "all" | "market" | "news" | "attention";
 type MarketChartMode = "actual" | "compare";
 type SignalSort = "reaction" | "recent" | "volume" | "persistence";
-type ResearchSection = "explorer" | "comparison" | "sources" | "methodology";
+type ResearchSection = "market-timeline" | "explorer" | "comparison" | "sources" | "methodology";
 
 const comparisonColors = ["#174e37", "#536dfe", "#8a6f45", "#9a5f77", "#5d7185", "#9b6f35", "#667d69"];
 
@@ -62,9 +62,9 @@ const copy = {
     pricing: "Pricing",
     language: "한국어",
     kicker: "CROSS-DOMAIN SIGNAL INTELLIGENCE",
-    heroA: "See how a signal spreads",
-    heroB: "across markets, media, and attention.",
-    hero: "Track one public signal across actual prices, news publication volume, and public-attention evidence, with every source and limitation kept visible.",
+    heroA: "Choose a market reaction.",
+    heroB: "See the public signals around it.",
+    hero: "Start from actual market movement, open the signals observed in the same session, and inspect their sources and limits.",
     explore: "Open the atlas",
     how: "How we measure",
     signal: "Signal",
@@ -167,9 +167,9 @@ const copy = {
     pricing: "요금제",
     language: "English",
     kicker: "시장·미디어·관심도 통합 시그널 인텔리전스",
-    heroA: "하나의 시그널이",
-    heroB: "어디까지 퍼지는지 확인하세요.",
-    hero: "공개 시그널 전후의 실제 가격, 뉴스 발행량, 대중 관심 근거를 함께 추적하고 각 출처와 한계를 확인합니다.",
+    heroA: "시장 반응을 고르고,",
+    heroB: "그때의 공개 시그널을 확인하세요.",
+    hero: "실제 시장 움직임에서 시작해 같은 거래 세션의 공개 정보를 열고, 원문과 연결 근거 및 한계를 확인합니다.",
     explore: "시그널 지도 열기",
     how: "분석 방식 보기",
     signal: "시그널",
@@ -434,7 +434,7 @@ export function SignalAtlasDashboard({
   const c = copy[locale];
   const dateLocale = locale === "ko" ? "ko-KR" : "en-US";
   const [sourceType, setSourceType] = useState<SourceFilter>("all");
-  const [lens, setLens] = useState<ReactionLens>("all");
+  const [lens, setLens] = useState<ReactionLens>("market");
   const [asset, setAsset] = useState<string>(c.allAssets);
   const [entity, setEntity] = useState<string>(c.allEntities);
   const [topic, setTopic] = useState("all");
@@ -451,14 +451,16 @@ export function SignalAtlasDashboard({
   const [liveLoading, setLiveLoading] = useState(true);
   const [research, setResearch] = useState<OrchestrationReport | null>(null);
   const [researchLoading, setResearchLoading] = useState(false);
-  const [activeNav, setActiveNav] = useState<ResearchSection>("explorer");
+  const [activeNav, setActiveNav] = useState<ResearchSection>("market-timeline");
   const [interpretStep, setInterpretStep] = useState(0);
   const [news, setNews] = useState<NewsEvidencePayload | null>(null);
   const [displayAsset, setDisplayAsset] = useState(events[0]?.asset ?? "SPY");
-  const [marketChartMode, setMarketChartMode] = useState<MarketChartMode>("actual");
+  const [marketChartMode, setMarketChartMode] = useState<MarketChartMode>("compare");
+  const [reviewExpanded, setReviewExpanded] = useState(false);
   const [timelineAsset, setTimelineAsset] = useState("SPY");
   const [timelineSessions, setTimelineSessions] = useState(120);
   const navClickLock = useRef<ResearchSection | null>(null);
+  const userSelectedSignal = useRef(false);
 
   useEffect(() => {
     let active = true;
@@ -474,7 +476,7 @@ export function SignalAtlasDashboard({
 
   useEffect(() => {
     const sections = (
-      ["explorer", "comparison", "sources", "methodology"] as ResearchSection[]
+      ["market-timeline", "explorer", "comparison", "sources", "methodology"] as ResearchSection[]
     )
       .map((id) => document.getElementById(id))
       .filter((item): item is HTMLElement => Boolean(item));
@@ -703,12 +705,31 @@ export function SignalAtlasDashboard({
   );
 
   const selectSignal = (eventId: string) => {
+    userSelectedSignal.current = true;
     setSelectedId(eventId);
     const next = events.find((event) => event.id === eventId);
     setResearch(next?.orchestration ?? null);
     if (next) setDisplayAsset(next.asset);
     setInterpretStep(0);
+    setReviewExpanded(false);
   };
+
+  useEffect(() => {
+    if (!filtered.length) return;
+    const currentVisible = filtered.some((event) => event.id === selectedId);
+    if (userSelectedSignal.current && currentVisible) return;
+    const first = filtered[0];
+    if (first.id === selectedId) return;
+    const timer = window.setTimeout(() => {
+      userSelectedSignal.current = false;
+      setSelectedId(first.id);
+      setResearch(first.orchestration);
+      setDisplayAsset(first.asset);
+      setInterpretStep(0);
+      setReviewExpanded(false);
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, [filtered, selectedId]);
 
   const openTimelineSignal = (point: unknown) => {
     const marker = point as { event?: MarketEvent; payload?: { event?: MarketEvent } };
@@ -765,10 +786,15 @@ export function SignalAtlasDashboard({
     label: string;
     icon: typeof Radar;
   }> = [
+    {
+      id: "market-timeline",
+      label: locale === "ko" ? "반응 비교" : "Reaction comparison",
+      icon: LineChartIcon,
+    },
     { id: "explorer", label: c.explorer, icon: Radar },
     {
       id: "comparison",
-      label: locale === "ko" ? "반응 비교" : "Reaction comparison",
+      label: locale === "ko" ? "인사이트" : "Insights",
       icon: BarChart3,
     },
     { id: "sources", label: c.sources, icon: Database },
@@ -1020,7 +1046,7 @@ export function SignalAtlasDashboard({
             <div>
               <span className="pending-pill">
                 <Clock3 size={13} />
-                Pending
+                {locale === "ko" ? "시장 반응 계산 대기" : "Market reaction pending"}
               </span>
               <div>
                 <small>
@@ -1028,7 +1054,10 @@ export function SignalAtlasDashboard({
                     ? "최신 TRUMP 시그널 · 시장 반응 대기"
                     : "LATEST TRUMP SIGNAL · MARKET REACTION PENDING"}
                 </small>
-                <p>{latestSignal.text}</p>
+                <p>
+                  {locale === "ko" && <small className="original-language">원문(영문)</small>}
+                  {latestSignal.text}
+                </p>
                 <span>
                   {latestSignal.topic} · {formatTime(latestSignal.publishedAt)}
                 </span>
@@ -1216,6 +1245,7 @@ export function SignalAtlasDashboard({
                     <span className="row-meta">
                       <strong>{sourceLabel(event.sourceType, locale)}</strong>
                       <i>{topicLabel(event.topic, locale)}</i>
+                      {event.id === selected.id && <em>{locale === "ko" ? "선택됨" : "Selected"}</em>}
                     </span>
                     <span className="event-text">
                       {locale === "ko" ? event.summaryKo : event.text}
@@ -1236,6 +1266,10 @@ export function SignalAtlasDashboard({
             </div>
 
             <article className="evidence-panel">
+              <div className="selected-breadcrumb">
+                <span>{locale === "ko" ? "선택 사건" : "Selected event"}</span>
+                <strong>{selected.personName} · {selected.asset} · {formatDate(selected.publishedAt)}</strong>
+              </div>
               <div className="evidence-head">
                 <div className="evidence-person">
                   <PersonMark person={selected.person} />
@@ -1745,8 +1779,8 @@ export function SignalAtlasDashboard({
                   <ShieldCheck size={15} />
                   <strong>
                     {locale === "ko"
-                      ? "증거 리서치 데스크"
-                      : "EVIDENCE RESEARCH DESK"}
+                      ? "근거 검토"
+                      : "EVIDENCE REVIEW"}
                   </strong>
                 </div>
                 <span>
@@ -1787,87 +1821,62 @@ export function SignalAtlasDashboard({
                     : activeResearch.summaryEn}
                 </p>
               </div>
-              <button
-                className="run-research"
-                onClick={runResearch}
-                disabled={researchLoading}
-              >
-                <Search size={15} className={researchLoading ? "spin" : ""} />
-                {researchLoading
-                  ? locale === "ko"
-                    ? "근거 감사 중…"
-                    : "Auditing evidence…"
-                  : locale === "ko"
-                    ? "증거 감사 실행"
-                    : "Run evidence audit"}
+              <button className="review-toggle" onClick={() => setReviewExpanded((value) => !value)} aria-expanded={reviewExpanded}>
+                <ChevronRight size={15} className={reviewExpanded ? "expanded" : ""} />
+                {reviewExpanded
+                  ? locale === "ko" ? "검토 과정 접기" : "Hide review process"
+                  : locale === "ko" ? "검토 과정 보기" : "View review process"}
               </button>
-              <div className="agent-pipeline">
-                {activeResearch.stages.map((stage, index) => (
-                  <div
-                    className={`agent-stage ${stage.state.toLowerCase()}`}
-                    key={stage.id}
+              {reviewExpanded && (
+                <div className="review-details">
+                  <button
+                    className="run-research"
+                    onClick={runResearch}
+                    disabled={researchLoading}
                   >
-                    <span className="stage-index">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <div>
-                      <strong>
-                        {stage.id === "classify"
-                          ? locale === "ko"
-                            ? "시그널 분류"
-                            : "Signal Classifier"
-                          : stage.id === "map"
-                            ? locale === "ko"
-                              ? "온톨로지 매핑"
-                              : "Ontology Mapper"
-                            : stage.id === "amplify"
-                              ? locale === "ko"
-                                ? "정보 확산 분석"
-                                : "Amplification"
-                              : stage.id === "market"
-                                ? locale === "ko"
-                                  ? "시장 반응 계산"
-                                  : "Market Reaction"
-                                : stage.id === "audit"
-                                  ? locale === "ko"
-                                    ? "신뢰도 감사"
-                                    : "Confidence Auditor"
-                                  : locale === "ko"
-                                    ? "리포트 작성"
-                                    : "Report Writer"}
-                      </strong>
-                      <p>
-                        {locale === "ko" ? stage.summaryKo : stage.summaryEn}
-                      </p>
-                      <small>
-                        {stage.state} ·{" "}
-                        {confidenceLabel(stage.confidence, locale)}
-                      </small>
-                    </div>
-                    {stage.state === "Complete" ? (
-                      <CheckCircle2 size={14} />
-                    ) : (
-                      <Clock3 size={14} />
-                    )}
+                    <Search size={15} className={researchLoading ? "spin" : ""} />
+                    {researchLoading
+                      ? locale === "ko"
+                        ? "근거 감사 중…"
+                        : "Auditing evidence…"
+                      : locale === "ko"
+                        ? "근거 요약 갱신"
+                        : "Refresh evidence summary"}
+                  </button>
+                  <div className="agent-pipeline">
+                    {activeResearch.stages.map((stage, index) => (
+                      <div className={`agent-stage ${stage.state.toLowerCase()}`} key={stage.id}>
+                        <span className="stage-index">{String(index + 1).padStart(2, "0")}</span>
+                        <div>
+                          <strong>
+                            {stage.id === "classify" ? locale === "ko" ? "시그널 분류" : "Signal Classifier"
+                              : stage.id === "map" ? locale === "ko" ? "온톨로지 매핑" : "Ontology Mapper"
+                                : stage.id === "amplify" ? locale === "ko" ? "정보 확산 분석" : "Amplification"
+                                  : stage.id === "market" ? locale === "ko" ? "시장 반응 계산" : "Market Reaction"
+                                    : stage.id === "audit" ? locale === "ko" ? "신뢰도 감사" : "Confidence Auditor"
+                                      : locale === "ko" ? "리포트 작성" : "Report Writer"}
+                          </strong>
+                          <p>{locale === "ko" ? stage.summaryKo : stage.summaryEn}</p>
+                          <small>{stage.state} · {confidenceLabel(stage.confidence, locale)}</small>
+                        </div>
+                        {stage.state === "Complete" ? <CheckCircle2 size={14} /> : <Clock3 size={14} />}
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-              <div className="market-snapshot">
-                <div className="aside-title">
-                  <span>
-                    {locale === "ko" ? "증거 성숙 단계" : "EVIDENCE MATURITY"}
-                  </span>
-                  <small>
-                    {locale === "ko" ? "사후 검증형" : "Post-event"}
-                  </small>
+                  <div className="market-snapshot">
+                    <div className="aside-title">
+                      <span>{locale === "ko" ? "증거 성숙 단계" : "EVIDENCE MATURITY"}</span>
+                      <small>{locale === "ko" ? "사후 검증형" : "Post-event"}</small>
+                    </div>
+                    <div className="maturity-track">
+                      <span className="done">Initial</span>
+                      <span className="done">Amplification</span>
+                      <span className="done">Market</span>
+                      <span className="done">Report</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="maturity-track">
-                  <span className="done">Initial</span>
-                  <span className="done">Amplification</span>
-                  <span className="done">Market</span>
-                  <span className="done">Report</span>
-                </div>
-              </div>
+              )}
               <div className="live-note">
                 <ShieldCheck size={15} />
                 {c.association}
