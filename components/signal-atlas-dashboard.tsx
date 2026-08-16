@@ -1167,7 +1167,7 @@ export function SignalAtlasDashboard({
           </div>
           <div
             className="market-timeline-chart"
-            onClick={(chartEvent) => {
+            onClickCapture={(chartEvent) => {
               const target = chartEvent.target as Element;
               const marker = target.closest<SVGGElement>("[data-event-id]");
               const eventId = marker?.dataset.eventId;
