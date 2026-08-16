@@ -3088,8 +3088,17 @@ footer a {
 }
 .market-timeline-chart .recharts-wrapper,
 .market-timeline-chart .recharts-surface { outline: none !important; }
-.market-timeline-chart .recharts-scatter-symbol { transition: opacity .15s ease, filter .15s ease; }
-.market-timeline-chart .recharts-scatter-symbol:hover { filter: drop-shadow(0 2px 4px rgba(25, 54, 41, .28)); opacity: 1; }
+.market-timeline-chart .timeline-marker { cursor: pointer; outline: none; }
+.market-timeline-chart .timeline-marker-glyph { transition: filter .15s ease, stroke-width .15s ease; }
+.market-timeline-chart .timeline-marker:hover .timeline-marker-glyph,
+.market-timeline-chart .timeline-marker:focus-visible .timeline-marker-glyph {
+  filter: drop-shadow(0 2px 4px rgba(25, 54, 41, .32));
+  stroke-width: 2.4;
+}
+.market-timeline-chart .timeline-marker:focus-visible .timeline-marker-hit {
+  fill: rgba(31, 111, 74, .1);
+  stroke: rgba(31, 111, 74, .45);
+}
 .timeline-footnote {
   display: flex;
   align-items: center;
