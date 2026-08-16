@@ -1,7 +1,6 @@
-import { MarketDashboard } from "@/components/market-dashboard";
+import { SignalAtlasDashboard } from "@/components/signal-atlas-dashboard";
 import { liveFallback, marketEvents } from "@/lib/data";
 
 export default function Home() {
-  return <MarketDashboard events={marketEvents} initialLive={liveFallback} />;
+  return <SignalAtlasDashboard events={marketEvents} initialLive={liveFallback} locale="en" />;
 }
-

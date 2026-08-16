@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Market Mover — Evidence behind market reactions",
-  description: "Trace influential public statements to observable, benchmark-adjusted market reactions.",
+  title: "Market Signal Atlas — Public signals and real market reactions",
+  description: "Explore real asset prices around reviewed public signals without prediction or causality claims.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -13,4 +13,3 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   );
 }
-
