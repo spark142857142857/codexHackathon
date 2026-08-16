@@ -27,3 +27,10 @@
 
 Codex was used to inspect the source datasets, define the product boundary, implement the Next.js application and data pipeline, connect public/server-side data sources, add verification, and document deployment and methodological limitations. Human judgment remains explicit in event selection, topic mapping, and linked-asset rationale.
 
+## Signal Atlas pivot
+
+- Reframed the product from personality-led “Market Mover” rankings to policy, executive, and industry signal exploration.
+- Replaced the normalized comparison chart with each linked asset's real D-5 through D+5 closing prices and an explicit signal-session marker.
+- Retained abnormal return, volume, and persistence as transparent context rather than restoring an opaque impact score.
+- Added signal-type comparison and public engagement as an attention evidence layer.
+- Added a dedicated `/ko` interface and reviewed Korean summaries while preserving every English original and source URL.

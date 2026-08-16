@@ -1,12 +1,14 @@
-# Market Mover
+# Market Signal Atlas
 
-Market Mover is an evidence-first dashboard that connects influential public statements to observable, benchmark-adjusted market reactions. It is a hackathon demo for individual investors and independent researchers—not a prediction product or investment adviser.
+Market Signal Atlas is an evidence-first dashboard that connects reviewed public signals to actual asset prices, benchmark context, trading activity, and source attention. It is a hackathon demo for individual investors and independent researchers—not a prediction product or investment adviser.
 
 **Live demo:** [market-mover.vercel.app](https://market-mover.vercel.app)
 
+**한국어 UI:** [market-mover.vercel.app/ko](https://market-mover.vercel.app/ko)
+
 The core path is deliberately inspectable:
 
-`person → original statement → linked asset → benchmark-adjusted reaction`
+`public signal → original source → linked asset → actual price path → comparison context`
 
 ## Demo scope
 
@@ -16,6 +18,8 @@ The core path is deliberately inspectable:
 - Current signal: Trump public statements from an independent public RSS archive
 - Market refresh: five daily prices through Twelve Data when configured
 - Metrics: Abnormal Return 1D, Volume Multiple, and 3D Persistence
+- Price window: actual daily closes from five sessions before through five sessions after each signal
+- Locales: full English and Korean interfaces, with reviewed Korean summaries that preserve the original source text
 
 Sam Altman has no directly listed company in this analysis. NVDA and MSFT are visibly labeled as AI proxy assets and use QQQ as the benchmark.
 
@@ -67,7 +71,7 @@ If a statement is published after 4:00 PM Eastern, on a weekend, or on a market 
 - **Volume Multiple** = event-session volume ÷ average volume over the previous 20 sessions
 - **3D Persistence** = cumulative three-session excess return, labeled Persisted, Faded, or Reversed
 
-The dashboard shows temporal association only. It does not establish causality, generate buy/sell recommendations, or compress evidence into an opaque impact score.
+The main event chart shows the linked asset's actual close and marks the aligned signal session. Benchmark-adjusted returns remain visible as comparison context. The dashboard shows temporal association only; it does not establish causality, generate buy/sell recommendations, or compress evidence into an opaque impact score.
 
 ## API and scheduled refresh
 
