@@ -2,6 +2,8 @@
 
 > 공개 발언·뉴스·공시·청문회가 등장한 시점에 시장, 미디어, 대중 관심에서 어떤 반응이 함께 관찰됐는지 탐색하는 이벤트 인텔리전스 서비스
 
+이 프로젝트는 [Codex Community Korea Hackathon Seoul 2026](https://codex-community-korea.skysplit.chatgpt.site/hackathon/seoul-2026) 출품작입니다.
+
 [![Production](https://img.shields.io/badge/Production-Vercel-111111)](https://market-mover.vercel.app/)
 [![Korean UI](https://img.shields.io/badge/UI-한국어-285f48)](https://market-mover.vercel.app/ko)
 [![Tests](https://img.shields.io/badge/tests-17%20passed-237657)](#로컬-실행과-검증)
