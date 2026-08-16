@@ -729,9 +729,7 @@ export function SignalAtlasDashboard({
     return () => window.clearTimeout(timer);
   }, [filtered, selectedId]);
 
-  const openTimelineSignal = (point: unknown, mapping: MarketEvent["coverage"]) => {
-    const marker = point as { payload?: Partial<Record<MarketEvent["coverage"], MarketEvent>> };
-    const event = marker.payload?.[mapping];
+  const openTimelineSignal = (event?: MarketEvent) => {
     if (!event) return;
     setSourceType("all");
     setAsset(c.allAssets);
@@ -745,6 +743,56 @@ export function SignalAtlasDashboard({
       window.history.replaceState(null, "", "#explorer");
       document.getElementById("explorer")?.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 0);
+  };
+
+  const renderTimelineMarker = (
+    shapeProps: unknown,
+    mapping: MarketEvent["coverage"],
+    shape: "circle" | "triangle" | "diamond",
+  ) => {
+    const marker = shapeProps as {
+      cx?: number;
+      cy?: number;
+      payload?: Partial<Record<MarketEvent["coverage"], MarketEvent>>;
+    };
+    const event = marker.payload?.[mapping];
+    if (!event || marker.cx === undefined || marker.cy === undefined) return <g />;
+
+    const activate = () => openTimelineSignal(event);
+    const label = `${event.personName} · ${event.topic} · ${event.eventSession}`;
+    const commonProps = {
+      className: "timeline-marker-glyph",
+      stroke: "#ffffff",
+      strokeWidth: 1.4,
+    };
+
+    return (
+      <g
+        className={`timeline-marker timeline-marker-${mapping.toLowerCase()}`}
+        role="button"
+        tabIndex={0}
+        aria-label={locale === "ko" ? `${label} 상세 사건 열기` : `Open ${label}`}
+        onClick={(clickEvent) => {
+          clickEvent.stopPropagation();
+          activate();
+        }}
+        onKeyDown={(keyEvent) => {
+          if (keyEvent.key === "Enter" || keyEvent.key === " ") {
+            keyEvent.preventDefault();
+            activate();
+          }
+        }}
+      >
+        <circle cx={marker.cx} cy={marker.cy} r={12} fill="transparent" className="timeline-marker-hit" />
+        {shape === "circle" ? (
+          <circle {...commonProps} cx={marker.cx} cy={marker.cy} r={5.2} fill="#1f6f4a" />
+        ) : shape === "triangle" ? (
+          <polygon {...commonProps} points={`${marker.cx},${marker.cy - 6} ${marker.cx + 6},${marker.cy + 5} ${marker.cx - 6},${marker.cy + 5}`} fill="#a66a2d" />
+        ) : (
+          <polygon {...commonProps} points={`${marker.cx},${marker.cy - 6} ${marker.cx + 6},${marker.cy} ${marker.cx},${marker.cy + 6} ${marker.cx - 6},${marker.cy}`} fill="#75658c" />
+        )}
+      </g>
+    );
   };
 
   useEffect(() => {
@@ -1124,9 +1172,9 @@ export function SignalAtlasDashboard({
                 <YAxis domain={["auto", "auto"]} tickFormatter={(value) => `$${Number(value).toFixed(0)}`} tick={{ fill: "#68736d", fontSize: 10 }} axisLine={false} tickLine={false} width={48} />
                 <Tooltip labelFormatter={(label) => `${timelineAsset} · ${label}`} formatter={(value, name) => name === "close" ? [`$${Number(value).toFixed(2)}`, locale === "ko" ? "종가" : "Close"] : [`$${Number(value).toFixed(2)}`, String(name).replace("Value", "")]} />
                 <Line isAnimationActive={false} type="monotone" dataKey="close" name="close" stroke="#205b43" strokeWidth={2.6} dot={false} activeDot={{ r: 4 }} />
-                <Scatter dataKey="DirectValue" name="Direct" fill="#1f6f4a" fillOpacity={0.92} shape="circle" cursor="pointer" onClick={(point) => openTimelineSignal(point, "Direct")} />
-                <Scatter dataKey="PolicyValue" name="Policy" fill="#a66a2d" fillOpacity={0.92} shape="triangle" cursor="pointer" onClick={(point) => openTimelineSignal(point, "Policy")} />
-                <Scatter dataKey="ProxyValue" name="Proxy" fill="#75658c" fillOpacity={0.92} shape="diamond" cursor="pointer" onClick={(point) => openTimelineSignal(point, "Proxy")} />
+                <Scatter dataKey="DirectValue" name="Direct" fill="#1f6f4a" shape={(props: unknown) => renderTimelineMarker(props, "Direct", "circle")} />
+                <Scatter dataKey="PolicyValue" name="Policy" fill="#a66a2d" shape={(props: unknown) => renderTimelineMarker(props, "Policy", "triangle")} />
+                <Scatter dataKey="ProxyValue" name="Proxy" fill="#75658c" shape={(props: unknown) => renderTimelineMarker(props, "Proxy", "diamond")} />
               </ComposedChart>
             </ResponsiveContainer>
           </div>
