@@ -6,17 +6,21 @@
 [![Korean UI](https://img.shields.io/badge/UI-한국어-285f48)](https://market-mover.vercel.app/ko)
 [![Tests](https://img.shields.io/badge/tests-17%20passed-237657)](#로컬-실행과-검증)
 
-## 바로 체험하기
+## 심사위원 접속 링크
 
-- 영문 기본 화면: **https://market-mover.vercel.app/**
-- 한국어 화면: **https://market-mover.vercel.app/ko**
+- 영문 기본 화면: [market-mover.vercel.app](https://market-mover.vercel.app/)
+- 한국어 화면: [market-mover.vercel.app/ko](https://market-mover.vercel.app/ko)
 - 기본 주소로 접속했다면 우측 상단의 `한국어`를 누르면 됩니다.
 
 로그인, 결제, 개인 API 키 입력 없이 바로 사용할 수 있습니다.
 
-## 심사위원을 위한 3분 체험 경로
+## 데모 화면
 
-README에 적힌 아래 동선은 배포된 Production 화면에서 직접 검증했습니다.
+![Market Signal Atlas 한국어 데모 화면](docs/images/market-signal-atlas-demo-2026-08-16.png)
+
+## 빠른 시작
+
+다음 순서로 주요 기능을 확인할 수 있습니다.
 
 ### 1. 시장 움직임에서 시작하기
 
@@ -33,7 +37,7 @@ README에 적힌 아래 동선은 배포된 Production 화면에서 직접 검�
 
 마커를 누르면 해당 거래 세션의 대표 시그널이 선택되고 `시그널 탐색` 상세로 이동합니다. 마커는 인과관계가 아니라 같은 시점에 관찰된 공개 정보입니다.
 
-### 2. 재현 가능한 대표 사례 보기
+### 2. 대표 사례 보기
 
 `시그널 탐색`에서 아래 조건을 선택하면 대표적인 Musk–Tesla 사례를 빠르게 볼 수 있습니다.
 
@@ -44,7 +48,7 @@ README에 적힌 아래 동선은 배포된 Production 화면에서 직접 검�
 정렬       1일 초과반응순
 ```
 
-목록 첫 행과 중앙의 `선택 사건`이 모두 아래 사례를 가리키는지 확인합니다.
+목록 첫 행과 중앙의 `선택 사건`에서 아래 사례를 확인할 수 있습니다.
 
 ```text
 Elon Musk · TSLA · 2024-10-25
@@ -72,7 +76,7 @@ Elon Musk · TSLA · 2024-10-25
 
 뉴스 화면에는 검색 쿼리, 반환 구간, 기사 링크와 공급자가 표시됩니다. 대중 관심은 **Bluesky 공개 검색의 최대 100개 표본**이며 X 전체 언급량으로 표현하지 않습니다.
 
-### 5. 결론보다 근거 먼저 확인하기
+### 5. 근거 확인하기
 
 우측 또는 모바일 상세 아래의 `근거 검토`에서 판정, 신뢰도와 핵심 한계를 먼저 확인합니다. `검토 과정 보기`를 누르면 다음 6단계가 펼쳐집니다.
 
@@ -85,7 +89,7 @@ Elon Musk · TSLA · 2024-10-25
 
 시장 지표는 규칙과 실제 관측값으로 계산합니다. 모델은 없는 가격·기사·해시태그를 만들어내지 않습니다.
 
-### 6. 전체 원문까지 확장하기
+### 6. 전체 원문 검색하기
 
 아래로 내려가면 `전체 시그널 유니버스`가 나옵니다.
 
@@ -95,27 +99,27 @@ Elon Musk · TSLA · 2024-10-25
 
 검색창에 `tariff`, `Tesla`, `AI`, `bitcoin` 등을 입력하고 인물·단계·주제를 함께 필터링할 수 있습니다. 각 원문은 출처 URL과 군집 ID를 유지합니다.
 
-## 발표할 때 보여주기 좋은 세 장면
+## 주요 시나리오
 
-### 장면 A — 시장에서 원문으로 역탐색
+### 시장에서 원문 찾기
 
 `QQQ → 최근 60 거래 세션 → 사건 마커 클릭`
 
 > 가격 움직임을 먼저 보고, 같은 거래 세션에 어떤 공개 정보가 있었는지 역으로 확인합니다.
 
-### 장면 B — 하나의 발언, 여러 시장
+### 하나의 시그널, 여러 자산
 
 `Elon Musk → Tesla & EV → 동시 반응 비교`
 
 > 하나의 게시물을 TSLA 하나에만 연결하지 않고 SPY·QQQ·BTC-USD와 함께 비교합니다. 직접 연결과 시장 맥락은 구분합니다.
 
-### 장면 C — 시장·뉴스·관심도·신뢰도
+### 시장·뉴스·관심도 함께 보기
 
 `뉴스 → 대중 관심 → 근거 검토`
 
 > 가격만 보여주는 대시보드가 아니라 원문, 정보 확산, 시장 반응, 해석 한계를 하나의 증거 경로로 연결합니다.
 
-## 왜 만들었나
+## 서비스 구현 목적
 
 투자자와 리서처는 가격 급변 이후 원인을 찾기 위해 SNS, 뉴스, 공시, 가격 차트를 각각 검색해야 합니다. Market Signal Atlas는 공개 정보 한 건을 `Signal`로 표준화하고 다음 경로를 한 화면에서 연결합니다.
 
@@ -130,7 +134,7 @@ Elon Musk · TSLA · 2024-10-25
 
 이 서비스는 “발언이 가격을 움직였다”고 단정하지 않습니다. 시간적으로 함께 관찰된 반응을 비교하고, 사용자가 원문과 한계를 직접 검토하게 합니다.
 
-## 현재 데이터 범위
+## 데이터 범위
 
 ```text
 원본 데이터 145,442행
@@ -175,7 +179,7 @@ Trump와 Musk는 전체 로컬 이력을 사용합니다. Sam Altman은 완전�
 
 불투명한 단일 Impact Score는 사용하지 않습니다. 사용자는 1일 초과반응, 거래량, 3일 지속성, 최신순 중 정렬 기준을 직접 선택합니다.
 
-## 시간 정렬 원칙
+## 분석 기준
 
 - 정확한 게시 시각은 미국 동부시간(ET)으로 표시합니다.
 - 장 마감 후, 주말, 휴일 발언은 다음 미국 거래 세션에 정렬합니다.
@@ -183,9 +187,9 @@ Trump와 Musk는 전체 로컬 이력을 사용합니다. Sam Altman은 완전�
 - 일봉에서는 게시 순간의 가격을 추정하지 않습니다.
 - BTC-USD는 현재 주식 거래 세션 날짜에 표본화된 비교 맥락이며 완전한 24/7 분봉 분석이 아닙니다.
 
-## 데이터와 AI를 구분하는 방법
+## 데이터 처리 방식
 
-기본 Production은 결정론적 근거 검토를 사용합니다.
+기본 분석은 규칙과 실제 관측값을 사용합니다.
 
 | 단계 | 처리 방식 |
 | --- | --- |
@@ -197,7 +201,18 @@ Trump와 Musk는 전체 로컬 이력을 사용합니다. Sam Altman은 완전�
 
 OpenAI 보조 경로가 실패하거나 비활성화되어도 가격 계산과 근거 화면은 그대로 동작합니다. API 키는 브라우저에 노출하지 않습니다.
 
-## 기술 구조
+## 기술 스택
+
+| 구분 | 사용 기술 |
+| --- | --- |
+| 웹 애플리케이션 | Next.js 16 (App Router), React 19, TypeScript |
+| UI·시각화 | Tailwind CSS 4, Recharts, Lucide React |
+| 데이터 처리 | Node.js 스크립트, CSV Parse, Fast XML Parser |
+| 테스트·품질 | Vitest, ESLint |
+| 배포·스케줄링 | Vercel, Vercel Cron |
+| 선택형 데이터·AI 연동 | Twelve Data, OpenAI Responses API, Google News RSS, GDELT, Bluesky 공개 검색 |
+
+### 처리 구조
 
 ```text
 로컬 공개 데이터셋 / 검토된 공식 원문
@@ -209,13 +224,6 @@ OpenAI 보조 경로가 실패하거나 비활성화되어도 가격 계산과 �
   → Vercel Production + 일일 Cron
 ```
 
-- Next.js App Router
-- TypeScript
-- Recharts
-- CSS responsive workspace
-- Vitest
-- Vercel Production
-
 ## API
 
 | 경로 | 역할 |
@@ -226,7 +234,7 @@ OpenAI 보조 경로가 실패하거나 비활성화되어도 가격 계산과 �
 | `POST /api/research` | 결정론적 근거 검토 및 선택형 OpenAI 보조 리포트 |
 | `GET /api/cron/refresh` | 인증된 일일 upstream 캐시 갱신 |
 
-## 로컬 실행과 검증
+## 로컬 실행
 
 ```bash
 npm install
@@ -236,7 +244,7 @@ npm run dev
 - 영문: http://localhost:3000
 - 한국어: http://localhost:3000/ko
 
-전체 검증:
+필요하면 아래 명령으로 검사와 빌드를 실행합니다.
 
 ```bash
 npm run lint
@@ -244,11 +252,22 @@ npm test
 npm run build
 ```
 
-현재 자동 테스트는 계산, 데이터 고유 ID, 출처 URL, 공통 시장 자산, 이벤트 세션 정렬과 전체 데이터 레이어를 검사합니다.
+테스트는 계산, 데이터 고유 ID, 출처 URL, 공통 시장 자산, 이벤트 세션 정렬과 데이터 레이어를 확인합니다.
 
-## 환경 변수
+## API 키 및 환경 변수
 
 `.env.example`을 `.env.local`로 복사하고 필요한 값만 설정합니다.
+
+기본 화면과 내장 데이터는 API 키 없이 실행됩니다. 아래 값은 실시간 갱신, 서버 API 인증, 선택형 AI 보조 기능을 사용할 때만 필요합니다.
+
+| 변수 | 필요 여부 | 용도 |
+| --- | --- | --- |
+| `TWELVE_DATA_API_KEY` | 선택 | 일일 시장 가격 갱신 |
+| `CRON_SECRET` | 선택 | `/api/cron/refresh` 인증 |
+| `OPENAI_API_KEY` | 선택 | 서버 측 모델 보조 리포트와 Batch 작업 |
+| `OPENAI_MODEL` | 선택 | 모델 보조 리포트 모델 |
+| `OPENAI_BATCH_MODEL` | 선택 | Batch 분류 모델 |
+| `ENABLE_LIVE_AI` | 선택 | `true`일 때 모델 보조 리포트 사용 |
 
 ```env
 TWELVE_DATA_API_KEY=
@@ -257,6 +276,7 @@ CRON_SECRET=
 # 선택 사항: 서버 전용 OpenAI 보조 리포트
 OPENAI_API_KEY=
 OPENAI_MODEL=gpt-5.4-nano
+OPENAI_BATCH_MODEL=gpt-5.4-nano
 ENABLE_LIVE_AI=false
 ```
 
@@ -275,32 +295,6 @@ ENABLE_LIVE_AI=false
 | `scripts/build-evidence-universe.mjs` | 군집 대표와 근거 준비 레이어 생성 |
 | `BUILD_LOG.md` | Codex 활용 과정과 주요 구현 결정 |
 
-## 현재 한계
-
-- 발언과 시장 반응의 시간적 연관성은 인과관계 증명이 아닙니다.
-- 무료 데모에는 X 전체 아카이브·실시간 firehose가 없습니다.
-- Musk·Altman의 최신 X 게시물은 실시간 추적하지 않습니다.
-- 공개 소셜 수치는 Bluesky 검색 표본 또는 로컬 추적 코퍼스 범위입니다.
-- 최신 RSS가 자동으로 완성된 사후 분석 사례가 되는 작업 큐는 아직 없습니다.
-- 미국 주식 과거 반응은 일봉이며 정확한 분 단위 가격이 아닙니다.
-- BTC-USD는 아직 별도의 24/7 시간봉 세션 모델을 사용하지 않습니다.
-- 로그인, 알림, 결제, 데이터베이스는 해커톤 MVP 범위에서 제외했습니다.
-
-## 심사 체크리스트
-
-- [x] 실제 공개 원문과 출처 URL
-- [x] 실제 시장 종가·거래량
-- [x] 시장 움직임 → 공개 시그널 역탐색
-- [x] 사건별 다중 자산 비교
-- [x] 뉴스·해시태그·공개 게시물 근거
-- [x] Direct / Policy / Proxy 구분
-- [x] exact/date-only 및 장전·장중·장후 구분
-- [x] 한국어·영문 UI
-- [x] 규칙 기반 계산과 선택형 AI 보조 분리
-- [x] 결측·stale·fallback 표시
-- [x] 모바일 390px 가로 넘침 방지
-- [x] GitHub·Vercel·자동 테스트
-
-## Disclaimer
+## 유의 사항
 
 Market Signal Atlas는 연구·모니터링 도구이며 투자 조언, 매수·매도 추천, 가격 예측 서비스가 아닙니다. 공개 정보와 시장 반응의 시간적 연관성은 인과관계를 증명하지 않습니다.
