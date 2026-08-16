@@ -64,4 +64,14 @@ Codex was used to inspect the source datasets, define the product boundary, impl
 - Added actual D-5 through D+5 closes, abnormal return, volume multiple, volatility multiple, persistence, tracked-corpus mentions, and linked-media references to the priority layer.
 - Renamed the visible workflow to Evidence Research and positioned it as AI-ready conditional orchestration rather than completed AI analysis.
 - Added an explicit latest-signal `Pending` state so an RSS arrival is never shown as a confirmed market reaction.
-- Removed the temporary 200-signal cap. The current build produces 735 eligible social signals plus seven verified OpenAI/NVIDIA newsroom announcements; future builds grow automatically with valid data.
+- Removed the temporary 200-signal cap. The current build produces 735 eligible social signals plus seven news, one filing, and one hearing signal; future builds grow automatically with valid data.
+
+## Evidence collection and asset-context correction
+
+- Added on-demand Google News RSS search with GDELT DOC as a secondary provider and the reviewed snapshot as the final fallback. Counts and headlines now come from returned articles rather than UI-only labels.
+- Added unauthenticated Bluesky public-search sampling for related posts and hashtag occurrences, with the tracked local corpus as an explicitly labeled fallback. This is a public sample, not an X-wide mention count.
+- Added `SPY`, `QQQ`, and `BTC-USD` to every signal as common market context while keeping directly related and proxy assets distinct.
+- Added per-asset actual-close windows and an asset switcher. The UI prints the original Eastern publication time and market phase, but does not claim an exact intraday price from daily data.
+- Fixed the Atlas composer so reviewed filing and hearing signals are no longer discarded by a news-only filter.
+- Removed the access-request CTA and replaced decorative AI styling with a quieter evidence-research visual system.
+- Added an optional server-only OpenAI Responses API path for bilingual report editing. Deterministic calculations remain the source of truth and are used whenever the feature is disabled, missing a key, or fails.

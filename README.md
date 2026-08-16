@@ -12,7 +12,7 @@ The core path is deliberately inspectable:
 
 The product now separates the full source universe from the reviewed demo layer:
 
-`145,442 raw rows → 32,393 eligible originals → 1,162 cluster representatives → 735 evidence-ready social signals + 7 verified newsroom signals`
+`145,442 raw rows → 32,393 eligible originals → 1,162 cluster representatives → 735 evidence-ready social signals + 9 reviewed cross-source signals`
 
 ## Demo scope
 
@@ -21,7 +21,7 @@ The product now separates the full source universe from the reviewed demo layer:
 - Assets: SPY, QQQ, TSLA, NVDA, MSFT, BTC-USD, and SOXX
 - Candidate universe: all 32,393 non-reply/non-repost Musk and Trump originals since 2023, searchable through a paginated server API
 - Evidence universe: one representative per 1,162 cluster, with deterministic enrichment for every market-relevant cluster that has a valid price window
-- Main Signal Atlas: currently 735 evidence-ready Trump/Musk signals plus seven verified newsroom announcements, without a fixed product cap
+- Main Signal Atlas: currently 735 evidence-ready Trump/Musk signals plus seven news, one filing, and one hearing signal, without a fixed product cap
 - Reviewed reference library: 33 retained source records, including seven official OpenAI/NVIDIA newsroom announcements
 - Current signal: Trump public statements from an independent public RSS archive
 - Market refresh: five daily prices through Twelve Data when configured
@@ -49,7 +49,7 @@ TWELVE_DATA_API_KEY=your_key
 CRON_SECRET=a_long_random_secret
 ```
 
-No AI key is required. `/api/research` runs the six roles deterministically from observed fields. The architecture is AI-ready for a future licensed connector or optional model-assisted classification, but the public deployment does not claim that generative AI completed the analysis.
+No AI key is required for the evidence calculations. `/api/research` falls back to the six deterministic roles. To enable a model-assisted bilingual report, set `OPENAI_API_KEY`, `OPENAI_MODEL`, and `ENABLE_LIVE_AI=true` on the server; the model may rewrite only report text and cannot replace observed prices, news, hashtags, or deterministic metrics.
 
 ## Commands
 
@@ -74,9 +74,9 @@ Large source CSVs are intentionally excluded from Git and production. `scripts/b
 - Trump history: local `Kaggle_Trump_2009_2025.csv`
 - Sam Altman cases: reviewed records derived from the [SuperX 2026 Top 50](https://superx.so/tweets/sam-altman)
 - Cross-source cases: original OpenAI/NVIDIA announcements, a Tesla SEC filing, and a U.S. Senate AI hearing
-- Main Atlas source mix: 193 social signals and seven official newsroom announcements
-- News-volume snapshots: GDELT DOC 2.0 `TimelineVolRaw`; each stored case preserves its query and raw daily article counts
-- Public-attention scope: mentions and hashtags cover only the tracked Musk/Trump source corpora and are never labeled as platform-wide counts
+- Main Atlas source mix: 735 social signals, seven news signals, one filing, and one hearing
+- News evidence: on-demand Google News RSS search, then GDELT DOC 2.0, then the reviewed GDELT snapshot; returned-item caps and source state remain visible
+- Public-attention evidence: on-demand Bluesky public-search samples, then the tracked Musk/Trump corpus snapshot; it is never labeled as X-wide or platform-wide volume
 - Current Trump statements: independent [Trump's Truth public RSS archive](https://www.trumpstruth.org/about)
 - Current prices: [Twelve Data Basic](https://twelvedata.com/pricing)
 - Paid roadmap: official [X Search API](https://docs.x.com/x-api/posts/search/introduction)
@@ -91,8 +91,8 @@ Running deep analysis independently for every source row would repeat near-ident
 2. Rules create topics, assets, and time-bucket clusters, then select the highest-evidence representative of each cluster.
 3. Every market-relevant representative with a valid price window receives actual price, volume, volatility, tracked mentions, and linked-media-reference evidence at build time.
 4. Six deterministic roles classify, map, inspect amplification, calculate market reaction, audit confidence, and render a bilingual report.
-5. Missing global news or social coverage stays explicitly unavailable; recent RSS signals stay `Pending` until a market session is observable.
-6. Optional Batch scripts remain a future AI-assisted classification path, not a dependency or a completed capability of the public demo.
+5. Public news and Bluesky context are collected on demand and cached daily; source failure falls back to a reviewed snapshot rather than a generated value.
+6. Optional OpenAI Responses API report editing is server-side and visibly labeled `openai`; Batch scripts remain a separate bulk-classification path.
 
 Original statement URLs are preserved in every event record. The independent Trump archive is suitable for this free demo; a commercial version should use a licensed official feed and review market-data display rights.
 
@@ -104,15 +104,15 @@ If a statement is published after 4:00 PM Eastern, on a weekend, or on a market 
 - **Volume Multiple** = event-session volume ÷ average volume over the previous 20 sessions
 - **3D Persistence** = cumulative three-session excess return, labeled Persisted, Faded, or Reversed
 
-The main event chart shows the linked asset's actual close and marks the aligned signal session. Benchmark-adjusted returns remain visible as comparison context. The dashboard shows temporal association only; it does not establish causality, generate buy/sell recommendations, or compress evidence into an opaque impact score.
+Every event carries its related assets plus the common market context `SPY`, `QQQ`, and `BTC-USD`. The chart shows one selected asset's actual close at a time. It marks the aligned trading session and prints the original Eastern publication time and whether it was pre-market, in-session, after-hours, or on a non-trading day. An exact intraday price is not claimed without minute data.
 
-The News lens displays raw GDELT article counts only for captured historical windows. Missing news history stays empty. The Public Attention lens reports tracked-corpus mentions, observed hashtags, and source engagement with its coverage limitation visible next to the chart.
+The News lens displays daily counts from the returned public-news results. The Public Attention lens displays returned Bluesky posts and hashtag occurrences from a capped sample. If either request fails, the UI identifies the tracked-corpus or reviewed-GDELT fallback.
 
 ## API and scheduled refresh
 
 - `GET /api/live` returns the latest Trump signals, five-symbol snapshot, and source freshness.
 - `GET /api/signals` searches and paginates all originals, cluster representatives, or the evidence-ready layer.
-- `POST /api/research` runs the six deterministic evidence roles for a selected reviewed signal without an AI key.
+- `POST /api/research` runs deterministic evidence roles and optionally uses the server-side OpenAI Responses API to edit the bilingual report when explicitly enabled.
 - `GET /api/cron/refresh` requires `Authorization: Bearer $CRON_SECRET` and refreshes the upstream caches.
 - `vercel.json` schedules the refresh for `23:00 UTC` once daily, compatible with Vercel Hobby limits.
 
@@ -122,12 +122,12 @@ External-provider failures and quota exhaustion fall back to the bundled snapsho
 
 Stocktwits is community-sentiment oriented, Quiver Quantitative aggregates ticker-centric alternative datasets, and RavenPack offers institution-scale event infrastructure. Market Signal Atlas focuses on an inspectable cross-domain evidence path and confidence audit for each public signal.
 
-The demo includes pricing concepts only. It does not implement accounts, payments, databases, or free real-time X ingestion. The public demo is deterministic; AI is a conditional future extension.
+The demo includes pricing concepts only. It does not implement accounts, payments, databases, or free real-time X ingestion. Model-assisted reports are conditional; evidence calculations remain deterministic.
 
 ## Deploy to Vercel
 
 1. Import this GitHub repository in Vercel.
-2. Add `TWELVE_DATA_API_KEY` and `CRON_SECRET` for daily current-data refreshes. The bundled static evidence works without either value.
+2. Add `TWELVE_DATA_API_KEY` and `CRON_SECRET` for daily current-data refreshes. For shared model-assisted reports, add `OPENAI_API_KEY`, `OPENAI_MODEL=gpt-5.4-nano`, and `ENABLE_LIVE_AI=true` to the Vercel Production environment. Never use a `NEXT_PUBLIC_` prefix for the secret.
 3. Deploy. The Next.js preset and cron configuration are detected automatically.
 
 ## Disclaimer
