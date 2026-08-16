@@ -39,6 +39,7 @@ import {
   YAxis,
 } from "recharts";
 import type { LivePayload, MarketEvent, OrchestrationReport, PersonId, SignalType, SourceType } from "@/lib/types";
+import { SignalUniverse } from "@/components/signal-universe";
 
 type Locale = "en" | "ko";
 type SourceFilter = SourceType | "all";
@@ -135,7 +136,7 @@ const copy = {
     whyTitle: "From a public signal to an inspectable evidence report.",
     whyBody: "People and assets are filters. The product is the path across original source, media amplification, public attention, market reaction, and confidence audit.",
     plan: "Plans",
-    free: "24 reviewed signals, daily Trump feed, and real event price windows.",
+    free: "28 reviewed signals, daily Trump feed, and real event price windows.",
     pro: "Custom entities, assets, alerts, and licensed near-real-time connectors.",
     team: "Shared watchlists, reports, API access, and managed data sources.",
     footer: "Research and monitoring only. No investment advice; temporal association does not establish causality.",
@@ -232,7 +233,7 @@ const copy = {
     whyTitle: "공개 시그널에서 검증 가능한 증거 리포트까지.",
     whyBody: "인물과 자산은 필터일 뿐입니다. 원문·미디어 확산·대중 관심·시장 반응·신뢰도 감사를 하나의 증거 경로로 연결합니다.",
     plan: "요금제",
-    free: "검토된 시그널 24개, Trump 일일 피드, 실제 이벤트 가격 구간.",
+    free: "검토된 시그널 28개, Trump 일일 피드, 실제 이벤트 가격 구간.",
     pro: "사용자 지정 인물·자산, 알림, 정식 라이선스 기반 준실시간 연결.",
     team: "공유 워치리스트, 팀 리포트, API, 데이터 출처 관리.",
     footer: "리서치·모니터링 전용입니다. 투자 조언이 아니며 시간적 연관성은 인과관계를 증명하지 않습니다.",
@@ -389,11 +390,11 @@ export function SignalAtlasDashboard({ events, initialLive, locale = "en" }: { e
     <main lang={locale === "ko" ? "ko" : "en"}>
       <header className="site-header">
         <a className="brand" href="#top"><span className="brand-symbol"><Radar size={18} /></span><span>MARKET SIGNAL ATLAS</span></a>
-        <nav><a href="#explorer">{c.explorer}</a><a href="#comparison">{locale === "ko" ? "반응 비교" : "Comparison"}</a><a href="#sources">{c.sources}</a><a href="#methodology">{c.method}</a></nav>
+        <nav><a href="#universe">{locale === "ko" ? "전체 데이터" : "Universe"}</a><a href="#explorer">{c.explorer}</a><a href="#comparison">{locale === "ko" ? "반응 비교" : "Comparison"}</a><a href="#sources">{c.sources}</a></nav>
         <div className="header-actions"><a className="language-link" href={locale === "ko" ? "/" : "/ko"}><Globe2 size={14} />{c.language}</a><a className="header-cta" href="mailto:hello@marketmover.demo">{c.request}<ArrowUpRight size={14} /></a></div>
       </header>
 
-      <section className="hero atlas-hero" id="top"><div className="hero-grid" /><div className="hero-copy"><div className="eyebrow"><CircleDot size={14} />{c.kicker}</div><h1>{c.heroA}<br /><span>{c.heroB}</span></h1><p>{c.hero}</p><div className="hero-actions"><a className="button primary" href="#explorer">{c.explore}<ArrowRight size={16} /></a><a className="button ghost" href="#methodology">{c.how}</a></div></div><div className="hero-proof" aria-hidden="true"><div className="proof-orbit orbit-one" /><div className="proof-orbit orbit-two" /><div className="proof-center"><Radar size={30} /></div><div className="proof-node node-one"><span>{c.signal}</span><strong>{c.original}</strong></div><div className="proof-node node-two"><span>{c.price}</span><strong>{c.realClose}</strong></div><div className="proof-node node-three"><span>{c.context}</span><strong>{c.attention}</strong></div></div></section>
+      <section className="hero atlas-hero" id="top"><div className="hero-grid" /><div className="hero-copy"><div className="eyebrow"><CircleDot size={14} />{c.kicker}</div><h1>{c.heroA}<br /><span>{c.heroB}</span></h1><p>{c.hero}</p><div className="hero-actions"><a className="button primary" href="#universe">{locale === "ko" ? "전체 데이터 보기" : "Explore all data"}<ArrowRight size={16} /></a><a className="button ghost" href="#methodology">{c.how}</a></div></div><div className="hero-proof" aria-hidden="true"><div className="proof-orbit orbit-one" /><div className="proof-orbit orbit-two" /><div className="proof-center"><Radar size={30} /></div><div className="proof-node node-one"><span>{c.signal}</span><strong>{c.original}</strong></div><div className="proof-node node-two"><span>{c.price}</span><strong>{c.realClose}</strong></div><div className="proof-node node-three"><span>{c.context}</span><strong>{c.attention}</strong></div></div></section>
 
       <section className="overview section-shell" aria-label="Overview">
         <div className="stat-card"><div className="stat-icon"><Database size={18} /></div><div><span>{c.reviewed}</span><strong>{events.length}</strong><small>{locale === "ko" ? "원문 링크가 있는 큐레이션 사례" : "Curated cases with original links"}</small></div></div>
@@ -401,6 +402,8 @@ export function SignalAtlasDashboard({ events, initialLive, locale = "en" }: { e
         <div className="stat-card"><div className="stat-icon"><BarChart3 size={18} /></div><div><span>{c.largest}</span><strong>{formatPercent(Math.abs(largest.metrics.abnormalReturn1D))}</strong><small>{largest.asset} vs {largest.benchmark}</small></div></div>
         <div className="stat-card live-card"><div className="stat-icon"><RefreshCw size={18} className={liveLoading ? "spin" : ""} /></div><div><span>{c.sync}</span><strong>{live.mode === "live" ? "Live" : c.snapshotMode}</strong><small>{formatTime(live.fetchedAt)}</small></div><SourceState state={sourceState} locale={locale} /></div>
       </section>
+
+      <SignalUniverse locale={locale} />
 
       <section className="section-shell explorer-section" id="explorer">
         <div className="section-heading"><div><span className="section-kicker">{c.signalsKicker}</span><h2>{c.signalsTitle}</h2><p>{c.signalsDesc}</p></div><div className="method-badge"><ShieldCheck size={16} />{c.caveat}</div></div>
