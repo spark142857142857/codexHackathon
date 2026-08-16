@@ -5,6 +5,8 @@
     "personName": "Sam Altman",
     "role": "AI narrative power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2026-06-22T12:00:00Z",
     "text": "We want to help all companies be secure, working with the government and the security ecosystem.",
     "sourceUrl": "https://x.com/sama/status/2069121360744550796",
@@ -15,6 +17,7 @@
       "MSFT",
       "Sam Altman"
     ],
+    "hashtags": [],
     "summaryKo": "정부 및 보안 생태계와 협력해 모든 기업의 AI 보안을 지원하겠다는 계획을 밝혔다.",
     "asset": "MSFT",
     "benchmark": "QQQ",
@@ -109,8 +112,144 @@
         "close": 368.57
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2026-06-12",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2026-06-15",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2026-06-16",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2026-06-17",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2026-06-18",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2026-06-22",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2026-06-23",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2026-06-24",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2026-06-25",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2026-06-26",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2026-06-29",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2026-06-22",
-    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Reaction detected",
+      "summaryEn": "Sam Altman's AI security signal shows 2.82% absolute one-day excess movement in MSFT. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Sam Altman의 AI security 시그널 이후 MSFT에서 1일 기준 2.82%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as AI security.",
+          "summaryKo": "AI security 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "MSFT is a proxy rather than direct equity.",
+          "summaryKo": "MSFT은(는) 직접 지분이 아닌 프록시 자산입니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Proxy mapping and source-time limits lower attribution confidence.",
+          "summaryKo": "프록시 매핑과 출처 시각의 한계 때문에 귀속 신뢰도를 낮췄습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose.",
+        "The selected listed asset is a proxy, not direct ownership."
+      ]
+    }
   },
   {
     "id": "altman-2064088940932641225",
@@ -118,6 +257,8 @@
     "personName": "Sam Altman",
     "role": "AI narrative power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2026-06-08T12:00:00Z",
     "text": "Here is our current plan for OpenAI.",
     "sourceUrl": "https://x.com/sama/status/2064088940932641225",
@@ -128,6 +269,7 @@
       "MSFT",
       "Sam Altman"
     ],
+    "hashtags": [],
     "summaryKo": "OpenAI의 현재 전략과 향후 계획을 공개했다.",
     "asset": "MSFT",
     "benchmark": "QQQ",
@@ -222,8 +364,144 @@
         "close": 399.76
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2026-06-01",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2026-06-02",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2026-06-03",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2026-06-04",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2026-06-05",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2026-06-08",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2026-06-09",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2026-06-10",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2026-06-11",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2026-06-12",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2026-06-15",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2026-06-08",
-    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Reaction detected",
+      "summaryEn": "Sam Altman's AI strategy signal shows 2.74% absolute one-day excess movement in MSFT. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Sam Altman의 AI strategy 시그널 이후 MSFT에서 1일 기준 2.74%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as AI strategy.",
+          "summaryKo": "AI strategy 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "MSFT is a proxy rather than direct equity.",
+          "summaryKo": "MSFT은(는) 직접 지분이 아닌 프록시 자산입니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Proxy mapping and source-time limits lower attribution confidence.",
+          "summaryKo": "프록시 매핑과 출처 시각의 한계 때문에 귀속 신뢰도를 낮췄습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose.",
+        "The selected listed asset is a proxy, not direct ownership."
+      ]
+    }
   },
   {
     "id": "altman-2062660086787613116",
@@ -231,6 +509,8 @@
     "personName": "Sam Altman",
     "role": "AI narrative power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2026-06-04T12:00:00Z",
     "text": "Big upgrade to ChatGPT memory rolling out today.",
     "sourceUrl": "https://x.com/sama/status/2062660086787613116",
@@ -241,6 +521,7 @@
       "MSFT",
       "Sam Altman"
     ],
+    "hashtags": [],
     "summaryKo": "ChatGPT 메모리 기능의 대규모 업그레이드 배포를 발표했다.",
     "asset": "MSFT",
     "benchmark": "QQQ",
@@ -335,8 +616,144 @@
         "close": 390.34
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2026-05-28",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2026-05-29",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2026-06-01",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2026-06-02",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2026-06-03",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2026-06-04",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2026-06-05",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2026-06-08",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2026-06-09",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2026-06-10",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2026-06-11",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2026-06-04",
-    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Mixed evidence",
+      "summaryEn": "Sam Altman's AI products signal shows 0.65% absolute one-day excess movement in MSFT. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Sam Altman의 AI products 시그널 이후 MSFT에서 1일 기준 0.65%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as AI products.",
+          "summaryKo": "AI products 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "MSFT is a proxy rather than direct equity.",
+          "summaryKo": "MSFT은(는) 직접 지분이 아닌 프록시 자산입니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Proxy mapping and source-time limits lower attribution confidence.",
+          "summaryKo": "프록시 매핑과 출처 시각의 한계 때문에 귀속 신뢰도를 낮췄습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose.",
+        "The selected listed asset is a proxy, not direct ownership."
+      ]
+    }
   },
   {
     "id": "altman-2061117302528188712",
@@ -344,6 +761,8 @@
     "personName": "Sam Altman",
     "role": "AI narrative power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2026-05-31T12:00:00Z",
     "text": "OpenAI Robotics is hiring to help program and manufacture robots that are useful for society.",
     "sourceUrl": "https://x.com/sama/status/2061117302528188712",
@@ -354,6 +773,7 @@
       "NVDA",
       "Sam Altman"
     ],
+    "hashtags": [],
     "summaryKo": "사회에 유용한 로봇을 개발·생산하기 위한 OpenAI 로보틱스 채용을 알렸다.",
     "asset": "NVDA",
     "benchmark": "QQQ",
@@ -448,8 +868,144 @@
         "close": 208.64
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2026-05-22",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2026-05-26",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2026-05-27",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2026-05-28",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2026-05-29",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2026-06-01",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2026-06-02",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2026-06-03",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2026-06-04",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2026-06-05",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2026-06-08",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2026-06-01",
-    "rationale": "NVDA is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+    "rationale": "NVDA is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Reaction detected",
+      "summaryEn": "Sam Altman's Robotics signal shows 5.66% absolute one-day excess movement in NVDA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Sam Altman의 Robotics 시그널 이후 NVDA에서 1일 기준 5.66%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Robotics.",
+          "summaryKo": "Robotics 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "NVDA is a proxy rather than direct equity.",
+          "summaryKo": "NVDA은(는) 직접 지분이 아닌 프록시 자산입니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Proxy mapping and source-time limits lower attribution confidence.",
+          "summaryKo": "프록시 매핑과 출처 시각의 한계 때문에 귀속 신뢰도를 낮췄습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose.",
+        "The selected listed asset is a proxy, not direct ownership."
+      ]
+    }
   },
   {
     "id": "altman-2057203171198636251",
@@ -457,6 +1013,8 @@
     "personName": "Sam Altman",
     "role": "AI narrative power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2026-05-20T12:00:00Z",
     "text": "A general-purpose model solved a major open problem in mathematics. This is a big milestone.",
     "sourceUrl": "https://x.com/sama/status/2057203171198636251",
@@ -467,6 +1025,7 @@
       "NVDA",
       "Sam Altman"
     ],
+    "hashtags": [],
     "summaryKo": "범용 AI 모델이 수학의 주요 미해결 문제를 풀었다는 연구 성과를 발표했다.",
     "asset": "NVDA",
     "benchmark": "QQQ",
@@ -561,8 +1120,144 @@
         "close": 214.25
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2026-05-13",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2026-05-14",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2026-05-15",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2026-05-18",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2026-05-19",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2026-05-20",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2026-05-21",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2026-05-22",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2026-05-26",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2026-05-27",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2026-05-28",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2026-05-20",
-    "rationale": "NVDA is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+    "rationale": "NVDA is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Mixed evidence",
+      "summaryEn": "Sam Altman's AI capability signal shows 0.36% absolute one-day excess movement in NVDA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Sam Altman의 AI capability 시그널 이후 NVDA에서 1일 기준 0.36%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as AI capability.",
+          "summaryKo": "AI capability 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "NVDA is a proxy rather than direct equity.",
+          "summaryKo": "NVDA은(는) 직접 지분이 아닌 프록시 자산입니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Proxy mapping and source-time limits lower attribution confidence.",
+          "summaryKo": "프록시 매핑과 출처 시각의 한계 때문에 귀속 신뢰도를 낮췄습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose.",
+        "The selected listed asset is a proxy, not direct ownership."
+      ]
+    }
   },
   {
     "id": "altman-2056435834333934051",
@@ -570,6 +1265,8 @@
     "personName": "Sam Altman",
     "role": "AI narrative power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2026-05-18T12:00:00Z",
     "text": "ChatGPT has gotten so much better with the latest update. Really proud of the team for this one.",
     "sourceUrl": "https://x.com/sama/status/2056435834333934051",
@@ -580,6 +1277,7 @@
       "MSFT",
       "Sam Altman"
     ],
+    "hashtags": [],
     "summaryKo": "최신 업데이트로 ChatGPT 성능이 크게 향상됐다고 밝혔다.",
     "asset": "MSFT",
     "benchmark": "QQQ",
@@ -674,8 +1372,144 @@
         "close": 416.03
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2026-05-11",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2026-05-12",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2026-05-13",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2026-05-14",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2026-05-15",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2026-05-18",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2026-05-19",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2026-05-20",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2026-05-21",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2026-05-22",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2026-05-26",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2026-05-18",
-    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Mixed evidence",
+      "summaryEn": "Sam Altman's Model update signal shows 0.81% absolute one-day excess movement in MSFT. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Sam Altman의 Model update 시그널 이후 MSFT에서 1일 기준 0.81%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Model update.",
+          "summaryKo": "Model update 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "MSFT is a proxy rather than direct equity.",
+          "summaryKo": "MSFT은(는) 직접 지분이 아닌 프록시 자산입니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Proxy mapping and source-time limits lower attribution confidence.",
+          "summaryKo": "프록시 매핑과 출처 시각의 한계 때문에 귀속 신뢰도를 낮췄습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose.",
+        "The selected listed asset is a proxy, not direct ownership."
+      ]
+    }
   },
   {
     "id": "altman-2054626219858293128",
@@ -683,6 +1517,8 @@
     "personName": "Sam Altman",
     "role": "AI narrative power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2026-05-13T12:00:00Z",
     "text": "Codex is the best AI coding product and we want to make it easy to try.",
     "sourceUrl": "https://x.com/sama/status/2054626219858293128",
@@ -693,6 +1529,7 @@
       "MSFT",
       "Sam Altman"
     ],
+    "hashtags": [],
     "summaryKo": "AI 코딩 제품 Codex의 품질과 접근성 확대 계획을 강조했다.",
     "asset": "MSFT",
     "benchmark": "QQQ",
@@ -787,8 +1624,144 @@
         "close": 421.06
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2026-05-06",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2026-05-07",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2026-05-08",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2026-05-11",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2026-05-12",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2026-05-13",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2026-05-14",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2026-05-15",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2026-05-18",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2026-05-19",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2026-05-20",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2026-05-13",
-    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+    "rationale": "MSFT is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Reaction detected",
+      "summaryEn": "Sam Altman's AI products signal shows 1.68% absolute one-day excess movement in MSFT. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Sam Altman의 AI products 시그널 이후 MSFT에서 1일 기준 1.68%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as AI products.",
+          "summaryKo": "AI products 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "MSFT is a proxy rather than direct equity.",
+          "summaryKo": "MSFT은(는) 직접 지분이 아닌 프록시 자산입니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Proxy mapping and source-time limits lower attribution confidence.",
+          "summaryKo": "프록시 매핑과 출처 시각의 한계 때문에 귀속 신뢰도를 낮췄습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose.",
+        "The selected listed asset is a proxy, not direct ownership."
+      ]
+    }
   },
   {
     "id": "altman-2049712078836170843",
@@ -796,6 +1769,8 @@
     "personName": "Sam Altman",
     "role": "AI narrative power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2026-04-30T12:00:00Z",
     "text": "We're starting rollout of GPT-5.5-Cyber, a frontier cybersecurity model, to critical cyber defenders in the next few days.",
     "sourceUrl": "https://x.com/sama/status/2049712078836170843",
@@ -806,6 +1781,7 @@
       "NVDA",
       "Sam Altman"
     ],
+    "hashtags": [],
     "summaryKo": "핵심 사이버 방어 기관을 대상으로 GPT-5.5-Cyber 배포를 시작한다고 발표했다.",
     "asset": "NVDA",
     "benchmark": "QQQ",
@@ -900,8 +1876,144 @@
         "close": 211.5
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2026-04-23",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2026-04-24",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2026-04-27",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2026-04-28",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2026-04-29",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2026-04-30",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2026-05-01",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2026-05-04",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2026-05-05",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2026-05-06",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2026-05-07",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2026-04-30",
-    "rationale": "NVDA is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman."
+    "rationale": "NVDA is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Reaction detected",
+      "summaryEn": "Sam Altman's AI security signal shows 5.56% absolute one-day excess movement in NVDA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Sam Altman의 AI security 시그널 이후 NVDA에서 1일 기준 5.56%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as AI security.",
+          "summaryKo": "AI security 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "NVDA is a proxy rather than direct equity.",
+          "summaryKo": "NVDA은(는) 직접 지분이 아닌 프록시 자산입니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Proxy mapping and source-time limits lower attribution confidence.",
+          "summaryKo": "프록시 매핑과 출처 시각의 한계 때문에 귀속 신뢰도를 낮췄습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose.",
+        "The selected listed asset is a proxy, not direct ownership."
+      ]
+    }
   },
   {
     "id": "trump-114664632971715644",
@@ -909,6 +2021,8 @@
     "personName": "Donald Trump",
     "role": "Policy power",
     "platform": "Truth Social",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2025-06-11 12:04:07+00:00",
     "text": "OUR DEAL WITH CHINA IS DONE, SUBJECT TO FINAL APPROVAL WITH PRESIDENT XI AND ME. FULL MAGNETS, AND ANY NECESSARY RARE EARTHS, WILL BE SUPPLIED, UP FRONT, BY CHINA. LIKEWISE, WE WILL PROVIDE TO CHINA WHAT WAS AGREED TO, INCLUDING CHINESE STUDENTS USING OUR COLLEGES AND UNIVERSITIES (WHICH HAS ALWAYS BEEN GOOD WITH ME!). WE ARE GETTING A TOTAL OF 55% TARIFFS, CHINA IS GETTING 10%. RELATIONSHIP IS EXCELLENT! THANK YOU FOR YOUR ATTENTION TO THIS MATTER!",
     "sourceUrl": "https://truthsocial.com/@realDonaldTrump/posts/114664632971715644",
@@ -919,6 +2033,7 @@
       "QQQ",
       "Donald Trump"
     ],
+    "hashtags": [],
     "summaryKo": "미·중 희토류 공급과 관세 조건을 포함한 무역 합의가 최종 승인 단계라고 밝혔다.",
     "asset": "QQQ",
     "benchmark": "SPY",
@@ -1013,8 +2128,649 @@
         "close": 528.99
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2025-06-04",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2025-06-05",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2025-06-06",
+        "newsCount": null,
+        "trackedMentions": 4,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2025-06-09",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2025-06-10",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2025-06-11",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2025-06-12",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2025-06-13",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2025-06-16",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2025-06-17",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2025-06-18",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2025-06-11",
-    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control."
+    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Mixed evidence",
+      "summaryEn": "Donald Trump's Trade & tariffs signal shows 0.05% absolute one-day excess movement in QQQ. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Donald Trump의 Trade & tariffs 시그널 이후 QQQ에서 1일 기준 0.05%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Trade & tariffs.",
+          "summaryKo": "Trade & tariffs 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "QQQ is mapped as a direct or policy-linked asset.",
+          "summaryKo": "QQQ을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and SPY comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 SPY 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
+  },
+  {
+    "id": "hearing-us-senate-ai-race-2025-05-08",
+    "person": "us-senate",
+    "personName": "U.S. Senate AI Hearing",
+    "role": "Public hearing",
+    "platform": "U.S. Senate",
+    "sourceType": "Hearing",
+    "timePrecision": "exact",
+    "publishedAt": "2025-05-08T14:00:00Z",
+    "text": "Winning the AI Race: Strengthening U.S. Capabilities in Computing and Innovation. Witnesses included Sam Altman, Lisa Su, Michael Intrator, and Brad Smith.",
+    "sourceUrl": "https://www.commerce.senate.gov/press/rep/release/winning-the-ai-race-strengthening-u-s-capabilities-in-computing-and-innovation-2025-4/",
+    "topic": "AI policy & infrastructure",
+    "signalType": "Policy signal",
+    "tags": [
+      "AI policy",
+      "compute",
+      "hearing",
+      "OpenAI",
+      "NVIDIA",
+      "Microsoft"
+    ],
+    "hashtags": [],
+    "summaryKo": "샘 올트먼·리사 수·브래드 스미스 등이 참석한 미 상원 청문회에서 미국의 AI 컴퓨팅 역량과 혁신 정책을 논의했다.",
+    "asset": "QQQ",
+    "benchmark": "SPY",
+    "coverage": "Policy",
+    "engagement": {
+      "likes": null,
+      "reposts": null,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": 0.34,
+      "volumeMultiple": 0.79,
+      "cumulativeAbnormal3D": 1.19,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 1.03,
+        "benchmark": 0.7
+      },
+      {
+        "day": 1,
+        "asset": 0.97,
+        "benchmark": 0.57
+      },
+      {
+        "day": 3,
+        "asset": 5.08,
+        "benchmark": 3.89
+      }
+    ],
+    "priceWindow": [
+      {
+        "session": -5,
+        "date": "2025-05-01",
+        "close": 481.68
+      },
+      {
+        "session": -4,
+        "date": "2025-05-02",
+        "close": 488.83
+      },
+      {
+        "session": -3,
+        "date": "2025-05-05",
+        "close": 485.93
+      },
+      {
+        "session": -2,
+        "date": "2025-05-06",
+        "close": 481.41
+      },
+      {
+        "session": -1,
+        "date": "2025-05-07",
+        "close": 483.3
+      },
+      {
+        "session": 0,
+        "date": "2025-05-08",
+        "close": 488.29
+      },
+      {
+        "session": 1,
+        "date": "2025-05-09",
+        "close": 487.97
+      },
+      {
+        "session": 2,
+        "date": "2025-05-12",
+        "close": 507.85
+      },
+      {
+        "session": 3,
+        "date": "2025-05-13",
+        "close": 515.59
+      },
+      {
+        "session": 4,
+        "date": "2025-05-14",
+        "close": 518.68
+      },
+      {
+        "session": 5,
+        "date": "2025-05-15",
+        "close": 519.25
+      }
+    ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2025-05-01",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2025-05-02",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2025-05-05",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2025-05-06",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2025-05-07",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2025-05-08",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2025-05-09",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2025-05-12",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2025-05-13",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2025-05-14",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2025-05-15",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
+    "eventSession": "2025-05-08",
+    "rationale": "The hearing spans AI software, compute, and public policy; QQQ is used as a broad listed-technology basket rather than as a directly owned asset.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Insufficient evidence",
+      "summaryEn": "U.S. Senate AI Hearing's AI policy & infrastructure signal shows 0.34% absolute one-day excess movement in QQQ. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "U.S. Senate AI Hearing의 AI policy & infrastructure 시그널 이후 QQQ에서 1일 기준 0.34%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as AI policy & infrastructure.",
+          "summaryKo": "AI policy & infrastructure 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "QQQ is mapped as a direct or policy-linked asset.",
+          "summaryKo": "QQQ을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Monitoring",
+          "confidence": "Low",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and SPY comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 SPY 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
+  },
+  {
+    "id": "filing-tesla-q1-results-2025-04-22",
+    "person": "tesla",
+    "personName": "Tesla, Inc.",
+    "role": "Issuer filing",
+    "platform": "SEC EDGAR",
+    "sourceType": "Filing",
+    "timePrecision": "exact",
+    "publishedAt": "2025-04-22T20:10:12Z",
+    "text": "Tesla furnished its first-quarter 2025 financial results under Item 2.02 of Form 8-K after the U.S. market close.",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828025018851/0001628280-25-018851-index.htm",
+    "topic": "Earnings filing",
+    "signalType": "Executive signal",
+    "tags": [
+      "Tesla",
+      "earnings",
+      "8-K",
+      "SEC filing"
+    ],
+    "hashtags": [],
+    "summaryKo": "Tesla가 미국 장 마감 후 Form 8-K를 통해 2025년 1분기 실적 자료를 공시했다.",
+    "asset": "TSLA",
+    "benchmark": "QQQ",
+    "coverage": "Direct",
+    "engagement": {
+      "likes": null,
+      "reposts": null,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": 3.1,
+      "volumeMultiple": 1.04,
+      "cumulativeAbnormal3D": 13.42,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": 5.37,
+        "benchmark": 2.27
+      },
+      {
+        "day": 1,
+        "asset": 9.05,
+        "benchmark": 5.15
+      },
+      {
+        "day": 3,
+        "asset": 19.74,
+        "benchmark": 6.32
+      }
+    ],
+    "priceWindow": [
+      {
+        "session": -5,
+        "date": "2025-04-15",
+        "close": 254.11
+      },
+      {
+        "session": -4,
+        "date": "2025-04-16",
+        "close": 241.55
+      },
+      {
+        "session": -3,
+        "date": "2025-04-17",
+        "close": 241.37
+      },
+      {
+        "session": -2,
+        "date": "2025-04-21",
+        "close": 227.5
+      },
+      {
+        "session": -1,
+        "date": "2025-04-22",
+        "close": 237.97
+      },
+      {
+        "session": 0,
+        "date": "2025-04-23",
+        "close": 250.74
+      },
+      {
+        "session": 1,
+        "date": "2025-04-24",
+        "close": 259.51
+      },
+      {
+        "session": 2,
+        "date": "2025-04-25",
+        "close": 284.95
+      },
+      {
+        "session": 3,
+        "date": "2025-04-28",
+        "close": 285.88
+      },
+      {
+        "session": 4,
+        "date": "2025-04-29",
+        "close": 292.03
+      },
+      {
+        "session": 5,
+        "date": "2025-04-30",
+        "close": 282.16
+      }
+    ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2025-04-15",
+        "newsCount": 43,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2025-04-16",
+        "newsCount": 45,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2025-04-17",
+        "newsCount": 30,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2025-04-21",
+        "newsCount": 149,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2025-04-22",
+        "newsCount": 380,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2025-04-23",
+        "newsCount": 807,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2025-04-24",
+        "newsCount": 166,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2025-04-25",
+        "newsCount": 112,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2025-04-28",
+        "newsCount": 40,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2025-04-29",
+        "newsCount": 36,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2025-04-30",
+        "newsCount": 77,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "GDELT raw article counts for query \"Tesla\" \"first quarter\"; social mentions cover only the tracked Musk and Trump source corpora.",
+    "eventSession": "2025-04-23",
+    "rationale": "TSLA is the direct listed issuer. The SEC acceptance timestamp is used, so the after-hours filing aligns to the next trading session.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Reaction detected",
+      "summaryEn": "Tesla, Inc.'s Earnings filing signal shows 3.10% absolute one-day excess movement in TSLA. A GDELT news-volume snapshot is available. Association is observable; causality is not established.",
+      "summaryKo": "Tesla, Inc.의 Earnings filing 시그널 이후 TSLA에서 1일 기준 3.10%의 절대 초과 움직임이 관찰됐습니다. GDELT 뉴스 발행량 스냅샷도 함께 확인할 수 있습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Earnings filing.",
+          "summaryKo": "Earnings filing 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "TSLA is mapped as a direct or policy-linked asset.",
+          "summaryKo": "TSLA을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "News publication counts and tracked-source mentions were checked.",
+          "summaryKo": "뉴스 발행량과 추적 소스 언급량을 확인했습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   },
   {
     "id": "trump-114352766082542122",
@@ -1022,6 +2778,8 @@
     "personName": "Donald Trump",
     "role": "Policy power",
     "platform": "Truth Social",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2025-04-17 10:12:16+00:00",
     "text": "The ECB is expected to cut interest rates for the 7th time, and yet, “Too Late” Jerome Powell of the Fed, who is always TOO LATE AND WRONG, yesterday issued a report which was another, and typical, complete “mess!” Oil prices are down, groceries (even eggs!) are down, and the USA is getting RICH ON TARIFFS. Too Late should have lowered Interest Rates, like the ECB, long ago, but he should certainly lower them now. Powell’s termination cannot come fast enough!",
     "sourceUrl": "https://truthsocial.com/@realDonaldTrump/posts/114352766082542122",
@@ -1032,6 +2790,7 @@
       "QQQ",
       "Donald Trump"
     ],
+    "hashtags": [],
     "summaryKo": "ECB의 금리 인하를 언급하며 연준과 제롬 파월에게 즉각적인 금리 인하를 요구했다.",
     "asset": "QQQ",
     "benchmark": "SPY",
@@ -1126,8 +2885,143 @@
         "close": 472.56
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2025-04-10",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2025-04-11",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2025-04-14",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2025-04-15",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2025-04-16",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2025-04-17",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2025-04-21",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2025-04-22",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2025-04-23",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2025-04-24",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2025-04-25",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2025-04-17",
-    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control."
+    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Mixed evidence",
+      "summaryEn": "Donald Trump's Trade & tariffs signal shows 0.16% absolute one-day excess movement in QQQ. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Donald Trump의 Trade & tariffs 시그널 이후 QQQ에서 1일 기준 0.16%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Trade & tariffs.",
+          "summaryKo": "Trade & tariffs 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "QQQ is mapped as a direct or policy-linked asset.",
+          "summaryKo": "QQQ을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and SPY comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 SPY 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   },
   {
     "id": "trump-114341773968885783",
@@ -1135,6 +3029,8 @@
     "personName": "Donald Trump",
     "role": "Policy power",
     "platform": "Truth Social",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2025-04-15 11:36:50+00:00",
     "text": "NVIDIA COMMITS 500 BILLION DOLLARS TO BUILD A.I. SUPERCOMPUTERS, PLUS, IN THE UNITED STATES, EXCLUSIVELY. This is very big and exciting news. All necessary permits will be expedited and quickly delivered to NVIDIA, as they will to all companies committing to be part of the Golden Age of America!",
     "sourceUrl": "https://truthsocial.com/@realDonaldTrump/posts/114341773968885783",
@@ -1145,6 +3041,7 @@
       "NVDA",
       "Donald Trump"
     ],
+    "hashtags": [],
     "summaryKo": "NVIDIA가 미국 내 AI 슈퍼컴퓨터 생산에 5천억 달러를 투자한다고 발표했다.",
     "asset": "NVDA",
     "benchmark": "QQQ",
@@ -1239,8 +3136,395 @@
         "close": 102.71
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2025-04-08",
+        "newsCount": null,
+        "trackedMentions": 4,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2025-04-09",
+        "newsCount": null,
+        "trackedMentions": 9,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2025-04-10",
+        "newsCount": null,
+        "trackedMentions": 12,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2025-04-11",
+        "newsCount": null,
+        "trackedMentions": 9,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2025-04-14",
+        "newsCount": null,
+        "trackedMentions": 7,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2025-04-15",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2025-04-16",
+        "newsCount": null,
+        "trackedMentions": 8,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2025-04-17",
+        "newsCount": null,
+        "trackedMentions": 5,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2025-04-21",
+        "newsCount": null,
+        "trackedMentions": 5,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2025-04-22",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2025-04-23",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2025-04-15",
-    "rationale": "Policy-language match linked to NVDA; QQQ is shown as the broad-market control."
+    "rationale": "Policy-language match linked to NVDA; QQQ is shown as the broad-market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Reaction detected",
+      "summaryEn": "Donald Trump's Technology policy signal shows 1.23% absolute one-day excess movement in NVDA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Donald Trump의 Technology policy 시그널 이후 NVDA에서 1일 기준 1.23%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Technology policy.",
+          "summaryKo": "Technology policy 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "NVDA is mapped as a direct or policy-linked asset.",
+          "summaryKo": "NVDA을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
+  },
+  {
+    "id": "news-nvidia-us-ai-factories-2025-04-14",
+    "person": "nvidia",
+    "personName": "NVIDIA Newsroom",
+    "role": "Company newsroom",
+    "platform": "NVIDIA Blog",
+    "sourceType": "News",
+    "timePrecision": "date",
+    "publishedAt": "2025-04-14T12:00:00Z",
+    "text": "NVIDIA announced that it was working with manufacturing partners to produce NVIDIA AI supercomputers in the United States for the first time.",
+    "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-manufacture-american-made-ai-supercomputers-us/",
+    "topic": "AI infrastructure",
+    "signalType": "Industry signal",
+    "tags": [
+      "NVIDIA",
+      "AI infrastructure",
+      "manufacturing",
+      "chips"
+    ],
+    "hashtags": [],
+    "summaryKo": "NVIDIA가 협력사들과 함께 미국에서 처음으로 NVIDIA AI 슈퍼컴퓨터를 생산할 계획이라고 발표했다.",
+    "asset": "NVDA",
+    "benchmark": "QQQ",
+    "coverage": "Direct",
+    "engagement": {
+      "likes": null,
+      "reposts": null,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": -0.88,
+      "volumeMultiple": 0.81,
+      "cumulativeAbnormal3D": -3.56,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -0.2,
+        "benchmark": 0.68
+      },
+      {
+        "day": 1,
+        "asset": 1.14,
+        "benchmark": 0.79
+      },
+      {
+        "day": 3,
+        "asset": -5.81,
+        "benchmark": -2.25
+      }
+    ],
+    "priceWindow": [
+      {
+        "session": -5,
+        "date": "2025-04-07",
+        "close": 97.64
+      },
+      {
+        "session": -4,
+        "date": "2025-04-08",
+        "close": 96.3
+      },
+      {
+        "session": -3,
+        "date": "2025-04-09",
+        "close": 114.33
+      },
+      {
+        "session": -2,
+        "date": "2025-04-10",
+        "close": 107.57
+      },
+      {
+        "session": -1,
+        "date": "2025-04-11",
+        "close": 110.93
+      },
+      {
+        "session": 0,
+        "date": "2025-04-14",
+        "close": 110.71
+      },
+      {
+        "session": 1,
+        "date": "2025-04-15",
+        "close": 112.2
+      },
+      {
+        "session": 2,
+        "date": "2025-04-16",
+        "close": 104.49
+      },
+      {
+        "session": 3,
+        "date": "2025-04-17",
+        "close": 101.49
+      },
+      {
+        "session": 4,
+        "date": "2025-04-21",
+        "close": 96.91
+      },
+      {
+        "session": 5,
+        "date": "2025-04-22",
+        "close": 98.89
+      }
+    ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2025-04-07",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2025-04-08",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2025-04-09",
+        "newsCount": 0,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2025-04-10",
+        "newsCount": 1,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2025-04-11",
+        "newsCount": 1,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2025-04-14",
+        "newsCount": 45,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2025-04-15",
+        "newsCount": 36,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2025-04-16",
+        "newsCount": 44,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2025-04-17",
+        "newsCount": 4,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2025-04-21",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2025-04-22",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "GDELT raw article counts for query \"NVIDIA\" \"AI supercomputers\"; social mentions cover only the tracked Musk and Trump source corpora.",
+    "eventSession": "2025-04-14",
+    "rationale": "NVDA is the direct listed issuer behind the announcement. Publication time was not exposed, so alignment uses the published date and is labeled date-precision.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Mixed evidence",
+      "summaryEn": "NVIDIA Newsroom's AI infrastructure signal shows 0.88% absolute one-day excess movement in NVDA. A GDELT news-volume snapshot is available. Association is observable; causality is not established.",
+      "summaryKo": "NVIDIA Newsroom의 AI infrastructure 시그널 이후 NVDA에서 1일 기준 0.88%의 절대 초과 움직임이 관찰됐습니다. GDELT 뉴스 발행량 스냅샷도 함께 확인할 수 있습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as AI infrastructure.",
+          "summaryKo": "AI infrastructure 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "NVDA is mapped as a direct or policy-linked asset.",
+          "summaryKo": "NVDA을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "News publication counts and tracked-source mentions were checked.",
+          "summaryKo": "뉴스 발행량과 추적 소스 언급량을 확인했습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   },
   {
     "id": "trump-1909258777380974625",
@@ -1248,6 +3532,8 @@
     "personName": "Donald Trump",
     "role": "Policy power",
     "platform": "Twitter",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2025-04-07 14:55:39+00:00",
     "text": "Oil prices are down, interest rates are down (the slow moving Fed should cut rates!), food prices are down, there is NO INFLATION, and the long time abused USA is bringing in Billions of Dollars a week from the abusing countries on Tariffs that are already in place. This is",
     "sourceUrl": "https://x.com/realdonaldtrump/status/1909258777380974625",
@@ -1257,6 +3543,10 @@
       "Trade & tariffs",
       "QQQ",
       "Donald Trump"
+    ],
+    "hashtags": [
+      "#1",
+      "#storylink"
     ],
     "summaryKo": "관세 수입과 물가 하락을 주장하며 연준에 기준금리 인하를 촉구했다.",
     "asset": "QQQ",
@@ -1352,8 +3642,143 @@
         "close": 457.48
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2025-03-31",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2025-04-01",
+        "newsCount": null,
+        "trackedMentions": 7,
+        "hashtagCount": 1
+      },
+      {
+        "session": -3,
+        "date": "2025-04-02",
+        "newsCount": null,
+        "trackedMentions": 5,
+        "hashtagCount": 1
+      },
+      {
+        "session": -2,
+        "date": "2025-04-03",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2025-04-04",
+        "newsCount": null,
+        "trackedMentions": 4,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2025-04-07",
+        "newsCount": null,
+        "trackedMentions": 8,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2025-04-08",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2025-04-09",
+        "newsCount": null,
+        "trackedMentions": 5,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2025-04-10",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2025-04-11",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2025-04-14",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2025-04-07",
-    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control."
+    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Mixed evidence",
+      "summaryEn": "Donald Trump's Trade & tariffs signal shows 0.42% absolute one-day excess movement in QQQ. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Donald Trump의 Trade & tariffs 시그널 이후 QQQ에서 1일 기준 0.42%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Trade & tariffs.",
+          "summaryKo": "Trade & tariffs 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "QQQ is mapped as a direct or policy-linked asset.",
+          "summaryKo": "QQQ을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and SPY comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 SPY 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   },
   {
     "id": "musk-1906727530607808546",
@@ -1361,6 +3786,8 @@
     "personName": "Elon Musk",
     "role": "Founder power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2025-03-31 15:17:23+00:00",
     "text": "As I’ve said previously, unsupervised full self-driving Teslas will be carrying passengers in Austin in June and many cities in America by end of year. This will enable passenger cars to increase in utility by roughly half an order of magnitude overnight with a software update.",
     "sourceUrl": "https://x.com/elonmusk/status/1906727530607808546",
@@ -1370,6 +3797,9 @@
       "Tesla & EV",
       "TSLA",
       "Elon Musk"
+    ],
+    "hashtags": [
+      "#1"
     ],
     "summaryKo": "6월 오스틴을 시작으로 연내 여러 도시에 무인 자율주행 승객 서비스를 확대하겠다고 밝혔다.",
     "asset": "TSLA",
@@ -1465,8 +3895,396 @@
         "close": 233.29
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2025-03-24",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2025-03-25",
+        "newsCount": null,
+        "trackedMentions": 12,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2025-03-26",
+        "newsCount": null,
+        "trackedMentions": 5,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2025-03-27",
+        "newsCount": null,
+        "trackedMentions": 8,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2025-03-28",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2025-03-31",
+        "newsCount": null,
+        "trackedMentions": 5,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2025-04-01",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2025-04-02",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 1
+      },
+      {
+        "session": 3,
+        "date": "2025-04-03",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 1
+      },
+      {
+        "session": 4,
+        "date": "2025-04-04",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2025-04-07",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2025-03-31",
-    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Reaction detected",
+      "summaryEn": "Elon Musk's Tesla & EV signal shows 1.66% absolute one-day excess movement in TSLA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Elon Musk의 Tesla & EV 시그널 이후 TSLA에서 1일 기준 1.66%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Tesla & EV.",
+          "summaryKo": "Tesla & EV 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "TSLA is mapped as a direct or policy-linked asset.",
+          "summaryKo": "TSLA을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
+  },
+  {
+    "id": "news-openai-gpt45-2025-02-27",
+    "person": "openai",
+    "personName": "OpenAI",
+    "role": "Product announcement",
+    "platform": "OpenAI News",
+    "sourceType": "News",
+    "timePrecision": "date",
+    "publishedAt": "2025-02-27T12:00:00Z",
+    "text": "OpenAI introduced GPT-4.5 as a research preview and described it as its largest and most knowledgeable model for chat at the time.",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-4-5/",
+    "topic": "AI product launch",
+    "signalType": "Industry signal",
+    "tags": [
+      "OpenAI",
+      "GPT-4.5",
+      "model launch",
+      "AI"
+    ],
+    "hashtags": [],
+    "summaryKo": "OpenAI가 당시 가장 크고 지식이 풍부한 채팅 모델로 GPT-4.5 연구 프리뷰를 공개했다.",
+    "asset": "MSFT",
+    "benchmark": "QQQ",
+    "coverage": "Proxy",
+    "engagement": {
+      "likes": null,
+      "reposts": null,
+      "views": null
+    },
+    "metrics": {
+      "abnormalReturn1D": 0.98,
+      "volumeMultiple": 0.86,
+      "cumulativeAbnormal3D": 0.59,
+      "persistence": "Persisted"
+    },
+    "window": [
+      {
+        "day": -1,
+        "asset": 0,
+        "benchmark": 0
+      },
+      {
+        "day": 0,
+        "asset": -1.8,
+        "benchmark": -2.78
+      },
+      {
+        "day": 1,
+        "asset": -0.69,
+        "benchmark": -1.24
+      },
+      {
+        "day": 3,
+        "asset": -2.81,
+        "benchmark": -3.4
+      }
+    ],
+    "priceWindow": [
+      {
+        "session": -5,
+        "date": "2025-02-20",
+        "close": 416.13
+      },
+      {
+        "session": -4,
+        "date": "2025-02-21",
+        "close": 408.21
+      },
+      {
+        "session": -3,
+        "date": "2025-02-24",
+        "close": 404
+      },
+      {
+        "session": -2,
+        "date": "2025-02-25",
+        "close": 397.9
+      },
+      {
+        "session": -1,
+        "date": "2025-02-26",
+        "close": 399.73
+      },
+      {
+        "session": 0,
+        "date": "2025-02-27",
+        "close": 392.53
+      },
+      {
+        "session": 1,
+        "date": "2025-02-28",
+        "close": 396.99
+      },
+      {
+        "session": 2,
+        "date": "2025-03-03",
+        "close": 388.49
+      },
+      {
+        "session": 3,
+        "date": "2025-03-04",
+        "close": 388.61
+      },
+      {
+        "session": 4,
+        "date": "2025-03-05",
+        "close": 401.02
+      },
+      {
+        "session": 5,
+        "date": "2025-03-06",
+        "close": 396.89
+      }
+    ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2025-02-20",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2025-02-21",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2025-02-24",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2025-02-25",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2025-02-26",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2025-02-27",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2025-02-28",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2025-03-03",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2025-03-04",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2025-03-05",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2025-03-06",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
+    "eventSession": "2025-02-27",
+    "rationale": "OpenAI is private. MSFT is explicitly labeled as a partnership proxy, not as direct OpenAI equity.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "Medium",
+      "verdict": "Mixed evidence",
+      "summaryEn": "OpenAI's AI product launch signal shows 0.98% absolute one-day excess movement in MSFT. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "OpenAI의 AI product launch 시그널 이후 MSFT에서 1일 기준 0.98%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as AI product launch.",
+          "summaryKo": "AI product launch 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "MSFT is a proxy rather than direct equity.",
+          "summaryKo": "MSFT은(는) 직접 지분이 아닌 프록시 자산입니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Low",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Proxy mapping and source-time limits lower attribution confidence.",
+          "summaryKo": "프록시 매핑과 출처 시각의 한계 때문에 귀속 신뢰도를 낮췄습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose.",
+        "The selected listed asset is a proxy, not direct ownership."
+      ]
+    }
   },
   {
     "id": "musk-1884467091899593076",
@@ -1474,6 +4292,8 @@
     "personName": "Elon Musk",
     "role": "Founder power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2025-01-29 05:02:21+00:00",
     "text": "Unsupervised full self-driving begins",
     "sourceUrl": "https://x.com/elonmusk/status/1884467091899593076",
@@ -1483,6 +4303,9 @@
       "Tesla & EV",
       "TSLA",
       "Elon Musk"
+    ],
+    "hashtags": [
+      "#1"
     ],
     "summaryKo": "감독자 없는 완전 자율주행의 시작을 짧게 발표했다.",
     "asset": "TSLA",
@@ -1578,8 +4401,143 @@
         "close": 378.17
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2025-01-22",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2025-01-23",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 1
+      },
+      {
+        "session": -3,
+        "date": "2025-01-24",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2025-01-27",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2025-01-28",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2025-01-29",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2025-01-30",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2025-01-31",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2025-02-03",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2025-02-04",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2025-02-05",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2025-01-29",
-    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Reaction detected",
+      "summaryEn": "Elon Musk's Tesla & EV signal shows 2.07% absolute one-day excess movement in TSLA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Elon Musk의 Tesla & EV 시그널 이후 TSLA에서 1일 기준 2.07%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Tesla & EV.",
+          "summaryKo": "Tesla & EV 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "TSLA is mapped as a direct or policy-linked asset.",
+          "summaryKo": "TSLA을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   },
   {
     "id": "trump-113683654440040843",
@@ -1587,6 +4545,8 @@
     "personName": "Donald Trump",
     "role": "Policy power",
     "platform": "Truth Social",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2024-12-20 06:08:22+00:00",
     "text": "I told the European Union that they must make up their tremendous deficit with the United States by the large scale purchase of our oil and gas. Otherwise, it is TARIFFS all the way!!!",
     "sourceUrl": "https://truthsocial.com/@realDonaldTrump/posts/113683654440040843",
@@ -1597,6 +4557,7 @@
       "QQQ",
       "Donald Trump"
     ],
+    "hashtags": [],
     "summaryKo": "EU가 미국산 석유와 가스를 대규모로 구매하지 않으면 관세를 부과하겠다고 밝혔다.",
     "asset": "QQQ",
     "benchmark": "SPY",
@@ -1691,8 +4652,143 @@
         "close": 515.61
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2024-12-13",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2024-12-16",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2024-12-17",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2024-12-18",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2024-12-19",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2024-12-20",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2024-12-23",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2024-12-24",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2024-12-26",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2024-12-27",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2024-12-30",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2024-12-20",
-    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control."
+    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Mixed evidence",
+      "summaryEn": "Donald Trump's Trade & tariffs signal shows 0.01% absolute one-day excess movement in QQQ. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Donald Trump의 Trade & tariffs 시그널 이후 QQQ에서 1일 기준 0.01%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Trade & tariffs.",
+          "summaryKo": "Trade & tariffs 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "QQQ is mapped as a direct or policy-linked asset.",
+          "summaryKo": "QQQ을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and SPY comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 SPY 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   },
   {
     "id": "trump-113573130299319701",
@@ -1700,6 +4796,8 @@
     "personName": "Donald Trump",
     "role": "Policy power",
     "platform": "Truth Social",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2024-11-30 17:40:38+00:00",
     "text": "The idea that the BRICS Countries are trying to move away from the Dollar while we stand by and watch is OVER. We require a commitment from these Countries that they will neither create a new BRICS Currency, nor back any other Currency to replace the mighty U.S. Dollar or, they will face 100% Tariffs, and should expect to say goodbye to selling into the wonderful U.S. Economy. They can go find another “sucker!” There is no chance that the BRICS will replace the U.S. Dollar in International Trade, and any Country that tries should wave goodbye to America.",
     "sourceUrl": "https://truthsocial.com/@realDonaldTrump/posts/113573130299319701",
@@ -1710,6 +4808,7 @@
       "QQQ",
       "Donald Trump"
     ],
+    "hashtags": [],
     "summaryKo": "BRICS 국가가 달러 대체 통화를 추진하면 100% 관세를 부과하겠다고 경고했다.",
     "asset": "QQQ",
     "benchmark": "SPY",
@@ -1804,8 +4903,143 @@
         "close": 522.38
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2024-11-22",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2024-11-25",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2024-11-26",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2024-11-27",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2024-11-29",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2024-12-02",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2024-12-03",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2024-12-04",
+        "newsCount": null,
+        "trackedMentions": 4,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2024-12-05",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2024-12-06",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2024-12-09",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2024-12-02",
-    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control."
+    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Mixed evidence",
+      "summaryEn": "Donald Trump's Trade & tariffs signal shows 0.91% absolute one-day excess movement in QQQ. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Donald Trump의 Trade & tariffs 시그널 이후 QQQ에서 1일 기준 0.91%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Trade & tariffs.",
+          "summaryKo": "Trade & tariffs 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "QQQ is mapped as a direct or policy-linked asset.",
+          "summaryKo": "QQQ을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and SPY comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 SPY 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   },
   {
     "id": "trump-113546215051155542",
@@ -1813,6 +5047,8 @@
     "personName": "Donald Trump",
     "role": "Policy power",
     "platform": "Truth Social",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2024-11-25 23:35:44+00:00",
     "text": "As everyone is aware, thousands of people are pouring through Mexico and Canada, bringing Crime and Drugs at levels never seen before. Right now a Caravan coming from Mexico, composed of thousands of people, seems to be unstoppable in its quest to come through our currently Open Border. On January 20th, as one of my many first Executive Orders, I will sign all necessary documents to charge Mexico and Canada a 25% Tariff on ALL products coming into the United States, and its ridiculous Open Borders. This Tariff will remain in effect until such time as Drugs, in particular Fentanyl, and all Illegal Aliens stop this Invasion of our Country! Both Mexico and Canada have the absolute right and power to easily solve this long simmering problem. We hereby demand that they use this power, and until such time that they do, it is time for them to pay a very big price!",
     "sourceUrl": "https://truthsocial.com/@realDonaldTrump/posts/113546215051155542",
@@ -1823,6 +5059,7 @@
       "QQQ",
       "Donald Trump"
     ],
+    "hashtags": [],
     "summaryKo": "멕시코와 캐나다산 모든 제품에 25% 관세를 부과하겠다는 계획을 발표했다.",
     "asset": "QQQ",
     "benchmark": "SPY",
@@ -1917,8 +5154,143 @@
         "close": 523.26
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2024-11-19",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2024-11-20",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2024-11-21",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2024-11-22",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2024-11-25",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2024-11-26",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2024-11-27",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2024-11-29",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2024-12-02",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2024-12-03",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2024-12-04",
+        "newsCount": null,
+        "trackedMentions": 4,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2024-11-26",
-    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control."
+    "rationale": "Policy-language match linked to QQQ; SPY is shown as the broad-market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Mixed evidence",
+      "summaryEn": "Donald Trump's Trade & tariffs signal shows 0.01% absolute one-day excess movement in QQQ. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Donald Trump의 Trade & tariffs 시그널 이후 QQQ에서 1일 기준 0.01%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Trade & tariffs.",
+          "summaryKo": "Trade & tariffs 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "QQQ is mapped as a direct or policy-linked asset.",
+          "summaryKo": "QQQ을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and SPY comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 SPY 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   },
   {
     "id": "trump-112909351574797350",
@@ -1926,6 +5298,8 @@
     "personName": "Donald Trump",
     "role": "Policy power",
     "platform": "Truth Social",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2024-08-05 12:12:58+00:00",
     "text": "STOCK MARKETS ARE CRASHING, JOBS NUMBERS ARE TERRIBLE, WE ARE HEADING TO WORLD WAR lll, AND WE HAVE TWO OF THE MOST INCOMPETENT “LEADERS” IN HISTORY. THIS IS NOT GOOD!!!",
     "sourceUrl": "https://truthsocial.com/@realDonaldTrump/posts/112909351574797350",
@@ -1936,6 +5310,7 @@
       "SPY",
       "Donald Trump"
     ],
+    "hashtags": [],
     "summaryKo": "주식시장 급락과 고용지표 악화를 강하게 언급했다.",
     "asset": "SPY",
     "benchmark": "QQQ",
@@ -2030,8 +5405,143 @@
         "close": 533.27
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2024-07-29",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2024-07-30",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2024-07-31",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2024-08-01",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2024-08-02",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2024-08-05",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2024-08-06",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2024-08-07",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2024-08-08",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2024-08-09",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2024-08-12",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2024-08-05",
-    "rationale": "Policy-language match linked to SPY; QQQ is shown as the broad-market control."
+    "rationale": "Policy-language match linked to SPY; QQQ is shown as the broad-market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Mixed evidence",
+      "summaryEn": "Donald Trump's Economy & rates signal shows 0.07% absolute one-day excess movement in SPY. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Donald Trump의 Economy & rates 시그널 이후 SPY에서 1일 기준 0.07%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Economy & rates.",
+          "summaryKo": "Economy & rates 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "SPY is mapped as a direct or policy-linked asset.",
+          "summaryKo": "SPY을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   },
   {
     "id": "musk-1819797937414611313",
@@ -2039,6 +5549,8 @@
     "personName": "Elon Musk",
     "role": "Founder power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2024-08-03 18:10:13+00:00",
     "text": "Just did a walkthrough of the Tesla supercompute cluster at Giga Texas (aka Cortex). This will be ~100k H100/H200 with massive storage for video training of FSD & Optimus. Great work by the Tesla team!",
     "sourceUrl": "https://x.com/elonmusk/status/1819797937414611313",
@@ -2049,6 +5561,7 @@
       "TSLA",
       "Elon Musk"
     ],
+    "hashtags": [],
     "summaryKo": "FSD와 Optimus 학습을 위한 약 10만 개 H100/H200 규모의 Tesla 슈퍼컴퓨팅 클러스터를 공개했다.",
     "asset": "TSLA",
     "benchmark": "QQQ",
@@ -2143,8 +5656,143 @@
         "close": 197.49
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2024-07-29",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2024-07-30",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2024-07-31",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2024-08-01",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2024-08-02",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2024-08-05",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2024-08-06",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2024-08-07",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2024-08-08",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2024-08-09",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2024-08-12",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2024-08-05",
-    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Reaction detected",
+      "summaryEn": "Elon Musk's Tesla & EV signal shows 1.25% absolute one-day excess movement in TSLA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Elon Musk의 Tesla & EV 시그널 이후 TSLA에서 1일 기준 1.25%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Tesla & EV.",
+          "summaryKo": "Tesla & EV 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "TSLA is mapped as a direct or policy-linked asset.",
+          "summaryKo": "TSLA을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   },
   {
     "id": "musk-1785406795814510785",
@@ -2152,6 +5800,8 @@
     "personName": "Elon Musk",
     "role": "Founder power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2024-04-30 20:32:06+00:00",
     "text": "Tesla still plans to grow the Supercharger network, just at a slower pace for new locations and more focus on 100% uptime and expansion of existing locations",
     "sourceUrl": "https://x.com/elonmusk/status/1785406795814510785",
@@ -2162,6 +5812,7 @@
       "TSLA",
       "Elon Musk"
     ],
+    "hashtags": [],
     "summaryKo": "Tesla Supercharger 신규 부지 확대 속도는 낮추되 기존 시설 확장과 가동률에 집중하겠다고 밝혔다.",
     "asset": "TSLA",
     "benchmark": "QQQ",
@@ -2256,8 +5907,143 @@
         "close": 174.72
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2024-04-24",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2024-04-25",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2024-04-26",
+        "newsCount": null,
+        "trackedMentions": 4,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2024-04-29",
+        "newsCount": null,
+        "trackedMentions": 4,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2024-04-30",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2024-05-01",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2024-05-02",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2024-05-03",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2024-05-06",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2024-05-07",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2024-05-08",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2024-05-01",
-    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Reaction detected",
+      "summaryEn": "Elon Musk's Tesla & EV signal shows 1.07% absolute one-day excess movement in TSLA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Elon Musk의 Tesla & EV 시그널 이후 TSLA에서 1일 기준 1.07%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Tesla & EV.",
+          "summaryKo": "Tesla & EV 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "TSLA is mapped as a direct or policy-linked asset.",
+          "summaryKo": "TSLA을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   },
   {
     "id": "musk-1778881361249800203",
@@ -2265,6 +6051,8 @@
     "personName": "Elon Musk",
     "role": "Founder power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2024-04-12 20:22:21+00:00",
     "text": "Supervised full self-driving now $99/month",
     "sourceUrl": "https://x.com/elonmusk/status/1778881361249800203",
@@ -2275,6 +6063,7 @@
       "TSLA",
       "Elon Musk"
     ],
+    "hashtags": [],
     "summaryKo": "감독형 FSD 구독료를 월 99달러로 인하한다고 발표했다.",
     "asset": "TSLA",
     "benchmark": "QQQ",
@@ -2369,8 +6158,143 @@
         "close": 142.05
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2024-04-08",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2024-04-09",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2024-04-10",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2024-04-11",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2024-04-12",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2024-04-15",
+        "newsCount": null,
+        "trackedMentions": 5,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2024-04-16",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2024-04-17",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2024-04-18",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2024-04-19",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2024-04-22",
+        "newsCount": null,
+        "trackedMentions": 4,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2024-04-15",
-    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Reaction detected",
+      "summaryEn": "Elon Musk's Tesla & EV signal shows 3.95% absolute one-day excess movement in TSLA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Elon Musk의 Tesla & EV 시그널 이후 TSLA에서 1일 기준 3.95%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Tesla & EV.",
+          "summaryKo": "Tesla & EV 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "TSLA is mapped as a direct or policy-linked asset.",
+          "summaryKo": "TSLA을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   },
   {
     "id": "musk-1756751879701156059",
@@ -2378,6 +6302,8 @@
     "personName": "Elon Musk",
     "role": "Founder power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2024-02-11 18:47:41+00:00",
     "text": "Since most people don’t love to buy cars in the middle of winter, Tesla is offering a $1000 incentive to do so. This is the essential quandary of manufacturing: factories need continuous production for efficiency, but consumer demand is seasonal.",
     "sourceUrl": "https://x.com/elonmusk/status/1756751879701156059",
@@ -2388,6 +6314,7 @@
       "TSLA",
       "Elon Musk"
     ],
+    "hashtags": [],
     "summaryKo": "겨울철 계절적 수요 둔화에 대응해 Tesla 차량에 1천 달러 인센티브를 제공한다고 밝혔다.",
     "asset": "TSLA",
     "benchmark": "QQQ",
@@ -2482,8 +6409,143 @@
         "close": 193.76
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2024-02-05",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2024-02-06",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2024-02-07",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2024-02-08",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2024-02-09",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2024-02-12",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2024-02-13",
+        "newsCount": null,
+        "trackedMentions": 6,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2024-02-14",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2024-02-15",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2024-02-16",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2024-02-20",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2024-02-12",
-    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Reaction detected",
+      "summaryEn": "Elon Musk's Tesla & EV signal shows 2.42% absolute one-day excess movement in TSLA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Elon Musk의 Tesla & EV 시그널 이후 TSLA에서 1일 기준 2.42%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Tesla & EV.",
+          "summaryKo": "Tesla & EV 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "TSLA is mapped as a direct or policy-linked asset.",
+          "summaryKo": "TSLA을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   },
   {
     "id": "musk-1752922071229722990",
@@ -2491,6 +6553,8 @@
     "personName": "Elon Musk",
     "role": "Founder power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2024-02-01 05:09:24+00:00",
     "text": "The public vote is unequivocally in favor of Texas! Tesla will move immediately to hold a shareholder vote to transfer state of incorporation to Texas.",
     "sourceUrl": "https://x.com/elonmusk/status/1752922071229722990",
@@ -2501,6 +6565,7 @@
       "TSLA",
       "Elon Musk"
     ],
+    "hashtags": [],
     "summaryKo": "Tesla의 법인 소재지를 텍사스로 옮기는 주주 투표를 즉시 추진하겠다고 밝혔다.",
     "asset": "TSLA",
     "benchmark": "QQQ",
@@ -2595,8 +6660,143 @@
         "close": 189.56
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2024-01-25",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2024-01-26",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2024-01-29",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2024-01-30",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2024-01-31",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2024-02-01",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2024-02-02",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2024-02-05",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2024-02-06",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2024-02-07",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2024-02-08",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2024-02-01",
-    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Mixed evidence",
+      "summaryEn": "Elon Musk's Tesla & EV signal shows 0.34% absolute one-day excess movement in TSLA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Elon Musk의 Tesla & EV 시그널 이후 TSLA에서 1일 기준 0.34%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Tesla & EV.",
+          "summaryKo": "Tesla & EV 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "TSLA is mapped as a direct or policy-linked asset.",
+          "summaryKo": "TSLA을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   },
   {
     "id": "musk-1730278921248161877",
@@ -2604,6 +6804,8 @@
     "personName": "Elon Musk",
     "role": "Founder power",
     "platform": "X",
+    "sourceType": "Social",
+    "timePrecision": "exact",
     "publishedAt": "2023-11-30 17:33:36+00:00",
     "text": "Cybertruck production line https://t.co/sGYuVFLy3c",
     "sourceUrl": "https://x.com/elonmusk/status/1730278921248161877",
@@ -2614,6 +6816,7 @@
       "TSLA",
       "Elon Musk"
     ],
+    "hashtags": [],
     "summaryKo": "Cybertruck 생산 라인의 가동 모습을 공개했다.",
     "asset": "TSLA",
     "benchmark": "QQQ",
@@ -2708,7 +6911,142 @@
         "close": 242.64
       }
     ],
+    "attentionWindow": [
+      {
+        "session": -5,
+        "date": "2023-11-22",
+        "newsCount": null,
+        "trackedMentions": 8,
+        "hashtagCount": 0
+      },
+      {
+        "session": -4,
+        "date": "2023-11-24",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": -3,
+        "date": "2023-11-27",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": -2,
+        "date": "2023-11-28",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      },
+      {
+        "session": -1,
+        "date": "2023-11-29",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 0,
+        "date": "2023-11-30",
+        "newsCount": null,
+        "trackedMentions": 4,
+        "hashtagCount": 0
+      },
+      {
+        "session": 1,
+        "date": "2023-12-01",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 2,
+        "date": "2023-12-04",
+        "newsCount": null,
+        "trackedMentions": 0,
+        "hashtagCount": 0
+      },
+      {
+        "session": 3,
+        "date": "2023-12-05",
+        "newsCount": null,
+        "trackedMentions": 2,
+        "hashtagCount": 0
+      },
+      {
+        "session": 4,
+        "date": "2023-12-06",
+        "newsCount": null,
+        "trackedMentions": 3,
+        "hashtagCount": 0
+      },
+      {
+        "session": 5,
+        "date": "2023-12-07",
+        "newsCount": null,
+        "trackedMentions": 1,
+        "hashtagCount": 0
+      }
+    ],
+    "attentionCoverage": "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
     "eventSession": "2023-11-30",
-    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control."
+    "rationale": "Company or technology statement linked directly to TSLA; QQQ is the market control.",
+    "orchestration": {
+      "mode": "reviewed_snapshot",
+      "confidence": "High",
+      "verdict": "Reaction detected",
+      "summaryEn": "Elon Musk's Tesla & EV signal shows 1.41% absolute one-day excess movement in TSLA. Historical news volume is not available for this case. Association is observable; causality is not established.",
+      "summaryKo": "Elon Musk의 Tesla & EV 시그널 이후 TSLA에서 1일 기준 1.41%의 절대 초과 움직임이 관찰됐습니다. 이 사례의 과거 뉴스 발행량은 확보되지 않았습니다. 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.",
+      "stages": [
+        {
+          "id": "classify",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Classified as Tesla & EV.",
+          "summaryKo": "Tesla & EV 시그널로 분류했습니다."
+        },
+        {
+          "id": "map",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "TSLA is mapped as a direct or policy-linked asset.",
+          "summaryKo": "TSLA을(를) 직접 또는 정책 연결 자산으로 매핑했습니다."
+        },
+        {
+          "id": "amplify",
+          "state": "Complete",
+          "confidence": "Medium",
+          "summaryEn": "Tracked-source attention was checked; broad social coverage is unavailable.",
+          "summaryKo": "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."
+        },
+        {
+          "id": "market",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Actual closes, volume, and QQQ comparison were calculated deterministically.",
+          "summaryKo": "실제 종가·거래량과 QQQ 비교값을 코드로 계산했습니다."
+        },
+        {
+          "id": "audit",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Source timing and asset relevance were reviewed.",
+          "summaryKo": "출처 시각과 자산 관련성을 검토했습니다."
+        },
+        {
+          "id": "report",
+          "state": "Complete",
+          "confidence": "High",
+          "summaryEn": "Evidence report generated with non-causality caveats.",
+          "summaryKo": "인과관계 제한을 포함한 증거 리포트를 생성했습니다."
+        }
+      ],
+      "caveats": [
+        "Temporal association does not establish causality.",
+        "Tracked social mentions are not a platform-wide firehose."
+      ]
+    }
   }
 ]

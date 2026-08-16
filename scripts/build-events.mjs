@@ -138,6 +138,54 @@ function loadKoreanSummaries() {
   return JSON.parse(fs.readFileSync(path.join(root, "data", "event-summaries.ko.json"), "utf8"));
 }
 
+function loadCrossSourceEvents() {
+  return JSON.parse(fs.readFileSync(path.join(root, "data", "cross-source-events.source.json"), "utf8")).map((row) => ({
+    ...row,
+    likes: null,
+    reposts: null,
+    views: null,
+    classification: { topic: row.topic, asset: row.asset, benchmark: row.benchmark },
+  }));
+}
+
+function loadNewsSnapshots() {
+  return JSON.parse(fs.readFileSync(path.join(root, "data", "news-volume-snapshots.source.json"), "utf8"));
+}
+
+function loadTrackedPosts() {
+  const posts = [];
+  const muskFile = path.join(root, "all_musk_posts.csv");
+  if (fs.existsSync(muskFile)) {
+    const rows = parse(fs.readFileSync(muskFile), { columns: true, skip_empty_lines: true, relax_quotes: true });
+    posts.push(...rows.map((row) => ({ date: String(row.createdAt).slice(0, 10), text: cleanText(row.fullText) })));
+  }
+  const trumpFile = path.join(root, "Kaggle_Trump_2009_2025.csv");
+  if (fs.existsSync(trumpFile)) {
+    const rows = parse(fs.readFileSync(trumpFile), { columns: true, skip_empty_lines: true, relax_quotes: true });
+    posts.push(...rows.map((row) => ({ date: String(row.date).slice(0, 10), text: cleanText(row.text) })));
+  }
+  return posts.filter((post) => post.date && post.text);
+}
+
+const extractHashtags = (text) => Array.from(new Set(text.match(/#[\p{L}\p{N}_]+/gu) ?? []));
+
+function defaultMentionTerms(event) {
+  const topicTerms = {
+    "Trade & tariffs": ["tariff", "trade", "china"],
+    "Economy & rates": ["economy", "interest rate", "federal reserve"],
+    "Technology policy": ["AI", "NVIDIA", "chip"],
+    "Tesla & EV": ["Tesla", "FSD", "Cybertruck"],
+    "AI & robotics": ["AI", "robot", "xAI"],
+    "AI security": ["AI", "security"],
+    "AI strategy": ["OpenAI", "AI"],
+    "AI products": ["OpenAI", "ChatGPT"],
+    Robotics: ["robot", "robotics"],
+    "AI capability": ["AI", "model"],
+    "Model update": ["OpenAI", "model"],
+  };
+  return event.mentionTerms ?? topicTerms[event.classification.topic] ?? [event.classification.asset];
+}
+
 async function fetchChart(symbol) {
   const start = Math.floor(new Date("2022-01-01T00:00:00Z").getTime() / 1000);
   const end = Math.floor(Date.now() / 1000) + 86400;
@@ -221,13 +269,76 @@ function buildReaction(event, assetSeries, benchmarkSeries) {
   };
 }
 
+function buildAttention(event, priceWindow, trackedPosts, newsSnapshots) {
+  const terms = defaultMentionTerms(event).map((term) => term.toLowerCase());
+  const newsCounts = newsSnapshots.events[event.id]?.counts ?? {};
+  const hasNewsSnapshot = Boolean(newsSnapshots.events[event.id]);
+  const points = priceWindow.map((point) => {
+    const matches = trackedPosts.filter((post) => post.date === point.date && terms.some((term) => post.text.toLowerCase().includes(term)));
+    const hashtags = new Set(matches.flatMap((post) => extractHashtags(post.text).map((tag) => tag.toLowerCase())));
+    return {
+      session: point.session,
+      date: point.date,
+      newsCount: Object.hasOwn(newsCounts, point.date) ? newsCounts[point.date] : null,
+      trackedMentions: matches.length,
+      hashtagCount: hashtags.size,
+    };
+  });
+  const eventHashtags = extractHashtags(event.text);
+  const observedHashtags = Array.from(new Set([
+    ...eventHashtags,
+    ...trackedPosts
+      .filter((post) => points.some((point) => point.date === post.date) && terms.some((term) => post.text.toLowerCase().includes(term)))
+      .flatMap((post) => extractHashtags(post.text)),
+  ])).slice(0, 8);
+  return {
+    points,
+    hashtags: observedHashtags,
+    coverage: hasNewsSnapshot
+      ? `GDELT raw article counts for query ${newsSnapshots.events[event.id].query}; social mentions cover only the tracked Musk and Trump source corpora.`
+      : "News-volume history is unavailable for this case; social mentions cover only the tracked Musk and Trump source corpora.",
+  };
+}
+
+function buildOrchestration(event, reaction, attention) {
+  const hasNews = attention.points.some((point) => point.newsCount !== null);
+  const hasEngagement = [event.likes, event.reposts, event.views].some((value) => value !== null);
+  const isProxy = event.coverage === "Proxy" || event.person === "altman" || event.person === "openai";
+  const confidence = event.timePrecision === "exact" && !isProxy && (hasNews || hasEngagement) ? "High" : "Medium";
+  const moved = Math.abs(reaction.metrics.abnormalReturn1D) >= 1;
+  const amplified = hasNews || hasEngagement || attention.points.some((point) => point.trackedMentions > 0);
+  const verdict = moved && amplified ? "Reaction detected" : moved || amplified ? "Mixed evidence" : "Insufficient evidence";
+  const assetReason = isProxy ? `${event.classification.asset} is a proxy rather than direct equity.` : `${event.classification.asset} is mapped as a direct or policy-linked asset.`;
+  const stage = (id, state, level, summaryEn, summaryKo) => ({ id, state, confidence: level, summaryEn, summaryKo });
+  return {
+    mode: "reviewed_snapshot",
+    confidence,
+    verdict,
+    summaryEn: `${event.personName}'s ${event.classification.topic} signal shows ${Math.abs(reaction.metrics.abnormalReturn1D).toFixed(2)}% absolute one-day excess movement in ${event.classification.asset}. ${hasNews ? "A GDELT news-volume snapshot is available." : "Historical news volume is not available for this case."} Association is observable; causality is not established.`,
+    summaryKo: `${event.personName}의 ${event.classification.topic} 시그널 이후 ${event.classification.asset}에서 1일 기준 ${Math.abs(reaction.metrics.abnormalReturn1D).toFixed(2)}%의 절대 초과 움직임이 관찰됐습니다. ${hasNews ? "GDELT 뉴스 발행량 스냅샷도 함께 확인할 수 있습니다." : "이 사례의 과거 뉴스 발행량은 확보되지 않았습니다."} 시간적 연관성은 관찰되지만 인과관계는 확정할 수 없습니다.`,
+    stages: [
+      stage("classify", "Complete", "High", `Classified as ${event.classification.topic}.`, `${event.classification.topic} 시그널로 분류했습니다.`),
+      stage("map", "Complete", isProxy ? "Medium" : "High", assetReason, isProxy ? `${event.classification.asset}은(는) 직접 지분이 아닌 프록시 자산입니다.` : `${event.classification.asset}을(를) 직접 또는 정책 연결 자산으로 매핑했습니다.`),
+      stage("amplify", amplified ? "Complete" : "Monitoring", hasNews ? "High" : hasEngagement ? "Medium" : "Low", hasNews ? "News publication counts and tracked-source mentions were checked." : "Tracked-source attention was checked; broad social coverage is unavailable.", hasNews ? "뉴스 발행량과 추적 소스 언급량을 확인했습니다." : "추적 소스 관심도를 확인했으며 전체 SNS 범위는 제공되지 않습니다."),
+      stage("market", "Complete", "High", `Actual closes, volume, and ${event.classification.benchmark} comparison were calculated deterministically.`, `실제 종가·거래량과 ${event.classification.benchmark} 비교값을 코드로 계산했습니다.`),
+      stage("audit", "Complete", confidence, isProxy ? "Proxy mapping and source-time limits lower attribution confidence." : "Source timing and asset relevance were reviewed.", isProxy ? "프록시 매핑과 출처 시각의 한계 때문에 귀속 신뢰도를 낮췄습니다." : "출처 시각과 자산 관련성을 검토했습니다."),
+      stage("report", "Complete", confidence, "Evidence report generated with non-causality caveats.", "인과관계 제한을 포함한 증거 리포트를 생성했습니다."),
+    ],
+    caveats: [
+      "Temporal association does not establish causality.",
+      "Tracked social mentions are not a platform-wide firehose.",
+      ...(isProxy ? ["The selected listed asset is a proxy, not direct ownership."] : []),
+    ],
+  };
+}
+
 function rationale(person, classification) {
   if (person === "trump") return `Policy-language match linked to ${classification.asset}; ${classification.benchmark} is shown as the broad-market control.`;
   if (person === "musk") return `Company or technology statement linked directly to ${classification.asset}; ${classification.benchmark} is the market control.`;
   return `${classification.asset} is an explicitly labeled AI proxy, not a company directly owned or operated by Sam Altman.`;
 }
 
-async function buildLiveFallback(priceSeries) {
+async function buildLiveFallback(priceSeries, newsSnapshots) {
   const parser = new XMLParser({ ignoreAttributes: false, removeNSPrefix: true });
   let signals = [];
   try {
@@ -289,13 +400,35 @@ async function buildLiveFallback(priceSeries) {
         lastSuccessAt: now,
         note: "Historical cases are available; live X ingestion is intentionally disabled in Free.",
       },
+      {
+        id: "gdelt-news",
+        label: "News publication volume",
+        provider: "GDELT DOC 2.0 snapshot",
+        cadence: "Reviewed historical windows",
+        access: "Free",
+        state: "Fresh",
+        lastSuccessAt: newsSnapshots.fetchedAt,
+        note: "TimelineVolRaw article counts are stored with the exact query; missing cases remain unavailable.",
+      },
+      {
+        id: "sec-edgar",
+        label: "Corporate filings",
+        provider: "SEC EDGAR",
+        cadence: "Reviewed filing events",
+        access: "Free",
+        state: "Fresh",
+        lastSuccessAt: now,
+        note: "Original filing pages and SEC acceptance timestamps are preserved.",
+      },
     ],
   };
 }
 
 async function main() {
-  const raw = [...loadTrump(), ...loadMusk(), ...loadAltman()];
+  const raw = [...loadTrump(), ...loadMusk(), ...loadAltman(), ...loadCrossSourceEvents()];
   const koreanSummaries = loadKoreanSummaries();
+  const newsSnapshots = loadNewsSnapshots();
+  const trackedPosts = loadTrackedPosts();
   if (raw.length < 20) throw new Error(`Expected at least 20 source events, got ${raw.length}`);
 
   const symbols = ["SPY", "QQQ", "TSLA", "NVDA", "MSFT"];
@@ -303,34 +436,47 @@ async function main() {
   const events = raw.map((event) => {
     const classification = event.classification;
     const reaction = buildReaction(event, series[classification.asset], series[classification.benchmark]);
+    const coverage = event.coverage ?? (event.person === "trump" ? "Policy" : event.person === "altman" ? "Proxy" : "Direct");
+    const normalized = {
+      ...event,
+      coverage,
+      timePrecision: event.timePrecision ?? "exact",
+    };
+    const attention = buildAttention(normalized, reaction.priceWindow, trackedPosts, newsSnapshots);
     return {
       id: event.id,
       person: event.person,
       personName: event.personName,
       role: event.role,
       platform: event.platform,
+      sourceType: event.sourceType ?? "Social",
+      timePrecision: event.timePrecision ?? "exact",
       publishedAt: event.publishedAt,
       text: event.text,
       sourceUrl: event.sourceUrl,
       topic: classification.topic,
-      signalType: event.person === "trump" ? "Policy signal" : event.person === "musk" ? "Executive signal" : "Industry signal",
-      tags: [classification.topic, classification.asset, event.personName],
-      summaryKo: koreanSummaries[event.id] ?? event.text,
+      signalType: event.signalType ?? (event.person === "trump" ? "Policy signal" : event.person === "musk" ? "Executive signal" : "Industry signal"),
+      tags: event.tags ?? [classification.topic, classification.asset, event.personName],
+      hashtags: attention.hashtags,
+      summaryKo: event.summaryKo ?? koreanSummaries[event.id] ?? event.text,
       asset: classification.asset,
       benchmark: classification.benchmark,
-      coverage: event.person === "trump" ? "Policy" : event.person === "altman" ? "Proxy" : "Direct",
+      coverage,
       engagement: { likes: event.likes, reposts: event.reposts, views: event.views },
       metrics: reaction.metrics,
       window: reaction.window,
       priceWindow: reaction.priceWindow,
+      attentionWindow: attention.points,
+      attentionCoverage: attention.coverage,
       eventSession: reaction.sessionDate,
-      rationale: rationale(event.person, classification),
+      rationale: event.rationale ?? rationale(event.person, classification),
+      orchestration: buildOrchestration(normalized, reaction, attention),
     };
   });
 
   events.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
   fs.writeFileSync(path.join(outputDir, "events.json"), `${JSON.stringify(events, null, 2)}\n`);
-  const fallback = await buildLiveFallback(series);
+  const fallback = await buildLiveFallback(series, newsSnapshots);
   fs.writeFileSync(path.join(outputDir, "live-fallback.json"), `${JSON.stringify(fallback, null, 2)}\n`);
   console.log(`Generated ${events.length} events and ${Object.keys(fallback.prices).length} price snapshots.`);
 }

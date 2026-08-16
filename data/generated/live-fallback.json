@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-16T04:04:26.500Z",
+  "fetchedAt": "2026-08-16T04:42:37.833Z",
   "mode": "fallback",
   "signals": [
     {
@@ -73,7 +73,7 @@
       "cadence": "Daily demo refresh",
       "access": "Free",
       "state": "Fresh",
-      "lastSuccessAt": "2026-08-16T04:04:26.500Z",
+      "lastSuccessAt": "2026-08-16T04:42:37.833Z",
       "note": "Independent public archive; production uses licensed Truth API."
     },
     {
@@ -83,7 +83,7 @@
       "cadence": "Daily",
       "access": "Free",
       "state": "Fresh",
-      "lastSuccessAt": "2026-08-16T04:04:26.500Z",
+      "lastSuccessAt": "2026-08-16T04:42:37.833Z",
       "note": "Five-symbol demo scope. Display licensing required for commercial use."
     },
     {
@@ -93,8 +93,28 @@
       "cadence": "Near real time in Pro",
       "access": "Paid connector",
       "state": "Stale",
-      "lastSuccessAt": "2026-08-16T04:04:26.500Z",
+      "lastSuccessAt": "2026-08-16T04:42:37.833Z",
       "note": "Historical cases are available; live X ingestion is intentionally disabled in Free."
+    },
+    {
+      "id": "gdelt-news",
+      "label": "News publication volume",
+      "provider": "GDELT DOC 2.0 snapshot",
+      "cadence": "Reviewed historical windows",
+      "access": "Free",
+      "state": "Fresh",
+      "lastSuccessAt": "2026-08-16T04:40:00Z",
+      "note": "TimelineVolRaw article counts are stored with the exact query; missing cases remain unavailable."
+    },
+    {
+      "id": "sec-edgar",
+      "label": "Corporate filings",
+      "provider": "SEC EDGAR",
+      "cadence": "Reviewed filing events",
+      "access": "Free",
+      "state": "Fresh",
+      "lastSuccessAt": "2026-08-16T04:42:37.833Z",
+      "note": "Original filing pages and SEC acceptance timestamps are preserved."
     }
   ]
 }
