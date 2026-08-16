@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-16T06:14:32.849Z",
+  "fetchedAt": "2026-08-16T07:00:40.000Z",
   "mode": "fallback",
   "signals": [
     {
@@ -52,6 +52,10 @@
       "price": 731.07,
       "asOf": "2026-08-14"
     },
+    "BTC-USD": {
+      "price": 62993.72,
+      "asOf": "2026-08-16"
+    },
     "TSLA": {
       "price": 342.27,
       "asOf": "2026-08-14"
@@ -63,6 +67,10 @@
     "MSFT": {
       "price": 495.4,
       "asOf": "2026-08-14"
+    },
+    "SOXX": {
+      "price": 550.42,
+      "asOf": "2026-08-14"
     }
   },
   "sources": [
@@ -73,7 +81,7 @@
       "cadence": "Daily demo refresh",
       "access": "Free",
       "state": "Fresh",
-      "lastSuccessAt": "2026-08-16T06:14:32.849Z",
+      "lastSuccessAt": "2026-08-16T07:00:40.000Z",
       "note": "Independent public archive; production uses licensed Truth API."
     },
     {
@@ -83,7 +91,7 @@
       "cadence": "Daily",
       "access": "Free",
       "state": "Fresh",
-      "lastSuccessAt": "2026-08-16T06:14:32.849Z",
+      "lastSuccessAt": "2026-08-16T07:00:40.000Z",
       "note": "Five-symbol demo scope. Display licensing required for commercial use."
     },
     {
@@ -93,7 +101,7 @@
       "cadence": "Near real time in Pro",
       "access": "Paid connector",
       "state": "Stale",
-      "lastSuccessAt": "2026-08-16T06:14:32.849Z",
+      "lastSuccessAt": "2026-08-16T07:00:40.000Z",
       "note": "Historical cases are available; live X ingestion is intentionally disabled in Free."
     },
     {
@@ -113,7 +121,7 @@
       "cadence": "Reviewed filing events",
       "access": "Free",
       "state": "Fresh",
-      "lastSuccessAt": "2026-08-16T06:14:32.849Z",
+      "lastSuccessAt": "2026-08-16T07:00:40.000Z",
       "note": "Original filing pages and SEC acceptance timestamps are preserved."
     }
   ]

@@ -17,6 +17,8 @@ export async function GET(request: NextRequest) {
 
   revalidateTag("market-live", "max");
   revalidateTag("gdelt-news", "max");
+  revalidateTag("public-news", "max");
+  revalidateTag("public-social", "max");
   const payload = await getLivePayload({ force: true });
   return NextResponse.json({
     ok: true,

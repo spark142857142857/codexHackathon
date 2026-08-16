@@ -7,6 +7,7 @@ const reviewedFile = path.join(root, "data", "generated", "events.json");
 const outputFile = path.join(root, "data", "generated", "evidence-universe.json");
 const atlasFile = path.join(root, "data", "generated", "atlas-events.json");
 const ASSETS = ["SPY", "QQQ", "TSLA", "NVDA", "MSFT", "BTC-USD", "SOXX"];
+const MARKET_CONTEXT_ASSETS = ["SPY", "QQQ", "BTC-USD"];
 const MARKET_TOPICS = new Set(["Trade & tariffs", "Economy & rates", "Technology policy", "Tesla & EV", "AI & robotics", "Energy & climate", "Crypto"]);
 const MEDIA_PATTERN = /\b(reuters|bloomberg|cnbc|wsj|nytimes|bbc|cnn|foxnews|theguardian|apnews|forbes|politico|axios|washingtonpost)\b/i;
 const round = (value) => Math.round(value * 100) / 100;
@@ -90,12 +91,20 @@ function buildReaction(row, series, mapping) {
   let persistence = "Faded";
   if (Math.sign(dayOne) !== Math.sign(dayThree)) persistence = "Reversed";
   else if (Math.abs(dayThree) >= Math.abs(dayOne) * 0.5) persistence = "Persisted";
+  const priceWindow = assetRows.slice(index - 5, index + 6).map((item, i) => ({ session: i - 5, date: item.date, close: round(item.close) }));
+  const relatedAssets = [...new Set([mapping.asset, ...row.assets.filter((asset) => ASSETS.includes(asset)), ...MARKET_CONTEXT_ASSETS])];
+  const priceWindows = Object.fromEntries(relatedAssets.map((symbol) => {
+    const byDate = new Map(series[symbol].map((item) => [item.date, item.close]));
+    return [symbol, priceWindow.map((point) => ({ ...point, close: byDate.has(point.date) ? round(byDate.get(point.date)) : null }))];
+  }));
   return {
     eventSession,
     abnormalReturn1D: round(dayOne), volumeMultiple: round(assetRows[index].volume / meanVolume),
     cumulativeAbnormal3D: round(dayThree), volatilityMultiple: round(baseVol ? eventVol / baseVol : 0), persistence,
     window: [-1, 0, 1, 2].map((offset, index) => ({ day: [-1, 0, 1, 3][index], ...(offset === -1 ? { asset: 0, benchmark: 0 } : cumulative(offset)) })),
-    priceWindow: assetRows.slice(index - 5, index + 6).map((item, i) => ({ session: i - 5, date: item.date, close: round(item.close) })),
+    relatedAssets,
+    priceWindow,
+    priceWindows,
   };
 }
 
@@ -188,6 +197,7 @@ async function main() {
       topic: row.topic,
       signalType,
       tags: [...new Set([row.topic, ...row.assets])],
+      relatedAssets: item.relatedAssets,
       hashtags: row.hashtags,
       summaryKo: item.orchestration.summaryKo,
       asset: item.asset,
@@ -202,6 +212,7 @@ async function main() {
       },
       window: item.window,
       priceWindow: item.priceWindow,
+      priceWindows: item.priceWindows,
       attentionWindow: item.attentionWindow,
       attentionCoverage: `${item.attentionCoverage} Verified media-domain links in the same tracked window: ${item.linkedMediaReferences}.`,
       eventSession: item.eventSession,
@@ -209,8 +220,10 @@ async function main() {
       orchestration: item.orchestration,
     };
   });
-  const newsroomEvents = reviewedEvents.filter((event) => event.sourceType === "News");
-  const atlasEvents = [...newsroomEvents, ...socialAtlasEvents]
+  const reviewedCrossSourceEvents = reviewedEvents.filter(
+    (event) => event.sourceType !== "Social",
+  );
+  const atlasEvents = [...reviewedCrossSourceEvents, ...socialAtlasEvents]
     .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
   fs.writeFileSync(atlasFile, `${JSON.stringify(atlasEvents)}\n`);
   console.log(`Generated ${representatives.length.toLocaleString()} representatives and ${evidence.length} evidence-ready signals.`);
