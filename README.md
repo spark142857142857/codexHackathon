@@ -27,6 +27,9 @@ The product now separates the full source universe from the reviewed demo layer:
 - Market refresh: five daily prices through Twelve Data when configured
 - Metrics: Abnormal Return 1D, Volume Multiple, and 3D Persistence
 - Reaction lenses: actual daily closes, GDELT raw article counts when captured, tracked-source mentions, hashtags, and public engagement
+- Market-first timeline: SPY, QQQ, or BTC-USD actual-close coverage with clickable Direct, Policy, and Proxy signal markers
+- Multi-asset event comparison: linked asset plus SPY, QQQ, and BTC-USD indexed to the prior close, with actual closes retained in the tooltip
+- Discovery controls: topic, mapping type, timestamp precision, reaction, volume, persistence, and recency
 - Price window: actual daily closes from five sessions before through five sessions after each signal
 - Evidence research desk: classifier, ontology mapper, amplification analyst, market analyst, confidence auditor, and bilingual report writer
 - Locales: full English and Korean interfaces, with reviewed Korean summaries that preserve the original source text

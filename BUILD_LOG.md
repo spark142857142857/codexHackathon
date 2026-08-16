@@ -75,3 +75,18 @@ Codex was used to inspect the source datasets, define the product boundary, impl
 - Fixed the Atlas composer so reviewed filing and hearing signals are no longer discarded by a news-only filter.
 - Removed the access-request CTA and replaced decorative AI styling with a quieter evidence-research visual system.
 - Added an optional server-only OpenAI Responses API path for bilingual report editing. Deterministic calculations remain the source of truth and are used whenever the feature is disabled, missing a key, or fails.
+
+## Market-first discovery pass
+
+- Added an actual-close market timeline reconstructed from the committed signal price windows, with clickable Direct, Policy, and Proxy markers that open the corresponding evidence record.
+- Added a prior-close-indexed multi-asset comparison for every event while preserving the single-asset actual-close view and exact publication-time/session annotation.
+- Added topic, mapping, and exact-time filters plus transparent sorting by 1D excess reaction, volume multiple, 3D persistence, or recency.
+- Moved the full Signal Universe below the core market timeline and event explorer so the first workflow answers the product question before exposing the data pipeline.
+- Kept BTC-USD explicitly labeled as equity-session-sampled context rather than claiming a complete 24/7 intraday series.
+
+## First-visit UI hierarchy pass
+
+- Synchronized the initially selected event and every filtered/sorted fallback with the visible evidence panel, while preserving an explicit user selection when it remains in scope.
+- Promoted the working market timeline to the first navigation item, renamed the former summary-card comparison section to Insights, and rewrote the hero around the market-first task.
+- Made the indexed multi-asset reaction the default event chart, increased the chart height, and collapsed the deterministic six-stage process behind a concise Evidence Review summary.
+- Removed the duplicate desktop sidebar, strengthened selected-event labeling, localized the pending Trump state, and added single-column mobile ordering, touch targets, overflow protection, and readable core text sizes.

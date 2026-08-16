@@ -2453,9 +2453,36 @@ footer a {
 .chart-asset-switch p { display: flex; align-items: center; gap: 5px; margin: 8px 0 0; color: #757e78; font-size: 8px; line-height: 1.4; }
 .metric-basis-note { margin: -4px 0 12px; color: #66706a; font-size: 8px; line-height: 1.45; }
 
+.market-timeline-section { margin-top: 18px; }
+.timeline-heading { align-items: flex-end; }
+.timeline-controls { display: flex; gap: 8px; flex-wrap: wrap; }
+.timeline-controls select { min-height: 38px; padding: 0 34px 0 12px; border: 1px solid #d7ddd8; border-radius: 8px; color: #405249; background: #fff; font-size: 11px; }
+.timeline-legend { display: flex; align-items: center; gap: 14px; margin: 4px 0 10px; color: #59675f; font-size: 10px; }
+.timeline-legend span { display: inline-flex; align-items: center; gap: 5px; }
+.timeline-legend i, .comparison-legend i { width: 8px; height: 8px; border-radius: 50%; }
+.timeline-legend i.direct { background: #1f6f4a; }
+.timeline-legend i.policy { background: #9a642f; clip-path: polygon(50% 0, 100% 100%, 0 100%); border-radius: 0; }
+.timeline-legend i.proxy { background: #75658c; border-radius: 1px; transform: rotate(45deg); }
+.timeline-legend small { margin-left: auto; color: #7a847e; }
+.market-timeline-chart { width: 100%; height: 300px; padding: 10px 6px 0; border: 1px solid #dfe3df; border-radius: 10px; background: #fff; }
+.timeline-footnote { margin: 9px 0 0; color: #69736d; font-size: 10px; line-height: 1.5; }
+.explorer-toolbar { flex-wrap: wrap; }
+.explorer-toolbar .search-box { min-width: 280px; }
+.explorer-toolbar select { flex: 1 1 135px; max-width: 190px; }
+.market-view-toggle { padding-bottom: 8px; margin-bottom: 8px; border-bottom: 1px solid #e4e7e4; }
+.comparison-legend { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 6px 10px; max-width: 310px; }
+.comparison-legend span { display: inline-flex; align-items: center; gap: 4px; color: #5e6a63; font-size: 8px; }
+
 @media (max-width: 760px) {
   .app-main .hero { padding-top: 88px; }
   .chart-asset-switch button { flex: 1 0 auto; }
+  .timeline-heading { align-items: flex-start; }
+  .timeline-controls { width: 100%; }
+  .timeline-controls select { flex: 1; }
+  .market-timeline-chart { height: 260px; }
+  .timeline-legend { flex-wrap: wrap; }
+  .timeline-legend small { width: 100%; margin-left: 0; }
+  .explorer-toolbar .search-box, .explorer-toolbar select { min-width: 100%; max-width: none; }
 }
 
 @media (max-width: 430px) {
@@ -2942,4 +2969,54 @@ footer a {
   .app-main .event-list {
     max-height: none;
   }
+}
+
+/* UI/UX audit pass: market-first hierarchy and readable responsive layout */
+.app-frame { display: block; }
+.research-sidebar { display: none; }
+.app-main .site-header { padding: 0 28px; gap: 18px; }
+.app-main .site-header .brand { display: flex; flex: 0 0 auto; }
+.top-section-nav { display: flex !important; flex: 1; justify-content: center; gap: 4px !important; min-width: 0; }
+.top-section-nav a { min-height: 38px; display: inline-flex; align-items: center; padding: 0 10px; border-radius: 7px; color: #68736d; font-size: 12px; white-space: nowrap; }
+.top-section-nav a.active { color: #174e37; background: #e8f0eb; }
+.app-main .hero { min-height: 330px; padding: 58px max(28px, calc((100vw - 1320px) / 2)) 66px; }
+.actual-price-chart { height: 380px; }
+.selected-breadcrumb { display: flex; align-items: center; gap: 8px; margin: -2px 0 13px; padding-bottom: 10px; border-bottom: 1px solid #e3e7e3; }
+.selected-breadcrumb span { color: #6f7973; font-size: 11px; }
+.selected-breadcrumb strong { color: #2a3d34; font-size: 12px; }
+.row-meta em { padding: 2px 5px; border-radius: 4px; color: #fff; background: #285f48; font-size: 9px; font-style: normal; font-weight: 750; }
+.review-toggle { width: 100%; min-height: 42px; display: flex; align-items: center; justify-content: center; gap: 7px; margin: 11px 0 0; border: 1px solid #d9dfda; border-radius: 8px; color: #345746; background: #fff; font-size: 12px; font-weight: 750; cursor: pointer; }
+.review-toggle svg { transition: transform .15s ease; }
+.review-toggle svg.expanded { transform: rotate(90deg); }
+.review-details { margin-top: 10px; }
+.original-language { display: block; margin-bottom: 4px; color: #69756f; font-size: 11px; font-weight: 750; }
+.app-main .hero-copy > p, .latest-signal p, .evidence-panel blockquote, .interpretation-content p, .research-verdict p { font-size: 14px; }
+.explorer-toolbar select, .search-box input, .event-text, .coverage-note { font-size: 12px; }
+.row-foot, .source-line, .metric-basis-note, .chart-asset-switch p, .news-source-status span, .social-source-status span { font-size: 11px; }
+.row-meta, .chart-asset-switch button, .reaction-lenses button, .comparison-legend span { font-size: 11px; }
+.chart-asset-switch button, .reaction-lenses button { min-height: 40px; }
+
+@media (max-width: 760px) {
+  html, body { max-width: 100%; overflow-x: hidden; }
+  .app-main, .app-main .section-shell, .explorer-section, .explorer-grid, .evidence-panel, .research-desk, .event-list { width: 100%; min-width: 0; max-width: 100%; }
+  .app-main .site-header { padding: 0 14px; }
+  .top-section-nav { scrollbar-width: none; }
+  .top-section-nav a { min-height: 44px; font-size: 12px; }
+  .app-main .hero { min-height: 315px; padding: 100px 18px 48px; }
+  .app-main .hero h1 { font-size: clamp(32px, 10vw, 42px); }
+  .app-main .hero-copy > p { font-size: 14px; }
+  .hero-actions .button { min-height: 44px; }
+  .app-main .explorer-grid { display: flex; flex-direction: column; }
+  .app-main .evidence-panel { order: 1; }
+  .app-main .research-desk { order: 2; }
+  .app-main .event-list { order: 3; }
+  .actual-price-chart { height: 340px; }
+  .person-tabs { display: flex; overflow-x: auto; }
+  .person-tabs button { min-width: 148px; min-height: 52px; }
+  .explorer-toolbar select, .explorer-toolbar .search-box { min-height: 44px; }
+  .metric-strip { grid-template-columns: 1fr; }
+  .metric-strip > div { min-height: 74px; }
+  .chart-head { align-items: flex-start; gap: 10px; }
+  .comparison-legend { justify-content: flex-start; max-width: none; }
+  .latest-signal { margin-left: 14px; margin-right: 14px; }
 }
