@@ -13,6 +13,9 @@ coverage/
 data/generated/*.tmp
 data/batch/
 
+# local Codex conversation history
+codex-chat_history
+
 # operating system
 .DS_Store
 Thumbs.db
